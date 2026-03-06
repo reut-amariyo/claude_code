@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Obsidian internals
+.obsidian/
+
+# Obsidian misc files
+*.base
+*.canvas
+
+# Archives
+*.zip
+
+# Only track the-system-v5 project and .gitignore
+/*
+!.gitignore
+!reut-workspace/
+reut-workspace/*
+!reut-workspace/the-system-v5/
+
+# Inside the project, ignore Claude Code local config
+reut-workspace/the-system-v5/.claude/
