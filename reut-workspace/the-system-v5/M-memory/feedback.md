@@ -39,7 +39,8 @@ Track comments, shares, and engagement that show what works.
 
 | Date | Content | Feedback | Insight |
 |------|---------|----------|---------|
-| [Date] | [Post title/topic] | [What they said/did] | [What this tells you] |
+| 2026-03-18 | Post 15: Company Party / Hiring (Personal Confession + Hiring CTA) | 4,000 impressions — owner rated "good, not excellent" | Personal origin story + business proof recovers reach after posts 11-13 slump. Hiring CTA may cap virality but adds practical value. Best performer since recent slump (10x post 13). |
+| 2026-03-18 | Post 16: Israel #1 AI Usage / Anthropic Data (Industry Analysis) | 4,000 impressions — owner rated "good" | Timely external data (Anthropic ranking) + personal reframe ("applying > building") lands at same 4K as Post 15. Two consecutive 4K posts — this may be the new baseline for "good" content. |
 
 ### Low Performance Signals (What Didn't Land)
 Track posts that underperformed. This is where the real learning happens.

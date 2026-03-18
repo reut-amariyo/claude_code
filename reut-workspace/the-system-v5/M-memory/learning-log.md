@@ -78,6 +78,96 @@ When a pattern here becomes a permanent rule, promote it to `C-core/voice-dna.md
 
 ---
 
+## 2026-03-18 - LinkedIn Post: Israel #1 AI Usage / Anthropic Data (Post 16) - GOOD (4,000 impressions)
+
+### What Happened
+LinkedIn post reframing Anthropic's ranking of Israel as #1 in global AI usage. Hot take: it's not about building the best models, it's about applying them faster. Short punchy format ("Ship. Iterate."). 4,000 impressions — same as Post 15. Owner rated "good."
+
+### What Worked
+
+**1. Timely credible data + personal reframe.**
+Anthropic's ranking is a strong hook — credible source, surprising stat, national pride angle. Lior's reframe ("applying > building") adds the personal lens missing from posts 11-13.
+
+**2. Voice DNA alignment.**
+Short lines, punchy rhythm. "Ship. Iterate." — peak Lior voice. No jargon, no filler.
+
+**3. Medium friction.**
+The "building vs. applying" frame invites disagreement. Light debate territory.
+
+### What Kept It at 4K (Not 10K)
+
+**1. Personal stake is medium, not high.**
+"I see it every day" is observational. Compare to Post 15 where Lior froze at his own party — that's visceral. This post = commentator, not protagonist.
+
+**2. No specific Lior story.**
+Missing: "Here's how MY company applied AI faster and the result was Y." Concrete personal example would elevate from industry take to founder proof.
+
+**3. National framing may limit global reach.**
+Israel-specific angle resonates locally but may not travel to global LinkedIn audience.
+
+### Emerging Pattern: The 4K Baseline
+
+| Post | Archetype | Key Ingredient | Impressions |
+|------|-----------|---------------|-------------|
+| Post 15 | Personal Confession | High personal stake, low friction | 4,000 |
+| Post 16 | Industry Analysis | Medium personal stake, medium friction | 4,000 |
+
+**Hypothesis: 4K is the "good" floor. To break 10K, we need BOTH high personal stake AND high friction in the same post.**
+
+### The Loop
+- [x] Added to feedback.md
+- [x] Analyst report created at O-output/16-social-post-israel-ai-adoption/
+- [ ] Test hypothesis: High personal stake + high friction = 10K+
+- [ ] Track: Is 4K the new baseline or coincidence? Need more data points
+
+---
+
+## 2026-03-18 - LinkedIn Post: Company Party / Hiring (Post 15) - GOOD (4,000 impressions)
+
+### What Happened
+LinkedIn post opening with a frozen moment at the company party, reflecting on the 10-year journey from building at parents' house at age 20 to 240+ employees, Fiverr exit, and one of the fastest-growing eCommerce platforms. Ends with 5 open hiring positions and CTA to link in comments. Owner rated "good, not excellent." 4,000 impressions — 60% below 10K target, but best performer since post 10 and 10x post 13.
+
+### What Worked
+
+**1. Personal stake is back.**
+Scene opener ("I froze at the party") + origin story + concrete proof (240+ employees, Fiverr exit). This is Lior's strongest archetype. Every post with high personal stake outperforms posts without it.
+
+**2. The "zoom out" structure works.**
+Small moment (frozen at party) → big realization (these people work on what I built) → proof (the numbers). This creates emotional arc that hooks readers.
+
+**3. Culture proof through details.**
+"FIFA matches, dogs at our feet, music always on" — these sensory details paint a picture competitors can't copy. Authentic culture signaling.
+
+### What Kept It Below 10K
+
+**1. Hiring CTA may cap virality.**
+Job posts get shared to immediate networks, not broadly. The transition from inspiring story to "we're hiring" shifts the frame from thought leadership to recruitment.
+
+**2. No friction or debate.**
+Everyone agrees company parties are great. No controversial angle to drive comments and algorithm boost.
+
+**3. List-heavy ending.**
+Five job titles with emoji markers reads like a job ad. May reduce organic engagement compared to a provocative ending.
+
+### Pattern Update
+
+| Post | Personal Stake | Impressions | Ratio to Post 13 (baseline) |
+|------|---------------|-------------|----------------------------|
+| Post 11 | NONE | 400 | 1.3x |
+| Post 12 | LOW | 2,000 | 6.7x |
+| Post 13 | ZERO | 300 | 1x |
+| Post 15 | HIGH | 4,000 | 13.3x |
+
+**CONFIRMED (4 posts): Personal stake is the single strongest predictor of reach.** Ready for voice-dna.md promotion.
+
+### The Loop
+- [x] Added to feedback.md
+- [x] Analyst report created at O-output/15-social-post-company-party-hiring/
+- [ ] Promote "personal stake = reach" rule to C-core/voice-dna.md (confirmed across 4 posts)
+- [ ] Test next: Same archetype (personal origin story) but with friction/debate angle to push past 10K
+
+---
+
 ## 2026-03-05 - LinkedIn Post: OpenClaw "Reputation Problem" (Post 13) - UNDERPERFORMED (300 impressions)
 
 ### What Happened
