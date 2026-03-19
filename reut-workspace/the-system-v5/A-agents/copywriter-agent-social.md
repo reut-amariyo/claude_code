@@ -32,6 +32,7 @@ Before starting ANY copywriting work, read these files:
 
 3. **Reference Materials (from B-brain):**
    - `B-brain/content-samples/`, `B-brain/communication-samples/`, or `B-brain/research-samples/` - Examples of your past writing (depends on your track)
+   - `B-brain/autod-products.md` - **Product knowledge base** (MUST read when writing about any product: AutoDS, ShopShark, CreateUGC, BuildYourStore, Simply Reviews, ZipStore)
 
 Then, do the following:
 
@@ -83,6 +84,7 @@ Before delivering any copy:
 - [ ] Are claims specific (with numbers)?
 - [ ] Is it easy to scan?
 - [ ] Would a human say this?
+- [ ] If mentioning any product (AutoDS, ShopShark, CreateUGC, BYS, Simply Reviews, ZipStore) - did I verify features and claims against `B-brain/autod-products.md`?
 
 ---
 
