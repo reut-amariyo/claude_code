@@ -78,6 +78,115 @@ When a pattern here becomes a permanent rule, promote it to `C-core/voice-dna.md
 
 ---
 
+## 2026-03-29 - LinkedIn Post: Jensen Huang / Lex Fridman Summary (Post 19) - FAILED (800 impressions)
+
+### What Happened
+LinkedIn post summarizing 3 takeaways from Jensen Huang's 2.5-hour Lex Fridman interview: token budgets for engineers, 60 direct reports with zero 1-on-1s, and "speed of light" thinking. Ended with "2.5 hours condensed into 60 seconds." 800 impressions.
+
+### Why It Failed
+
+**1. Celebrity commentary = the weakest archetype.**
+Summarizing someone else's interview puts Lior in narrator mode. He's not the protagonist, not even a commentator with a unique angle. Hundreds of creators posted the exact same Jensen takeaways the same week. Zero differentiation.
+
+**2. Zero personal stake — 6th confirmation.**
+No "here's how I tested this at my company." No "I tried 60 direct reports and here's what happened." No connection to Lior's 250-person company, his 100 engineers, his experience. Pure relay of someone else's ideas.
+
+**3. Zero friction.**
+Everyone agrees Jensen is impressive. Everyone agrees AI matters. Nothing to debate = no comments = algorithm doesn't push it.
+
+**4. Listicle + template patterns.**
+"3 things I can't stop thinking about" is a LinkedIn template hook. "What hit you the hardest?" is a generic engagement bait CTA. Senior audience scrolls past this format.
+
+**5. "Condensed into 60 seconds" = content summarizer positioning.**
+This frames Lior as a content creator who watches interviews and repackages them. His ICP follows him for CEO/founder insight, not video summaries. Wrong value proposition.
+
+**6. The Jensen bias disclaimer was the only original thought — buried at the bottom.**
+"Jensen won't stop overhyping AI because 90% of AI revenue flows to NVIDIA" — this is actually a sharp, contrarian take. But it's a throwaway line at the end, not the hook. If the post LED with this friction, it might have worked.
+
+### Updated Performance Map
+
+| Post | Archetype | Personal Stake | Friction | Impressions |
+|------|-----------|---------------|----------|-------------|
+| Post 11 | External Brand Story | NONE | NONE | 400 |
+| Post 13 | Product Defense | ZERO | ZERO | 300 |
+| Post 15 | Personal Confession | HIGH | LOW | 4,000 |
+| Post 16 | Industry Analysis | MEDIUM | MEDIUM | 4,000 |
+| Post 17 | Industry Commentary | ZERO | ZERO | Failed |
+| Post 18 | Personal/Emotional | HIGH | LOW | 1,400 |
+| Post 19 | Celebrity Commentary | ZERO | ZERO | 800 |
+
+**Pattern hardened: Every post below 1,000 has ZERO personal stake. No exceptions in 7 data points.**
+
+### New Archetype to Avoid: Celebrity Commentary
+Summarizing/reacting to famous people's content (Jensen, Elon, Sam Altman interviews) is the lowest-value archetype. Oversaturated, zero differentiation, positions Lior as a fan instead of a peer.
+
+**What could have saved this post:**
+- Lead with the NVIDIA bias angle as the hook (friction)
+- Add: "I run a 250-person company. Here's why Jensen's 60-direct-reports model would/wouldn't work for me" (personal stake)
+- Or skip Jensen entirely and write about Lior's OWN experience with token budgets at his companies
+
+### The Loop
+- [x] Added to feedback.md
+- [ ] New rule: Avoid celebrity commentary archetype entirely — or only use if Lior has a direct personal counter-experience
+- [ ] The buried NVIDIA bias line shows Lior CAN find friction — train agents to surface contrarian angles as hooks, not footnotes
+- [ ] 7 data points now confirm the personal stake rule. Consider promoting to C-core/voice-dna.md as a hard rule
+
+---
+
+## 2026-03-24 - LinkedIn Post: AI Token Tracking as Productivity Metric (Post 17) - FAILED
+
+### What Happened
+LinkedIn post framing AI token usage as the new productivity metric. Hot take: companies now track tokens instead of hours. "One person with AI does the work of three." Paired with a graph/chart image. Post didn't succeed — owner flagged the image (graph) as likely cause.
+
+### Why It Failed
+
+**1. Graph image killed it before anyone read a word.**
+A graph signals "corporate report" or "newsletter promo" — not founder insight. LinkedIn algorithm and users favor personal/human visuals. The image set the wrong expectation and users scrolled past. This is a NEW failure factor we haven't tracked before.
+
+**2. Zero personal stake (again).**
+No "my company" story. No personal experience with token tracking. Pure industry commentary — could be written by any AI influencer. Fails the Lior Test completely.
+
+**3. LinkedIn template patterns = voice violation.**
+"Read that again." + "Not X. Not Y. Z." + "One person... One team..." — these are overused LinkedIn-bro patterns. They contradict Lior's voice DNA (authentic, specific, non-generic). Senior audience recognizes and scrolls past template content.
+
+**4. Unverified claim, no source.**
+"Companies are now tracking tokens" — which companies? No data, no source, no proof. Loses credibility with CEO/founder audience who think critically.
+
+**5. Zero friction.**
+Everyone in AI agrees tokens matter. Nothing to debate = no comments = no algorithm boost.
+
+### New Pattern: Image Type Matters
+
+| Image Type | Post | Result |
+|------------|------|--------|
+| Graph/Chart | Post 17 | Failed |
+| Meme | Post 13 | 300 impressions |
+| Personal context | Post 15 | 4,000 impressions |
+
+**Hypothesis: Image must match voice DNA. Personal copy + personal visuals. Graphs belong in newsletters.**
+
+### Updated Performance Map
+
+| Post | Personal Stake | Friction | Image | Impressions |
+|------|---------------|----------|-------|-------------|
+| Post 11 | NONE | NONE | — | 400 |
+| Post 13 | ZERO | ZERO | Meme | 300 |
+| Post 15 | HIGH | LOW | Personal | 4,000 |
+| Post 16 | MEDIUM | MEDIUM | — | 4,000 |
+| Post 17 | ZERO | ZERO | Graph | Failed |
+
+**5th confirmation: Zero personal stake = failure. No exceptions.**
+
+### The Loop
+- [x] Added to feedback.md
+- [x] Analyst report created at O-output/17-social-post-token-tracking-productivity/
+- [ ] New rule to test: Image type as performance factor (personal > meme > graph)
+- [ ] Stop: LinkedIn template patterns ("Read that again", repetitive structure)
+- [ ] Stop: Unverified claims without source/proof
+- [ ] Promote "image must match voice" to C-core if confirmed in next 2 posts
+
+---
+
 ## 2026-03-18 - LinkedIn Post: Israel #1 AI Usage / Anthropic Data (Post 16) - GOOD (4,000 impressions)
 
 ### What Happened

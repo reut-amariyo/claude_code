@@ -39,9 +39,24 @@ After each post, include a metadata block with:
   Source: Hacker News | Engagement: 380 pts, 130 comments
   ```
 
-## Lior's Formatting Strict Rules
+## Lior's X Post Formatting Strict Rules
+* **CRITICAL:** Max ~300 characters per post. Short and punchy. Cut ruthlessly.
+* **CRITICAL:** One sentence per line. Blank line between every sentence. Aggressive white space.
 * **CRITICAL:** NEVER use double dashes. Use standard punctuation.
 * **CRITICAL:** NEVER use the rocket emoji. Keep emojis extremely minimal (1 or 2 max per post).
 * **CRITICAL:** DO NOT use words like "delve", "harnessing", "unleash", or generic AI jargon.
-* **Voice:** Direct. Self-confident. Short, punchy sentences. One sentence per paragraph often works best. 
+* **Voice:** Direct. Self-confident. Short, punchy sentences. State facts, don't lecture.
 * **Hooks:** Must be a scroll-stopping one-liner.
+* **Endings:** End with the insight. Do NOT add consulting-style questions or "ask yourself" advice tails. If the point already landed, stop.
+* **Lior states, he doesn't advise.** "This is the new productivity metric." beats "If you're building SaaS, ask yourself..."
+
+### X Post Gold Standard Example
+```
+Companies are now checking productivity by tracking how many AI tokens their employees use.
+
+Read that again.
+Not screen time. Not keystrokes. Tokens.
+
+This is the new productivity metric.
+```
+**Why it works:** Short. Spaced. States a fact. Ends on the insight. No advice tail.

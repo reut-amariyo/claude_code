@@ -27,6 +27,7 @@ If Round 1 didn't surface enough builder-specific content, run a second targeted
 Sort all gathered data by engagement (likes, views, comments) before applying the Lior Filter. High engagement signals real friction and real conversation. Low engagement posts are only worth including if they contain a genuinely novel insight.
 
 ## Core Data Sources (Reference List)
+* **Curated Inspiration List:** @NirBenda's following list (https://x.com/NirBenda/following). Use this as a curated pool of relevant tech/SaaS voices. When running Round 2, prioritize accounts from this list for targeted queries.
 * **X Authority Accounts (for Round 2 if needed):** @alliekmiller, @patio11, @bentossell, @swyx, @mattshumer_, @sama, @rowancheung.
 * **AI Companies:** OpenAI, Anthropic, Google DeepMind, Microsoft AI, Meta AI, Hugging Face, Cohere.
 * **Builder Friction:** Hacker News and Hugging Face Daily Papers.
