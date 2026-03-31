@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(source ~/.zshrc)",
+      "Bash(python3:*)",
+      "Bash(python3 -c:*)",
+      "Bash(pip3 install tweepy)",
+      "Bash(pip3 install atproto)",
+      "Bash(pip3 install openai googlesearch-python feedparser)",
+      "Bash(pip3 list)",
+      "WebSearch",
+      "WebFetch(domain:docs.x.ai)",
+      "WebFetch(domain:x.com)",
+      "mcp__scheduled-tasks__list_scheduled_tasks"
+    ]
+  }
+}
