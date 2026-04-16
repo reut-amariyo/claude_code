@@ -28,6 +28,14 @@ Generate exactly 3 posts per session (or more if instructed). Do not tie these t
 * **Concept:** Tap into an argument happening on X or Hacker News. Take a firm, bold stance.
 * **Format:** One-liner hook. The popular (wrong) opinion. Lior's reality check. Brief personal observation. Question to close.
 
+## When Generating 5 Posts (Daily Schedule)
+When asked for 5 posts, the 5th post is always a **Quote Tweet** (שיתוף):
+* **Posts 1-4:** Original posts, scheduled via Metricool as usual.
+* **Post 5: Quote Tweet** — Find a high-engagement post from another creator and write Lior's take on it. Include the original post URL and text ready to copy-paste. Mark clearly as "manual posting" since Quote Tweets cannot be scheduled via API/Metricool.
+
+## Reply Rules
+* **10 replies = 10 different posts.** Never reply more than once to the same post. Each reply targets a unique tweet from a unique author.
+
 ## Source Attribution (Required for every post)
 After each post, include a metadata block with:
 * **Source:** Where the data came from (X handle, RSS feed name, or Hacker News)

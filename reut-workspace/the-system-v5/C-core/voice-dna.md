@@ -57,6 +57,22 @@ If this brand were a person, they would be Lior Pozin:
 **Example paragraph (from Lior):**
 "I never planned to start a business. I was just looking to buy a new cell phone. At 14, I found a Chinese seller offering the model I wanted, $40 cheaper than what I saw on eBay. So, I bought it. Listed it on eBay myself. It sold in a few hours. That single sale taught me two things: I didn't need permission to make money, and every inefficiency is an opportunity."
 
+## The Real Person Principle (APPLIES TO ALL PLATFORMS)
+
+People don't just want opinions and advice. They want to see a real person on a real path, just like them. This is the single most important content principle across X, LinkedIn, Instagram, and every other platform.
+
+**What this means in practice:**
+- **Stories beat opinions.** A specific moment from Lior's life always outperforms a generic take. Even a one-line real experience beats three lines of analysis.
+- **Progress beats perfection.** Showing the messy middle of building something (setup upgrades, failed experiments, real decisions) creates connection that polished content never will.
+- **Journey-style content compounds.** A chain of updates showing real progress over time builds an audience that feels invested in the outcome.
+- **Forced content underperforms.** If the idea doesn't come naturally, the audience can tell. The best posts come from genuine sparks: a real moment, a real insight, a real win or loss.
+
+**The test:** Before any post goes out, ask: "Does this show Lior as a real person who's on the same path as the reader, just a few steps ahead?" If not, add a real story, a real number, or a real moment.
+
+**Pull from:** 9 years building AutoDS, scaling from 0 to 250+ employees, the eBay ban, the VAT crisis, the PE deal walkaway, the Fiverr acquisition, 100 engineers, pricing experiments, delegation failures, hiring mistakes, personal growth moments.
+
+---
+
 ## Content Structure
 
 **Formula:** Hook > Story > Insight > Actionable Tip > Punchy Close/CTA
@@ -77,21 +93,41 @@ Key stories from Lior's journey to use in content:
 2. **Age 12:** Wanted a skateboard, had no money. Started repairing computers for neighbors. Built a school forum that became the entire school's communication hub.
 3. **Age 14:** Found product arbitrage between TinyDeal and eBay. Made first $40 profit in hours. Sold e-cigarettes at school, launched online store, turned parents' apartment into a warehouse.
 4. **Age 21:** eBay blocked his 7-year account. Decided to open 100 eBay accounts. Built software to automate his own stores. Showed it at a conference, other dropshippers wanted access. That became AutoDS.
-5. **VAT Crisis:** Spent every dollar on growth, didn't know about VAT. Advisor wanted $30K. Didn't have it. Took a loan. Created a mentorship program (150 people x $200/month). Learned how to sell. Even organized first AutoDS conference while terrified of public speaking.
-6. **DSM-Tool Competition:** Early fear of the market leader (2 brothers, MBA, connections, money). Had an "internal no." Overtook them in 5 years, then acquired them.
-7. **Rejected PE Deal:** Negotiated 6 months with a private equity firm. Full due diligence, everyone ready to sign. One day before closing, walked away. The CEO's approach was to cut staff and turn AutoDS into a cash cow. Culturally and morally misaligned.
-8. **Fiverr Acquisition:** Chose vision alignment over short-term cash. AutoDS became first dropshipping software acquired by a public company. Lior remains CEO, company runs independently.
+5. **VAT Crisis:** Spent every dollar on growth, didn't know about VAT. Advisor wanted $30K. Didn't have it. Took a loan. Created a mentorship program (150 people x $200/month). Learned how to sell. Even organized first AutoDS conference while terrified of public speaking. Result: doubled the company in one month.
+6. **DSM-Tool Competition:** Early fear of the market leader (2 brothers, MBA, connections, money). Had an "internal no." Overtook them in 5 years, then acquired them. Sat in their Facebook groups daily, read what people loved and hated, built every feature they had, fixed every pain they didn't.
+7. **Rejected PE Deal:** Negotiated 6 months with a private equity firm. Full due diligence, everyone ready to sign. One day before closing, walked away. The CEO's approach was to cut staff and turn AutoDS into a cash cow. Culturally and morally misaligned. "I built this for fun. Selling to someone I don't trust isn't fun."
+8. **Fiverr Acquisition:** Chose vision alignment over short-term cash. AutoDS became first dropshipping software acquired by a public company. Lior remains CEO, company runs independently. Two previous sale attempts failed (one PE deal walked away from, one where the entire banking team quit mid-process). Fiverr deal closed in 23 days.
+9. **"The Con Man":** Friends called Lior a "con man" (נוכל) for years because he was buying cheap and selling for profit as a teen. He didn't care. Over 1 million people have paid AutoDS since. "They knew what I was doing. They just couldn't understand it."
+10. **The 3AM Alarm Clock:** First 2 years of AutoDS - laptop everywhere. Gym, friends' houses, Independence Day celebrations. Set a daily alarm for 3AM to restart servers when Israeli users were asleep. Pure survival mode.
+11. **The Bug That Sent 30 Orders:** Early automation bug would send the same order 30-40 times to suppliers overnight while Lior slept. He'd wake up losing money, scrambling to cancel Amazon orders. "Every bug was a lesson in what happens when you scale before you're ready."
+12. **30 Influencers, 2 Replied, 1 Stood Him Up:** Reached out to 30 YouTube influencers for partnerships. Two replied. Met one at a coffee shop in New York. The guy didn't show up. Lior said "fuck it, I'll be the influencer myself." Started AutoDS YouTube channel, uploaded 100 videos. Channel now has 400K+ subscribers.
+13. **First 5 Years - No Salary:** Reinvested 100% of profits back into the business. Only took a basic survival salary. Didn't even check his personal bank account for years. "The company number was the only number that mattered."
+14. **$30K MRR in 6 Months:** AutoDS hit $30,000 MRR within half a year. But Lior was emotionally detached from the money. "Telling my dad we crossed 100K shekels a month mattered more than the number itself."
+15. **Co-founder Story:** A friend in the US was helping fix bugs remotely. Lior discovered the friend was willing to leave everything to join. Best decision he ever made. "Building a company alone is possible. Long-term, it's brutal. Being a CEO is lonely. A co-founder walks the path with you."
+16. **Validate by Charging, Then Refund:** At AutoDS, when testing new product ideas, Lior creates a landing page, charges real money, then refunds and adds customers to a waitlist. "Free users will say they love it. Only paying customers prove it."
+17. **"Money Is a Game":** Lior's core relationship with money since childhood. "I never thought of it as stress. It was always 'let's play, let's see what else we can do.' That mindset drove everything."
+18. **No Website for 2-3 Years:** AutoDS had no marketing website for the first 2-3 years. Just a logo, a login screen, and a signup form. 100% word of mouth. "All I focused on was: how do I get customers, and how do I make the best product possible. That's it."
+19. **Reading Every Churn Response:** To this day, Lior reads every single response from the "why are you leaving?" survey when users cancel. Most common reason: "I closed my business" - not product issues. "That's when you know you've solved the real problems."
+20. **"Why Can They and Not Me?":** Lior's internal question that drives everything. Applied to competitors, millionaires, billionaires. After selling AutoDS: "How do I become a billionaire now? Because if they can, why can't I?"
 
 ## Core Principles (Lior repeats these)
 
 - No finish line, only the next milestone
 - Problems = opportunities
-- Competition fuels improvement
+- Competition fuels improvement ("I love competitors. They solve the whole game for me.")
 - Speed > perfection
 - Personal growth fuels business growth
 - Simplicity wins over complexity
 - Trust, once broken, is gone
 - Just start, ASAP
+- "If someone else succeeded, why can't I?" (applies to everything: competitors, wealth, scale)
+- Money is a game, not stress
+- Pick one thing and go deep. "תפסת מרובה לא תפסת" (grab too much, catch nothing)
+- Plan quarterly, not 5 years ahead. The world moves too fast
+- Fun is non-negotiable. If it's not fun, don't do it (rejected PE deal for this reason)
+- Advisors/mentors at every stage. "I don't know everything. I find people who do."
+- Solve YOUR OWN pain first. The best products come from scratching your own itch
+- 100% of side projects failed. 100% of focused plans succeeded
 
 ## Inspiration Sources
 

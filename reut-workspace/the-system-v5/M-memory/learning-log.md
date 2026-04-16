@@ -78,6 +78,61 @@ When a pattern here becomes a permanent rule, promote it to `C-core/voice-dna.md
 
 ---
 
+## 2026-04-09 - LinkedIn Post: 10-80-10 AI Marketing Rule (Post 20) - FAILED (800 impressions)
+
+### What Happened
+LinkedIn post about scaling from 1 brand to 5 with the same marketing team, zero hires. Introduces the "10-80-10 rule" framework (10% ideate, 80% AI executes, 10% review & ship). Uses Anthropic, Cursor, and Notion as external proof points. 800 impressions.
+
+### Why It Failed
+
+**1. Framework without personal proof — 7th confirmation of the personal stake rule.**
+The "10-80-10 rule" is a clean framework, but there's no personal story showing it in action. No "last Tuesday we launched brand #4 and here's what happened." No specific moment, no scene, no sensory detail. It reads like a consulting slide, not a founder's journal. The opening ("We went from one brand to five") is a claim, not a story.
+
+**2. External proof points overshadow Lior's own story.**
+3 out of 5 bullet points are about Anthropic, Cursor, and Notion — not AutoDS. The reader remembers the external brands, not Lior. Same failure as Celebrity Commentary (Post 19): Lior becomes the narrator, not the protagonist. Worse: the Anthropic/Cursor stats are widely cited — zero differentiation.
+
+**3. Zero friction — 5th post with zero friction that failed.**
+Everyone in the LinkedIn AI audience agrees that AI helps marketing teams scale. "AI does the heavy lifting" is a consensus take in 2026. Nothing to debate = no comments = algorithm doesn't push it. The CTA ("What's the one task AI cut from hours to minutes for you?") is engagement bait that asks the READER's story instead of telling Lior's.
+
+**4. "Think piece" dismissal undermines credibility.**
+"Not 'AI is coming for your job' think pieces" attacks a strawman nobody on LinkedIn is actually defending anymore. It positions Lior against a 2023 argument, not a 2026 debate. The audience has moved past this.
+
+**5. Framework is too clean/generic.**
+"10-80-10" is catchy but unverifiable. How does the 80% actually work? What does "AI executes campaigns" look like on a Tuesday morning? Without specifics, any AI consultant could tweet this exact framework. Fails the Lior Test: "Could only Lior say this?" — No.
+
+**6. Listicle proof pattern (→ arrows) = template content.**
+"→ Anthropic built..." / "→ Cursor scaled..." / "→ Notion hit..." — this arrow-list format is the LinkedIn equivalent of a Twitter thread. Senior audience recognizes template structure and scrolls past. Same pattern that killed Post 17 and Post 19.
+
+### Updated Performance Map
+
+| Post | Archetype | Personal Stake | Friction | Impressions |
+|------|-----------|---------------|----------|-------------|
+| Post 11 | External Brand Story | NONE | NONE | 400 |
+| Post 13 | Product Defense | ZERO | ZERO | 300 |
+| Post 15 | Personal Confession | HIGH | LOW | 4,000 |
+| Post 16 | Industry Analysis | MEDIUM | MEDIUM | 4,000 |
+| Post 17 | Industry Commentary | ZERO | ZERO | Failed |
+| Post 18 | Personal/Emotional | HIGH | LOW | 1,400 |
+| Post 19 | Celebrity Commentary | ZERO | ZERO | 800 |
+| **Post 20** | **Framework/Industry** | **ZERO** | **ZERO** | **800** |
+
+**Pattern iron-clad: 8 data points. Every post below 1,000 impressions has ZERO personal stake. No exceptions.**
+
+### What Could Have Saved This Post
+- **Add a scene:** "Last month I walked into the office and realized our designer was running campaigns for 3 brands simultaneously. Same person. I pulled up her screen and..." → then introduce the 10-80-10 framework as what emerged.
+- **Cut external proof entirely.** Anthropic/Cursor/Notion are noise. The only proof that matters: what happened at AutoDS, with real numbers.
+- **Add friction:** "Most marketing leaders I talk to are still hiring for scale. They think 5 brands = 5 teams. They're wrong." — this creates debate.
+- **Show the 80% in detail:** Instead of "AI executes content, funnels, designs, campaigns" — show ONE specific example. "Our Q1 campaign for brand #3: AI generated 47 ad variants in 20 minutes. Our designer picked 5. We launched that afternoon."
+
+### The Loop
+- [x] Added to learning log
+- [ ] **HARD RULE (8 confirmations):** Zero personal stake = failure. No post should pass the Strategist without a specific Lior scene/story. Ready for C-core promotion as a BLOCKING rule.
+- [ ] **Pattern confirmed:** Framework posts fail without personal proof showing the framework in action. A framework alone is a slide deck, not content.
+- [ ] **Stop:** Using external company stats (Anthropic, Cursor, Notion) as proof points. They dilute Lior's authority and add zero differentiation.
+- [ ] **Stop:** Arrow-list (→) format. Flagged as template content in Posts 17, 19, and 20.
+
+---
+
 ## 2026-03-29 - LinkedIn Post: Jensen Huang / Lex Fridman Summary (Post 19) - FAILED (800 impressions)
 
 ### What Happened

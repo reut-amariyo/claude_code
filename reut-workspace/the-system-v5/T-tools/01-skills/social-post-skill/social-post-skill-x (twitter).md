@@ -23,13 +23,19 @@ Create X posts that stop the scroll and start conversations. X-specific.
 
 You must write with the understanding that the X algorithm has shifted from "Early Engagement" to "AI-Content Matching":
 
-- **Content > Timing:** Post timing and "Reply Guy" strategies are secondary because the AI reads the content to determine the audience.
+- **AI Reads Your Content:** The algorithm uses AI to read post content and match it to the right audience. Content quality determines distribution, not engagement gaming.
 
-- **The 24-Hour Burn:** Posts are now pushed for up to 24 hours. Write for "Dwell Time" (keeping people reading) rather than just a quick click.
+- **Content > Timing:** Post timing and "Reply Guy" strategies are secondary. The AI decides who sees your post based on what it says, not when you posted or who engaged first.
 
-- **Visual Bias:** Always suggest or incorporate a media element (screenshot, UI, or photo). Media can increase impressions by 5x-10x even if engagement is the same.
+- **The 24-Hour Burn:** Posts get promoted for up to 24 hours. A post that looks dead at 30 minutes can blow up hours later. Write for "Dwell Time" (keeping people reading) rather than quick early engagement.
 
-- **Authentic Journey:** Prioritize progress, setup updates, and "wins" over generic advice. People want the person, not just the opinion.
+- **Engagement Groups Are Dead:** You can't trick the algorithm with coordinated early engagement. The AI evaluates content quality directly. Don't rely on engagement hacks.
+
+- **Visual Bias (CRITICAL):** ALWAYS suggest or incorporate a media element (screenshot, UI, dashboard, or photo). Media increases impressions by 5-10x even with identical engagement numbers. This is because media increases dwell time, which platforms reward. But media must be relevant to the post. Random images hurt. Best case: the media IS the point of the post (a screenshot backing a claim, a result dashboard, a real photo from a moment).
+
+- **Authentic Journey:** Progress updates, setup chains, and real wins consistently outperform generic advice. People want to see a real person on a real path. Journey-style chains (quote-posting your own progress over days/weeks) compound in reach.
+
+- **Don't Force Ideas:** The best posts come from genuine sparks. If the idea takes 5+ minutes to come up with, it will feel forced and underperform. The writing can take time, but the spark should be natural.
 
 ---
 
@@ -158,6 +164,42 @@ Tweet 5: The takeaway + engagement question.
 
 ## 6. X Hook Formulas
 
+**Every hook must pass two gates:**
+1. Make the reader STOP scrolling
+2. Make the reader WANT to read more
+
+### The 5 Hook Elements (Apply to EVERY hook)
+
+Before writing any hook, check these five elements:
+
+1. **Be CLEAR, not Clever** - The reader should instantly know what the post is about. Wordplay and mystery kill reach.
+2. **Specify the WHO** - Call out your audience directly ("If you're a founder...", "CEOs building with AI...")
+3. **Specify the WHAT** - What will they get? A framework, a story, a lesson, a number?
+4. **Specify the WHY** - Why should they care? What's at stake?
+5. **Twist the Knife** - Agitate the problem. Show what they're losing by NOT reading.
+
+### The 6 First Sentence Openers
+
+Pick ONE of these to open every post:
+
+| **Opener Type** | **What it does** | **Lior Example** |
+|---|---|---|
+| **Strong declarative** | Bold statement of fact | "AutoDS processes $150M+ in annual GMV." |
+| **Thought-provoking question** | Makes reader pause to think | "What's more expensive - building the wrong feature or building no feature?" |
+| **Controversial opinion** | Says what people think but won't say | "Most SaaS founders are pricing cowards." |
+| **Moment in time** | Drops into a specific scene | "3 employees quit last month. I'm writing this with a smile." |
+| **Vulnerable statement** | Admits failure or uncertainty | "I spent 2 years avoiding this conversation with my co-founder." |
+| **Weird, unique insight** | Something unexpected that only you know | "The best hire I ever made applied for a different role entirely." |
+
+### Hook Power Moves
+
+- **Credibility stacking:** Lead with proof of effort - "I studied 200 pricing pages", "After 9 years and 250+ employees", "We tested this on 50K users". Specific numbers = instant authority.
+- **Curiosity gap:** Show the outcome first, withhold the how. "We 4x'd retention in 6 weeks. Not with a new feature." Reader HAS to keep reading.
+- **The comparison flip:** Position against the expensive/hard alternative. "College costs $120K to teach writing. These 5 frameworks are free." Makes your content feel 100x more valuable.
+- **Demographic lock-in:** Name your exact audience in the first line. "If you're a SaaS founder doing $1-10M ARR" - everyone else scrolls past, but YOUR people stop dead.
+
+### Hook Formulas
+
 ### Formula 1: The Contrarian
 ```
 Everyone says [common advice].
@@ -204,6 +246,33 @@ It's [what it actually is].
 Next target: [what's coming].
 ```
 
+### Formula 7: The Credibility Stack
+```
+Over the past [timeframe]...
+
+I [specific effort with number].
+
+[Surprising finding or result].
+
+[Value promise]:
+```
+
+### Formula 8: The Demographic Lock
+```
+If you're a [specific audience]
+
+[Read this / Stop scrolling / This is for you]:
+```
+
+### Formula 9: The Curiosity Gap
+```
+[Big outcome or result].
+
+But not because of [obvious reason].
+
+[Setup for the unexpected reason]:
+```
+
 ---
 
 ## 7. X-Specific Engagement Rules
@@ -234,6 +303,7 @@ When the user provides a topic, you must reply with:
 Before publishing:
 
 - [ ] Under 280 characters (or structured as a thread)?
+- [ ] Hook uses one of the 6 opener types (declarative/question/controversial/moment/vulnerable/weird)?
 - [ ] Hook would make YOU stop scrolling?
 - [ ] One clear idea/message?
 - [ ] No hashtags in body text?

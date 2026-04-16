@@ -20,9 +20,11 @@
 
 ## Recurring Daily Tasks
 ### Every Day
+- [ ] Post/schedule 1 story on Instagram ⚡ URGENT
+- [ ] 5 posts on X (Twitter)
 - [ ] 10 replies/comments on X (200+ likes or 10K+ views, SaaS/AI/startup topics only)
-- [ ] Post/schedule 1 story on Instagram
-- [ ] 3-5 LinkedIn comments/replies on relevant posts
+- [ ] 3 LinkedIn comments/replies on relevant posts
+- [ ] Grow LinkedIn network (connection requests)
 
 ### Monday
 - [ ] Plan weekly content (4 high-impact posts across platforms)
@@ -32,6 +34,7 @@
 - [ ] LinkedIn post (publish or schedule)
 
 ### Wednesday
+- [ ] LinkedIn post (publish or schedule)
 - [ ] Instagram reel or carousel (70% Lior-specific content)
 
 ### Thursday
@@ -42,37 +45,47 @@
 - [ ] Instagram reel or carousel
 - [ ] Weekly review: what worked, what didn't
 
-## Lior's Tasks
-<!-- Add tasks from Lior here with deadlines -->
-<!-- Format: - [ ] Task description (deadline: DATE) (added: DATE) -->
+### Monthly
+- [ ] Internal message to AutoDS employees (tie to holidays, board meetings, quarter summaries)
 
-## Carryover Tasks
-<!-- Tasks not completed yesterday, moved here automatically -->
+## Asana Board — One-Time Tasks
 
-## One-Time Q2 Tasks
-- [ ] 🔴 BRAND BOOK: Schedule meeting with stylist for brand direction (April)
-- [ ] 🔴 BRAND BOOK: Build first draft in Stitch (April)
-- [ ] 🔴 BRAND BOOK: Find professional designer to refine/finalize brand book (April-May)
-- [ ] 🔴 BRAND BOOK: Define visual identity — colors, fonts, photography style, logo usage (Q2)
-- [ ] 🔴 WEBSITE: Build on Base44 AFTER brand book is ready (depends on brand book completion)
-- [ ] 🔴 WEBSITE: Speaker/authority site + content hub (bio, speaking, press, blog, newsletter)
-- [ ] Prepare FuckUp Night TLV content (deadline: May)
-- [ ] Research podcasts in Toronto for Shopify conference (deadline: June)
-- [ ] Contact Eran Bar Gefen for podcast (April)
-- [ ] Contact Yasmin Lokatch for podcast (April)
-- [ ] Follow up on SaaStr Annual speaker application
-- [ ] Follow up on LEAP conference (April 9-12)
-- [ ] Follow up on SaaStock USA (April 15-16)
-- [ ] Set up first Instagram paid promotion - NIS 200 budget (April)
-- [ ] Start LinkedIn reply strategy with Claude (April)
-- [ ] Set up automated X posts via Metricool (April, first week)
-- [ ] Start working with Tomtzu on X follower growth strategy (April)
-- [ ] Review and update 3 pinned Instagram posts (April)
-- [ ] Define 2-3 recurring content series for Instagram (April)
-- [ ] IG strategy shift: less trends, more value content that drives follows & retention (April)
-- [ ] Find IG content supplier Reut is excited about (ongoing)
-- [ ] Pitch Toronto-based podcasts (May-June)
-- [ ] Fuckup Night TLV — get Lior confirmed as speaker (English event) (April-May)
-- [ ] Side conferences — start outreach in May
-- [ ] TNW — follow up on response (April)
-- [ ] Shopify conference — keep looking for contact (ongoing)
+### 🔴 URGENT
+- [ ] Madball post on Tuesday (deadline: 2026-04-14)
+- [ ] Post + story about breathwork workshop in Sweden
+
+### To Do
+- [ ] Send Ben the "HaKessef" (money updates) ideas
+- [ ] Change Lior's website domain
+- [ ] TED — Talk to Lior Zoref about how to get in
+- [ ] Start working with Tommy (designer)
+- [ ] Start paid promotion test with Amir
+- [ ] Switch Instagram provider — Aviv or 5WPR
+- [ ] AI designer — get proposal for Lior's AI videos
+- [ ] Find Upwork provider for IG + TikTok execution
+- [ ] Prepare 10 LinkedIn posts for Lior's approval
+- [ ] Instagram collabs with other accounts
+- [ ] Pitch Lior to tech/startup podcasts (Israel, NYC, Toronto)
+- [ ] AI project — NotebookLM social hooks generator
+- [ ] Talk to X & LinkedIn provider Lior sent
+- [ ] Talk to Nick — LinkedIn profile network collab
+- [ ] Connect Shield (LinkedIn analytics)
+- [ ] Smooth automation migration to Claude Enterprise
+- [ ] Martel conference — option to speak
+- [ ] Fuckup Night TLV (English) — option to speak
+- [ ] Lior's home setup — make a post about it
+
+### Waiting on Lior
+- [ ] Suggest Instagram bio change (needs Lior's approval)
+
+### Podcast Targets (Pitch Lior)
+- [ ] Kinso Podcast
+- [ ] The Diary Of A CEO
+- [ ] The Pocket (Chris Griffin)
+- [ ] Founder2Founder
+
+### Backlog
+<!-- Move tasks here that are on hold -->
+
+### Complete
+<!-- Move completed tasks here with date -->

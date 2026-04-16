@@ -18,12 +18,15 @@ Create LinkedIn posts that stop the scroll and start conversations. LinkedIn-spe
 
 ## LinkedIn Post Basics
 
+**The #1 Rule (All Platforms):** People don't want more opinions and advice. They want to see a real person on a real path, just like them. Every post should show Lior as a real human - through specific stories, real numbers, genuine moments, and honest progress. Stories beat opinions. Progress beats perfection. Forced content always underperforms.
+
 **What works on LinkedIn:**
 - Personal stories with professional insights
 - Contrarian takes with evidence
 - Practical frameworks people can use immediately
 - Vulnerability that teaches
 - Transformation stories (before/after)
+- Journey-style updates showing real progress over time
 
 text length- 
 A post should be as long as it needs to be to provide value, but as short as possible to respect the reader's time.
