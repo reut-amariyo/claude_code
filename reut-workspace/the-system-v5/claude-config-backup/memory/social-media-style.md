@@ -1,5 +1,17 @@
 # Social Media Post Writing Style
 
+## The Real Person Principle (ALL PLATFORMS - Most Important Rule)
+
+People don't follow accounts for opinions. They follow real people on a real path, just like them. This applies to X, LinkedIn, Instagram, Bluesky - everywhere.
+
+- **Stories beat opinions.** A specific moment always outperforms a generic take
+- **Progress beats perfection.** The messy middle creates more connection than polished advice
+- **Journey content compounds.** Chains of updates showing real progress build invested audiences
+- **Forced content fails.** If the idea doesn't come naturally, the audience can tell. Best posts come from genuine sparks
+- **The test:** Does this show Lior as a real person on the same path as the reader? If not, add a real story, a real number, or a real moment
+
+---
+
 ## Key Patterns (from reference examples)
 
 ### Structure
@@ -37,6 +49,19 @@
 - Don't over-explain - trust the reader to fill in gaps
 - Hiring posts / CTAs: don't list every role - just say "We're hiring" and point to the link
 - A great post is 6-8 lines, not 15-20
+
+### "AI agents Paperclip" post - 10,000 impressions, 12 likes, 0 comments
+- **Topic:** Testing Paperclip (AI agent company simulator) for 2 weeks, finding that multi-agent handoffs lose context like a telephone game
+- **Why impressions were high:**
+  - Viral topic (AI agents replacing humans) stops the scroll
+  - Strong narrative arc: hook, build-up, twist, insight
+  - Balanced take (not hype, not doom) = credible
+- **Why engagement was low:**
+  - Closed ending ("Humans aren't going anywhere" + "greatest time to be building") - people agree silently, nothing to add
+  - Post delivers the full answer: story + problem + conclusion = no gap for the reader to fill
+  - Too balanced - no friction, no debate trigger
+- **Fix:** End with an open question or a sharper take. Leave a gap the reader wants to fill. "Article" format = impressions. "Conversation starter" format = comments.
+- **Pattern:** High-impression low-engagement = strong content but closed loop. Always leave an entry point for the reader.
 
 ## Winning Posts (High Performance)
 
@@ -102,6 +127,11 @@
 ### Don't: End with a prediction instead of engagement
 - "A year from now..." invites no action from the reader
 - **Fix:** End with a question, a CTA, or a link
+
+### Don't: Close the loop completely on viral topics
+- When a post gives hook + story + problem + full conclusion, the reader has nothing to add
+- Agreeable statements ("Humans aren't going anywhere") get nods, not comments
+- **Fix:** Leave one gap open. End with a question or a sharper take that invites pushback. High impressions + low engagement = the content worked but the ending sealed the conversation shut
 
 ### Don't: Write too long with uniform blocks
 - If the post is a wall of same-sized paragraphs, it reads heavy

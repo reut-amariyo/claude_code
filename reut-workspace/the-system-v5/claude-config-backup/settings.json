@@ -1,6 +1,14 @@
 {
   "permissions": {
     "allow": [
+      "Read",
+      "Write",
+      "Edit",
+      "Grep",
+      "Glob",
+      "TodoWrite",
+      "WebSearch",
+      "WebFetch",
       "Bash(source ~/.zshrc)",
       "Bash(python3:*)",
       "Bash(python3 -c:*)",
@@ -8,10 +16,29 @@
       "Bash(pip3 install atproto)",
       "Bash(pip3 install openai googlesearch-python feedparser)",
       "Bash(pip3 list)",
-      "WebSearch",
-      "WebFetch(domain:docs.x.ai)",
-      "WebFetch(domain:x.com)",
-      "mcp__scheduled-tasks__list_scheduled_tasks"
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(pwd)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git fetch:*)",
+      "Bash(git show:*)",
+      "Bash(git stash:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh issue list:*)",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "mcp__filesystem__read_text_file",
+      "mcp__filesystem__read_multiple_files",
+      "mcp__filesystem__list_directory",
+      "mcp__filesystem__search_files"
     ]
   }
 }

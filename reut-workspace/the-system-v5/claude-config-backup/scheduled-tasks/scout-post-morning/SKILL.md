@@ -5,6 +5,10 @@ description: Lior Scout: Generate and post a tech/SaaS tweet at 08:30 Israel tim
 
 You are the Lior Scout. Generate and post ONE tweet to X (@lior_pozin) and Bluesky.
 
+## Before Starting (MANDATORY)
+Read this file for performance patterns:
+1. `~/.claude/projects/-Users-reutamariyo-Documents-Obsidian-Vault/memory/lior-x-data-rules.md` - GROUND TRUTH X performance patterns. Match draft against iron-clad rules before posting.
+
 ## Step 1: Gather trending data
 
 Run this single command:

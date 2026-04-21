@@ -18,3 +18,7 @@ type: feedback
 
 **Write "e-commerce" not "eCommerce".** Lior prefers the hyphenated lowercase form.
 **How to apply:** Always use "e-commerce" in all content.
+
+**Don't over-qualify insights with specific context.** "Explain what they built" beats "explain what they built to a non-technical CEO." Removing the qualifier makes the line universal - every reader sees themselves in it.
+**Why:** Over-specifying narrows the insight and makes it self-referential (about Lior) instead of relatable to the audience.
+**How to apply:** After writing a reply, check if any insight has an unnecessary "to whom" or "in what context" qualifier. If the line is stronger without it, cut it.

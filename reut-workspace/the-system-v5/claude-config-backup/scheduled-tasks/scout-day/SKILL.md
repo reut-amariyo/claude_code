@@ -14,6 +14,7 @@ Read these files from the project at "/Users/reutamariyo/Documents/Obsidian Vaul
 3. `C-core/voice-dna.md` - How Lior sounds
 4. `C-core/project-brief.md` - What Lior does and who he serves
 5. `M-memory/learning-log.md` - What worked and what didn't
+6. `~/.claude/projects/-Users-reutamariyo-Documents-Obsidian-Vault/memory/lior-x-data-rules.md` - GROUND TRUTH X performance patterns. Match draft against iron-clad rules before posting.
 
 ## Publishing Schedule (Israel Time)
 
