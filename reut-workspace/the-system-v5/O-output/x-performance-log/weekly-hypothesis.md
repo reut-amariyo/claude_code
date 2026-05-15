@@ -1,46 +1,80 @@
-# Weekly X Hypothesis — Week of 2026-05-06
+# Weekly X Hypothesis — Week of 2026-05-15 (PIVOT)
 
-Generated: 2026-05-06 21:15
-Approved by Reut: 2026-05-06
+Generated: 2026-05-15 21:30
+Approved by Reut: 2026-05-15
 
-## Context
+## Context — strategic pivot
 
-Third consecutive weekly collapse. Avg original impressions: 306 → 105 → 67 → **19.3**. Zero posts cleared 50 imp this past week. The scout-day automation has been shipping news-headline-first posts for three weeks straight and the audience has tuned out. We need a structural pivot, not another tweak.
+The 2026-05-14 hypothesis (Lior-first memoir scenes, 0 news-reaction) is being **overridden mid-week** by Reut's direct decision. Reason: 5 consecutive weeks of flatline (306 → 67 → 19.3 → 16.1 → 21.3 avg impressions) with the memoir direction proving correct on hook form but failing to drive distribution. The personal-scene approach makes Lior look isolated from the conversations his ICP is actually having today. The reply-pipeline analysis (today) confirmed 29 of 29 reply attempts have failed historically (403 reply-restriction) — meaning audience expansion via replies is not the lever we thought it was either.
+
+**The new bet:** the account is failing because Lior's posts read as monologue while the X feed is a debate. Stop trying to "earn" attention via personal vulnerability. Instead, **curate the takes that are already winning on X and re-voice them in Lior's tone.** Trend supplies the attention; tone supplies the differentiation.
+
+This is an experimental pivot. Measure for 7 days against the memoir baseline. If avg impressions don't move above 100 by 2026-05-22, revert to memoir.
 
 ## Winning topic theme
 
-**Lior-first scenes from inside AutoDS.** Specific moments — a hire he regretted, a feature he killed, a 3 AM production fire, a customer call that changed his roadmap. The week's only post that crossed 30 imp opened with a question, not a company name ("How do you turn the worst mistake of your career into a personal brand win?" — 31 imp).
+**Take-driven posts that ride trending X conversations in Lior's lanes.** Source candidates from X posts with proven engagement in the last 24h:
+- 200+ likes OR 5K+ views OR 20+ active replies, AND
+- topic in: SaaS economics, vertical AI, AI agents at work, founder-led sales, pricing, hiring/firing, scaling 0→1, dropshipping/eCom platforms, tech M&A.
 
-Avoid: any post structured as "Company X just did Y, here's what I learned at AutoDS." That structure is exhausted.
+The post **almost paraphrases the trending take.** Lior's voice is the wrapper, not the source. Tone differentiation = short sentences, contrarian flip in the last line, zero fluff, zero "I" hooks.
+
+Personal anchor is **optional, not required.** Use it only when it sharpens the take in one line. Default to no personal anchor.
 
 ## Winning perspective
 
-**Storytelling.** The data is too thin to claim "winners" with confidence — but storytelling is the lane we have not actually tried this quarter on X (story posts are <10% of the last 60 days). News-reaction is confirmed dead. Contrarian/hot-take requires a stake we haven't earned with the current audience size. Default to storytelling for this week and measure.
+**Conviction / hot-take voiced as curator of the best ideas already moving on X.** Not Lior-the-storyteller. Not Lior-the-coach. **Lior-the-operator-who-also-reads-X.**
 
-Why: of the 24 posts this week, the only one that opened with a personal scene rather than a company name (the PocketOS thread opener) was the second-best performer at 31 imp. Every other top-5 by score also pivoted to AutoDS-specific receipts within the first 3 lines.
+Why: scenes were ICP-isolating. Curated takes plant Lior inside the conversations his ICP is already in. The take is borrowed; the voicing is unique.
 
 ## Winning vehicle
 
-**Story post (single, self-contained).** Not threads — Rule 7 confirmed thread decay (31 → 17 → 11 → 3 imp in the same chain). Not value-tweets, not listicles. One scene, one punch, one open question.
+**Single take post (4-6 lines, take-first).** Same structural rule as before — single, self-contained, no thread chains. New: first line carries the take, not a Lior scene. Last line carries the contrarian flip or sharp landing.
 
 ## Style mix for next 5 posts
 
-- 2 × story (Lior-first scene, AutoDS-anchored)
-- 1 × vulnerability (a decision he regrets, a loss, an imposter moment)
-- 1 × midas (a number-driven receipt: hires, dollars, years, churn rate)
-- 1 × conviction (one strong opinion — no hedging — on a topic Lior owns: SaaS pricing, vertical AI, founder-led sales)
-- 0 × news-reaction
+- 5 × take-driven (each anchored to one trending X post with proven engagement)
+- 0 × pure memoir (the old default — paused this week as the A/B test)
 - 0 × thread / multi-post chain
-- 0 × doc/framework
+- 0 × tool-tip / productivity
+- 0 × aphorism without anchor
+- 0 × company-name opener
+- Personal anchor: optional in 0-2 of the 5. Default no anchor.
+
+Inside the 5, vary the take type:
+- 1-2 × industry shift ("X is moving from A to B")
+- 1-2 × contrarian commentary on a popular thread
+- 1 × prediction (18-month or year-end call)
+
+## Required structure for each post
+
+1. **Line 1:** the take. Plain assertion of what's true now or what's changing. No scene, no "9 years ago," no AutoDS.
+2. **Lines 2-3:** one supporting beat — why this is true, or why most people miss it.
+3. **Last line:** Lior-style flip or sharp landing. Examples: "Today it looks crazy. 18 months from now it looks obvious." / "The market that broke you is the market that needs you."
 
 ## What to avoid
 
-1. **Opening with a company name.** No "OpenAI just…", "Microsoft is…", "Anthropic refused…". The hook must be a Lior scene, number, or question.
-2. **The PE-walkaway story.** Used 3+ times in 7 days, performed flat (11–35 imp range). Rest it.
-3. **Multi-vendor / vendor-lock-in takes.** Used 3+ times this week, all under 25 imp. Audience has heard it.
-4. **Pure URL posts.** The May 3 URL-only post hit 4 imp.
-5. **Thread chains.** See Rule 7.
+1. **Personal-scene openers** ("3 AM. My code change…" / "At 21, eBay banned…"). Paused for this 7-day experiment.
+2. **Company-name openers** ("OpenAI just…", "Anthropic just…"). Still dead from prior weeks.
+3. **"It's not X, it's Y" contrast pattern.** ChatGPT watermark. Banned across all hypotheses.
+4. **Em dashes, en dashes, double dashes.** Hyphens only.
+5. **"I" hooks** in line one. Even take-driven posts use a declarative or reader-facing opener.
+6. **Tool-tip posts** ("Claude just dropped…"). Banned indefinitely.
+7. **Thread chains.** Banned indefinitely.
+8. **Aphorism-only posts.** Always need either a take or a real anchor.
+9. **Crypto, politics, hardware/robotics, image-gen hype, engagement-bait giveaways.** Hard filter on source.
+10. **Shopify criticism.** Shopify is a key AutoDS partner.
 
-## Reply pipeline note
+## Measurement plan
 
-Metricool does NOT track replies posted via `reply_x.py` (replies go directly to X). The single reply in this week's log is a tracking artifact, not a delivery failure. Reply volume to be audited from X directly, not Metricool.
+- Track avg impressions of the 5 take-driven posts over 7 days.
+- Compare against the 5 memoir-style posts from the prior week (baseline avg = 21.3 imp).
+- Decision point: 2026-05-22 (next Sunday). If avg > 100 → keep direction, refine. If avg ≤ 50 → revert to memoir. If 50-100 → extend test one more week.
+
+## Reply pipeline status (updated 2026-05-15)
+
+- 29 of 29 historical reply attempts failed with 403 Forbidden (reply restriction on target tweets).
+- `reply_x.py` updated to log full error type + message on failure.
+- `find_reply_target.py` updated with topic filter + reply_settings verification (currently 401 on Free tier — falls back gracefully).
+- Decision pending: upgrade X dev tier to Basic ($200/mo) to enable reply_settings pre-check.
+- Until decided, expect replies to keep failing at high rate. The take-driven pivot is the higher-leverage bet this week.
