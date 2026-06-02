@@ -13,6 +13,21 @@ from pathlib import Path
 LOG_FILE = Path.home() / ".scout-replies-bluesky-log.json"
 
 
+def is_mostly_latin(text):
+    """True if the post's letters are predominantly Latin script.
+
+    Replaces the old `ord(c) > 0x2000` check, which wrongly flagged English
+    posts containing a curly apostrophe, em dash, ellipsis, arrow, or emoji as
+    non-English. We look only at alphabetic characters so punctuation/emoji are
+    ignored, and require >=80% of them to be ASCII letters.
+    """
+    letters = [c for c in text if c.isalpha()]
+    if not letters:
+        return False  # no real text to reply to (likely just a link/emoji)
+    ascii_letters = sum(1 for c in letters if c.isascii())
+    return ascii_letters / len(letters) >= 0.8
+
+
 def load_replied_uris():
     if not LOG_FILE.exists():
         return set()
@@ -56,8 +71,8 @@ def main():
                     text = post.record.text if post.record else ""
                     likes = post.like_count or 0
                     replies = post.reply_count or 0
-                    # Skip non-English (basic heuristic)
-                    if any(ord(c) > 0x2000 for c in text[:50]):
+                    # Skip non-English (Latin-script heuristic)
+                    if not is_mostly_latin(text):
                         continue
                     # Skip very low engagement
                     if likes < 3:

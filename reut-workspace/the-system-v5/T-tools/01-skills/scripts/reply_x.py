@@ -14,6 +14,18 @@ from datetime import datetime, timedelta
 LOG_FILE = Path.home() / ".scout-replies-log.json"
 CANDIDATES_CACHE = Path.home() / ".scout-reply-candidates-cache.json"
 BLOCKED_AUTHORS_FILE = Path.home() / ".scout-blocked-authors.json"
+WHITELIST_FILE = Path.home() / ".scout-reply-whitelist.json"
+
+
+def load_whitelist():
+    """Return set of lowercased curated open-reply handles, or empty set."""
+    if not WHITELIST_FILE.exists():
+        return set()
+    try:
+        data = json.loads(WHITELIST_FILE.read_text())
+        return {h.lower().lstrip("@") for h in data.get("handles", [])}
+    except (json.JSONDecodeError, KeyError):
+        return set()
 
 # Persistent reply log for x-analyst-weekly. Metricool does NOT track replies posted
 # via this script, so this is the only source of truth for true reply volume/quality.
@@ -41,6 +53,11 @@ def add_blocked_author(author, tweet_id, reason):
     if not author:
         return
     handle = author.lower().lstrip("@")
+    # Never block a curated open-reply account. A transient 403 must not erode the
+    # whitelist (see [[x-reply-pipeline-whitelist-collapse]], 2026-05-20).
+    if handle in load_whitelist():
+        print(f"NOTE: {author} is whitelisted — 403 ignored, not blocking.", file=sys.stderr)
+        return
     try:
         data = json.loads(BLOCKED_AUTHORS_FILE.read_text()) if BLOCKED_AUTHORS_FILE.exists() else {}
     except json.JSONDecodeError:
@@ -114,6 +131,27 @@ def main():
     except Exception as e:
         error_msg = str(e)
         print(f"REPLY FAILED: {type(e).__name__}: {error_msg}", file=sys.stderr)
+        # Resolve the author up front so per-handle outcomes can be aggregated later
+        # (whitelist pruning — see reply_whitelist_stats.py). is_403 distinguishes a
+        # reply-restriction (a fact about the handle) from a transient/other error.
+        author = lookup_author_from_cache(tweet_id)
+        is_403 = "403" in error_msg or "Forbidden" in error_msg
+        # ACCOUNT-LEVEL restriction (NOT the target's fault). Verified 2026-05-23:
+        # @lior_pozin is in an X-imposed limited state — replies AND quotes to
+        # strangers 403 with this wording even when the target's reply_settings is
+        # "everyone" (write perms + Premium confirmed fine). It is X anti-spam on a
+        # low-trust/automated account, not a per-author setting. So we must NOT block
+        # the author for it. See [[x-reply-pipeline-whitelist-collapse]].
+        account_restricted = (
+            "not been mentioned or otherwise engaged" in error_msg
+            or "not part of the conversation thread" in error_msg
+        )
+        if account_restricted:
+            failure_kind = "account_reply_restricted"
+        elif is_403:
+            failure_kind = "403_reply_restricted"
+        else:
+            failure_kind = "other"
         # Log failed tweets too so we skip them next time. Capture the error so we can
         # diagnose later — the 29 historical "failed" entries were unanalyzable without it.
         log = load_log()
@@ -129,6 +167,8 @@ def main():
             "replied_at": now_iso,
             "status": "failed",
             "tweet_id": tweet_id,
+            "author": author,
+            "failure_kind": failure_kind,
             "original_url": f"https://x.com/i/status/{tweet_id}",
             "reply_text": reply_text,
             "error_type": type(e).__name__,
@@ -136,10 +176,20 @@ def main():
         })
         print(f"Logged failed tweet {tweet_id} to skip next time.")
 
-        # If this was a 403 reply-restriction, block the author for future runs.
-        # Closes the loop: every restricted-reply author teaches the scout to skip them.
-        if "403" in error_msg or "Forbidden" in error_msg:
-            author = lookup_author_from_cache(tweet_id)
+        if account_restricted:
+            # Loud, unambiguous signal so a human (or the scout) stops retrying. No
+            # author is blocked — the restriction is on THIS account, not the target.
+            print(
+                "ACCOUNT REPLY-RESTRICTED: X is blocking this account's replies/quotes "
+                "to non-engaged authors (anti-spam limited state). This is NOT fixable by "
+                "retrying or by curating the whitelist. The scout-reply-x scheduled tasks "
+                "are disabled for this reason; re-run reply_whitelist_stats.py or the live "
+                "API test to check if the restriction has lifted before re-enabling.",
+                file=sys.stderr,
+            )
+        elif is_403:
+            # A genuine per-author/tweet 403 (different wording). Teach the scout to skip
+            # that author next time. (Whitelisted handles are exempted in add_blocked_author.)
             if author:
                 add_blocked_author(author, tweet_id, "403 reply-restricted")
                 print(f"Blocked author {author} from future scout runs.")
@@ -149,6 +199,7 @@ def main():
         sys.exit(1)
 
     # Log the successful reply (dedup log + persistent performance log)
+    author = lookup_author_from_cache(tweet_id)
     log = load_log()
     log.append({"tweet_id": tweet_id, "replied_at": now_iso, "status": "success"})
     save_log(log)
@@ -156,6 +207,7 @@ def main():
         "replied_at": now_iso,
         "status": "success",
         "tweet_id": tweet_id,
+        "author": author,
         "original_url": f"https://x.com/i/status/{tweet_id}",
         "reply_id": str(reply_id),
         "reply_url": f"https://x.com/lior_pozin/status/{reply_id}",

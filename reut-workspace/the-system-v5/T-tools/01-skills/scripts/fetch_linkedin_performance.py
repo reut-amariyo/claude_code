@@ -1,10 +1,25 @@
 #!/usr/bin/env python3
 """
+⚠️ DEPRECATED 2026-06-01 — DO NOT RUN ON A SCHEDULE.
+
+This Metricool->JSONL pipeline was a SECOND, redundant LinkedIn tracker.
+The canonical LinkedIn performance log is now the Markdown file:
+    ~/.claude/projects/.../memory/lior-performance-log.md
+maintained daily by the `lior-linkedin-daily-scan` scheduled task
+(Chrome scrape of Creator Analytics). That system is healthy and richer.
+
+The `linkedin-analyst-daily` cron referenced below was NEVER created, which
+is why posts.jsonl went stale (frozen 2026-05-03) — it was an orphan, not a
+bug. Reut chose to retire this pipeline (2026-06-01) to avoid two drifting
+logs. Kept on disk (read-only) for historical data only. Do not resurrect
+without a deliberate decision to consolidate the two systems.
+
+---
+
 Fetch Lior's LinkedIn post performance from Metricool and upsert into
 O-output/linkedin-performance-log/posts.jsonl.
 
 Credentials live in ~/.config/metricool/.env (chmod 600).
-Run nightly via scheduled task `linkedin-analyst-daily`.
 
 Usage:
     python3 fetch_linkedin_performance.py                  # last 30 days
@@ -92,7 +107,15 @@ def main() -> int:
     parser.add_argument("--days", type=int, default=30, help="Days back from today (ignored if --from/--to given)")
     parser.add_argument("--from", dest="start", help="Start date YYYY-MM-DD")
     parser.add_argument("--to", dest="end", help="End date YYYY-MM-DD")
+    parser.add_argument("--force", action="store_true", help="Override the deprecation guard (this pipeline is retired)")
     args = parser.parse_args()
+
+    if not args.force:
+        sys.exit(
+            "DEPRECATED (2026-06-01): this Metricool->JSONL LinkedIn tracker is retired.\n"
+            "Canonical log is lior-performance-log.md via the `lior-linkedin-daily-scan` task.\n"
+            "Re-run with --force only if you deliberately want to backfill the historical JSONL."
+        )
 
     env = load_env(ENV_PATH)
     token = env.get("METRICOOL_API_TOKEN") or os.environ.get("METRICOOL_API_TOKEN")
