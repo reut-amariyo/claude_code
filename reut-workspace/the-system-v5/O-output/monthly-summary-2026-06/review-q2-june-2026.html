@@ -1,0 +1,474 @@
+<title>Lior Pozin · June + Q2 2026 Review</title>
+<style>
+  :root{
+    --ink:#16140f; --paper:#fbfaf7; --card:#ffffff;
+    --sand:#c8b591; --sand-deep:#8a7550; --sand-wash:#f3eee2;
+    --line:#e4dfd3; --muted:#6e6a5e;
+    --good:#1e7f4f; --good-wash:#e9f4ee;
+    --bad:#b3402e; --bad-wash:#f9ece9;
+    --warn:#9a7b1f; --warn-wash:#f7f1de;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);margin:0;line-height:1.55}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px 96px}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+  header{padding:64px 0 40px;border-bottom:2px solid var(--ink)}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--sand-deep);margin-bottom:14px}
+  h1{font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 10px;font-weight:800;text-wrap:balance}
+  .sub{color:var(--muted);font-size:16px;max-width:62ch}
+  .tagline{font-family:var(--mono);font-size:12px;color:var(--sand-deep);margin-top:18px}
+
+  section{padding:52px 0 8px}
+  .sec-label{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:26px}
+  .sec-label .idx{font-family:var(--mono);font-size:13px;color:var(--sand-deep)}
+  .sec-label h2{font-size:24px;margin:0;font-weight:800}
+  .sec-label .note{font-size:13px;color:var(--muted);margin-left:auto}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px}
+  .tile{background:var(--card);border:1px solid var(--line);padding:18px 18px 15px}
+  .tile .v{font-family:var(--mono);font-size:30px;font-weight:700;letter-spacing:-.02em}
+  .tile .l{font-size:13px;color:var(--muted);margin-top:4px}
+  .tile .d{font-family:var(--mono);font-size:12px;margin-top:8px}
+  .up{color:var(--good)} .down{color:var(--bad)} .flat{color:var(--warn)}
+  .tile.hero-tile{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .tile.hero-tile .l{color:#cfc9ba}
+  .tile.hero-tile .v{color:var(--sand)}
+
+  .tbl-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line)}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+  th{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);text-align:left;font-weight:600;padding:12px 16px;border-bottom:2px solid var(--ink);background:var(--sand-wash)}
+  td{padding:11px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num{text-align:right;white-space:nowrap}
+  th.c-num{text-align:right}
+  .row-total td{background:var(--sand-wash);font-weight:700}
+
+  .pill{display:inline-block;font-family:var(--mono);font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap}
+  .pill.ok{background:var(--good-wash);color:var(--good)}
+  .pill.miss{background:var(--bad-wash);color:var(--bad)}
+  .pill.part{background:var(--warn-wash);color:var(--warn)}
+  .pill.bonus{background:var(--ink);color:var(--sand)}
+
+  .bars{display:grid;gap:12px;background:var(--card);border:1px solid var(--line);padding:22px}
+  .bar-row{display:grid;grid-template-columns:120px 1fr 84px;gap:14px;align-items:center}
+  .bar-row .name{font-size:13.5px;font-weight:600}
+  .bar-track{background:var(--sand-wash);height:22px;position:relative}
+  .bar-fill{position:absolute;top:0;bottom:0;left:0;background:var(--ink)}
+  .bar-fill.under{background:var(--bad)}
+  .bar-goal{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--sand-deep)}
+  .bar-row .mult{font-family:var(--mono);font-size:13px;font-weight:700;text-align:right}
+  .bars .legend{font-size:12px;color:var(--muted);margin-top:4px}
+
+  .plat{background:var(--card);border:1px solid var(--line);margin-bottom:18px}
+  .plat-head{display:flex;align-items:baseline;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--sand-wash);flex-wrap:wrap}
+  .plat-head h3{margin:0;font-size:18px;font-weight:800}
+  .plat-head .role{font-family:var(--mono);font-size:11.5px;color:var(--sand-deep)}
+  .plat-head .verdict{margin-left:auto}
+  .plat-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .plat-col{padding:18px 20px}
+  .plat-col + .plat-col{border-left:1px solid var(--line)}
+  .plat-col h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);margin:0 0 10px;font-weight:600}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:5px 0;font-size:14px;border-bottom:1px dashed var(--line)}
+  .kv:last-child{border-bottom:none}
+  .kv b{font-family:var(--mono);font-weight:700;text-align:right}
+  .plat-note{padding:14px 20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted);background:#fdfcf9}
+  .plat-note b{color:var(--ink)}
+
+  .demo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+  .demo-card{background:var(--card);border:1px solid var(--line);padding:20px}
+  .demo-card h3{margin:0 0 4px;font-size:16px;font-weight:800}
+  .demo-card .layer{font-family:var(--mono);font-size:11px;color:var(--sand-deep);letter-spacing:.08em;margin-bottom:14px}
+  .dline{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;padding:4px 0;border-bottom:1px dashed var(--line)}
+  .dline:last-child{border-bottom:none}
+  .dline b{font-family:var(--mono);text-align:right;white-space:nowrap}
+  .demo-head{margin:0 0 8px;font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em}
+
+  .callout{border:1px solid var(--line);border-left:4px solid var(--sand-deep);background:var(--card);padding:18px 20px;margin:14px 0;font-size:14.5px}
+  .callout.good{border-left-color:var(--good)}
+  .callout.bad{border-left-color:var(--bad)}
+  .callout h4{margin:0 0 6px;font-size:14.5px}
+
+  ul.tight{margin:8px 0 0;padding-left:20px;font-size:14.5px}
+  ul.tight li{margin-bottom:7px}
+  ul.tight li::marker{color:var(--sand-deep)}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:760px){.plat-body,.two-col{grid-template-columns:1fr}.plat-col + .plat-col{border-left:none;border-top:1px solid var(--line)}}
+
+  footer{margin-top:64px;border-top:2px solid var(--ink);padding-top:18px;font-size:12.5px;color:var(--muted)}
+  footer .src{font-family:var(--mono);font-size:11.5px;line-height:1.8}
+</style>
+
+<div class="wrap" lang="en">
+
+<header>
+  <div class="kicker">LIOR POZIN · PERSONAL BRAND · Q2 2026 REVIEW</div>
+  <h1>June 2026 Recap + Q2 vs. OKRs</h1>
+  <p class="sub">All platforms: Instagram, Facebook, TikTok, LinkedIn, X and YouTube. Numbers pulled directly from each platform's native analytics on July 3, 2026. Prepared by Reut.</p>
+  <div class="tagline">[ life is beta ]</div>
+</header>
+
+<!-- 01 bottom line -->
+<section>
+  <div class="sec-label"><span class="idx">01</span><h2>The Quarter's Bottom Line</h2><span class="note">April – June 2026</span></div>
+  <div class="tiles">
+    <div class="tile hero-tile">
+      <div class="v num">23.0M</div>
+      <div class="l">Views / impressions this quarter, all platforms</div>
+      <div class="d up">Target: 2.4M · 9.6x the goal</div>
+    </div>
+    <div class="tile">
+      <div class="v num">+78K</div>
+      <div class="l">Net new followers this quarter</div>
+      <div class="d up">FB +66.7K · IG +8.2K · LI +3K</div>
+    </div>
+    <div class="tile">
+      <div class="v num">166K</div>
+      <div class="l">Total followers across platforms today</div>
+      <div class="d up">Most of it built this quarter</div>
+    </div>
+    <div class="tile">
+      <div class="v num">15.1M</div>
+      <div class="l">Facebook views — breakout quarter, now added to reporting</div>
+      <div class="d up">+ YouTube channel launched</div>
+    </div>
+    <div class="tile">
+      <div class="v num">Jul 29</div>
+      <div class="l">Nasdaq Tower billboard, Times Square — booked</div>
+      <div class="d up">+ personal website launched</div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 scorecard -->
+<section>
+  <div class="sec-label"><span class="idx">02</span><h2>Q2 vs. OKRs</h2><span class="note">Target vs. actual</span></div>
+
+  <div class="bars" aria-label="Average monthly performance as a multiple of target">
+    <div class="bar-row"><span class="name">Total / month</span><div class="bar-track"><div class="bar-fill" style="width:96%"></div><div class="bar-goal" style="left:10%"></div></div><span class="mult">×9.6</span></div>
+    <div class="bar-row"><span class="name">TikTok</span><div class="bar-track"><div class="bar-fill" style="width:43%"></div><div class="bar-goal" style="left:10%"></div></div><span class="mult">×4.3</span></div>
+    <div class="bar-row"><span class="name">Instagram</span><div class="bar-track"><div class="bar-fill" style="width:35%"></div><div class="bar-goal" style="left:10%"></div></div><span class="mult">×3.5</span></div>
+    <div class="bar-row"><span class="name">LinkedIn</span><div class="bar-track"><div class="bar-fill" style="width:24%"></div><div class="bar-goal" style="left:10%"></div></div><span class="mult">×2.4</span></div>
+    <div class="bar-row"><span class="name">X</span><div class="bar-track"><div class="bar-fill under" style="width:5.4%"></div><div class="bar-goal" style="left:10%"></div></div><span class="mult">×0.54</span></div>
+    <div class="legend">Actual monthly average for the quarter, as a multiple of the monthly OKR target. Gold line = target (×1). Facebook excluded — it had no target.</div>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>KR</th><th>Target</th><th>Actual</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>O1-KR1</b> · Reach</td>
+        <td>800K+ impressions/month across platforms by end of Q2 (+10%)</td>
+        <td>7.7M/month average · June alone: 6.1M · May peak: ~12.4M</td>
+        <td><span class="pill ok">HIT ×9.6</span></td>
+      </tr>
+      <tr>
+        <td><b>O1-KR2</b> · Podcast + stage</td>
+        <td>Confirmed podcast appearance + 1 Tier-1 stage by end of Q2</td>
+        <td>Steady inbound of Hebrew podcast invitations — declined by choice to protect the global/English positioning; a Tier-1 international show not secured yet — carried into Q3 as a focus. Conference in advanced talks; meanwhile: <b>Nasdaq billboard (Jul 29) booked</b></td>
+        <td><span class="pill part">CARRIED TO Q3</span></td>
+      </tr>
+      <tr>
+        <td><b>O2-KR1</b> · AI workflow</td>
+        <td>5+ consistent, on-brand pieces per week</td>
+        <td>System running across all platforms + automated mirroring to secondary channels + weekly data-driven learning loop</td>
+        <td><span class="pill ok">HIT</span></td>
+      </tr>
+      <tr>
+        <td><b>O2-KR2</b> · Brand Book v1</td>
+        <td>Codified brand identity by June 30</td>
+        <td>V8 strategy + Visual Identity completed and adopted; full Brand Book in progress — completion targeted for Q3</td>
+        <td><span class="pill part">IN PROGRESS</span></td>
+      </tr>
+      <tr>
+        <td><b>Bonus</b> · Beyond the OKR</td>
+        <td>—</td>
+        <td>Facebook breakout — added to reporting (15.1M views, followers ~4.3K → 71.9K) · YouTube channel launched · personal website</td>
+        <td><span class="pill bonus">ABOVE PLAN</span></td>
+      </tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- 03 june snapshot -->
+<section>
+  <div class="sec-label"><span class="idx">03</span><h2>June 2026 at a Glance</h2><span class="note">June 1–30</span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Platform</th><th class="c-num">Views / impressions</th><th class="c-num">Engagement</th><th class="c-num">Net followers</th><th>vs. May</th></tr></thead>
+    <tbody>
+      <tr><td><b>Facebook</b></td><td class="num">3,248,396</td><td class="num">110,108</td><td class="num">+12,684</td><td>Down from May's viral peak + active profile restriction; followers +20.8% in one month</td></tr>
+      <tr><td><b>Instagram</b></td><td class="num">2,441,469</td><td class="num">129,030</td><td class="num">+4,740</td><td>3.8x the monthly target; 91% of views from non-followers</td></tr>
+      <tr><td><b>TikTok</b></td><td class="num">316,300</td><td class="num">11,286</td><td class="num">—</td><td>-21% vs May, still 5.3x the target</td></tr>
+      <tr><td><b>LinkedIn</b></td><td class="num">51,839</td><td class="num">873</td><td class="num">+1,009</td><td>Impressions reverted from viral May, but engagement rate jumped 3.4x</td></tr>
+      <tr><td><b>X</b></td><td class="num">21,202</td><td class="num">975</td><td class="num">+50</td><td>New agency model: 10x efficiency per post</td></tr>
+      <tr><td><b>YouTube</b></td><td class="num" colspan="2">Channel launched — first long-form video live</td><td class="num">—</td><td>"Everything I learned from selling my company to Fiverr"</td></tr>
+      <tr class="row-total"><td>Total</td><td class="num">6,079,206</td><td class="num">252,272</td><td class="num">+18,483</td><td>7.6x the monthly reach target</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout good">
+    <h4>The thing that matters about June</h4>
+    Reach came down from May — but <b>every metric we own went up</b>: +18.5K new followers, higher engagement rates on LinkedIn and X, profile visits climbing. May bought reach; June converted it into a permanent audience.
+  </div>
+</section>
+
+<!-- 04 platforms deep dive -->
+<section>
+  <div class="sec-label"><span class="idx">04</span><h2>Platform Deep Dive</h2><span class="note">June + quarter</span></div>
+
+  <!-- Instagram -->
+  <div class="plat">
+    <div class="plat-head"><h3>Instagram</h3><span class="role">HOME PLATFORM · VISUAL QUALITY LAYER</span><span class="verdict"><span class="pill ok">×3.5 TARGET</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>JUNE (LAST 30 DAYS)</h4>
+        <div class="kv"><span>Views</span><b>2,441,469</b></div>
+        <div class="kv"><span>Accounts reached</span><b>1,491,939</b></div>
+        <div class="kv"><span>Interactions</span><b>129,030</b></div>
+        <div class="kv"><span>Profile visits</span><b>35,410</b></div>
+        <div class="kv"><span>Net followers in June</span><b class="up">+4,740 (+7.3%)</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>QUARTER (90 DAYS)</h4>
+        <div class="kv"><span>Views</span><b>6,754,895</b></div>
+        <div class="kv"><span>Accounts reached</span><b>3,709,541</b></div>
+        <div class="kv"><span>Interactions</span><b>308,471</b></div>
+        <div class="kv"><span>Net followers in Q2</span><b class="up">+8,248 (+13.6%)</b></div>
+        <div class="kv"><span>Total followers</span><b>70,998</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Top content:</b> "Age 15" carousel — 2M views (May 22) · "10 startups that don't exist yet" reels — 392K + 174K · the exit post "$92M, Bootstrapped" — 44.5K. <b>Bright spot:</b> 91% of views come from non-followers — a strong discovery engine — and June alone delivered 57% of the quarter's follower growth: conversion is improving.</div>
+  </div>
+
+  <!-- Facebook -->
+  <div class="plat">
+    <div class="plat-head"><h3>Facebook</h3><span class="role">MASS-REACH LAYER · FIRST QUARTER IN REPORTING</span><span class="verdict"><span class="pill bonus">BREAKOUT · FOLLOWERS ×16</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>JUNE</h4>
+        <div class="kv"><span>Views</span><b>3,248,396</b></div>
+        <div class="kv"><span>Engagement</span><b>110,108</b></div>
+        <div class="kv"><span>Shares</span><b>6,398</b></div>
+        <div class="kv"><span>Net followers in June</span><b class="up">+12,684 (+20.8%)</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>QUARTER</h4>
+        <div class="kv"><span>Views</span><b>15,058,972</b></div>
+        <div class="kv"><span>Engagement</span><b>647,592</b></div>
+        <div class="kv"><span>Shares</span><b>38,218</b></div>
+        <div class="kv"><span>Net followers in Q2</span><b class="up">+66,725</b></div>
+        <div class="kv"><span>Total followers</span><b>71,924 (+1,559%)</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Top content:</b> "never worry about money again" reel — 9.05M views and 499K engagement (May 11) · "TRUTH" — 4.52M (May 20). <b>Heads-up:</b> an automated Facebook profile restriction is active ("activity may not follow our rules") — appeal in progress. Even under the restriction: +12.7K followers in June on a steady daily climb.</div>
+  </div>
+
+  <!-- TikTok -->
+  <div class="plat">
+    <div class="plat-head"><h3>TikTok</h3><span class="role">COMPLEMENTARY VIDEO REACH</span><span class="verdict"><span class="pill ok">×4.3 TARGET</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>JUNE</h4>
+        <div class="kv"><span>Video views</span><b>316,300</b></div>
+        <div class="kv"><span>Likes</span><b>9,500</b></div>
+        <div class="kv"><span>Shares</span><b>1,700</b></div>
+        <div class="kv"><span>Profile views</span><b>4,200</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>QUARTER</h4>
+        <div class="kv"><span>Video views</span><b class="up">769,700 (+257%)</b></div>
+        <div class="kv"><span>Likes</span><b class="up">24,300 (+318%)</b></div>
+        <div class="kv"><span>Shares</span><b>4,200</b></div>
+        <div class="kv"><span>Followers</span><b>12,000</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Monthly arc:</b> April ~52K → May ~402K → June 316K. Even after the May correction, June is 6x April and 5.3x the monthly OKR target.</div>
+  </div>
+
+  <!-- LinkedIn -->
+  <div class="plat">
+    <div class="plat-head"><h3>LinkedIn</h3><span class="role">QUALITY LAYER · THE FOUNDER AUDIENCE</span><span class="verdict"><span class="pill ok">×2.4 TARGET</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>JUNE</h4>
+        <div class="kv"><span>Impressions</span><b>51,839</b></div>
+        <div class="kv"><span>Members reached</span><b>22,727</b></div>
+        <div class="kv"><span>Engagement</span><b>873</b></div>
+        <div class="kv"><span>Engagement rate</span><b class="up">1.68% (3.4x May)</b></div>
+        <div class="kv"><span>Net followers in June</span><b class="up">+1,009 (+10%)</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>QUARTER (EXACT DAILY DATA)</h4>
+        <div class="kv"><span>Impressions</span><b>393,897</b></div>
+        <div class="kv"><span>Apr / May / Jun</span><b>49K / 293K / 52K</b></div>
+        <div class="kv"><span>Engagement</span><b>2,685</b></div>
+        <div class="kv"><span>Net followers in Q2</span><b class="up">+3,031 (+39%)</b></div>
+        <div class="kv"><span>Total followers</span><b>10,786</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Top content this quarter:</b> newsjack "Google just dropped a Base44 killer" — 147K · "Anthropic's workflow" — 93K · "AI agents replaced my team" — 30K · the birthday/exit post — 19K and top-3 by engagement. <b>Consistency anchor:</b> +1K followers every single month, independent of virality.</div>
+  </div>
+
+  <!-- X -->
+  <div class="plat">
+    <div class="plat-head"><h3>X</h3><span class="role">MID-PIVOT TO A NEW MODEL</span><span class="verdict"><span class="pill miss">54% OF TARGET</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>JUNE</h4>
+        <div class="kv"><span>Impressions</span><b>21,202</b></div>
+        <div class="kv"><span>Engagement</span><b class="up">975 (ER 4.6%)</b></div>
+        <div class="kv"><span>Bookmarks</span><b class="up">232 (from 7 in May)</b></div>
+        <div class="kv"><span>Posts</span><b>33</b></div>
+        <div class="kv"><span>Impressions per post</span><b class="up">642 — 10x May</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>QUARTER</h4>
+        <div class="kv"><span>Impressions</span><b>64,662</b></div>
+        <div class="kv"><span>Apr / May / Jun</span><b>36K / 7K / 21K</b></div>
+        <div class="kv"><span>Engagement</span><b>1,644</b></div>
+        <div class="kv"><span>Net followers</span><b>+88</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Honestly: the miss of the quarter</b> — 21.6K average vs. a 40K target. What changed: mid-quarter we replaced volume (119 posts/month) with a lean, curated agency model. The response was immediate: a third of the posts, 3x May's impressions, 10x efficiency per post, and the best follower month of the quarter. <b>Q3 = scale what June proved.</b></div>
+  </div>
+
+  <!-- YouTube -->
+  <div class="plat">
+    <div class="plat-head"><h3>YouTube</h3><span class="role">NEW · LONG-FORM AUTHORITY LAYER</span><span class="verdict"><span class="pill bonus">LAUNCHED</span></span></div>
+    <div class="plat-body">
+      <div class="plat-col">
+        <h4>STATUS</h4>
+        <div class="kv"><span>Channel</span><b>Live</b></div>
+        <div class="kv"><span>First video</span><b>Published</b></div>
+      </div>
+      <div class="plat-col">
+        <h4>FIRST VIDEO</h4>
+        <div class="kv"><span>Title</span><b style="white-space:normal;text-align:right">"Everything I learned from selling my company to Fiverr"</b></div>
+      </div>
+    </div>
+    <div class="plat-note"><b>Why it matters:</b> YouTube is the long-form authority platform — where a founder story compounds for years, feeds search and AI answers, and turns viral short-form viewers into a deep audience. Launched with the strongest possible opening story: the exit.</div>
+  </div>
+</section>
+
+<!-- 05 demographics -->
+<section>
+  <div class="sec-label"><span class="idx">05</span><h2>Where the Audience Is</h2><span class="note">Demographics by platform — each layer has a job</span></div>
+  <div class="demo-grid">
+    <div class="demo-card">
+      <h3>LinkedIn</h3>
+      <div class="layer">QUALITY LAYER — DECISION MAKERS</div>
+      <p class="demo-head">WHO THEY ARE</p>
+      <div class="dline"><span>Founders / Co-Founders / CEOs</span><b>28%</b></div>
+      <div class="dline"><span>Decision-making seniority</span><b>~75%</b></div>
+      <div class="dline"><span>Companies of 2–200 people</span><b>58%</b></div>
+      <div class="dline"><span>Software / Tech / IT</span><b>42%</b></div>
+      <p class="demo-head" style="margin-top:14px">WHERE THEY ARE</p>
+      <div class="dline"><span>Tel Aviv</span><b>10%</b></div>
+      <div class="dline"><span>NYC · Miami · London · SF · Toronto</span><b>12%+</b></div>
+      <div class="dline"><span>Following the account</span><b>Shopify · Fiverr · Google · AWS</b></div>
+    </div>
+    <div class="demo-card">
+      <h3>Instagram</h3>
+      <div class="layer">HOME PLATFORM — GLOBAL YOUNG-BUSINESS AUDIENCE</div>
+      <p class="demo-head">WHO THEY ARE</p>
+      <div class="dline"><span>Ages 25–34</span><b>35.4%</b></div>
+      <div class="dline"><span>Ages 18–24</span><b>23.7%</b></div>
+      <div class="dline"><span>Ages 25–44 (core business demo)</span><b>53%</b></div>
+      <p class="demo-head" style="margin-top:14px">WHERE THEY ARE (ALL 71K FOLLOWERS)</p>
+      <div class="dline"><span>United States — #1 country</span><b>19.9%</b></div>
+      <div class="dline"><span>India</span><b>17.2%</b></div>
+      <div class="dline"><span>Brazil · Israel · Pakistan</span><b>4.6% · 3.8% · 2.2%</b></div>
+      <div class="dline"><span>Top cities: NYC · Delhi · LA</span><b>Broad global spread</b></div>
+    </div>
+    <div class="demo-card">
+      <h3>Facebook</h3>
+      <div class="layer">MASS-REACH LAYER — TOP OF FUNNEL</div>
+      <p class="demo-head">WHO THEY ARE</p>
+      <div class="dline"><span>Ages 25–44</span><b>60%</b></div>
+      <div class="dline"><span>Mostly men</span><b>✓</b></div>
+      <p class="demo-head" style="margin-top:14px">WHERE THEY ARE</p>
+      <div class="dline"><span>United States — #1 country</span><b>47.2%</b></div>
+      <div class="dline"><span>Nigeria · Philippines · S. Africa</span><b>33.5%</b></div>
+      <div class="dline"><span>UK + Canada</span><b>8.6%</b></div>
+      <div class="dline"><span>Top cities</span><b>Lagos · Cape Town · Nairobi</b></div>
+    </div>
+  </div>
+  <div class="callout">
+    <h4>How to read this</h4>
+    Each platform plays a different role in the funnel: <b>Facebook</b> generates mass awareness (US 47%, broad audience), <b>Instagram</b> converts it into a young global business audience with New York as its #1 city, and <b>LinkedIn</b> holds the audience that matters most — 28% founders and CEOs, three-quarters decision-makers, spread across Tel Aviv, New York, Miami and London. The brand is building width and depth at the same time.
+  </div>
+</section>
+
+<!-- 06 what we built -->
+<section>
+  <div class="sec-label"><span class="idx">06</span><h2>What We Built Beyond the Numbers</h2><span class="note">Infrastructure that compounds</span></div>
+  <ul class="tight">
+    <li><b>Lior's personal website</b> — live. The first owned asset outside the platforms.</li>
+    <li><b>Nasdaq Tower billboard, Times Square</b> — booked, going live July 29. A brand moment that seeds a full Q3 content campaign.</li>
+    <li><b>YouTube channel launched</b> — first long-form video live: "Everything I learned from selling my company to Fiverr". Opens the long-form authority lane.</li>
+    <li><b>Brand strategy V8 + Visual Identity</b> — approved and adopted: archetype, ICP, writing principles and a unified content mix across all platforms.</li>
+    <li><b>Facebook scaled from ~4K to 72K followers</b> — the channel existed but was dormant; this quarter it broke out and joined the reporting as a core reach layer.</li>
+    <li><b>Content & learning system</b> — automated mirroring to secondary channels (Bluesky, Threads), daily performance logging, and a weekly loop that feeds next week's content.</li>
+  </ul>
+</section>
+
+<!-- 07 q3 -->
+<section>
+  <div class="sec-label"><span class="idx">07</span><h2>Q3 Proposal — Based on What the Quarter Taught Us</h2><span class="note">For discussion & approval</span></div>
+
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>Platform</th><th class="c-num">Baseline (June)</th><th class="c-num">Commit / month</th><th class="c-num">Stretch / month</th><th>Followers / month</th></tr></thead>
+    <tbody>
+      <tr><td>Instagram</td><td class="num">2.44M</td><td class="num">1.8M</td><td class="num">2.8M</td><td>+4K → on track for 100K total by end of Q4</td></tr>
+      <tr><td>Facebook</td><td class="num">3.25M*</td><td class="num">2.5M</td><td class="num">6.0M</td><td>+8K</td></tr>
+      <tr><td>TikTok</td><td class="num">316K</td><td class="num">250K</td><td class="num">400K</td><td>—</td></tr>
+      <tr><td>LinkedIn</td><td class="num">52K</td><td class="num">55K</td><td class="num">120K</td><td>+900</td></tr>
+      <tr><td>X</td><td class="num">21K</td><td class="num">30K</td><td class="num">45K</td><td>—</td></tr>
+      <tr><td>YouTube</td><td class="num">new</td><td class="num" colspan="2">Cadence + baseline to be set after first videos</td><td>—</td></tr>
+      <tr class="row-total"><td>Total</td><td class="num">6.1M</td><td class="num">4.5M+ / month</td><td class="num">9M+</td><td>+12K/mo → 190K+ total by Sep 30</td></tr>
+    </tbody>
+  </table></div>
+  <p style="font-size:12.5px;color:var(--muted);margin-top:8px">* Under an active profile restriction (appeal in progress). Commits are floors built on June — the one month of Q2 with no viral hit and an active restriction. Consistency beats a peak: 4.5M+ every month = 13.5M+ for the quarter, 5.6x the previous target, defensible with zero virals. Stretch reflects a month with one viral — any viral, restriction lift, or billboard halo puts us ahead of plan.</p>
+
+  <div class="two-col" style="margin-top:16px">
+    <div class="callout">
+      <h4>Q3 focus</h4>
+      <ul class="tight">
+        <li><b>AI-generated videos — new lane launching in Q3:</b> script → AI avatar/voice → publish on IG and TikTok, with a quality bar of 8K+ average views per AI reel</li>
+        <li><b>Scale the collab motion:</b> the "Money Updates" (עדכוני הכסף) collabs drove significant traffic — find international equivalents and run more of them</li>
+        <li><b>More content, more Trial Reels:</b> increase overall publishing volume and use IG Trial Reels to test with non-followers before full release</li>
+        <li><b>Nasdaq billboard (Jul 29)</b> — a cross-platform content campaign around the moment</li>
+        <li><b>2-year exit anniversary</b> — anchor post using the proven format (200K+ last time)</li>
+        <li><b>YouTube</b> — establish a long-form cadence off the launch video</li>
+        <li><b>Brand Book</b> — complete and roll out</li>
+      </ul>
+    </div>
+    <div class="callout">
+      <h4>Course corrections</h4>
+      <ul class="tight">
+        <li><b>Facebook:</b> appeal the restriction + reduce automation pace until it clears</li>
+        <li><b>X:</b> scale the agency model June validated — quality over volume</li>
+        <li><b>LinkedIn:</b> 1–2 weekly AI-newsjack slots + personal stories for conversion</li>
+        <li><b>Podcasts:</b> target Tier-1 international (English) shows — one recorded appearance in Q3; keep declining off-focus Hebrew inbound</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Sources & methodology</b></p>
+  <p class="src">
+    Instagram: Professional Dashboard (30/90-day ranges — June ≈ Jun 3–Jul 3, quarter ≈ Apr 4–Jul 3) + mobile app (followers & demographics, exact ranges) ·
+    LinkedIn: Creator Analytics + AggregateAnalytics daily export Apr 1–Jun 30 ·
+    X: daily CSV export Apr 1–Jun 30 ·
+    Facebook: Professional Dashboard, exact custom ranges ·
+    TikTok: TikTok Studio, exact custom ranges ·
+    YouTube: channel launch, July 2026.<br>
+    Collected & compiled July 3, 2026 · Prepared by Reut Amariyo · Full raw data: monthly-summary-2026-06/data-collected.md
+  </p>
+</footer>
+
+</div>

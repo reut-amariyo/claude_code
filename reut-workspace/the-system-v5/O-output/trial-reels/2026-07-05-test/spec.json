@@ -1,0 +1,21 @@
+{
+  "source": "/Users/reutamariyo/Downloads/4.2.26/C0030.MP4",
+  "start": "00:09:55",
+  "duration": 13,
+  "crop_x_frac": 0.62,
+  "scrim": 0.55,
+  "hook": ["10 AI businesses", "you can start with", "$0 in 2026"],
+  "items": [
+    "AI receptionist for clinics",
+    "Chargeback fighter for online stores",
+    "AI bookkeeper for creators",
+    "Review responder for hotels",
+    "Churn rescue agent for SaaS",
+    "AI grant writer for nonprofits",
+    "Bill negotiator for small businesses",
+    "Tenant screener for landlords",
+    "Inventory forecaster for Shopify stores",
+    "Import compliance checker"
+  ],
+  "footer": "Comment \"BUILD\""
+}

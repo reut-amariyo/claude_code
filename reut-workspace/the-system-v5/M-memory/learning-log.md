@@ -2103,6 +2103,155 @@ Copywriter Agent now has concrete examples to follow. Next content piece should:
 
 ---
 
+## 2026-07-08 - External Swipe: "I cloned my brain inside Claude" (10-step listicle)
+
+### Source
+Hand-picked by Reut: external LinkedIn post she liked that performed very well.
+Creator-lane AI-tips listicle. Full text saved for reference in this entry's analysis.
+
+### Why It Worked (mechanics)
+- Hook is 6 words with a named entity and a provocative claim: "I cloned my brain inside Claude."
+- Line 2 is explicit save-bait: "the exact 10-step system (save this)" - saves are the highest-intent signal and LinkedIn rewards them with cold reach.
+- Enemy line creates an instant status gap: "Most people use Claude like a search bar." Reader feels behind, keeps reading to catch up.
+- Every step is an imperative verb + a one-line payoff. Fully skimmable in 15 seconds.
+- Named current features (Cowork, Skills, Memory, Projects) - specificity reads as insider credibility and rides the AI wave.
+- "Output:" block paints the end state before the CTA.
+- P.S. is a diagnostic engagement gap: "Which step are you missing?" invites one-word numeric comments - lowest possible friction to comment.
+
+### Why It Does NOT Transfer to Lior As-Is
+- CEO relevance filter: pure productivity/tool-tip lane, banned for Lior. Only viable frame is the 93K MD-to-HTML exception: insider intel + operator confession + strategic close.
+- Stack mismatch: Lior's public stack is Hermes Agent + Codex since June 2026. A Claude-workflow post contradicts it.
+- Arrow-expansion lines (the ↳ family) killed three Lior posts at ~800 impressions. Works in creator niche, fails with Lior's operator audience.
+- Recognizable AI-guru template; conflicts with Architect of Growth archetype.
+
+### Patterns Worth Stealing (lane-adjusted)
+- **Save-bait via "the exact system" promise** in line 2, delivered as a numbered artifact.
+- **"Most people use X like Y" enemy line** as the post's vs. - cheap, effective status gap.
+- **Diagnostic P.S. question** that can be answered with a number - engagement gap that scales comments.
+- Note: 10 steps is even and it still worked; save-bait round numbers can override the odd-number preference when the promise is "complete system".
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [ ] Promoted to C-core (only if a Lior adaptation ships and wins)
+
+---
+
+## 2026-07-08 - External Swipe: Linas Beliunas fake-Claude meme post (1,144 reactions)
+
+### Source
+Hand-picked by Reut. Linas Beliunas, fintech/AI newsletter creator, 22h old at capture:
+1,144 reactions / 97 comments / 18 reposts. Fake Claude screenshot: user asks
+"how much p's are in strawperry?", Claude replies "No. I'm sick of this shit. Go ask Grok."
+Text: 4 short lines riding the Claude Fable 5 launch + Anthropic paid-credits news,
+punchline "If this isn't AGI, I don't know what is." P.S. links his newsletter.
+
+### Why It Worked (mechanics)
+- Cultural-meme visual family carries 100% of the post. Text is only setup + punchline; the image is the content. Sub-5-second consumption.
+- Newsjack timing: posted into the Fable 5 launch wave when every feed was already primed on the topic.
+- The joke is craft, not lazy: "Thought for 0s", the deliberate "strawperry" typo, and the Grok name-drop each add a laugh layer. Details sell fake screenshots.
+- Brand-war tribalism (Claude vs Grok) generates riff comments; top comment extends the joke, which feeds the thread.
+- Funnel structure: meme = cold-reach vehicle, P.S. newsletter link = conversion. Post was edited, likely link added after traction to dodge early link suppression.
+- "If this isn't AGI, I don't know what is" is the shareable caption line - people repost the post to say the line themselves.
+
+### Lior Fit
+- BETTER fit than tool-listicles: cultural meme is a confirmed visual family in the Top 12 playbook, and AI-model newsjacks pass the CEO filter as market commentary.
+- Watch-outs: needs an operator stake or founder angle in the text or it flatlines for Lior (recap-post lesson generalizes: humor with zero stake underperforms for operator audiences). A model-launch meme is commentary, not workflow content, so the Hermes+Codex stack rule is not violated - but never let a meme imply his daily stack is something it isn't.
+- No newsletter, so the P.S. funnel becomes an open question or reflection close.
+
+### Patterns Worth Stealing
+- **Meme as the post, text as the caption.** 4 lines max, punchline early, zero explanation of the joke.
+- **Newsjack window discipline**: meme posts only work inside the news wave, not a week later.
+- **Edit-in-the-link (or link in P.S.) after traction** instead of link-in-body at publish.
+- **One shareable caption line** people can repost as their own take.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [ ] Promoted to C-core (if a Lior meme-newsjack ships and wins)
+
+---
+
+## 2026-07-08 - External Swipe: "Knowing your worth" salary story post
+
+### Source
+Hand-picked by Reut. Career-story post, Indian creator audience (salaries in lakhs).
+Story: friend Sharan discovers a same-role colleague earns nearly double, gets curious
+instead of bitter, upskills, jumps firms, income leaps in one move. Second act flips to
+the manager's seat: unassigned-problem-solvers can ask 20-40% hikes and get them
+"because losing them would cost him more."
+
+### Why It Worked (mechanics)
+- Topic with maximum emotional TAM: salary injustice. Nearly every reader has lived the "colleague earns more for the same job" moment. Envy + injustice = guaranteed emotional entry.
+- Named character + hyper-specific numbers (4.5 vs 8 lakhs) make it feel true. Local currency units signal authenticity to the target audience.
+- The reframe IS the lesson: "He did not complain about it. He got curious about it." One sentence carries the entire value.
+- Mid-post rehook: "knowing your worth is only half of it" resets attention and doubles dwell time.
+- The killer section is the seat flip: reader gets the OTHER side of the table - what makes a manager pay 40% more. Insider intel is the highest-value currency in career content.
+- Cold honest motive: "Not because he is generous. Because losing them would cost him more." Cynical-but-true beats inspirational.
+- Quotable principle near the close: "Most people wait to be offered what they are worth. The ones who actually get it are the ones who ask."
+- Diagnostic engagement gap: "What are you worth right now that you have never actually asked for?" - introspective, personal, comment-driving.
+
+### Anti-AI Note
+The hook is a "not X, it's Y" contrast template and the post leans on parallel constructions - both on our banned-tells list. It worked for this audience anyway; mass career audiences don't filter for AI tells the way senior operator audiences do. Keep our rules for Lior.
+
+### Lior Fit
+- Employee-side story is NOT his and never can be (no borrowed stories). But the seat-flip half is 100% ownable: Lior as the CEO of 250 explaining what actually makes him pay someone 40% more. Operator confession + insider intel, passes the CEO filter cleanly.
+- Candidate frame: "The employees I've given the biggest raises to never asked for a raise first. They took problems nobody assigned them." Needs a real AutoDS example with a number.
+
+### Patterns Worth Stealing
+- **Seat flip**: tell the reader's story, then show them the decision-maker's view of it. Insider intel from the other side of the table.
+- **Mid-post rehook** ("that's only half of it") to extend dwell.
+- **Cold motive honesty** over generosity framing - "because losing them costs me more" style truths.
+- **Introspective diagnostic close** the reader answers about themselves, not about the poster.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [ ] Promoted to C-core (if a Lior seat-flip post ships and wins)
+
+---
+
+## 2026-07-15 - External Swipe: "I'm leaking my phone number" WhatsApp-channel funnel post
+
+### Source
+Hand-picked by Reut. Lead-gen post: creator invites readers into an invite-only
+WhatsApp channel for LinkedIn growth BTS, via a Tally application form. Backstory:
+he and co-founder Jake ran a private WhatsApp thread since 2023 sharing tweaks,
+impressions, funnels - "no one was sharing the ugly part online" - and the channel
+recreates that for followers. Free, application-only, link down in 42 hours.
+
+### Why It Worked (mechanics)
+- **Risk-reframe hook.** "I'm leaking my phone number." is 5 words, literally true (joining a WhatsApp channel exposes his number) but implies breach/danger. A mundane announcement - "join my WhatsApp channel" - is repackaged as an act of personal exposure. Opens with "I" + a confession-class verb, so it passes even our own hook rule.
+- **Two-beat hook.** Bold claim, then a whispered aside "and I'm kinda scared" that raises emotional stakes before any content. The vulnerability beat buys the next 3 lines of reading.
+- **Backstory before offer.** The private co-founder DM thread since 2023 is the proof of value. He is not selling a community; he is opening a door to something that demonstrably already worked for him. "Those direct messages made a big difference" grounds the promise in lived history.
+- **The gap he fills is named precisely:** "no one was sharing the 'ugly' part online." BTS/insider intel is the value prop, same currency as our seat-flip finding from 07-08.
+- **Altruism frame for a funnel:** "I wish someone made this post 3 years ago." The ask is disguised as a gift to his past self.
+- **Objection pre-emption stack:** 100% free / real BTS / no link-sharing-for-engagement allowed. Kills the "this is a funnel" cynicism in the exact moment it forms.
+- **Scarcity is stacked, not single:** invite-only + application-only + link removed. Gating flips status - the reader applies to HIM.
+- **Hyper-specific deadline:** 42 hours, not 48. The non-round number reads like a real operational decision instead of marketing copy.
+
+### Anti-AI Note
+Parentheses in line 2, "Look," opener, bullet spam, slightly broken numbering. On
+our banned list - and here the sloppiness actually WORKS as a human tell for a
+creator audience. Keep our rules for Lior; senior operator audiences read polish
+differently than creator audiences read mess.
+
+### Lior Fit
+- The funnel itself is off-limits: a "learn LinkedIn" WhatsApp channel is creator-lane, fails the CEO relevance filter, and Lior has no newsletter/community CTA by decision (channels memory). Do NOT clone the offer.
+- The HOOK mechanic is fully transferable: any Lior announcement (speaking slot, AMA, open Q&A, sharing an internal artifact) can be reframed as personal exposure instead of promotion. "I'm publishing the deck my board saw" beats "excited to share my deck".
+- The backstory-before-offer structure fits Lior's proven pattern: real history with a specific number first, ask last.
+- "I wish someone had shown me this in 2015" is a legitimate Lior generosity frame for sharing playbooks/artifacts, and it maps to the personal-artifact visual family.
+
+### Patterns Worth Stealing
+- **Risk-reframe hook**: state the scary literal truth of a mundane action. The announcement becomes a confession.
+- **Two-beat hook**: claim + stakes-raising aside (restructured without parentheses for us).
+- **Backstory-before-offer**: prove the thing worked privately before offering it publicly.
+- **Objection pre-emption stack**: answer the reader's cynicism one line before they feel it.
+- **Hyper-specific deadline / numbers**: 42 hours reads true, 48 reads like marketing.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [ ] Promoted to C-core (if a risk-reframe hook ships on a Lior post and wins)
+
+---
+
 ## Sample Entry: How to Log
 
 ## 2024-01-15 - LinkedIn Post: Product Launch
