@@ -20,3 +20,7 @@ reut-workspace/*
 
 # Inside the project, ignore Claude Code local config
 reut-workspace/the-system-v5/.claude/
+
+# Node projects (Remotion etc.) — never commit dependencies or rendered output
+node_modules/
+reut-workspace/the-system-v5/T-tools/remotion-videos/out/

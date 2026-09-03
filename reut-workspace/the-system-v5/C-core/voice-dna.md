@@ -1,5 +1,13 @@
 # Voice DNA
 
+> **Spoken ground truth (added 2026-08-02):** the only long-form unscripted Lior
+> source is podcast E97, analyzed in `M-memory/lior-spoken-voice-e97-podcast-analysis.md`.
+> His 6 spoken signatures: self-interrogation chains ("What's the worst case?
+> Okay, and then what?"), triple anaphora, short SVO present-tense sentences,
+> flat dismissals as punchlines ("I just ignored it"), wins as undecorated
+> numbers, boldness framed as logic. If a draft sentence couldn't come out of
+> his mouth on that podcast, cut it.
+
 ## Brand Personality
 
 If this brand were a person, they would be Lior Pozin:

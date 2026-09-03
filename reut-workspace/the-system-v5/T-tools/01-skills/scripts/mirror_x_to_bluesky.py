@@ -13,6 +13,16 @@ Two safety nets prevent duplicate Bluesky posts:
      made via post_social.py (scout / Reut), which already hit both networks.
 
 Commands:
+    mirror_x_to_bluesky.py fetch-candidates [--days N]  # PRIMARY detection. Grok
+                                                       # x_search (XAI_API_KEY) reads
+                                                       # @lior_pozin with NO Chrome/
+                                                       # Mac-awake dependency, then
+                                                       # runs the full dedup (state
+                                                       # log + live Bluesky twin
+                                                       # guard) and returns a
+                                                       # mirror-ready JSON array.
+                                                       # Exit 2 = detection down
+                                                       # (credit/API), NOT "no posts".
     mirror_x_to_bluesky.py list-pending [--days N]   # (Metricool path) JSON array to mirror
     mirror_x_to_bluesky.py mark <tweet_id>           # record a tweet as mirrored
     mirror_x_to_bluesky.py is-mirrored <tweet_id>    # prints YES/NO (state-log check)
@@ -45,6 +55,11 @@ from pathlib import Path
 METRICOOL_BASE_URL = "https://app.metricool.com/api"
 METRICOOL_USER_ID = "4473461"
 METRICOOL_BLOG_ID = "5775125"
+
+GROK_URL = "https://api.x.ai/v1/responses"
+GROK_MODEL = "grok-4-fast-non-reasoning"
+X_HANDLE = "lior_pozin"
+CANDIDATE_DAYS = 2  # only mirror today/yesterday, matching the Chrome flow
 
 REPO_ROOT = Path(__file__).resolve().parents[3]  # .../the-system-v5
 STATE_FILE = REPO_ROOT / "O-output" / "bluesky-mirror-log.json"
@@ -203,6 +218,161 @@ def bluesky_recent(limit: int) -> list[str]:
     return out[:limit]
 
 
+def _grok_fetch_x_posts(days: int) -> list[dict]:
+    """Detect recent @lior_pozin posts via Grok x_search (no Chrome needed).
+
+    Replaces the fragile Chrome scrape: Grok's x_search returns tweet_id, date,
+    repost/reply flags and FULL verbatim text with no browser or Mac-awake
+    dependency. Exits 2 on a credit/spend error so the caller can tell
+    "detection is down" apart from "no new posts".
+    """
+    import requests  # local import: only this path needs it
+
+    api_key = os.environ.get("XAI_API_KEY")
+    if not api_key:
+        print("ERROR: Missing XAI_API_KEY. Run: source ~/.zshrc", file=sys.stderr)
+        sys.exit(1)
+
+    prompt = (
+        f"Search X for the most recent original posts by @{X_HANDLE} from the "
+        f"last {days} days.\n"
+        "Include self-reply threads by the same author (treat each thread as ONE "
+        "post: concatenate the author's consecutive self-replies in order into the "
+        "TEXT). EXCLUDE reposts/retweets and replies to OTHER people's posts.\n"
+        "Return the FULL verbatim text, never a summary, and never invent a post.\n"
+        "For EACH post output exactly these lines, in this order:\n"
+        "TWEET_ID: <numeric id of the root post>\n"
+        "DATE: <ISO 8601 timestamp>\n"
+        "IS_REPLY_TO_OTHERS: <yes/no>\n"
+        "IS_REPOST: <yes/no>\n"
+        "TEXT: <full verbatim text>\n"
+        "---\n"
+    )
+    payload = {
+        "model": GROK_MODEL,
+        "stream": False,
+        "input": [{"role": "user", "content": prompt}],
+        "tools": [{"type": "x_search"}],
+    }
+    try:
+        resp = requests.post(
+            GROK_URL,
+            headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
+            json=payload,
+            timeout=120,
+        )
+        resp.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        body = (getattr(resp, "text", "") or "").lower()
+        status = getattr(resp, "status_code", None)
+        if status == 403 and ("credit" in body or "spending limit" in body
+                              or "used all available" in body):
+            print("ERROR: xAI credits/spending limit exhausted — detection unavailable. "
+                  "Top up at console.x.ai. NOT treating this as 'no new posts'.",
+                  file=sys.stderr)
+            sys.exit(2)
+        print(f"ERROR: Grok API request failed: {e}", file=sys.stderr)
+        sys.exit(2)
+    except requests.exceptions.RequestException as e:
+        print(f"ERROR: Grok API request failed: {e}", file=sys.stderr)
+        sys.exit(2)
+
+    data = resp.json()
+    raw = ""
+    for item in data.get("output", []):
+        if item.get("type") == "message":
+            for c in item.get("content", []):
+                if c.get("type") == "output_text":
+                    raw += c.get("text", "")
+    if not raw.strip():
+        print("ERROR: Empty response from Grok x_search.", file=sys.stderr)
+        sys.exit(2)
+
+    posts: list[dict] = []
+    for block in raw.split("\n---"):
+        block = block.strip()
+        if "TWEET_ID:" not in block or "TEXT:" not in block:
+            continue
+        tid_m = re.search(r"TWEET_ID:\s*(\d+)", block)
+        if not tid_m:
+            continue
+        date_m = re.search(r"DATE:\s*(\S+)", block)
+        rep_m = re.search(r"IS_REPLY_TO_OTHERS:\s*(\w+)", block, re.I)
+        rpt_m = re.search(r"IS_REPOST:\s*(\w+)", block, re.I)
+        text_m = re.search(r"TEXT:\s*(.*)", block, re.S)
+        posts.append({
+            "tweet_id": tid_m.group(1),
+            "created_at": date_m.group(1) if date_m else None,
+            "is_reply_to_others": bool(rep_m and rep_m.group(1).lower().startswith("y")),
+            "is_repost": bool(rpt_m and rpt_m.group(1).lower().startswith("y")),
+            "text": (text_m.group(1).strip() if text_m else ""),
+        })
+    return posts
+
+
+def _within_days(iso: str | None, days: int) -> bool:
+    if not iso:
+        return True  # keep if undated; state-log + twin-guard still protect us
+    try:
+        dt = datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    except ValueError:
+        return True
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt >= datetime.now(timezone.utc) - timedelta(days=days)
+
+
+def fetch_candidates(days: int) -> list[dict]:
+    """Return NEW original @lior_pozin posts that still need mirroring.
+
+    Full detection+dedup in one call so the mirror skill no longer touches Chrome:
+      Grok x_search -> drop reposts/other-replies/old -> state-log skip ->
+      live Bluesky twin-guard (auto-marks twins) -> mirror-ready JSON.
+    """
+    state = load_state()
+    mirrored = state.get("mirrored", {})
+
+    raw_posts = _grok_fetch_x_posts(days)
+    try:
+        bsky_norms = set(bluesky_recent(60))
+    except SystemExit:
+        raise
+    except Exception:  # noqa: BLE001
+        bsky_norms = set()  # twin-guard is best-effort; state log is the hard gate
+
+    pending: list[dict] = []
+    seen_ids: set[str] = set()
+    for p in raw_posts:
+        tid = p.get("tweet_id")
+        text = p.get("text") or ""
+        if not tid or tid in seen_ids:
+            continue
+        seen_ids.add(tid)
+        if p.get("is_repost") or p.get("is_reply_to_others"):
+            continue
+        if not _is_original(text):
+            continue
+        if not _within_days(p.get("created_at"), days):
+            continue
+        if tid in mirrored:
+            continue
+        norm = _norm(text)
+        if norm and norm in bsky_norms:
+            mirrored[tid] = {"mirrored_at": datetime.now(timezone.utc).isoformat(),
+                             "reason": "already_on_bluesky"}
+            continue
+        pending.append({
+            "tweet_id": tid,
+            "created_at": p.get("created_at"),
+            "text": text,
+            "url": f"https://x.com/{X_HANDLE}/status/{tid}",
+        })
+
+    save_state(state)  # persist any twin auto-skips
+    pending.sort(key=lambda r: r.get("created_at") or "")
+    return pending
+
+
 def is_mirrored(tweet_id: str) -> bool:
     return tweet_id in load_state().get("mirrored", {})
 
@@ -243,10 +413,15 @@ def main() -> None:
     p_boot = sub.add_parser("bootstrap")
     p_boot.add_argument("--days", type=int, default=30)
 
+    p_fc = sub.add_parser("fetch-candidates")
+    p_fc.add_argument("--days", type=int, default=CANDIDATE_DAYS)
+
     args = parser.parse_args()
 
     if args.cmd == "list-pending":
         print(json.dumps(list_pending(args.days), ensure_ascii=False, indent=2))
+    elif args.cmd == "fetch-candidates":
+        print(json.dumps(fetch_candidates(args.days), ensure_ascii=False, indent=2))
     elif args.cmd == "mark":
         mark(args.tweet_id)
     elif args.cmd == "is-mirrored":

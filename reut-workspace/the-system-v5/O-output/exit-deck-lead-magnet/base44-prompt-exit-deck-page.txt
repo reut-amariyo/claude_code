@@ -1,0 +1,30 @@
+Add a new page to the site at the route /exit-deck.
+
+Match the existing site's design system exactly: black backgrounds (#000000 and #151515), white text, cyan-blue accent (#00BEFF), Poppins/Inter, large bold headlines at 40px and up, body text 18-20px, minimalist with generous whitespace. The page must be fully responsive and look right on mobile first.
+
+Page structure, top to bottom:
+
+1. Hero, dark background, full width but not full viewport height. Small cyan uppercase eyebrow: "FREE TEMPLATE". H1: "The Exit Deck". Subheadline in grey: "The 47-slide structure that sold AutoDS to Fiverr. Fill in your numbers and you have a buyer-ready deck." Below it, one large cyan button: "Download the template (PDF)". The button downloads a PDF file directly, with no email form, no signup and no gate of any kind. Add a small grey line under the button: "No email required."
+
+2. A section titled "What's inside" listing the nine sections as a numbered list, each with its name and a one-line description:
+01 Executive Summary - the whole business in 8 slides
+02 Industry - why the market makes you inevitable
+03 Solutions & Technology - what the product actually does
+04 Architecture - proof it scales
+05 Competitive Landscape - why you win
+06 Customers & Marketing - the growth engine and the unit economics
+07 Future Growth Drivers - what the buyer's money buys
+08 Operations & Transaction - the company behind the product
+09 Financials - the scoreboard, last on purpose
+
+3. A short highlighted callout on a #151515 background: "Financials come last. The first 60 pages earn the right to show them."
+
+4. A closing section repeating the download button, plus a line: "Every number in the template is a placeholder. The structure is transferable, the numbers are yours to earn."
+
+Track a click event on both download buttons so I can see how many people downloaded the file.
+
+Set the page SEO title to "The Exit Deck - free 47-slide acquisition deck template by Lior Pozin" and the meta description to "The presentation structure used to sell AutoDS to Fiverr, as a fill-in-the-blank template. Free, no email required."
+
+Do not add a contact form, a newsletter signup, or any field that collects personal data on this page.
+
+Do not link this page from anywhere on the site. It must not appear in the navigation menu, on the homepage, in the footer, or in any other section. The only way to reach it is the direct URL. Keep it indexable by search engines, but invisible in the site's navigation.

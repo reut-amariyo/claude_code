@@ -1,0 +1,557 @@
+<title>Road to 500K and 100K</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+
+<style>
+  :root {
+    --paper:      #FAFBFB;
+    --surface:    #FFFFFF;
+    --sunken:     #F1F4F4;
+    --ink:        #131A1C;
+    --ink-soft:   #47555A;
+    --ink-faint:  #7C8A8F;
+    --rule:       #DDE4E5;
+    --rule-soft:  #E9EEEF;
+    --ig:         #B23A66;
+    --ig-wash:    #FBEFF3;
+    --li:         #1B6675;
+    --li-wash:    #E9F3F5;
+    --warn:       #A24A18;
+    --warn-wash:  #FBF0E8;
+    --good:       #2C6E4B;
+    --shadow:     0 1px 2px rgba(19,26,28,.05), 0 8px 24px -16px rgba(19,26,28,.18);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:     #0D1214;
+      --surface:   #141B1E;
+      --sunken:    #101719;
+      --ink:       #EDF2F2;
+      --ink-soft:  #A3B2B6;
+      --ink-faint: #74868B;
+      --rule:      #263236;
+      --rule-soft: #1D262A;
+      --ig:        #E88AAB;
+      --ig-wash:   #2A1721;
+      --li:        #6FC2D2;
+      --li-wash:   #10262C;
+      --warn:      #E0A175;
+      --warn-wash: #291B12;
+      --good:      #74C79B;
+      --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:     #0D1214;
+    --surface:   #141B1E;
+    --sunken:    #101719;
+    --ink:       #EDF2F2;
+    --ink-soft:  #A3B2B6;
+    --ink-faint: #74868B;
+    --rule:      #263236;
+    --rule-soft: #1D262A;
+    --ig:        #E88AAB;
+    --ig-wash:   #2A1721;
+    --li:        #6FC2D2;
+    --li-wash:   #10262C;
+    --warn:      #E0A175;
+    --warn-wash: #291B12;
+    --good:      #74C79B;
+    --shadow:    0 1px 2px rgba(0,0,0,.4), 0 8px 24px -16px rgba(0,0,0,.7);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: clamp(32px, 6vw, 72px) clamp(18px, 4vw, 40px) 96px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+  }
+
+  /* ---------- masthead ---------- */
+  .masthead { display: flex; flex-direction: column; gap: 14px; }
+  .kicker {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  h1 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.06;
+    letter-spacing: -.015em;
+    margin: 0;
+    text-wrap: balance;
+  }
+  .standfirst {
+    font-family: Newsreader, Georgia, serif;
+    font-size: clamp(17px, 2.2vw, 21px);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin: 0;
+  }
+  .masthead .meta {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--ink-faint);
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+    margin-top: 6px;
+  }
+
+  /* ---------- headline stats ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .stat { background: var(--surface); padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 6px; }
+  .stat .label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .stat .value {
+    font-family: Newsreader, Georgia, serif;
+    font-size: 36px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat .value.ig { color: var(--ig); }
+  .stat .value.li { color: var(--li); }
+  .stat .note { font-size: 13.5px; color: var(--ink-soft); line-height: 1.4; }
+
+  /* ---------- sections ---------- */
+  section { display: flex; flex-direction: column; gap: 18px; }
+  .sec-head { display: flex; flex-direction: column; gap: 5px; }
+  .sec-head .eyebrow {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  h2 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(24px, 3.4vw, 32px);
+    line-height: 1.15;
+    margin: 0;
+    letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  h2 .chan { font-style: italic; }
+  h2 .chan.ig { color: var(--ig); }
+  h2 .chan.li { color: var(--li); }
+  .lede { color: var(--ink-soft); max-width: 68ch; margin: 0; font-size: 15.5px; }
+
+  /* ---------- tables ---------- */
+  .tscroll {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    background: var(--surface);
+  }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; min-width: 640px; }
+  thead th {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-align: right;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: bottom;
+    white-space: nowrap;
+    background: var(--sunken);
+  }
+  thead th:first-child { text-align: left; }
+  tbody td {
+    padding: 11px 14px;
+    text-align: right;
+    border-bottom: 1px solid var(--rule-soft);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  tbody td:first-child { text-align: left; font-weight: 500; white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr.partial td { color: var(--ink-soft); }
+  td.none { color: var(--ink-faint); }
+  td.hi-ig { color: var(--ig); font-weight: 600; background: var(--ig-wash); }
+  td.hi-li { color: var(--li); font-weight: 600; background: var(--li-wash); }
+  td.hi-warn { color: var(--warn); font-weight: 600; background: var(--warn-wash); }
+  td.good { color: var(--good); font-weight: 600; }
+  .rowlabel-sub { display: block; font-weight: 400; font-size: 12px; color: var(--ink-faint); }
+
+  .tnote {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    line-height: 1.5;
+    max-width: 78ch;
+    margin: 0;
+  }
+
+  /* ---------- callout ---------- */
+  .callout {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--warn);
+    border-radius: 3px;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--shadow);
+  }
+  .callout h3 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 500;
+    font-size: 21px;
+    margin: 0;
+    line-height: 1.25;
+  }
+  .callout p { margin: 0; color: var(--ink-soft); font-size: 15px; max-width: 72ch; }
+  .callout p strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- conclusions ---------- */
+  .concl { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 22px; }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 24px 26px 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .card .tag {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 10.5px;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .card.ig .tag { color: var(--ig); }
+  .card.li .tag { color: var(--li); }
+  .card h3 {
+    font-family: Newsreader, Georgia, serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 0;
+  }
+  ol.actions { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; counter-reset: act; }
+  ol.actions li {
+    position: relative;
+    padding-left: 36px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+  ol.actions li::before {
+    counter-increment: act;
+    content: counter(act);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 22px;
+    height: 22px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    color: var(--ink-faint);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    text-align: center;
+    line-height: 20px;
+  }
+  ol.actions li b { display: block; margin-bottom: 2px; }
+  ol.actions li b { color: var(--ink); font-weight: 600; }
+
+  /* ---------- footer notes ---------- */
+  .sources { border-top: 1px solid var(--rule); padding-top: 22px; display: flex; flex-direction: column; gap: 12px; }
+  .sources h4 {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin: 0;
+    font-weight: 500;
+  }
+  .sources ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+  .sources li { font-size: 13px; color: var(--ink-faint); line-height: 1.5; }
+  .sources li b { color: var(--ink-soft); font-weight: 600; }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="kicker">Lior Pozin &nbsp;·&nbsp; Personal Brand &nbsp;·&nbsp; Growth Review</div>
+    <h1>Road to 500K and 100K</h1>
+    <p class="standfirst">Three months of Instagram and LinkedIn, measured as one funnel: views, profile visits, followers. The two targets turn out to be very different problems.</p>
+    <div class="meta">May 1 – August 19, 2026 &nbsp;·&nbsp; prepared by Reut Amariyo</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="label">Instagram today</div>
+      <div class="value ig">100,601</div>
+      <div class="note">+399,399 to target. 16 months at July's pace, 50 months at August's.</div>
+    </div>
+    <div class="stat">
+      <div class="label">LinkedIn today</div>
+      <div class="value li">12,115</div>
+      <div class="note">+87,885 to target. 88 months at the current pace of ~1,000 a month.</div>
+    </div>
+  </div>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Channel 01</div>
+      <h2><span class="chan ig">Instagram</span> — three months</h2>
+    </div>
+    <p class="lede">Volume rose every month. Follower growth did not follow volume; it followed one format.</p>
+
+    <div class="tscroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Posts<br>published</th>
+            <th>Avg views<br>per post</th>
+            <th>Total<br>views</th>
+            <th>Profile<br>visits</th>
+            <th>Visits %<br>of views</th>
+            <th>New followers<br>(gross)</th>
+            <th>Unfollows</th>
+            <th>Churn</th>
+            <th>Net new<br>followers</th>
+            <th>Followers %<br>of visits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>May 2026</td>
+            <td>69</td><td>50,725</td><td>3,500,000</td><td>38,137</td><td>1.09%</td>
+            <td class="none">not recorded</td><td class="none">not recorded</td><td class="hi-warn">34.0%</td>
+            <td>3,163</td><td>8.3%</td>
+          </tr>
+          <tr>
+            <td>June 2026</td>
+            <td>59</td><td>41,382</td><td>2,441,469</td><td>35,410</td><td>1.45%</td>
+            <td>6,447</td><td>1,707</td><td class="hi-warn">26.5%</td>
+            <td>4,740</td><td>13.4%</td>
+          </tr>
+          <tr>
+            <td>July 2026</td>
+            <td>114</td><td>35,965</td><td>4,100,000</td><td>65,463</td><td>1.60%</td>
+            <td>26,300</td><td>2,100</td><td class="good">8.0%</td>
+            <td class="hi-ig">24,354</td><td class="hi-ig">37.2%</td>
+          </tr>
+          <tr class="partial">
+            <td>Aug 1–19</td>
+            <td>101</td><td class="none">—</td><td class="none">—</td><td class="none">—</td><td class="none">—</td>
+            <td class="none">—</td><td class="none">—</td><td class="none">—</td>
+            <td>≈ 5,000</td><td class="none">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Posts published counts reels plus feed posts (May 60+9, June 52+7, July 97+17, August 90+11). August's views, visits and churn need a pull from the Instagram app; the web dashboard has no custom date range. The ≈5,000 net followers is the move from 95,635 on Aug 4 to 100,601 on Aug 19.</p>
+
+    <div class="callout">
+      <h3>One post produced 57% of July's growth</h3>
+      <p>The AGE 14 childhood photo brought <strong>14–15K of July's 24,354 followers</strong>. August has published <em>more</em> content than any 19-day stretch on record — 101 pieces — and added roughly 5,000. Volume is not the variable. The personal-artifact photo post is.</p>
+      <p>Per asset, July's 17 feed posts averaged <strong>112K views</strong> against <strong>21K</strong> for its 97 reels. Reels buy reach; posts buy followers.</p>
+    </div>
+  </section>
+
+  <!-- ============ LINKEDIN ============ -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Channel 02</div>
+      <h2><span class="chan li">LinkedIn</span> — three months</h2>
+    </div>
+    <div class="tscroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Month</th>
+            <th>Posts<br>published</th>
+            <th>Avg impressions<br>per post</th>
+            <th>Impressions</th>
+            <th>Profile<br>visits</th>
+            <th>Visits %<br>of impressions</th>
+            <th>New<br>followers</th>
+            <th>Followers %<br>of visits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>May 2026</td>
+            <td>15</td><td class="hi-li">19,514</td><td class="hi-li">292,705</td>
+            <td class="none">no data</td><td class="none">—</td><td>1,100</td><td class="none">—</td>
+          </tr>
+          <tr>
+            <td>June 2026</td>
+            <td>13</td><td>3,988</td><td>51,839</td>
+            <td>≈ 1,136</td><td>2.19%</td><td>1,009</td><td class="hi-warn">88.8%</td>
+          </tr>
+          <tr>
+            <td>July 2026</td>
+            <td>18</td><td>3,988</td><td>71,776</td>
+            <td>≈ 1,204</td><td>1.68%</td><td>821</td><td class="hi-warn">68.2%</td>
+          </tr>
+          <tr class="partial">
+            <td>Aug 1–19</td>
+            <td class="none">not verified</td><td class="none">—</td><td>55,759</td>
+            <td>≈ 578</td><td>1.04%</td><td>740</td><td class="hi-warn">128.0%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">August is on pace for the strongest month of the year: 55,759 impressions in 19 days runs to roughly 91,000 for the full month, against July's 71,776. Post counts confirmed manually. Profile visits are approximate, since LinkedIn reports profile viewers only as a 90-day chart in weekly buckets, so each month is the sum of the weeks inside it. May sits before that window opens, and August's post count is still pending.</p>
+
+  </section>
+
+  <!-- ============ COMPOSITION ============ -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">What I found in the account</div>
+      <h2>There is a ceiling on the follower number</h2>
+    </div>
+    <p class="lede">Auditing the account turned up something that changes the plan: the channel currently producing LinkedIn followers has a hard limit, and Lior is a third of the way into it.</p>
+
+    <div class="tscroll">
+      <table>
+        <thead>
+          <tr><th>The follower base, as of August 19</th><th>Count</th><th>Share</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Total followers</td><td>12,115</td><td>100%</td></tr>
+          <tr><td>Connections<span class="rowlabel-sub">invitations in both directions, ours and theirs. LinkedIn caps the total at 30,000</span></td><td class="hi-li">10,555</td><td class="hi-li">87.1%</td></tr>
+          <tr><td>Followers who are not connections<span class="rowlabel-sub">the only lane with no ceiling on it</span></td><td class="hi-warn">1,560</td><td class="hi-warn">12.9%</td></tr>
+          <tr><td>Invitations sent, still pending</td><td>251</td><td class="none">—</td></tr>
+          <tr><td>Remaining connection headroom before the cap</td><td>19,445</td><td class="none">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Checked directly on the account, August 19, 2026. The 30,000 ceiling is LinkedIn's own and cannot be raised for anyone. At the cap you can no longer send or accept invitations without deleting existing connections, and LinkedIn switches your profile's default button to Follow for you. Followers have no limit at all. Source: LinkedIn Help, “Network size limit”.</p>
+  </section>
+
+  <!-- ============ GAP ============ -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">The arithmetic</div>
+      <h2>What each target actually requires</h2>
+    </div>
+
+    <div class="tscroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Target</th><th>Gap</th><th>Current pace</th>
+            <th>Time at that pace</th><th>Needed for 18 months</th><th>Multiple</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Instagram 500K</td>
+            <td>+399,399</td><td>24,354 / mo (July)</td><td>16 months</td><td>22,189 / mo</td><td class="good">0.9×</td>
+          </tr>
+          <tr>
+            <td><span class="rowlabel-sub" style="font-weight:400">same target, August's pace</span></td>
+            <td>+399,399</td><td>≈ 7,900 / mo</td><td>50 months</td><td>22,189 / mo</td><td class="hi-warn">2.8×</td>
+          </tr>
+          <tr>
+            <td>LinkedIn 100K</td>
+            <td>+87,885</td><td>≈ 1,000 / mo</td><td>88 months</td><td>4,883 / mo</td><td class="hi-warn">4.9×</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tnote">Instagram's 18-month path sits just below what July already delivered, so it needs July repeated rather than exceeded. LinkedIn's number is the one worth discussing: five times the current rate, sustained for eighteen months, from a channel that stops at 30,000. That is not a target the current playbook reaches at any level of effort, which makes 100K a decision about what to invest rather than a question of execution.</p>
+  </section>
+
+  <!-- ============ CONCLUSIONS ============ -->
+  <section>
+    <div class="sec-head">
+      <div class="eyebrow">Conclusions</div>
+      <h2>What to do about it</h2>
+    </div>
+
+    <div class="concl">
+      <div class="card ig">
+        <div class="tag">Instagram · 500K</div>
+        <h3>Protect the format, stop buying volume</h3>
+        <ol class="actions">
+          <li><b>Commit to 2–3 personal-artifact posts a month.</b> One did 14–15K followers in July. Mine the real archive: childhood, army, the first office, early AutoDS.</li>
+          <li><b>Move the mix from reels to feed posts.</b> 17 posts matched 97 reels on views in July, and converted far better per asset.</li>
+          <li><b>Watch churn as the health metric.</b> 34% in May, 26% in June, 8% in July. It falling while volume rose is what makes a projection to 500K credible.</li>
+          <li><b>Reframe the target</b> as one breakout artifact post a month, rather than more content. That is the difference between a 16-month path and a 50-month one.</li>
+        </ol>
+      </div>
+
+      <div class="card li">
+        <div class="tag">LinkedIn · 100K</div>
+        <h3>Build the lane that does not exist yet</h3>
+        <ol class="actions">
+          <li><b>Make Follow the profile's primary button.</b> Plenty of people already ask to connect with Lior, and every one of them spends a slot from the 30,000 and waits on his approval. Switching the default sends that same demand into an uncapped, instant lane. LinkedIn imposes this switch anyway once the cap is reached, so the only real choice is whether it happens now or after all 30,000 slots are gone.</li>
+          <li><b>Keep invitations at LinkedIn's weekly ceiling, ICP only.</b> Founders and SaaS operators, so the invites also teach the feed's interest graph who Lior is. Do not push past the limit; a restricted account costs more than the followers.</li>
+          <li><b>Rewrite the profile around the three pillars.</b> The feed reads the profile before it distributes anything, and the profile is what has to convert a reader into a follower.</li>
+          <li><b>Push the Instagram audience across.</b> 100K there, 12K here. Even 2% moved deliberately is 2,000 followers, two months of current growth, and it has never been tried.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="callout">
+      <h3>The open question: a stronger follower engine</h3>
+      <p>The demand is already there. People find Lior and ask to connect with him every day, and that is the healthiest signal in this whole review. <strong>The problem is where that demand currently lands</strong> — in a lane LinkedIn caps at 30,000, one approval at a time.</p>
+      <p>So the work is not to create interest, it is to build somewhere uncapped for it to go. Three things worth putting on the table: making Follow the default so the same people arrive as followers, giving the profile an explicit reason to follow rather than leaving it to chance, and turning comments on other founders' posts into a discovery channel, since out-of-network readers can follow but cannot connect.</p>
+    </div>
+  </section>
+
+  <!-- ============ SOURCES ============ -->
+  <div class="sources">
+    <h4>Sources and open gaps</h4>
+    <ul>
+      <li><b>Instagram views, profile visits, followers, churn</b> — Instagram's own reporting: the May 2026 review deck, the June professional dashboard, and Instagram's official July monthly recap.</li>
+      <li><b>Instagram posts published</b> — Metricool API, August 19, 2026. Validated: it returns 97 reels and 17 posts for July, matching Instagram's own recap exactly.</li>
+      <li><b>LinkedIn impressions and followers</b> — Creator Analytics. April through July from the verified daily exports; August 1–19 pulled live on August 19.</li>
+      <li><b>LinkedIn posts published</b> — counted manually by Reut. Neither Metricool nor our own log holds a complete count from June onward, so these are the figures to trust.</li>
+      <li><b>LinkedIn connections, pending invitations</b> — read directly from the account on August 19, 2026.</li>
+      <li><b>Still open:</b> August on Instagram needs an app pull with a custom range; August's LinkedIn post count; LinkedIn profile visits stay approximate until they are logged monthly going forward.</li>
+    </ul>
+  </div>
+
+</div>

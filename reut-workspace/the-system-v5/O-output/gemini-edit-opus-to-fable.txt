@@ -1,0 +1,15 @@
+Keep this image exactly as it is: same layout, same cream background, same dark boxes, same coral labels, same fonts, same wording, same positions. Make only these changes.
+
+1. Add one new connector in coral #D97757. It leaves the bottom edge of the "Opus 5" box, drops down a short distance, runs to the right underneath the "Fable 5" box, then turns upward and enters the bottom edge of the "Fable 5" box. Draw it as a thin line with square corners, in the same style as the other connectors but coral instead of grey, so it reads as a second route from Opus 5 into Fable 5.
+
+2. Directly under that new coral connector, centred between the two boxes, place one small rectangle outlined in coral #D97757 on the cream background, containing the single line:
+"When Opus gets stuck, escalate to Fable."
+Set it in the same small clean sans-serif as the model descriptions, in dark #171818, and give the box enough width that the sentence fits on one line without being cut off.
+
+3. Delete the small broken box at the bottom right that currently reads "/ ~10% of lly need". Remove it completely.
+
+4. Change the bottom near-black band so it reads on two left-aligned lines:
+"Everything else, route down the tree."
+"Only ~10% of tasks actually need Fable."
+
+Do not change anything else. Do not move the four model boxes. Every word must be spelled correctly and fully visible.

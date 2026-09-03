@@ -1,0 +1,29 @@
+A flat vector infographic in a 4:5 portrait format, styled like a Swiss editorial diagram: strictly rectangular, sharp corners everywhere, thin outlines, wide margins and generous empty space. The page background is a warm cream #F0EEE6. The only accent colour in the whole image is Claude coral #D97757. Solid blocks are near-black #171818 with cream text. Row cards are white with a thin near-black outline. No gradients, no shadows, no glow, no rounded corners, no arrows, no emoji, no mascots, no screenshots.
+
+At the top left, in large bold monospace type on two lines, the title reads "One person + nine repos" on the first line and "= a whole company." on the second, where the words "a whole company." are set in coral #D97757 and the rest is near-black. In the top right corner sits the Claude logo mark on its own: a coral #D97757 starburst made of about a dozen slim tapered rays radiating evenly from one centre point, like an asterisk with soft pointed tips. No wordmark and no circle around it.
+
+Directly under the title, one line of small grey sans-serif reads "Nine roles you would otherwise hire. Every one free, open, and works with any coding agent." Under that line runs a full-width thin near-black horizontal rule.
+
+Below the rule sit nine identical horizontal row cards stacked vertically with a small even gap between them, grouped into three labelled sections. Each section label sits above its group in very small, widely letter-spaced monospace capitals in grey, with a thin grey line running from the end of the label to the right margin. The three labels, top to bottom, read "BUILD", "MARKET" and "SHIP", and each has exactly three row cards under it.
+
+Every row card is built the same way, left to right in four zones. Zone one is a solid near-black #171818 square at the far left of the card, full card height, containing a two-digit number in bold monospace in cream. Zone two holds the repository handle in bold near-black monospace. Zone three is a narrow centre column separated by thin light vertical rules on both sides, holding a coral #D97757 star count in bold monospace on the upper line and a large coral #D97757 equals sign on the lower line. Zone four holds the job title in bold near-black monospace capitals, with one smaller grey sans-serif sentence directly underneath it.
+
+The nine rows, in this exact order, each given as number, repository handle, star count, job title, and description sentence:
+
+01, "microsoft/playwright-mcp", "37k", "A QA TESTER", "Drives a real browser and finds what actually broke"
+02, "obra/superpowers", "280k", "A SENIOR ENGINEER", "Test-driven development and systematic debugging"
+03, "pbakaus/impeccable", "65k", "A PRODUCT DESIGNER", "Refuses to build before you define the audience"
+04, "mvanhorn/last30days-skill", "61k", "A RESEARCHER", "Reads the last 30 days, not last year"
+05, "coreyhaines31/marketingskills", "46k", "A MARKETER", "Conversion, copywriting, SEO and analytics"
+06, "charlie947/social-media-skills", "3k", "A SOCIAL MANAGER", "Every platform, one voice"
+07, "heygen-com/hyperframes", "44k", "A MOTION DESIGNER", "Write HTML, get a finished MP4 back"
+08, "microsoft/markitdown", "178k", "A DOCS TEAM", "Any PDF, deck or recording into clean markdown"
+09, "mem0ai/mem0", "65k", "AN OPS MANAGER", "Remembers last week so nobody has to ask"
+
+Rows 01, 02 and 03 sit under "BUILD". Rows 04, 05 and 06 sit under "MARKET". Rows 07, 08 and 09 sit under "SHIP". Each star count is preceded by a small solid coral five-pointed star glyph.
+
+Across the very bottom runs a full-width near-black #171818 band with cream text on two left-aligned lines: "Nine seats. Nine repos. Zero budget." on the first line and "The work now is telling the useful few from the noise." on the second.
+
+Under that band, at the bottom left, the wordmark "L1OR POZ1N" is set in bold sans-serif with both I letters written as the numeral 1. At the bottom right, in small widely spaced monospace, sits "[ life is beta ]".
+
+Render every quoted string exactly as written, correctly spelled, and legible at phone size. Keep all nine repository handles in lowercase exactly as given, including the forward slash and any hyphens and digits. Do not add any words, labels, captions, logos, URLs, icons or decorative elements that are not listed here.

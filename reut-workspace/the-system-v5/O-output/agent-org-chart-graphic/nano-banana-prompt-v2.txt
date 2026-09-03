@@ -1,0 +1,21 @@
+A polished editorial infographic poster in 4:5 portrait format, warm and premium, in the visual language of Anthropic's Claude brand. The page background is a warm cream #F0EEE6. The accent colour throughout is Claude coral #D97757. Body text is near-black #171818 and secondary text is a warm grey #7C7A73. Cards are pure white with a 16px corner radius, a very thin warm grey border and a soft low shadow. Elegant, generous spacing, print-quality. No gradients, no glow, no neon, no dark tech background, no mascots, no robots, no screenshots, no photographs, no emoji, no arrows.
+
+HEADER, across the top. On the far left a very large serif numeral "9" in coral #D97757, roughly the height of two text lines. Immediately to its right, two lines of large elegant serif display type: the first line "Free Repos That Staff" in near-black, the second line "A Whole Company" in coral #D97757 italic. Directly beneath those, one line of small grey sans-serif reading "Nine roles you would otherwise hire. Every one open source, every one free, works with any coding agent." In the top right corner, a solid coral #D97757 filled circle containing a white starburst mark made of about a dozen slim tapered rays radiating evenly from one centre point, like an asterisk with soft pointed tips. No wordmark, nothing else in that circle.
+
+BODY, a clean grid of nine white cards arranged in three columns and three rows, evenly spaced, all cards the same size. Every card is laid out identically: a small solid coral #D97757 filled circle in the top left containing its number in white bold sans-serif; to the right of it the job title in medium-large elegant serif in near-black; in the top right corner of the card a small thin-line icon drawn in coral #D97757; under the title one line of small grey sans-serif describing the job; then a thin warm grey horizontal divider across the card; then a bottom strip holding, on the left, the repository handle in monospace where the owner part before the slash is grey and the part after the slash is bold near-black, and on the right a small rounded pill with a pale coral fill containing a small coral star glyph and the star count in bold coral monospace.
+
+The nine cards read across in this order, given as number, job title, description, repository handle, star count, and icon:
+
+1, "A QA tester", "Drives a real browser and finds what actually broke", "microsoft/playwright-mcp", "37k", magnifying glass icon
+2, "A senior engineer", "Test-driven development and systematic debugging", "obra/superpowers", "280k", angle brackets code icon
+3, "A product designer", "Refuses to build before you define the audience", "pbakaus/impeccable", "65k", pencil icon
+4, "A researcher", "Reads the last 30 days, not last year", "mvanhorn/last30days-skill", "61k", calendar icon
+5, "A marketer", "Conversion, copywriting, SEO and analytics", "coreyhaines31/marketingskills", "46k", rising trend line icon
+6, "A social manager", "Every platform, one voice", "charlie947/social-media-skills", "3k", speech bubble icon
+7, "A motion designer", "Write HTML, get a finished MP4 back", "heygen-com/hyperframes", "44k", play button in a rectangle icon
+8, "A docs team", "Any PDF, deck or recording into clean markdown", "microsoft/markitdown", "178k", document page icon
+9, "An ops manager", "Remembers last week so nobody has to ask", "mem0ai/mem0", "65k", bell icon
+
+FOOTER, a full-bleed near-black #171818 band running edge to edge across the very bottom of the poster. On its left, in large serif, "Nine seats." in cream followed by "Zero budget." in coral #D97757 italic, and directly under them one line of small grey sans-serif reading "The work now is telling the useful few from the noise." On its right, "LIOR POZIN" in bold cream sans-serif with wide letter spacing, and under it "[ life is beta ]" in small coral #D97757 monospace with the square brackets included.
+
+Render every quoted string exactly as written, correctly spelled, and legible at phone size. Keep all nine repository handles in lowercase exactly as given, including the forward slash, the hyphens and the digits, and do not invent, translate or abbreviate any of them. Do not add any words, labels, captions, taglines, logos, URLs or decorative elements that are not listed here.

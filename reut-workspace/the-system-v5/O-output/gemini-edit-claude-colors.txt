@@ -1,0 +1,10 @@
+Keep this image exactly as it is: same layout, same boxes, same connector lines, same text, same fonts, same positions. Change only the colours and add one mark.
+
+Change the page background from grey to Claude's warm cream #F0EEE6.
+Change every YES and NO label rectangle from sand to Claude coral #D97757, with white text inside them.
+Change the thin outline of the small "Careful. Only ~10% of tasks actually need it." box to the same coral #D97757.
+Leave the four model boxes solid near-black #171818 with light text, leave the question boxes white, leave the bottom band near-black.
+
+In the empty square at the top right, place the Claude logo mark: a coral #D97757 starburst made of about a dozen slim tapered rays radiating evenly from one centre point, like an asterisk with soft pointed tips. Nothing else in that corner, no wordmark, no circle around it.
+
+Do not change any wording. Do not move anything.

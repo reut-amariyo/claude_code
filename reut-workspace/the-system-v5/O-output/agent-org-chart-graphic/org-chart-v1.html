@@ -1,0 +1,80 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --graphite:#1A1A1A; --lightgray:#EFEEEA; --medgray:#8A8A85;
+  --offwhite:#F7F6F3; --white:#FFFFFF; --sand:#C79A6B;
+}
+body{width:1200px;height:1500px;background:var(--lightgray);font-family:Inter,sans-serif;color:var(--graphite);
+     padding:54px 60px 42px;display:flex;flex-direction:column;overflow:hidden}
+
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:.22em;color:var(--medgray);text-transform:uppercase}
+h1{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:60px;line-height:1.02;letter-spacing:-.02em;margin-top:16px}
+h1 em{font-style:normal;color:var(--sand)}
+.sub{font-size:19px;color:var(--medgray);margin-top:14px;font-weight:500}
+.rule{height:2px;background:var(--graphite);margin:26px 0 0}
+
+.chart{flex:1;display:flex;flex-direction:column;justify-content:space-between;padding-top:22px}
+.dept{position:relative;padding-left:0}
+.deptlabel{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;letter-spacing:.26em;
+           color:var(--medgray);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.deptlabel::after{content:"";flex:1;height:1px;background:#D6D4CE}
+
+.row{display:flex;align-items:center;gap:0;background:var(--white);border:1.5px solid var(--graphite);
+     margin-bottom:9px;height:88px}
+.num{width:64px;height:100%;flex:0 0 64px;background:var(--graphite);color:var(--offwhite);
+     font-family:'JetBrains Mono',monospace;font-weight:700;font-size:24px;
+     display:flex;align-items:center;justify-content:center}
+.mid{flex:1;padding:0 22px;display:flex;flex-direction:column;justify-content:center;gap:5px}
+.role{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:21px;letter-spacing:-.01em}
+.does{font-size:15px;color:var(--medgray);font-weight:500}
+.right{flex:0 0 430px;padding:0 22px;border-left:1.5px solid #E2E0DA;display:flex;flex-direction:column;
+       justify-content:center;gap:6px}
+.repo{font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--graphite);word-break:break-all;line-height:1.25}
+.repo span{color:var(--medgray)}
+.free{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;
+      color:var(--sand);border:1.2px solid var(--sand);padding:2px 7px;align-self:flex-start}
+
+footer{display:flex;align-items:flex-end;justify-content:space-between;border-top:2px solid var(--graphite);padding-top:18px;margin-top:24px}
+.lockup{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;letter-spacing:-.01em}
+.byline{text-align:right;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--medgray);line-height:1.6}
+.byline b{color:var(--graphite);font-weight:700}
+</style></head><body>
+
+<div class="eyebrow">The org chart / every box is a repo</div>
+<h1>Nine positions.<br>Nine repos. <em>Zero budget.</em></h1>
+<div class="sub">One person can now run the whole company. These are the openings, already filled.</div>
+<div class="rule"></div>
+
+<div class="chart">
+
+  <div class="dept">
+    <div class="deptlabel">Build</div>
+    <div class="row"><div class="num">01</div><div class="mid"><div class="role">A QA tester</div><div class="does">Clicks through the live page and finds what actually broke</div></div><div class="right"><div class="repo">github.com/<span>microsoft/</span>playwright-mcp</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">02</div><div class="mid"><div class="role">A senior engineer</div><div class="does">Test-driven development and systematic debugging, 20+ skills</div></div><div class="right"><div class="repo">github.com/<span>obra/</span>superpowers</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">03</div><div class="mid"><div class="role">A product designer</div><div class="does">Refuses to write a line before you define the audience</div></div><div class="right"><div class="repo">github.com/<span>pbakaus/</span>impeccable</div><div class="free">Free</div></div></div>
+  </div>
+
+  <div class="dept">
+    <div class="deptlabel">Market</div>
+    <div class="row"><div class="num">04</div><div class="mid"><div class="role">A researcher</div><div class="does">Reads Reddit, X and the web from the last 30 days, not last year</div></div><div class="right"><div class="repo">github.com/<span>mvanhorn/</span>last30days-skill</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">05</div><div class="mid"><div class="role">A marketer</div><div class="does">Conversion, copywriting, SEO and analytics in one seat</div></div><div class="right"><div class="repo">github.com/<span>coreyhaines31/</span>marketingskills</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">06</div><div class="mid"><div class="role">A social manager</div><div class="does">106 skills, every platform, one voice</div></div><div class="right"><div class="repo">github.com/<span>social-media-skills/</span>skills</div><div class="free">Free</div></div></div>
+  </div>
+
+  <div class="dept">
+    <div class="deptlabel">Ship</div>
+    <div class="row"><div class="num">07</div><div class="mid"><div class="role">A motion designer</div><div class="does">Write HTML, get a finished MP4 back</div></div><div class="right"><div class="repo">github.com/<span>heygen-com/</span>hyperframes</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">08</div><div class="mid"><div class="role">A docs team</div><div class="does">Turns any PDF, deck or recording into clean markdown</div></div><div class="right"><div class="repo">github.com/<span>microsoft/</span>markitdown</div><div class="free">Free</div></div></div>
+    <div class="row"><div class="num">09</div><div class="mid"><div class="role">An ops manager</div><div class="does">Remembers last week so nobody has to ask again</div></div><div class="right"><div class="repo">github.com/<span>mem0ai/</span>mem0</div><div class="free">Free</div></div></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="lockup">[ life is beta ]</div>
+  <div class="byline"><b>Lior Pozin</b><br>architect of growth</div>
+</footer>
+</body></html>

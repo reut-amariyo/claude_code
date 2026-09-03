@@ -2252,6 +2252,389 @@ differently than creator audiences read mess.
 
 ---
 
+## 2026-08-04 - Lior LinkedIn Win: "Messi was barely running" (World Cup / lazy method) — 10K+ confirmed
+
+### Status
+Confirmed 10K+ impressions by Reut (exact figure not yet logged). Published the day after the 2026 World Cup final. Added to the leading playbook as **Archetype 10: Cultural Mega-Moment Decode** + new **hook shape #9: two-beat anomaly**.
+
+### The Post (verbatim reference)
+Hook: "Watched the World Cup final live yesterday, and one thing kept me busy: / Messi was barely running."
+Payoff stat: Messi walks 83% of the match. Bridge: "Business feels exactly like this." Arc: early-years sprints → "the lazy method" (pick where to attack, delegate, leave ego out). Principle: "Busy players run more. Great players run right." Close: "Which balls are you still chasing?"
+
+### What Worked
+- **Two-beat anomaly hook.** Line 1 buys shared context (everyone watched the final); line 2 lands a 5-word counterintuitive claim on a world-famous name. First confirmed win where line 1 exceeds 10 words — legal only in this shape.
+- **Humility disclaimer as lane-keeper.** "I'm not a football expert" pre-empts the punditry objection and keeps Lior an operator observing, not a pundit performing.
+- **"Went digging" beat.** Text version of the hand-drawn red circle: I-noticed-this-myself energy, then ONE undecorated stat (83%) as the payoff. Matches his spoken voice DNA (numbers without decoration).
+- **One-line bridge, then personal arc.** Metaphor → founder lesson in a single line ("It clicked instantly. Business feels exactly like this"), then past failure mode → current method. Vulnerability = real past behavior, exactly per the rules.
+- **Quotable one-word-swap parallelism.** "Busy players run more. Great players run right." One quotable principle per post, delivered.
+- **Question close = engagement gap.** "Which balls are you still chasing?" turns the metaphor on the reader.
+- **Pillars:** hits focus AND the lazy/delegation joy of "I live on 200" — two of three pillars.
+
+### Rule Tensions Worth Knowing (bends, not breaks)
+- "The lazy method" is self-named concept-naming, which our anti-AI rules ban. It survives because it's self-deprecating and earned by the failure arc before it. Grandiose naming ("the art of X") stays banned.
+- First-person count ~5, above the ~3 target; forgiven because the close hands the post fully to the reader.
+
+### Pattern Discovered
+- **Cultural mega-event + counterintuitive detail + one stat + pillar bridge = resonance play.** Speed window ~24h (faster decay than tech releases). Only works when the bridge clicks in one line; a forced metaphor kills it.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Promoted to playbook (Archetype 10 + hook #9 in lior-top-8-10k-playbook.md, linkedin-hooks-library.md, the-system-v5/CLAUDE.md)
+- [ ] Visual family for this post unconfirmed — log it when Reut shares the image
+- [ ] Log exact impressions when available
+
+---
+
+## 2026-08-09 - External Swipe: Sahil Bloom "Assume things will work out" (earned faith / active optimism)
+
+### Source
+Hand-picked by Reut. Sahil Bloom LinkedIn post expanding his own X post, with the
+tweet screenshot as the visual. 4,359 reactions, 504 comments, 216 reposts. Zero
+stories, zero numbers in the body - pure mechanism writing that still converted at
+scale. Ends in a repost/follow CTA + newsletter lead magnet.
+
+### Why It Worked (mechanics)
+- **Command-then-earn hook.** Line 1 is a 5-word imperative that reads like a platitude: "Assume things will work out." Line 2 immediately flips it into work ethic: "Then do the work to make it true." The twist rescues the platitude and filters out the manifesting crowd in one beat. Same two-beat DNA as our hook shape #9, but the anomaly is ideological, not factual.
+- **Stakes line third.** "This is the mindset that changed everything for me." Personal stakes claimed before any explanation, buying the scroll.
+- **Objection pre-emption via triple negation.** "Not blind optimism. Not delusion. Not manifesting from the couch." Kills the woo-woo objection in the exact moment it forms, BEFORE naming the concept. Same mechanic as the 07-15 WhatsApp swipe's objection stack.
+- **Villain with concrete verbs.** "Most people prepare for failure before they even start. They hedge. They protect. They build escape routes." The "vs." requirement satisfied through behavior, not identity. Then a consequence cascade: that energy leaks into pitch, effort, willingness.
+- **Mechanism as proof substitute.** No story anywhere. The proof is a compounding loop the reader can verify against their own life: survive uncertainty → build evidence → faith compounds. Abstract claim grounded in a repeatable mechanism.
+- **One quotable principle.** "The people who tolerate uncertainty the best are not the ones with the most answers. They're the ones with the most evidence that they'll find the answers when they need them." Delivered near the end, exactly one.
+- **Bookend close with twist verb.** Hook repeated verbatim, then upgraded: "Assume things will work out. Then go earn it." Closed command ending - works for his Motivator archetype.
+- **Own-tweet screenshot as visual.** Cross-platform authority: the X card with his verified handle IS the credibility artifact.
+- **Rhythm.** One-line paragraphs, 2-6 words per beat, escalating tempo. The post is skimmable at full comprehension.
+
+### Anti-AI / Rule Tension Note
+The post openly uses our banned patterns and wins anyway: concept-naming twice
+("active optimism", "earned faith"), the literal banned contrast template ("It's
+not confidence from success. It's confidence from surviving the process."),
+parentheses in the hook. Coined terms are Sahil's business model - he brands
+frameworks for a mass audience. Lior sells operator credibility to a senior
+audience; the same moves read as AI/guru there. Keep our bans.
+
+### Lior Fit
+- The CONTENT lane is off-limits: abstract mindset posts with no story fail the CEO relevance filter and the Architect-not-Motivator rule. Lior can never clone this post.
+- The command-then-earn hook shape transfers if beat 2 grounds in something real: "Assume the launch works. Then staff it like it won't." Needs a real operator context attached.
+- Objection pre-emption transfers: kill the obvious cynical reading one line before the reader forms it. Restructure away from the "Not X. Not Y." drumbeat, which brushes our banned contrast family.
+- Villain-with-verbs transfers directly: describe what most founders DO, not who they are. Hedge, protect, build escape routes is a model sentence.
+- Bookend close conflicts with our open-ending preference; engagement-gap audit (2026-08-04) says ending type is unproven on impressions, so a bookend close is legal but log it if used.
+- Own-tweet screenshot visual: agency X posts give us the raw material. A Lior tweet screenshot as a LinkedIn visual = personal artifact family, untested for us, worth one experiment.
+
+### Patterns Worth Stealing
+- **Command-then-earn hook**: imperative platitude + work-twist beat 2.
+- **Objection pre-emption before the concept lands**, not after.
+- **Villain with concrete verbs**: behavior as the "vs.", never a named group's identity.
+- **Mechanism-as-proof**: a compounding loop the reader self-verifies. For Lior, pair it with one real number instead of replacing story entirely.
+- **Bookend close with twist verb**: echo the hook, upgrade the verb.
+- **Own-tweet screenshot as LinkedIn visual.**
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [ ] Promote command-then-earn hook to linkedin-hooks-library if it ships and wins
+- [ ] Test own-tweet screenshot visual on one Lior post
+
+---
+
+## 2026-08-09 - Structure Teardown: Matt Gray "You are going to die" (LinkedIn, 296 likes / 102 comments / 12 reposts)
+
+### Why logged
+Reut flagged this post 2026-08-09: learn the structure, and the hook is approved for verbatim reuse on a future Lior post. Hook saved as #11 in the favorite-hooks memory.
+
+### The structure, beat by beat
+1. **Shock hook, second person, 5 words:** "You are going to die." No entity, no number; the provocation IS the anchor.
+2. **Acknowledge the shock:** "I know that's a hell of a way to start a post. But sit with it." Buys permission to continue instead of losing the scroller.
+3. **Escalating faux-data timeline:** 4 weeks = forgotten, 9 months = never mentioned. Two beats, specific numbers, no source needed because the reader feels they're true.
+4. **Reframe pivot:** "That sounds bleak. It's actually a gift." The whole post hinges on this one-line flip from dark to freeing.
+5. **Consequence unpacking:** applies the reframe to the reader's specific fears, second person throughout, rhythmic short lines.
+6. **Command sequence:** "Keep working. Do your best. Build the thing. Take the swing." Imperatives in bursts of 3.
+7. **Objection pre-emption:** "Not because it'll make you immortal, it won't." Kills the cynic's rebuttal before the close.
+8. **Quotable principle near the end:** "The fear of judgment is the most expensive thing you'll ever carry. And it doesn't even last."
+9. **Two-word closing commands:** "Put it down. Go do your work."
+10. Funnel CTA (repost + follow + link). We drop this layer; Lior has no newsletter, open question instead.
+
+### Visual
+Handwritten note on paper = personal artifact family. Legal under our 4-family rule and cheap to reproduce.
+
+### Patterns worth stealing
+- **Shock-then-acknowledge two-beat hook:** the acknowledgment beat is what makes the brutal opener land instead of repel. Copy both beats together, never the shock line alone.
+- **Faux-data timeline:** escalating time markers (4 weeks, 9 months) as proof texture without a citation.
+- **Reframe pivot sentence:** one short line that flips the emotional charge. The post's real engine.
+- **Lior adaptation rule:** source is pure Motivator. On Lior's page beats 5-6 must be replaced with a real founder story with a number, or it fails the Architect-of-Growth filter.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Hook #11 added to favorite-hooks memory, approved for verbatim reuse
+- [ ] Use hook on a Lior post when a fitting mortality/legacy/judgment topic appears
+
+---
+
+## 2026-08-09 - Structure Teardown: CEO sleep-schedule post "5 AM is when I go to sleep" (LinkedIn, 352 likes / 32 comments / 3 reposts)
+
+### Why logged
+Reut flagged this post 2026-08-09: learn the hook and what worked. Hook saved as #12 in the favorite-hooks memory.
+
+### The hook mechanic
+Two-beat cliché inversion:
+1. "Most leadership books tell you to wake up at 5:00 AM." Quotes the guru advice, names the genre, plants a concrete number.
+2. "That's actually when I go to sleep." Personal flip in 8 words that REUSES the exact anchor from beat 1. The 5 AM does double duty; no new information needed for the punch.
+This is a sibling of our two-beat anomaly hook from the Top 13 playbook, and same anti-guru family as favorite hook #6.
+
+### What worked in the body
+- **Confession as deliberate choice, never quirk:** the weird habit is immediately framed as "one of the best choices I've made as a CEO", then justified with operator payoff. No apology, no self-mockery.
+- **Numbers carry the credibility:** 5:00, 11:30, noon, 4 quiet hours. The schedule is fully specified, which makes it believable.
+- **Second payoff is organizational, not personal:** the team solves day-to-day issues before he arrives. Elevates a routine post into a leadership-maturity post. This is the beat that clears our CEO relevance filter.
+- **Quotable principle close:** "Real productivity comes when you carve out time where your best thinking actually happens."
+- **Built-in "vs.":** leadership-book advice vs his reality, established in line 1.
+
+### Patterns worth stealing
+- **Anchor-reuse inversion:** beat 2 flips beat 1 using the same number/entity. Cheapest possible second beat, maximum punch.
+- **Justify the anomaly with operator payoff within 2 lines** or the post reads as quirk-flexing.
+- **Escalate personal habit → organizational consequence:** the team-autonomy beat is what separates this from a productivity-tips post.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Hook #12 added to favorite-hooks memory
+- [ ] Candidate topics for the template: Lior's own non-traditional schedule, "don't ask me for permission" delegation, any guru-advice inversion with a real number
+
+---
+
+## 2026-08-10 - External Learn: Ty Heath (LinkedIn B2B Institute) — Buyability + CEO brand as risk mitigation
+
+### Why logged
+Reut shared the full transcript of Devon Reed's podcast with Ty Heath, global director of thought leadership go-to-market at LinkedIn and co-founder of the B2B Institute. Asked to learn from it + produce a Lior post on why CEO personal brands matter and where the market is heading.
+
+### The data (from LinkedIn's own research org — high authority)
+- **40% of B2B buying decisions end in NO decision.** Not lost to a competitor; the buying group never got confident enough to say yes. The B2B Institute is building its next 2 years of research on this.
+- **Buying groups grew from ~10 to up to 22 people.** Getting 22 people with different stakes to agree is the core failure point.
+- **Hidden buyers hold ~50% of decision power** — legal, finance, procurement. Vendors never talk to them. "If they don't know your brand exists, you're almost done."
+
+### The Buyability framework (3 signals)
+1. **Risk** — the champion's job is on the line; your content must make saying yes feel safe and arm the champion politically inside their org.
+2. **Visibility** — be known to the hidden buyers, not only the target buyer, in language each cares about ("will we get sued" vs feature lists).
+3. **Proof** — "someone like me made this decision before and was OK." Social proof as fear-removal, not bragging.
+
+### Why this validates the whole Lior operation
+- **"LinkedIn is the conversation before the conversation."** People check the founder's profile before any meeting; the profile is reputational surface area that works before you show up. Founder brand = trust infrastructure = pipeline, not vanity.
+- Devon Reed's Clary case: built the CEO's LinkedIn presence from an offline-only reputation; millions of views in year 1 and inbound leads naming the CEO in "how did you hear about us." Exactly the model we run for Lior.
+- The exec-hesitancy reframe: count what you LOSE by not posting (credibility, doors for the company, employees hearing your thinking), not what you gain by posting. A leader is a steward of the business; being out front is an expectation now.
+
+### Craft patterns worth stealing
+- **10-5-5 cadence** for busy execs: 10 min/day noticing insights (red car effect), 5 min posting unpolished, 5 min engaging in comments. Kills the "no time" objection. ⚠️ For our own ops, NOT a Lior post topic (productivity-tip lane).
+- **Voice-capture workflow:** dictate raw thoughts after meetings/events, then AI to SHARPEN not to think, with an explicit "keep as much of my original copy as possible" instruction. Matches our voice-DNA approach.
+- **Useful beats entertaining on LinkedIn**, but enthusiastic delivery is what makes useful content travel. Conviction is contagious, on stage and in writing.
+- Upcoming study to watch: **"The Credibility Code"** + the "creator stack" concept (brand voice + employees + customers/peers + creators as one trust ecosystem). B2B creator economy framed as underinvested = the wave is early, not over.
+
+### Where the market is heading (their read)
+LinkedIn is investing heavily in the B2B creator economy; it's "half the economy" with a fraction of the attention. Executive thought leadership is shifting from optional PR to a buying-committee de-risking mechanism. This is the strategic thesis behind today's post draft.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Saved auto-memory reference: reference-ty-heath-buyability-framework.md
+- [x] Post drafted: O-output/lior-linkedin-ceo-brand-buyability-2026-08-10.md
+- [ ] Watch for The Credibility Code release (Archetype 4 / Archetype 7 candidate when it drops)
+
+---
+
+## 2026-08-12 - External Swipe: Codie Sanchez "Money loves speed" (time-to-action)
+
+### Source
+Hand-picked by Reut. Codie Sanchez LinkedIn post with her own-tweet screenshot as the
+visual ("Decrease the time between having an idea and getting it done. Money loves
+speed. Poverty loves waiting."). 1,391 reactions, 339 comments, 50 reposts. Body
+expands the card into a time-compression ladder and closes on a same-day masterclass
+signup CTA.
+
+### Why It Worked (mechanics)
+- **The quotable lives in the IMAGE, not the body.** The tweet card carries the aphorism; the body is the expansion layer. Second confirmed case of the own-tweet-screenshot visual after the 08-09 Sahil Bloom swipe — this is now a recurring winner pattern among top creators, not a one-off.
+- **Binary aphorism pair.** "Money loves speed. Poverty loves waiting." Two parallel 4-word sentences, opposite subjects, same verb. Personification turns an abstract claim into something that reads like a law of nature.
+- **Metric reframe hook.** "The only statistic you should care about is time-to-action." Renames an invisible behavior as a KPI, so a business audience processes it as data instead of motivation.
+- **Time-compression ladder.** Quarter → month → week → tomorrow. Each beat shortens the horizon; the reader feels acceleration. The payoff is withheld until after the ladder ("You will make more money").
+- **CTA congruence.** The masterclass is TODAY and the ask is framed as "prove to yourself that you're someone who acts fast." The CTA is itself a test of the post's thesis; funnel and message are the same muscle.
+
+### Anti-AI / Rule Tension Note
+Her ladder is a hyphen bullet list; ours can't be (arrow/bullet lists cost us reach —
+restructure as stanza lines). Her binary aphorism brushes the banned contrast family
+but stays legal as parallel-positive phrasing, not "not X, it's Y" negation. Her CTA
+is a funnel play; Lior has no funnel — replace with an open question.
+
+### Lior Fit
+- Content lane is LEGAL: speed of execution hits the 0→1 pillar and focus pillar, and real operator proof exists (E97 story 5: meetings cut 60→30→15; same-week shipping culture).
+- Motivator risk is real: without a concrete experiment in the body this is a Codie post, not a Lior post. The meeting-cutting story is the spine that keeps it Architect.
+- Own-tweet card visual: the experiment flagged in the 08-09 Sahil swipe now has its second external proof. Ship the test on this post.
+
+### Patterns Worth Stealing
+- **Quotable-in-the-image, expansion-in-the-body.**
+- **Binary aphorism pair:** two parallel sentences, opposite subjects, same verb.
+- **Metric reframe:** rename a behavior as a statistic ("time-to-action").
+- **Time-compression ladder** with withheld payoff.
+- **CTA congruence:** the ask demonstrates the thesis. For Lior: an open question that can be answered right now, not a funnel.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Comment drafted for Reut (manual posting, delivered in chat)
+- [x] Lior adaptation drafted: O-output/lior-linkedin-time-to-action-2026-08-12.md
+- [ ] Test own-tweet-card visual (second flag — first was Sahil swipe 08-09)
+
+---
+
+## 2026-08-12 - LinkedIn Post: Anthropic watermark newsjack ("does it even matter?")
+
+### Gatekeeper Review
+**Status:** Published 2026-08-12. Lior explicitly happy — "המון תגובות", flagged the humanity as the reason. Impressions trajectory: ~3,000 (day 0) → 7,000 (day 0, later same day) — still climbing. 10K+ is in range; 7d final pending. Early read: heavy comment threads may be FEEDING distribution with a lag rather than failing to feed it — the deep-thread hypothesis below needs the 7d number before it stands.
+
+### What Worked Well
+- **"My media, not news media" (Lior's own framing, via voice notes).** The post went through ~10 iterations: started as a news-explainer with section headers (The news / Why it matters / What's next), ended as a human reaction. Lior killed the anchor-desk register twice before it clicked.
+- **Final structure:** locked winner hook ("Anthropic just dropped invisible watermarks into Claude") → panic acknowledgment → deflation question ("But does it even matter?") → 2-layer eye-level explainer (no C2PA jargon, "digital signature") → operator take → quotable ("The thinking has no watermark") → humility-curiosity close ("Teach me in the comments").
+- **The comment engine was the close.** A CEO asking the audience to teach HIM the engineering inverted the guru posture and pulled both technical commenters (steganography, KGW, hidden-Unicode threads) and philosophical ones (disclosure ethics, platform ranking). Every reply thread got a fresh image (loaded dice / model in the room vs. who ran the meeting / locks keep honest people honest) — no recycled lines across threads.
+- **Eye-level pass mattered:** "weaves a watermark" → "hides an invisible mark", "traceable" → "can be traced", C2PA dropped from body (kept in doc-screenshot visual).
+
+### What Needed Improvement
+- Early drafts over-indexed on completeness (GPTZero KGW mechanics, Gemini/SynthID precedent, laundering arms race, EU Article 50) — all true, all cut. The material migrated to Lior's comment replies instead, where it performed as thread fuel.
+- Hook took 4 rounds: era-claim hook and "JUST IN:" ticker both rejected; the proven "[Company] just dropped [thing]" shape won again.
+
+### Pattern Discovered
+- **Newsjack register rule now extends beyond hooks to full post structure:** on Lior's page, tech-news posts should read as a person reacting (panic → so what → my take → genuine question), not a reporter covering. The explainer content doesn't disappear — it gets demoted to comment-reply ammunition.
+- **Curiosity close > expertise close for comment volume.** "Teach me in the comments" out-pulled every prior CTA formula on this page.
+- **⚠️ Resonance ≠ reach (now confirmed in BOTH directions):** 142K Google post = reach without resonance (0.16% ER); this post = resonance without reach (~3K imp, heavy comments). The human-reaction register is a CONVERSATION lever, not a distribution lever. Hypotheses for the low reach, to test on next newsjack: (a) deep back-and-forth threads with the same few commenters don't multiply unique engagers the way many shallow comments do; (b) "does it even matter" deflation may suppress the click/dwell signals that news-shock framing buys; (c) posted on day 2 of the news wave, after the decode window's peak. One data point — do not kill the register, pair it with a reach lever next time (giant-tagging, threat framing, or earlier timing).
+- Promoted to auto-memory: feedback-newsjack-human-not-news-anchor.md (updated with the reach caveat)
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Promoted to Claude auto-memory (feedback-newsjack-human-not-news-anchor)
+- [ ] Capture 7d final metrics into performance log (day-0 trajectory: 3K → 7K same day, climbing)
+- [ ] If 10K+ confirmed → add to Top 13 playbook as Archetype 4 sub-pattern (human-reaction decode) and soften the "conversation lever only" caveat
+- [ ] Next Archetype 4 test: human-reaction register + explicit reach lever (tag the giant / sharper threat frame / ship day 1) — measure whether the combo breaks the reach-resonance tradeoff
+
+---
+
+## 2026-08-24 - Structure Teardown: Layla Shaikley quote card "Confidence doesn't come from believing in yourself" (1,323 reactions / 226 comments / 94 reposts)
+
+### Source
+Hand-picked by Reut. LinkedIn post built on a borrowed-quote card: a plain serif text
+card carrying a Layla Shaikley quote about confidence coming from repetition rather
+than belief, with the author's name in small grey type at the bottom. The body is the
+poster's own proof layer, not a restatement of the quote.
+
+### Why It Worked (mechanics)
+- **Borrowed-quote card, not an own-tweet card.** Third confirmed instance of the quotable-in-the-image family after Sahil Bloom (08-09) and Codie Sanchez (08-12), but this one attributes the quote to someone else. Cost is near zero, authority risk is zero, and crediting another author buys goodwill plus a reshare surface. Cheapest version of the pattern we have seen.
+- **Mundane-fear triple.** Posting an opinion, reaching out to creators, speaking live. Three specific, low-drama actions, odd count, all things the reader has personally avoided this month. The mirror does the work; nobody needs the author's biography to feel seen.
+- **Two-line reversal pivot.** "The actual activities haven't changed. My brain has." Short sentence, hard stop, the whole post turns there.
+- **Named mechanism instead of encouragement.** Fear framed as the brain making a prediction, repetition framed as feeding it new evidence. Mechanism content gets saved and reshared; pep talk does not. 94 reposts on a mindset post is the tell.
+- **Prescription close with a lowered bar.** Do not aim at feeling confident, find the smallest version you can repeat. One instruction, executable today.
+- **Four-word exit line.** "Give your brain some new data." Quotable that is not the card's quotable, so the post ships two takeaways.
+- **No CTA question, 226 comments.** The topic itself is a self-disclosure prompt. People comment their own fear unprompted. Confirms the 08-12 finding that invitation beats interrogation, in a shape that needs no "teach me" line.
+
+### Anti-AI / Rule Tension Note
+The source quote contains "nothing is actually hard, it's just unfamiliar", which is
+the banned contrast family. If we ever adapt this, the mechanism has to be stated
+positively. The body also leans on first person heavily, above our 3x cap for a short
+Lior post.
+
+### Lior Fit
+- Lane is LEGAL. Repetition-as-evidence maps to the 0-to-1 pillar and to "I live on 200": every ship is a rep, the founder's alarm goes quiet because of volume, not affirmations.
+- Motivator risk is the main threat. Without a dated operator moment this reads as a coach post, not an Architect post. Anchor candidates: the FB live apology after the dollar bug, first conference talk, first cold pitch to a partner.
+- Relevant to the follower-KPI work from 08-23: mechanism plus borrowed card is high-save, high-repost, low-production. Good candidate shape for the signature series test.
+
+### Patterns Worth Stealing
+- **Borrowed-quote card:** someone else's line as the visual, our proof as the body. Zero authority risk, cheap to produce, credits another creator.
+- **Mundane-fear triple:** three specific small actions the reader recognises, odd count, no drama.
+- **Reversal pivot:** the activity did not change, the operator did.
+- **Mechanism over motivation:** explain the machinery, the save and the repost follow.
+- **Lowered-bar close:** replace the big goal with the smallest repeatable version.
+- **Self-disclosure prompt instead of a CTA question.**
+
+### Adaptation Failure Mode Found (2026-08-24, 2 rejected drafts)
+First Lior adaptation swapped the universal fears for founder fears: going live about
+a bug, saying a number in an acquisition meeting, firing someone. Reut rejected it
+twice, second time as "does not create identification and emotion like the original".
+**The rule this produced: identification dies when the confessed fear is impressive.**
+The source triple works because posting an opinion, DMing someone you admire, and
+speaking to a room are things the reader personally avoided this month. Founder war
+stories earn admiration, and admiration is the opposite of the mirror. The second
+error was register: the original is written in body language (haywire, terrified,
+the alarm), the rejected draft translated it into operator language (survivable,
+handled), which drained the emotion even where the skeleton was intact.
+Fix that shipped: keep the small universal fears, buy Lior authenticity with ONE
+unimpressive detail (rewrote his opening line 40 times before the Dubai stage and
+forgot it anyway) instead of a war story.
+
+### The Loop
+- [x] Logged in M-memory/learning-log.md
+- [x] Comment drafted for Reut, manual posting, delivered in chat
+- [x] Lior adaptation v3 shipped: O-output/lior-linkedin-confidence-lagging-indicator-2026-08-24.md
+- [ ] Test the borrowed-quote card as a Lior visual, cheapest version of the quotable-in-image experiment already flagged twice
+- [ ] If the signature series needs a low-cost recurring format, evaluate borrowed-quote card plus operator proof as the weekly slot
+
+---
+
+## 2026-09-03 - Lior LinkedIn FAILURE: Fable 5.1 "7 steps to a premium AI-built site" (~1,000 impressions)
+
+### The numbers
+~1,000 impressions. At least 5 substantive comments, several of them long and thoughtful.
+Reactions and net new followers not yet captured. Open question at time of writing: does the
+post's analytics panel show the "seems like AI slop" report warning.
+
+### The diagnosis
+Five real comments on 1,000 impressions is an unusually HIGH engagement rate on an unusually
+SMALL pool. The people who saw it engaged. It was never distributed. This is a distribution
+failure, not a copy failure, and the two are diagnosed differently. Do not rewrite the
+sentences next time. Change what the post is about.
+
+### Root cause, most likely: topic mismatch with the interest graph
+LinkedIn ranks by topic relevance, not by follower graph. Lior's graph is founders, operators,
+e-commerce and AI leverage. This post was web design craft. Five of its seven items were
+designer advice: brand guidelines, audience definition, scroll animation, component reuse,
+mobile checking. The algorithm had no reason to show a design-process post to an operator
+audience, and no reason to show an operator's profile to a design audience.
+
+This was flagged three separate times during drafting. Every gate table in the four Fable 5.1
+drafts carried a ⚠️ on the CEO relevance row, naming items 3, 4 and 5 as designer craft and
+the drift risk. The recommended mitigation, one line tying the list back to his operator seat,
+was offered twice and never added. **A ⚠️ on the CEO relevance row is now treated as a
+blocker, not a note.** That row exists to catch exactly this and it caught exactly this.
+
+### Contributing causes, ranked
+2. **Promise and payoff did not match.** The hook said Fable 5.1 killed AI website slop. The
+   body handed the reader seven things they have to do themselves. The reader came for a
+   solved problem and got homework. That gap costs early dwell, and early dwell is what
+   decides whether LinkedIn expands the test pool.
+3. **Six of seven items were not new.** Only screenshot verification was unlocked by this
+   release. The rest has been standard design advice since 2015. A save-first post needs a
+   non-obvious artifact; this one had one non-obvious line buried in six obvious ones.
+4. **Day-one timing on the most crowded story of the week.** Day-one was recommended as the
+   reach lever. On a launch every AI account is covering, with no data nobody else had,
+   day-one means maximum competition and zero differentiation. Day-one is a reach lever only
+   when you hold something the crowd does not.
+5. **The one contrarian claim was cut in the final round.** "The model you pick matters less
+   than the seven things below" was the source's own finding and the only line in the post
+   that disagreed with the crowd. It was removed in round 8. Without it the post said what
+   500 other accounts said that day.
+
+### Process cost
+Eight rounds of revision on the copy, four on the graphic. Almost all of it spent on hook
+wording and punctuation while the topic, which is what actually decides distribution, was
+never revisited. **Rounds spent on the sentence do not fix a post that is about the wrong
+thing.** When a post is being iterated more than three times on the hook, stop and re-ask
+whether the topic clears the interest graph.
+
+### What to test next
+Same source material, opposite frame. The discarded finding is the asset: the model barely
+changed the output, the process did. That is contrarian, it is operator judgment rather than
+tool coverage, it does not compete in the launch pile, and it reaches the founder graph
+because the subject becomes decision-making under vendor hype rather than web design.
+
+### The Loop
+- [x] Logged
+- [x] Rule promoted: a ⚠️ on the CEO relevance row blocks publication
+- [ ] Capture reactions, net new followers, and the AI-slop warning status, then finalise
+      whether cause 1 or a suppression flag dominates
+- [ ] Retest with the contrarian frame, no design craft in the body
+- [ ] Related: [[linkedin-interest-graph-2026]], [[feedback-ceo-relevance-filter]],
+      [[linkedin-ai-slop-penalty]], the 2026-08-12 watermark entry on conversation levers
+      versus reach levers
+
+---
+
 ## Sample Entry: How to Log
 
 ## 2024-01-15 - LinkedIn Post: Product Launch

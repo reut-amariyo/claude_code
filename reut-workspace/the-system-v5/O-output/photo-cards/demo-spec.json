@@ -1,0 +1,30 @@
+[
+  {
+    "photo": "O-output/photo-cards/_demo-placeholder-lior.jpg",
+    "kicker": "AUTODS · 2017",
+    "line1": "WE STARTED WITH ZERO FUNDING",
+    "line2": "IT ENDED IN A {{$92M}} EXIT",
+    "variant": "block",
+    "byline": "Lior Pozin · architect of growth",
+    "focus": "50% 30%",
+    "out": "O-output/photo-cards/demo-A-block.png"
+  },
+  {
+    "photo": "O-output/photo-cards/_demo-placeholder-lior.jpg",
+    "kicker": "AUTODS · 2017",
+    "line1": "NOBODY WANTED TO INVEST IN US",
+    "line2": "WE BUILT IT TO {{250 PEOPLE}}",
+    "variant": "sand",
+    "byline": "Lior Pozin · architect of growth",
+    "focus": "50% 30%",
+    "out": "O-output/photo-cards/demo-B-sand.png"
+  },
+  {
+    "photo": "O-output/photo-cards/_demo-placeholder-lior.jpg",
+    "line1": "EVERY INVESTOR SAID NO",
+    "line2": "WE BOOTSTRAPPED TO {{$20M}} ARR",
+    "variant": "plain",
+    "focus": "50% 30%",
+    "out": "O-output/photo-cards/demo-C-plain.png"
+  }
+]

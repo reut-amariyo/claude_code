@@ -1,0 +1,44 @@
+A photorealistic supermarket receipt, shot straight down from directly above so the paper fills almost the entire 4:5 portrait frame. Long narrow thermal receipt paper in slightly off-white, resting on a plain warm cream #F0EEE6 surface. The paper has believable texture: faint fibre grain, a soft natural curl at the very top and very bottom edges, one light crease, and a soft realistic shadow underneath. The print is genuine thermal dot-matrix monospace, slightly imperfect and very slightly grey rather than pure black, exactly like a real till receipt. The paper is torn at the top edge with a small ragged serrated line. No hands, no props, no coins, no plants, no coffee cups, no other objects in frame.
+
+Printed on the receipt, top to bottom, centred unless stated otherwise:
+
+A small coral #D97757 starburst mark made of about a dozen slim tapered rays radiating from one centre point, like an asterisk with soft pointed tips. This is the only colour anywhere in the image, everything else on the paper is monochrome thermal print.
+
+Under the mark, in large bold monospace capitals: "OPEN SOURCE MARKET"
+Under that, smaller: "STAFFING DEPT - OPEN 24H"
+Under that, smaller still: "ORDER #9  -  SELF CHECKOUT"
+
+A dashed horizontal separator line running the full width of the paper.
+
+Then a left-aligned column of nine line items. Each line item takes two printed rows. The first row has the job title in bold monospace capitals on the left and the price "$0.00" right-aligned hard against the right edge of the paper. The second row is indented slightly and printed smaller and lighter, showing the repository name in lowercase monospace. The nine items in this exact order:
+
+"QA TESTER" / "playwright-mcp" / "$0.00"
+"SENIOR ENGINEER" / "superpowers" / "$0.00"
+"PRODUCT DESIGNER" / "impeccable" / "$0.00"
+"RESEARCHER" / "last30days-skill" / "$0.00"
+"MARKETER" / "marketingskills" / "$0.00"
+"SOCIAL MANAGER" / "social-media-skills" / "$0.00"
+"MOTION DESIGNER" / "hyperframes" / "$0.00"
+"DOCS TEAM" / "markitdown" / "$0.00"
+"OPS MANAGER" / "mem0" / "$0.00"
+
+Another dashed horizontal separator line.
+
+Then a right-aligned totals block, each label on the left and its figure hard right:
+"SUBTOTAL" with "$0.00"
+"TAX" with "$0.00"
+"TOTAL" with "$0.00", printed noticeably larger and bolder than every other line on the receipt.
+
+Another dashed separator, then a left-aligned block in normal size:
+"ITEMS SOLD: 9"
+"PAYMENT METHOD: NONE"
+"YOU SAVED: 9 SALARIES"
+
+Another dashed separator, then centred:
+"THANK YOU FOR BUILDING WITH US"
+"CASHIER: LIOR"
+"[ life is beta ]"
+
+At the very bottom, a realistic black barcode with a row of small digits underneath it.
+
+Render every quoted string exactly as written, correctly spelled and sharply legible at phone size. Print all nine repository names in lowercase exactly as given, including every hyphen and digit, and do not invent, translate or abbreviate any of them. Every one of the nine prices must read "$0.00" and the total must read "$0.00". Do not add any items, words, prices, logos, slogans or decorative elements that are not listed here.

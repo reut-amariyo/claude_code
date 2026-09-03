@@ -13,7 +13,7 @@ This is what makes `/hooks` improve over time. Every hook Reut reacts to gets lo
 
 | Date | Hook | Formula | Why it won |
 |------|------|---------|------------|
-| | | | |
+| 2026-08-06 | What is your dream? / This. | Open Question (trend-native) | Reut chose the pure trend phrasing over all 5 specificity-anchored candidates for the dream-achieved reel; simplicity + footage carries it |
 
 ## ❌ Rejected (avoid this pattern)
 

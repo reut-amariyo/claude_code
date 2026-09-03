@@ -1,0 +1,555 @@
+<title>Views to Stores</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ground:#F2F1ED; --surface:#FBFAF7; --focus:#FFFFFF;
+  --ink:#1F1E1B; --ink-2:#56544E; --ink-3:#8E8B83;
+  --line:#DEDCD5; --line-strong:#C6C3B9;
+  --sand:#A87C4A; --sand-fill:#EBE0CE;
+  --up:#4A7351; --down:#A0503A;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#131311; --surface:#1B1B18; --focus:#232320;
+  --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842;
+  --sand:#D2AC7C; --sand-fill:#3A3226; --up:#83AC8A; --down:#CE8569;}}
+:root[data-theme="dark"]{
+  --ground:#131311; --surface:#1B1B18; --focus:#232320;
+  --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842;
+  --sand:#D2AC7C; --sand-fill:#3A3226; --up:#83AC8A; --down:#CE8569;}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+section{padding:72px 0; border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); margin:0 0 14px}
+h1{font-family:var(--mono); font-weight:700; font-size:clamp(34px,5.2vw,58px); line-height:1.05; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance}
+h2{font-family:var(--mono); font-weight:700; font-size:clamp(23px,3vw,32px); line-height:1.15; letter-spacing:-.01em; margin:0 0 12px; text-wrap:balance}
+h3{font-family:var(--mono); font-weight:700; font-size:15px; letter-spacing:.02em; margin:0 0 8px}
+p{margin:0 0 14px; max-width:66ch; color:var(--ink-2)}
+p.lead{font-size:18px; color:var(--ink); max-width:62ch}
+strong{color:var(--ink); font-weight:700}
+.cover{padding:96px 0 72px}
+.lockup{font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--sand); margin:0 0 40px}
+.cover-meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.chip{font-family:var(--mono); font-size:12px; letter-spacing:.04em; border:1px solid var(--line-strong); border-radius:2px; padding:6px 11px; color:var(--ink-2); background:var(--surface)}
+.container-block{background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:22px 24px}
+.container-block.focus{background:var(--focus); border-color:var(--line-strong)}
+.container-block.missing{background:transparent; border:1px dashed var(--line-strong)}
+.ladder{display:flex; flex-direction:column; gap:0; margin-top:34px}
+.rung{display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:20px; background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:20px 24px}
+.rung.gap-row{background:transparent; border:1px dashed var(--line-strong)}
+.rung-label{font-family:var(--mono); font-size:13px; letter-spacing:.03em; color:var(--ink-2)}
+.rung-label small{display:block; font-family:var(--sans); font-size:12.5px; color:var(--ink-3); letter-spacing:0; margin-top:5px; max-width:54ch}
+.rung-value{font-family:var(--mono); font-weight:700; font-size:clamp(22px,3.4vw,34px); font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap}
+.rung.gap-row .rung-value{color:var(--ink-3)}
+.step{display:flex; align-items:center; gap:12px; padding:9px 24px; font-family:var(--mono); font-size:12px; color:var(--ink-3)}
+.step b{color:var(--sand); font-weight:700; font-variant-numeric:tabular-nums}
+.step .rule{flex:1; height:1px; background:var(--line)}
+.grid{display:grid; gap:14px; margin-top:28px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.stat-n{font-family:var(--mono); font-weight:700; font-size:30px; font-variant-numeric:tabular-nums; letter-spacing:-.02em; display:block; margin-bottom:2px}
+.stat-k{font-family:var(--mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.stat-note{font-size:13px; color:var(--ink-2); margin:8px 0 0}
+.scroller{overflow-x:auto; margin-top:26px; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:660px; font-variant-numeric:tabular-nums}
+th,td{padding:13px 16px; text-align:right; border-bottom:1px solid var(--line); font-size:14px}
+th:first-child,td:first-child{text-align:left}
+th{font-family:var(--mono); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono)}
+tr.spot td{background:var(--sand-fill)}
+.up{color:var(--up)} .down{color:var(--down)}
+.tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; border:1px solid var(--line-strong); border-radius:2px; padding:2px 7px; color:var(--ink-3); white-space:nowrap}
+.tag.gate{border-color:var(--sand); color:var(--sand)}
+.bars{display:flex; flex-direction:column; gap:16px; margin-top:26px}
+.bar-row{display:grid; grid-template-columns:104px 1fr 78px; align-items:center; gap:16px}
+.bar-name{font-family:var(--mono); font-size:13px; color:var(--ink-2)}
+.bar-track{height:12px; background:var(--line); border-radius:1px; overflow:hidden}
+.bar-fill{height:100%; background:var(--sand); border-radius:1px}
+.bar-val{font-family:var(--mono); font-size:14px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right}
+.checks{list-style:none; margin:16px 0 0; padding:0; display:flex; flex-direction:column; gap:11px}
+.checks li{display:grid; grid-template-columns:26px 1fr; gap:12px; align-items:start; font-size:14.5px; color:var(--ink-2); padding-bottom:11px; border-bottom:1px solid var(--line)}
+.checks li:last-child{border-bottom:0}
+.checks .mark{font-family:var(--mono); font-size:12px; color:var(--sand); padding-top:2px}
+.checks b{color:var(--ink); font-weight:700}
+.callout{border-left:2px solid var(--sand); padding:4px 0 4px 20px; margin:26px 0 0}
+.callout p{margin:0; color:var(--ink)}
+footer{padding:44px 0 64px; border-top:1px solid var(--line)}
+footer p{font-family:var(--mono); font-size:12px; color:var(--ink-3); max-width:none}
+@media (max-width:620px){
+  .rung{grid-template-columns:1fr; gap:8px}
+  .bar-row{grid-template-columns:88px 1fr 64px; gap:11px}
+  section{padding:52px 0}
+}
+</style>
+
+<div class="wrap">
+
+<section class="cover">
+  <p class="lockup">[ life is beta ]</p>
+  <p class="eyebrow">Offsite · Funstudio + Lior · 2 September 2026</p>
+  <h1>Views to stores</h1>
+  <p class="lead">Instagram, TikTok and Facebook in August, with six months of history behind them and what actually moved the numbers.</p>
+  <div class="cover-meta">
+    <span class="chip">August 2026</span>
+    <span class="chip">Instagram · TikTok · Facebook</span>
+    <span class="chip">~204K followers</span>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Today</p>
+  <h2>Seven things to talk about, and what each one has to decide</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Topic</th><th>The decision it produces</th></tr></thead>
+      <tbody>
+        <tr><td>Where August landed</td><td style="text-align:left">Shared read on what fell and what did not</td></tr>
+        <tr><td>Facebook</td><td style="text-align:left">Who owns it, and what Q4 assumes until it is fixed</td></tr>
+        <tr><td>TikTok</td><td style="text-align:left">Whether it gets more of the effort</td></tr>
+        <tr class="spot"><td>Gold content, the artifacts</td><td style="text-align:left">Ten named documents, six with dates</td></tr>
+        <tr><td>Volume</td><td style="text-align:left">Effort split per platform, one owner each</td></tr>
+        <tr><td>Build Your Store</td><td style="text-align:left">Whose channels carry it, and the one number we chase</td></tr>
+        <tr><td>The AI videos</td><td style="text-align:left">Fix, pivot or kill, with a gate</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="callout"><p>The room only works if Lior talks more than half the time. He is the only person here who owns the things nobody else can get.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">The headline</p>
+  <h2>Views fell by 3.3 million. Almost all of it is one platform.</h2>
+  <p>July was the best month this brand has ever had, with both September targets crossed in month one of the quarter. August gave most of it back, and the reason is not the content.</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Platform</th><th>July views</th><th>August views</th><th>Change</th></tr></thead>
+      <tbody>
+        <tr><td>Instagram</td><td class="num">4,100,000</td><td class="num">3,331,989</td><td class="num down">-18.7%</td></tr>
+        <tr class="spot"><td>Facebook</td><td class="num">3,181,303</td><td class="num">107,426</td><td class="num down">-96.6%</td></tr>
+        <tr><td>TikTok</td><td class="num">858,333</td><td class="num">1,391,919</td><td class="num up">+62.2%</td></tr>
+        <tr><td><strong>Total</strong></td><td class="num"><strong>8,139,636</strong></td><td class="num"><strong>4,831,334</strong></td><td class="num down"><strong>-3,308,302</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid g3">
+    <div class="container-block focus"><span class="stat-n">93%</span><span class="stat-k">Of the fall is Facebook</span><p class="stat-note">Facebook alone lost 3,073,877 views of the 3,308,302 total drop.</p></div>
+    <div class="container-block"><span class="stat-n">~204K</span><span class="stat-k">Followers, still climbing</span><p class="stat-note">Across these three platforms. Reach fell; the audience did not.</p></div>
+    <div class="container-block"><span class="stat-n">+62%</span><span class="stat-k">TikTok</span><p class="stat-note">The only platform that grew, and the one with the least resource.</p></div>
+  </div>
+
+  <div class="callout">
+    <p>Two sentences for the room. The content engine did not break in August, one distribution channel did. And the quarter is still ahead of plan on followers, so the conversation today is about where September's effort goes, not about damage control.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">The funnel</p>
+  <h2>Views to followers, and the exit that leads somewhere else</h2>
+  <p>Instagram, 1-31 August. Each rung is read from Insights. The figure between two rungs is the share that survived.</p>
+
+  <div class="ladder">
+    <div class="rung">
+      <div class="rung-label">Views<small>Across 161 posts and reels. 85.9% served to people who do not follow Lior.</small></div>
+      <div class="rung-value">3,331,989</div>
+    </div>
+    <div class="step"><b>38.2%</b><span class="rule"></span><span>were distinct people</span></div>
+
+    <div class="rung">
+      <div class="rung-label">Viewers reached<small>Distinct accounts that saw at least one piece.</small></div>
+      <div class="rung-value">1,271,908</div>
+    </div>
+    <div class="step"><b>5.05%</b><span class="rule"></span><span>went to look at the profile</span></div>
+
+    <div class="rung">
+      <div class="rung-label">Profile visits<small>Where a stranger decides whether this account is worth keeping.</small></div>
+      <div class="rung-value">64,241</div>
+    </div>
+    <div class="step"><b>18.1%</b><span class="rule"></span><span>pressed Follow</span></div>
+
+    <div class="rung">
+      <div class="rung-label">New follows<small>Gross, before anyone left.</small></div>
+      <div class="rung-value">11,600</div>
+    </div>
+    <div class="step"><b>-22.6%</b><span class="rule"></span><span>unfollowed inside the same month</span></div>
+
+    <div class="rung focus">
+      <div class="rung-label">Net new followers<small>14.0% of profile visits. The account closed August at 104,659, up 9.4% on the month.</small></div>
+      <div class="rung-value">+8,976</div>
+    </div>
+    <div class="step"><b>1.5%</b><span class="rule"></span><span>of profile visits tapped the link in bio</span></div>
+
+    <div class="rung">
+      <div class="rung-label">Bio link taps → liorpozin.com<small>0.029% of all views. This is the website link, not a Build Your Store link. It is the only measured exit Instagram gives us, and it does not lead where the product does.</small></div>
+      <div class="rung-value">964</div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>Six rungs, all measured, and then a wrong turn. The 964 taps go to liorpozin.com. <strong>Build Your Store is not on the other side of that link.</strong> The route to the product runs through the comment gates and the ManyChat auto-DM, which is a completely separate path, and it is the one we have never measured.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">What actually built the month</p>
+  <h2>Five artifact giveaways produced 45% of every new follower</h2>
+  <p>Instagram's Content tab sorted by follows rather than views. The ranking looks nothing like the views ranking, and it is the ranking that matters.</p>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Post</th><th>Type</th><th>Follows</th><th>Comments</th><th>Shares</th><th>Likes</th></tr></thead>
+      <tbody>
+        <tr class="spot"><td>Comment "CEO" · 10 startups that don't exist yet</td><td><span class="tag gate">Gated artifact</span></td><td class="num">3,200</td><td class="num">5,900</td><td class="num">15,000</td><td class="num">9,900</td></tr>
+        <tr class="spot"><td>Comment "EXIT" · the exit deck, Nasdaq reel</td><td><span class="tag gate">Gated artifact</span></td><td class="num">1,400</td><td class="num">1,300</td><td class="num">600</td><td class="num">1,900</td></tr>
+        <tr><td>How many times I failed before 28</td><td><span class="tag">Story</span></td><td class="num">487</td><td class="num">23</td><td class="num">138</td><td class="num">630</td></tr>
+        <tr class="spot"><td>Comment "CEO" · repeat</td><td><span class="tag gate">Gated artifact</span></td><td class="num">267</td><td class="num">611</td><td class="num">1,100</td><td class="num">957</td></tr>
+        <tr><td>How many times I failed before 28 · variant</td><td><span class="tag">Story</span></td><td class="num">220</td><td class="num">4</td><td class="num">84</td><td class="num">495</td></tr>
+        <tr><td>Lots of new people here lately · age 14, kicked out of school</td><td><span class="tag">Personal</span></td><td class="num">211</td><td class="num">19</td><td class="num">74</td><td class="num">2,000</td></tr>
+        <tr class="spot"><td>Comment "CEO" · repeat</td><td><span class="tag gate">Gated artifact</span></td><td class="num">207</td><td class="num">439</td><td class="num">1,200</td><td class="num">1,100</td></tr>
+        <tr class="spot"><td>Comment "EXIT" · repeat</td><td><span class="tag gate">Gated artifact</span></td><td class="num">199</td><td class="num">159</td><td class="num">101</td><td class="num">385</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid g3">
+    <div class="container-block focus"><span class="stat-n">5,273</span><span class="stat-k">Follows from gated artifacts</span><p class="stat-note">45.5% of the month's 11.6K gross follows, from five posts out of 161.</p></div>
+    <div class="container-block"><span class="stat-n">332K</span><span class="stat-k">Also number one by views</span><p class="stat-note">The 10 startups carousel topped both rankings. There was no trade-off to make.</p></div>
+    <div class="container-block"><span class="stat-n">3,200 → 207</span><span class="stat-k">Same asset, four runs</span><p class="stat-note">Follows fell 94% by the fourth. The format holds, the asset does not.</p></div>
+  </div>
+
+  <div class="callout">
+    <p>The mechanic is proven twice over. July's best post was the age-14 childhood photo, 14-15K follows, 57% of that month's growth. August's best was a giveaway of a real document, 3,200 follows. Both are first-party artifacts only Lior can produce, and nothing else on the account comes close.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>We are not short of a format. We are short of artifacts.</strong> Two assets have carried the last two months and one of them is already exhausted. Everything in the Q4 plan depends on finding the next ten.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>The gate rule is opposite on the two platforms, and both are now proven.</strong> On Instagram the comment gate is the follower engine. On LinkedIn the identical exit-deck copy behind a comment gate got 55 impressions, and ungated it got 66,682 with around 80 connection requests. Nobody should carry one platform's lesson to the other.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Churn</p>
+  <h2>Six months of unfollows, and the one month that broke the trend</h2>
+  <p>Share of each month's new followers who left inside the same month, on Instagram.</p>
+
+  <div class="bars">
+    <div class="bar-row"><span class="bar-name">March</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">91%</span></div>
+    <div class="bar-row"><span class="bar-name">April-May</span><span class="bar-track"><span class="bar-fill" style="width:48%"></span></span><span class="bar-val">44%</span></div>
+    <div class="bar-row"><span class="bar-name">June</span><span class="bar-track"><span class="bar-fill" style="width:29%"></span></span><span class="bar-val">26%</span></div>
+    <div class="bar-row"><span class="bar-name">July</span><span class="bar-track"><span class="bar-fill" style="width:9%"></span></span><span class="bar-val">8%</span></div>
+    <div class="bar-row"><span class="bar-name">August</span><span class="bar-track"><span class="bar-fill" style="width:25%"></span></span><span class="bar-val">22.6%</span></div>
+  </div>
+
+  <div class="callout">
+    <p>Nine in ten new followers left again in March. Now roughly two in ten do. That is the single cleanest improvement in the whole half year and it says the account is attracting people who actually want to be here.</p>
+  </div>
+
+  <div class="callout">
+    <p>August is the honest asterisk. Churn tripled off July's low, and the likely reason is in the previous slide: comment-gate posts bring people who came for a file. July's growth came from a personal story, which brings people who came for the person. The number to watch in September is whether artifact-driven followers stay, because if they churn at 25% we are buying a smaller audience than the headline says.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Volume</p>
+  <h2>161 pieces bought fewer views than 114 did</h2>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Month</th><th>Posts</th><th>Reels</th><th>Total</th><th>Views</th><th>Avg / piece</th><th>Profile visits</th><th>Net followers</th></tr></thead>
+      <tbody>
+        <tr><td>March 2026</td><td class="num">7</td><td class="num">84</td><td class="num">91</td><td class="num">not pulled</td><td class="num">-</td><td class="num">-</td><td class="num">-</td></tr>
+        <tr><td>April 2026</td><td class="num">8</td><td class="num">78</td><td class="num">86</td><td class="num">not pulled</td><td class="num">-</td><td class="num">-</td><td class="num">-</td></tr>
+        <tr><td>May 2026</td><td class="num">9</td><td class="num">60</td><td class="num">69</td><td class="num">not pulled</td><td class="num">-</td><td class="num">-</td><td class="num">-</td></tr>
+        <tr><td>June 2026</td><td class="num">7</td><td class="num">52</td><td class="num">59</td><td class="num">2,441,469</td><td class="num">41,381</td><td class="num">35,410</td><td class="num">+4,740</td></tr>
+        <tr><td>July 2026</td><td class="num">17</td><td class="num">97</td><td class="num">114</td><td class="num up">4,100,000</td><td class="num">35,965</td><td class="num">65,463</td><td class="num up">+24,354</td></tr>
+        <tr class="spot"><td>August 2026</td><td class="num">17</td><td class="num">144</td><td class="num">161</td><td class="num">3,331,989</td><td class="num down">20,696</td><td class="num">64,241</td><td class="num">+8,976</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bars">
+    <div class="bar-row"><span class="bar-name">June · 59</span><span class="bar-track"><span class="bar-fill" style="width:100%"></span></span><span class="bar-val">41,381</span></div>
+    <div class="bar-row"><span class="bar-name">July · 114</span><span class="bar-track"><span class="bar-fill" style="width:87%"></span></span><span class="bar-val">35,965</span></div>
+    <div class="bar-row"><span class="bar-name">August · 161</span><span class="bar-track"><span class="bar-fill" style="width:50%"></span></span><span class="bar-val">20,696</span></div>
+  </div>
+  <p class="stat-note">Average views per piece. Output nearly tripled since June and the average halved.</p>
+
+  <div class="callout">
+    <p>Profile visits barely moved between July and August, 65,463 against 64,241, while output went from 114 pieces to 161. The extra 47 pieces bought no additional attention at the top of the funnel. More posting is not the lever for September.</p>
+  </div>
+
+  <div class="callout">
+    <p>On the follower rate, July is the outlier and not the baseline. June converted 13.4% of profile visitors and August 14.0%. July's 37.2% was one childhood photo. The true rate is around 14%, measured twice, and it moves only when an exceptional asset appears.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">TikTok</p>
+  <h2>A quarter of the output, and the only line still rising</h2>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Month</th><th>Videos</th><th>Views</th><th>Avg / video</th><th>Likes</th><th>Shares</th></tr></thead>
+      <tbody>
+        <tr><td>March 2026</td><td class="num">27</td><td class="num">210,891</td><td class="num">7,811</td><td class="num">4,299</td><td class="num">1,998</td></tr>
+        <tr><td>April 2026</td><td class="num">28</td><td class="num down">36,645</td><td class="num">1,309</td><td class="num">927</td><td class="num">112</td></tr>
+        <tr><td>May 2026</td><td class="num">28</td><td class="num">683,898</td><td class="num">24,425</td><td class="num">21,185</td><td class="num">3,566</td></tr>
+        <tr><td>June 2026</td><td class="num">14</td><td class="num">122,106</td><td class="num">8,722</td><td class="num">2,597</td><td class="num">244</td></tr>
+        <tr><td>July 2026</td><td class="num">25</td><td class="num">858,333</td><td class="num">34,333</td><td class="num">23,375</td><td class="num">3,581</td></tr>
+        <tr class="spot"><td>August 2026</td><td class="num">41</td><td class="num up">1,391,919</td><td class="num">33,949</td><td class="num">46,665</td><td class="num">4,924</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid g3">
+    <div class="container-block focus"><span class="stat-n">33,949</span><span class="stat-k">TikTok avg / video</span><p class="stat-note">Against Instagram's 20,696 per piece in the same month.</p></div>
+    <div class="container-block focus"><span class="stat-n">1,877 → 4,318</span><span class="stat-k">Median video, July to August</span><p class="stat-note">The typical video more than doubled. The ceiling did not rise, the floor did.</p></div>
+    <div class="container-block"><span class="stat-n">366,054</span><span class="stat-k">Top video</span><p class="stat-note">"It's about time I introduce myself", then 313,235 and 235,066.</p></div>
+  </div>
+
+  <div class="callout">
+    <p><strong>This is the part worth understanding.</strong> Average views per video barely moved, 34,333 to 33,949, so at first glance August was pure volume. It was not. The median video went from 1,877 views to 4,318, and the top three fell from 82% of the month's views to 66%. August was a month where the typical video worked rather than a month carried by two outliers. Somebody changed something in the process and nobody has written down what.</p>
+  </div>
+
+  <div class="callout">
+    <p>TikTok published 41 videos against Instagram's 161 and averaged 64% more views on each one. It is the only platform where more output came with more reach per piece, it is at four times its September target, and it gets the least attention of any channel we run. That is the clearest resourcing question on the table.</p>
+  </div>
+  <p class="stat-note">These are views on videos published in each month, pulled from Metricool, not account-level monthly views. TikTok's own July figure on the same month was 787.5K, so treat the series as the shape rather than the decimal.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Facebook</p>
+  <h2>From the biggest platform to the smallest in three months</h2>
+  <p>Read from the Facebook professional dashboard. Facebook reports 4-31 August, not the full month.</p>
+
+  <div class="grid g3">
+    <div class="container-block"><span class="stat-n">107,426</span><span class="stat-k">Views</span><p class="stat-note down">Down 94% on the previous 28 days.</p></div>
+    <div class="container-block"><span class="stat-n">1,521</span><span class="stat-k">Interactions</span><p class="stat-note down">Down 98.6%. 1,380 reactions, 90 comments, 51 shares.</p></div>
+    <div class="container-block focus"><span class="stat-n">-290</span><span class="stat-k">Net follows</span><p class="stat-note down">The account is shrinking, not slowing. 84K against a 96K target.</p></div>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Month</th><th>Views</th><th>Net follows</th><th>Total followers</th></tr></thead>
+      <tbody>
+        <tr><td>May 2026</td><td class="num">~11.6M</td><td class="num">-</td><td class="num">~63K</td></tr>
+        <tr><td>June 2026</td><td class="num">3,250,000</td><td class="num up">+12,684</td><td class="num">71,924</td></tr>
+        <tr><td>July 2026</td><td class="num">3,181,303</td><td class="num up">+14,400</td><td class="num">85,191</td></tr>
+        <tr class="spot"><td>August 2026</td><td class="num down">107,426</td><td class="num down">-290</td><td class="num">~84,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <p>Facebook is the largest single line in the Q3 plan: 4M views a month and 96K followers. It delivered about 3% of the view target and the follower line turned negative. The same account did 9,839,685 views on one post in May and 860,319 on one in July. Nothing about the content got 96% worse in eight weeks.</p>
+  </div>
+
+  <h3 style="margin-top:44px">Three candidate causes, and what the data says</h3>
+  <div class="grid g3">
+    <div class="container-block">
+      <h3>The profile restriction</h3>
+      <p class="stat-note">Already active on 3 July, and July still delivered 3.18M views. On its own it does not explain August. It may have tightened, which we cannot see from outside.</p>
+    </div>
+    <div class="container-block">
+      <h3>The Instagram cross-post breaking</h3>
+      <p class="stat-note">Partly supported. In July 96.9% of Facebook traffic came from Reels; in August reels are 63.3% of views and photo posts jumped to 34.4%. That is what a broken reel pipe looks like.</p>
+    </div>
+    <div class="container-block">
+      <h3>No viral hit</h3>
+      <p class="stat-note">Facebook was never steady. May was carried by two reels at 9.8M and 4.6M, July had one at 860,319. August's biggest piece did 13,936.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p><strong>What the publishing data says.</strong> Facebook posted heavily in the first half of August, five to nine pieces a day between the 5th and the 12th, and those days produced five to eight thousand views each against a July daily average near 103,000. Content was there and it did not travel. Publishing did fall to almost nothing from the 21st to the 29th, so supply dropped too, but later. Distribution is the primary cause and supply is secondary.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>One number settles it.</strong> Facebook's post count for August against July, and views per post for each. If views per post fell around 95%, it is distribution. If the post count fell around 95%, it is the Instagram connection. Worth pulling before anyone spends on fixing the wrong thing. Until it is answered, the plan should assume Facebook contributes nothing, which means the 7M monthly target has to be met by Instagram and TikTok alone.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Audience</p>
+  <h2>Who this actually reaches</h2>
+
+  <div class="grid g2">
+    <div class="container-block">
+      <h3>Instagram, top countries</h3>
+      <p class="stat-note" style="margin-top:12px">United States <strong>16.9%</strong> · India <strong>15.5%</strong> · Israel 3.5% · Brazil 3.3% · Nigeria 3.2%.<br>Men 78.8%, women 21.2%. 56% aged 25-44.</p>
+    </div>
+    <div class="container-block">
+      <h3>TikTok and Facebook</h3>
+      <p class="stat-note" style="margin-top:12px">TikTok: US 35%, and 96.2% of views come from the For You feed.<br>Facebook: US 47%, but the top cities are African metros. Mass reach, not buyer intent.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>A follower target and a Build Your Store target can quietly diverge here. India, Brazil and Nigeria are 22% of the Instagram audience, and Facebook's audience is a different population again. If those followers convert to paying Shopify stores at a very different rate from the American ones, then growing followers and growing stores stop being the same job and the content plan has to choose. We cannot answer it today because signups carry no source. It is the first thing a tagged link will tell us.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Build Your Store</p>
+  <h2>The one tension to resolve rather than work around</h2>
+  <p>The chain is content, then a comment or DM, then the ManyChat flow, then a store created, then a Shopify customer. We can see the first two steps and nothing after them.</p>
+
+  <div class="grid g3">
+    <div class="container-block"><h3>Option one</h3><p class="stat-note">Build Your Store lives only on its own brand. Lior's channels stay clean.</p></div>
+    <div class="container-block"><h3>Option two</h3><p class="stat-note">Lior's channels carry it as founder story only, never as an offer.</p></div>
+    <div class="container-block"><h3>Option three</h3><p class="stat-note">Lior's channels carry the offer, capped at a fixed share of the monthly mix.</p></div>
+  </div>
+
+  <div class="callout">
+    <p>Lior's personal brand is a founder journey, not product marketing, and promoting the product pushes against that. If the room does not pick one of these three today, the agency keeps proposing product posts and they keep getting killed. The founder story is the strongest asset here and it is already documented: the 2023 AI wave, Shopify's own conference where they shared that around 30% of new customers never finish setting up, the same picture inside AutoDS, so use AI to remove the hardest barrier. That is journey content that happens to sell.</p>
+  </div>
+
+  <div class="callout">
+    <p><strong>Wording that is not negotiable.</strong> Partner, never affiliate. The ~30% is an opportunity Shopify shared openly, never a criticism. E-commerce, never dropshipping.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">The AI videos</p>
+  <h2>Fix, pivot or kill</h2>
+  <p>The target is six AI reels a month at 8,000+ views. Two rounds have failed. The Gemini watermark flagged in the July review was still in the 30 August render, which makes it a process failure rather than a creative one.</p>
+
+  <div class="grid g3">
+    <div class="container-block"><h3>Kill</h3><p class="stat-note">Move the hours to real footage. Defensible after two failed rounds.</p></div>
+    <div class="container-block focus"><h3>Pivot</h3><p class="stat-note">Point the lane at what only AI can do: generate what cannot be filmed. Fourteen years old on eBay, the first office, the night of the VAT crisis.</p></div>
+    <div class="container-block"><h3>Fix</h3><p class="stat-note">Three more attempts under a hard gate. Watermark fixed, one venue, two images. 8,000 views or the lane closes.</p></div>
+  </div>
+
+  <div class="callout">
+    <p>The pivot is the recommendation, and the reason is in the follower data. AI and graphics content wins reach while real, personal Lior wins follows. We have been spending the AI lane on a synthetic Lior giving generic advice, which competes with the real one and loses. Aiming it at his own history points it straight at the personal artifact, which is the only thing proven to convert on this account.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Questions for Lior</p>
+  <h2>Ask for documents that exist, not for content ideas</h2>
+  <p>Five artifact giveaways produced 45% of August's followers, and we are down to two artifacts with one already exhausted. Everything in Q4 depends on this list getting longer, so these are the questions worth the room's time.</p>
+
+  <div class="grid g2" style="margin-top:30px">
+    <div class="container-block focus">
+      <h3>What people already want from you</h3>
+      <ul class="checks">
+        <li><span class="mark">01</span><span><b>What do founders keep asking you to send them?</b></span></li>
+        <li><span class="mark">02</span><span><b>What is the question you get asked most, in DMs, at events, over dinner?</b></span></li>
+        <li><span class="mark">03</span><span><b>What do people assume you know that they want you to explain?</b></span></li>
+        <li><span class="mark">04</span><span><b>When someone finds out about the exit, what is the first thing they ask?</b></span></li>
+        <li><span class="mark">05</span><span><b>Who calls you for advice, and what about?</b></span></li>
+      </ul>
+    </div>
+
+    <div class="container-block focus">
+      <h3>What only you have</h3>
+      <ul class="checks">
+        <li><span class="mark">06</span><span><b>What document would be embarrassing to show, and what would people learn from it?</b></span></li>
+        <li><span class="mark">07</span><span><b>What did you get wrong that you have written evidence of?</b></span></li>
+        <li><span class="mark">08</span><span><b>What did you decide not to do, and still think you were right?</b></span></li>
+        <li><span class="mark">09</span><span><b>If you had to give away something nobody else on earth could give, what is it?</b></span></li>
+        <li><span class="mark">10</span><span><b>What is in your drive that you would never post, and why?</b></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container-block" style="margin-top:14px">
+    <h3>Then go drawer by drawer, one minute each, and write names on the wall</h3>
+    <p class="stat-note" style="margin-top:12px">
+      <strong>The acquisition:</strong> the data room index, the diligence questions Fiverr sent, the first offer email, the board update from the month of the deal.<br>
+      <strong>Zero to one:</strong> the first landing page, the first pricing page, the first-100-users spreadsheet, the eBay listing from age 14, the 2023 AI plan that became Build Your Store.<br>
+      <strong>Operating:</strong> the hiring scorecard for the first 10 hires, the weekly dashboard, the dollar-bug postmortem, the org chart at 50 people against 200.<br>
+      <strong>Money:</strong> the VAT paperwork, the first P&amp;L, the month he first paid himself.<br>
+      <strong>Judgment:</strong> ideas he rejected and why, deals he walked away from.
+    </p>
+  </div>
+
+  <div class="grid g3">
+    <div class="container-block"><span class="stat-k">Gate one</span><p class="stat-note">Only Lior has it. A prompt pack is a commodity. An internal document exists once.</p></div>
+    <div class="container-block"><span class="stat-k">Gate two</span><p class="stat-note">It survives redaction. Blur the numbers and it still teaches something.</p></div>
+    <div class="container-block"><span class="stat-k">Gate three</span><p class="stat-note">A stranger can say why they want it, in one sentence, without being told.</p></div>
+  </div>
+
+  <div class="callout">
+    <p>Target for the room: ten named documents, six with dates against them. Three yeses on the gates and it ships.</p>
+  </div>
+
+  <div class="callout">
+    <p>Two more that are not about artifacts but should not be skipped. <strong>What will you never post?</strong> Give the agency the fence in writing so nobody keeps bringing back things you will kill. And <strong>which moments from your own story do you wish people could actually see</strong>, given a camera can never get them.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">What we still need</p>
+  <h2>Seven numbers, and one of them cannot be recovered later</h2>
+
+  <div class="grid g2" style="margin-top:30px">
+    <div class="container-block">
+      <h3>August, from the platforms</h3>
+      <ul class="checks">
+        <li><span class="mark">01</span><span><b>TikTok:</b> post views, profile views, net followers, total, traffic source. TikTok Studio, custom range, to match how July was measured.</span></li>
+        <li><span class="mark">02</span><span><b>Instagram unfollows,</b> exact, instead of the 2,624 derived from gross minus net.</span></li>
+        <li><span class="mark">03</span><span><b>Story link taps and replies.</b> 135K story views with no measured exit, and story data expires.</span></li>
+        <li><span class="mark">04</span><span><b>Instagram views for March to May,</b> one custom range each, to finish the six-month series.</span></li>
+      </ul>
+    </div>
+    <div class="container-block missing">
+      <h3>The business end, which is ours</h3>
+      <ul class="checks">
+        <li><span class="mark">05</span><span><b>ManyChat flow entries per month from Instagram.</b> Every top follower post in August routed through this and we cannot see the other side.</span></li>
+        <li><span class="mark">06</span><span><b>Build Your Store signups, stores created, Shopify conversions,</b> by month, and how many arrived through the ManyChat DM rather than the website.</span></li>
+        <li><span class="mark">07</span><span><b>A tagged link per platform.</b> This is the one that cannot be recovered. Every month it is not in place is a month whose attribution never existed and never will.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>Everything else on this page is a number someone can go and read. Item seven is a number that does not exist until the tag goes on, so the value of doing it today is the whole of September.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Leaving the room</p>
+  <h2>What has to be written down before anyone stands up</h2>
+  <div class="grid g2">
+    <div class="container-block focus">
+      <h3>Decisions</h3>
+      <ul class="checks">
+        <li><span class="mark">01</span><span>Ten named documents, six with dates.</span></li>
+        <li><span class="mark">02</span><span>Who owns Facebook, and what Q4 assumes until it is answered.</span></li>
+        <li><span class="mark">03</span><span>The effort split across Instagram and TikTok, one named owner each.</span></li>
+        <li><span class="mark">04</span><span>Build Your Store: one of the three options, and the one number we chase.</span></li>
+        <li><span class="mark">05</span><span>The AI videos: fix, pivot or kill, with a date and a gate.</span></li>
+        <li><span class="mark">06</span><span>Who puts a tagged link on each platform, and by when.</span></li>
+      </ul>
+    </div>
+    <div class="container-block">
+      <h3>And the fence</h3>
+      <p class="stat-note" style="margin-top:12px">Three things we agreed we are <strong>not</strong> doing, written down, so the agency stops bringing them back. Plus the answer to the question only Lior can settle: what will you never post?</p>
+      <p class="stat-note" style="margin-top:16px">One sentence each around the table: what I own, and by when. Read it back before anyone leaves.</p>
+    </div>
+  </div>
+
+  <div class="callout">
+    <p>If only one thing survives today, make it this. Five artifact giveaways produced 45% of August's followers, we are down to two artifacts, and one of them is already spent. We are not short of a format. We are short of things worth giving away.</p>
+  </div>
+</section>
+
+<footer>
+  <p>Instagram Insights and Professional dashboard, captured 1 September 2026. TikTok and Instagram content counts from Metricool. Facebook from the professional dashboard, window 4-31 August. June and July from the monthly review packs. Derived figures are marked where they appear.</p>
+</footer>
+
+</div>

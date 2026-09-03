@@ -1,0 +1,11 @@
+Keep this image exactly as it is: same layout, same cream background, same dark boxes, same coral labels and coral connector, same fonts, same positions, same box sizes. Change only the four model names.
+
+Remove the version numbers from the four model boxes so they read:
+"Haiku" instead of "Haiku 4.5"
+"Sonnet" instead of "Sonnet 5"
+"Opus" instead of "Opus 5"
+"Fable" instead of "Fable 5"
+
+Keep the smaller sentence under each name exactly as it is. Keep the coral note reading "When Opus gets stuck, escalate to Fable." Keep the bottom band text unchanged except change "Only ~10% of tasks actually need Fable." so it still reads exactly that way.
+
+Do not move anything, do not resize the boxes, do not change any other word.

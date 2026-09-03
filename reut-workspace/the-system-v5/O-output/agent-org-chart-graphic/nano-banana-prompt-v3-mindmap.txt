@@ -1,0 +1,29 @@
+A premium editorial mind-map infographic poster in 4:5 portrait format, in the visual language of Anthropic's Claude brand. Warm cream #F0EEE6 background. The single accent colour is Claude coral #D97757. Primary text near-black #171818, secondary text warm grey #7C7A73. Every box is a white rounded rectangle with a 14px corner radius, a thin warm border and a soft low shadow. Boxes are connected by thin, clean coral #D97757 lines with gentle right-angle bends. Elegant, airy, print-quality, a lot of breathing room. No gradients, no glow, no neon, no dark tech background, no robots, no mascots, no screenshots, no photographs, no emoji.
+
+TOP OF THE PAGE, centred, two lines of large elegant serif display type above everything else: the first line "Someone already did the work." in near-black, the second line "You just have to use it." in coral #D97757 italic. Under them one line of small grey sans-serif reading "Nine roles you would otherwise hire. Every one open source and free."
+
+CENTRE OF THE PAGE, the hub: one large white rounded box, noticeably bigger than every other box, with a thick coral #D97757 outline. Inside it, stacked and centred: a very large serif numeral "9" in coral #D97757 taking most of the box height, under it the words "Repos That Staff" in small near-black serif, and under that "A WHOLE COMPANY" in bold coral #D97757 capitals. In the top right corner of this hub box sits a small coral #D97757 starburst mark made of about a dozen slim tapered rays radiating from one centre point, like an asterisk with soft pointed tips.
+
+Three thin coral connector lines leave the hub: one to the left, one to the right, one downward. Each line ends at a section header box. Every section header box is a rounded rectangle with a pale tinted fill, a bold near-black title in capitals and one line of small grey sans-serif underneath.
+
+LEFT SECTION, header box title "BUILD", subtitle "The three seats that make the thing exist." Beneath it, three white cards stacked vertically.
+RIGHT SECTION, header box title "MARKET", subtitle "The three seats that make anyone hear about it." Beneath it, three white cards stacked vertically.
+BOTTOM SECTION, header box title "SHIP", subtitle "The three seats that keep it moving after launch." Beneath it, three white cards side by side in one row.
+
+Every one of the nine cards is built identically: a small solid coral #D97757 triangular bullet on the left, then the job title in bold near-black sans-serif, then one line of small grey sans-serif under the title, then at the bottom of the card the repository handle in monospace where the owner part before the slash is grey and the part after the slash is bold near-black, followed by a small coral star glyph and the star count in bold coral monospace. A small thin-line coral icon sits in the top right corner of each card.
+
+The nine cards, given as section, job title, description, repository handle, star count, icon:
+
+BUILD, "A QA tester", "Drives a real browser and finds what actually broke", "microsoft/playwright-mcp", "37k", magnifying glass icon
+BUILD, "A senior engineer", "Test-driven development and systematic debugging", "obra/superpowers", "280k", angle brackets code icon
+BUILD, "A product designer", "Refuses to build before you define the audience", "pbakaus/impeccable", "65k", pencil icon
+MARKET, "A researcher", "Reads the last 30 days, not last year", "mvanhorn/last30days-skill", "61k", calendar icon
+MARKET, "A marketer", "Conversion, copywriting, SEO and analytics", "coreyhaines31/marketingskills", "46k", rising trend line icon
+MARKET, "A social manager", "Every platform, one voice", "charlie947/social-media-skills", "3k", speech bubble icon
+SHIP, "A motion designer", "Write HTML, get a finished MP4 back", "heygen-com/hyperframes", "44k", play button icon
+SHIP, "A docs team", "Any PDF, deck or recording into clean markdown", "microsoft/markitdown", "178k", document page icon
+SHIP, "An ops manager", "Remembers last week so nobody has to ask", "mem0ai/mem0", "65k", bell icon
+
+BOTTOM OF THE PAGE, a full-bleed near-black #171818 band running edge to edge. On its left, in serif, "Nine seats." in cream followed by "Zero budget." in coral #D97757 italic, and directly under them one line of small grey sans-serif reading "The work now is telling the useful few from the noise." On its right, "LIOR POZIN" in bold cream sans-serif with wide letter spacing, and under it "[ life is beta ]" in small coral #D97757 monospace with the square brackets included.
+
+Render every quoted string exactly as written, correctly spelled, and legible at phone size. Keep all nine repository handles in lowercase exactly as given, including the forward slash, the hyphens and the digits, and do not invent, translate or abbreviate any of them. Do not add any words, labels, captions, taglines, logos, URLs or decorative elements that are not listed here.
