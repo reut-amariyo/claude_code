@@ -1,0 +1,374 @@
+<title>August 2026 Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ground:#F2F1ED; --surface:#FBFAF7; --focus:#FFFFFF;
+  --ink:#1F1E1B; --ink-2:#56544E; --ink-3:#8E8B83;
+  --line:#DEDCD5; --line-strong:#C6C3B9;
+  --sand:#A87C4A; --sand-fill:#EBE0CE;
+  --up:#4A7351; --down:#A0503A;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#131311; --surface:#1B1B18; --focus:#232320;
+  --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842;
+  --sand:#D2AC7C; --sand-fill:#3A3226; --up:#83AC8A; --down:#CE8569;}}
+:root[data-theme="dark"]{
+  --ground:#131311; --surface:#1B1B18; --focus:#232320;
+  --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842;
+  --sand:#D2AC7C; --sand-fill:#3A3226; --up:#83AC8A; --down:#CE8569;}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px; margin:0 auto; padding:0 24px}
+section{padding:72px 0; border-top:1px solid var(--line)}
+section:first-of-type{border-top:0}
+.eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-3); margin:0 0 14px}
+h1{font-family:var(--mono); font-weight:700; font-size:clamp(34px,5.2vw,58px); line-height:1.05; letter-spacing:-.02em; margin:0 0 20px; text-wrap:balance}
+h2{font-family:var(--mono); font-weight:700; font-size:clamp(23px,3vw,32px); line-height:1.15; letter-spacing:-.01em; margin:0 0 12px; text-wrap:balance}
+h3{font-family:var(--mono); font-weight:700; font-size:15px; letter-spacing:.02em; margin:0 0 8px}
+p{margin:0 0 14px; max-width:66ch; color:var(--ink-2)}
+p.lead{font-size:18px; color:var(--ink); max-width:62ch}
+strong{color:var(--ink); font-weight:700}
+.cover{padding:96px 0 72px}
+.lockup{font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--sand); margin:0 0 40px}
+.cover-meta{display:flex; flex-wrap:wrap; gap:10px; margin-top:28px}
+.chip{font-family:var(--mono); font-size:12px; letter-spacing:.04em; border:1px solid var(--line-strong); border-radius:2px; padding:6px 11px; color:var(--ink-2); background:var(--surface)}
+.container-block{background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:22px 24px}
+.container-block.focus{background:var(--focus); border-color:var(--line-strong)}
+.container-block.missing{background:transparent; border:1px dashed var(--line-strong)}
+.ladder{display:flex; flex-direction:column; gap:0; margin-top:34px}
+.rung{display:grid; grid-template-columns:1fr auto; align-items:baseline; gap:20px; background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:20px 24px}
+.rung.gap-row{background:transparent; border:1px dashed var(--line-strong)}
+.rung-label{font-family:var(--mono); font-size:13px; letter-spacing:.03em; color:var(--ink-2)}
+.rung-label small{display:block; font-family:var(--sans); font-size:12.5px; color:var(--ink-3); letter-spacing:0; margin-top:5px; max-width:54ch}
+.rung-value{font-family:var(--mono); font-weight:700; font-size:clamp(22px,3.4vw,34px); font-variant-numeric:tabular-nums; letter-spacing:-.02em; white-space:nowrap}
+.rung.gap-row .rung-value{color:var(--ink-3)}
+.step{display:flex; align-items:center; gap:12px; padding:9px 24px; font-family:var(--mono); font-size:12px; color:var(--ink-3)}
+.step b{color:var(--sand); font-weight:700; font-variant-numeric:tabular-nums}
+.step .rule{flex:1; height:1px; background:var(--line)}
+.grid{display:grid; gap:14px; margin-top:28px}
+.grid.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.grid.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.stat-n{font-family:var(--mono); font-weight:700; font-size:30px; font-variant-numeric:tabular-nums; letter-spacing:-.02em; display:block; margin-bottom:2px}
+.stat-k{font-family:var(--mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3)}
+.stat-note{font-size:13px; color:var(--ink-2); margin:8px 0 0}
+.scroller{overflow-x:auto; margin-top:26px; border:1px solid var(--line); border-radius:2px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; min-width:660px; font-variant-numeric:tabular-nums}
+th,td{padding:13px 16px; text-align:right; border-bottom:1px solid var(--line); font-size:14px}
+th:first-child,td:first-child{text-align:left}
+th{font-family:var(--mono); font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono)}
+tr.spot td{background:var(--sand-fill)}
+.up{color:var(--up)} .down{color:var(--down)}
+.tag{font-family:var(--mono); font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; border:1px solid var(--line-strong); border-radius:2px; padding:2px 7px; color:var(--ink-3); white-space:nowrap}
+.tag.gate{border-color:var(--sand); color:var(--sand)}
+.bars{display:flex; flex-direction:column; gap:16px; margin-top:26px}
+.bar-row{display:grid; grid-template-columns:104px 1fr 78px; align-items:center; gap:16px}
+.bar-name{font-family:var(--mono); font-size:13px; color:var(--ink-2)}
+.bar-track{height:12px; background:var(--line); border-radius:1px; overflow:hidden}
+.bar-fill{height:100%; background:var(--sand); border-radius:1px}
+.bar-val{font-family:var(--mono); font-size:14px; font-weight:700; font-variant-numeric:tabular-nums; text-align:right}
+.checks{list-style:none; margin:16px 0 0; padding:0; display:flex; flex-direction:column; gap:11px}
+.checks li{display:grid; grid-template-columns:26px 1fr; gap:12px; align-items:start; font-size:14.5px; color:var(--ink-2); padding-bottom:11px; border-bottom:1px solid var(--line)}
+.checks li:last-child{border-bottom:0}
+.checks .mark{font-family:var(--mono); font-size:12px; color:var(--sand); padding-top:2px}
+.checks b{color:var(--ink); font-weight:700}
+.callout{border-left:2px solid var(--sand); padding:4px 0 4px 20px; margin:26px 0 0}
+.callout p{margin:0; color:var(--ink)}
+footer{padding:44px 0 64px; border-top:1px solid var(--line)}
+footer p{font-family:var(--mono); font-size:12px; color:var(--ink-3); max-width:none}
+@media (max-width:620px){
+  .rung{grid-template-columns:1fr; gap:8px}
+  .bar-row{grid-template-columns:88px 1fr 64px; gap:11px}
+  section{padding:52px 0}
+}
+@media print{
+  :root{--ground:#FFFFFF;--surface:#FBFAF7;--focus:#FFFFFF;--ink:#1F1E1B;--ink-2:#3C3A35;--ink-3:#6E6B64;--line:#DEDCD5;--line-strong:#C6C3B9;}
+  body{font-size:12.5px}
+  section{padding:26px 0; break-inside:avoid}
+  .scroller{overflow:visible}
+  table{min-width:0}
+  th,td{padding:7px 9px; font-size:11.5px}
+  h1{font-size:38px} h2{font-size:21px}
+  .stat-n{font-size:24px}
+  .cover{padding:24px 0 30px}
+}
+</style>
+
+<div class="wrap">
+
+<section class="cover">
+  <p class="lockup">[ life is beta ]</p>
+  <p class="eyebrow">Monthly review · Lior Pozin · August 2026</p>
+  <h1>The two platforms that were not in the room</h1>
+  <p class="lead">August across all five channels, with LinkedIn and X added to the offsite picture, and where the 500K and 100K targets actually stand.</p>
+  <div class="cover-meta">
+    <span class="chip">August 2026</span>
+    <span class="chip">5,300,365 views</span>
+    <span class="chip">~203K followers</span>
+    <span class="chip">Month 2 of Q3</span>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Followers, first</p>
+  <h2>August added 10,904 followers, and two platforms produced 20% of them</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Platform</th><th>July net</th><th>August net</th><th>Total on Aug 31</th></tr></thead>
+      <tbody>
+        <tr><td>Instagram</td><td class="num">+24,354</td><td class="num">+8,976</td><td class="num">104,659</td></tr>
+        <tr class="spot"><td>LinkedIn</td><td class="num">+821</td><td class="num up">+1,373</td><td class="num">12,980</td></tr>
+        <tr class="spot"><td>X</td><td class="num">~+175</td><td class="num up">+845</td><td class="num">~1,330</td></tr>
+        <tr><td>Facebook</td><td class="num">+14,400</td><td class="num down">-290</td><td class="num">~84,000</td></tr>
+        <tr><td>TikTok</td><td class="num">not pulled</td><td class="num">not pulled</td><td class="num">22,300 on Sep 8</td></tr>
+        <tr><td><b>Total measured</b></td><td class="num"><b>+39,750</b></td><td class="num"><b>+10,904</b></td><td class="num"><b>~202,969</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Follower acquisition fell 73% against July, and both of the platforms that grew are the two that were missing from the offsite. LinkedIn had its best month on record and X had its best month by a factor of four, while Facebook turned negative and Instagram gave back two thirds of a month that one photo post had carried.</p>
+  <p>The total still clears the quarter. Roughly <strong>203,000 followers on four measured platforms</strong> beats the ~202K September target a month early, before TikTok's 22,300 is counted.</p>
+</section>
+
+<section>
+  <p class="eyebrow">The correction</p>
+  <h2>August was not 4.8 million. It was 5.3 million.</h2>
+  <p>The offsite deck read Instagram, Facebook and TikTok. LinkedIn and X were left out, and they turned out to be the two fastest growing lines in the portfolio. Adding them changes the total and it changes the conclusion.</p>
+  <div class="grid g3">
+    <div class="container-block"><span class="stat-n">144,796</span><span class="stat-k">LinkedIn impressions</span><p class="stat-note"><span class="up">+102%</span> over July. 207% of the September target.</p></div>
+    <div class="container-block"><span class="stat-n">324,235</span><span class="stat-k">X impressions</span><p class="stat-note"><span class="up">+247%</span> over July.</p></div>
+    <div class="container-block focus"><span class="stat-n">+2,218</span><span class="stat-k">Followers the room never counted</span><p class="stat-note">1,373 on LinkedIn, 845 on X. Both records.</p></div>
+  </div>
+  <div class="callout"><p>Everything the offsite concluded still holds. The picture is simply less bad, and the evidence for the artifact thesis is now stronger, because two more platforms produced it independently.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">The month</p>
+  <h2>One platform fell. Every other line rose.</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Platform</th><th>July</th><th>August</th><th>Change</th><th>Followers Aug 31</th></tr></thead>
+      <tbody>
+        <tr><td>Instagram</td><td class="num">4,100,000</td><td class="num">3,331,989</td><td class="num down">-18.7%</td><td class="num">104,659</td></tr>
+        <tr class="spot"><td>Facebook</td><td class="num">3,181,303</td><td class="num">107,426</td><td class="num down">-96.6%</td><td class="num">~84,000</td></tr>
+        <tr><td>TikTok</td><td class="num">858,333</td><td class="num">1,391,919</td><td class="num up">+62.2%</td><td class="num">not pulled</td></tr>
+        <tr><td>X</td><td class="num">93,400</td><td class="num">324,235</td><td class="num up">+247%</td><td class="num">~1,330</td></tr>
+        <tr><td>LinkedIn</td><td class="num">71,776</td><td class="num">144,796</td><td class="num up">+102%</td><td class="num">12,980</td></tr>
+        <tr><td><b>Total</b></td><td class="num"><b>8,304,812</b></td><td class="num"><b>5,300,365</b></td><td class="num down"><b>-36.2%</b></td><td class="num"><b>~202,969</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Facebook lost 3,073,877 views. The whole portfolio lost 3,004,447. Everything outside Facebook grew by 69,430 while carrying a 41% jump in Instagram output that bought no extra reach.</p>
+</section>
+
+<section>
+  <p class="eyebrow">LinkedIn</p>
+  <h2>Four months of a flat follower line, then August</h2>
+  <p>From April to July, LinkedIn impressions moved 6x and new followers never left a narrow band. May bought 292,705 impressions and produced 1,100 followers. That was the strongest argument we had that reach does not buy followers on this platform.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Month</th><th>Impressions</th><th>Net followers</th><th>Followers per 1K imp</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td>April</td><td class="num">49,353</td><td class="num">+922</td><td class="num">18.7</td><td class="num">8,677</td></tr>
+        <tr><td>May</td><td class="num">292,705</td><td class="num">+1,100</td><td class="num">3.8</td><td class="num">9,777</td></tr>
+        <tr><td>June</td><td class="num">51,839</td><td class="num">+1,009</td><td class="num">19.5</td><td class="num">10,786</td></tr>
+        <tr><td>July</td><td class="num">71,776</td><td class="num">+821</td><td class="num">11.4</td><td class="num">11,607</td></tr>
+        <tr class="spot"><td><b>August</b></td><td class="num"><b>144,796</b></td><td class="num"><b>+1,373</b></td><td class="num"><b>9.5</b></td><td class="num"><b>12,980</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>August ran at half of May's reach and produced <strong>57% more followers</strong>. It is the first month in five to break the band, and one post carried it: the ungated 47-slide exit deck of 25 August, 70,922 impressions and 2,906 engagements, the best post this account has ever had by engagement. The same artifact behind a comment gate had done 55 impressions.</p>
+  <div class="grid g3">
+    <div class="container-block"><span class="stat-n">69,295</span><span class="stat-k">Members reached</span><p class="stat-note"><span class="up">+180%</span> over July</p></div>
+    <div class="container-block"><span class="stat-n">3.23%</span><span class="stat-k">Engagement rate</span><p class="stat-note">4,675 engagements, up 137%</p></div>
+    <div class="container-block"><span class="stat-n">30%</span><span class="stat-k">Founders and CEOs by title</span><p class="stat-note">Unchanged from July. The ICP held through a viral month.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">X</p>
+  <h2>3.5x the reach, and the followers came from a different post</h2>
+  <p>X had its best month by every metric. 324,235 impressions on 23 posts is 14,097 per post against July's 3,890. Bookmarks, the signal we weight triple, grew eight-fold to 3,663.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Day</th><th>What ran</th><th>Impressions</th><th>Share of month</th><th>New follows</th><th>Share of month</th></tr></thead>
+      <tbody>
+        <tr><td>Aug 19-20</td><td style="text-align:left">"Someone on Reddit just LEAKED…"</td><td class="num">226,670</td><td class="num">70%</td><td class="num">51</td><td class="num down">6%</td></tr>
+        <tr class="spot"><td>Aug 15-17</td><td style="text-align:left">"The kid nobody would have bet on"</td><td class="num">62,842</td><td class="num">19%</td><td class="num">748</td><td class="num up">86%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The viral post got 3,185 likes and 84 profile clicks. The personal-timeline thread got 154 likes and <strong>1,179 profile clicks</strong>, and 489 of those turned into follows in one day. Same account, same week, opposite outcomes.</p>
+</section>
+
+<section>
+  <p class="eyebrow">The rule August produced</p>
+  <h2>Reach and followers are two different buys</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Post</th><th>Platform</th><th>Impressions</th><th>Followers</th><th>Per 1K imp</th></tr></thead>
+      <tbody>
+        <tr><td>Reddit leak</td><td style="text-align:left">X</td><td class="num">226,670</td><td class="num">51</td><td class="num down">0.2</td></tr>
+        <tr><td>10 startups list</td><td style="text-align:left">Instagram</td><td class="num">332,000</td><td class="num">3,200</td><td class="num">9.6</td></tr>
+        <tr class="spot"><td>Exit deck, ungated</td><td style="text-align:left">LinkedIn</td><td class="num">69,539</td><td class="num">~590</td><td class="num up">8.5</td></tr>
+        <tr class="spot"><td>Kid nobody would bet on</td><td style="text-align:left">X</td><td class="num">62,842</td><td class="num">748</td><td class="num up">11.9</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Volume and virality move impressions. First-party artifacts and personal-timeline stories move followers. Instagram said it in July with the age-14 post, and in August three platforms said it independently in the same four weeks.</p>
+</section>
+
+<section>
+  <p class="eyebrow">The targets</p>
+  <h2>Where 500K and 100K actually stand on 31 August</h2>
+  <div class="grid g2">
+    <div class="container-block focus">
+      <h3>Instagram to 500,000</h3>
+      <div class="bar-row" style="margin:14px 0 10px"><span class="bar-name">20.9%</span><span class="bar-track"><span class="bar-fill" style="width:20.9%"></span></span><span class="bar-val">104,659</span></div>
+      <p class="stat-note">Gap of 395,341. Trailing-3 pace +12,690 a month.</p>
+    </div>
+    <div class="container-block focus">
+      <h3>LinkedIn to 100,000</h3>
+      <div class="bar-row" style="margin:14px 0 10px"><span class="bar-name">13.0%</span><span class="bar-track"><span class="bar-fill" style="width:13%"></span></span><span class="bar-val">12,980</span></div>
+      <p class="stat-note">Gap of 87,020. Trailing-3 pace +1,068 a month.</p>
+    </div>
+  </div>
+  <div class="scroller">
+    <table>
+      <thead><tr><th></th><th>Instagram 500K</th><th>LinkedIn 100K</th></tr></thead>
+      <tbody>
+        <tr><td>Followers on Aug 31</td><td class="num">104,659</td><td class="num">12,980</td></tr>
+        <tr><td>Gap</td><td class="num">395,341</td><td class="num">87,020</td></tr>
+        <tr><td>August net</td><td class="num">+8,976</td><td class="num">+1,373</td></tr>
+        <tr><td>Trailing-3 average</td><td class="num">+12,690</td><td class="num">+1,068</td></tr>
+        <tr class="spot"><td>Arrival at trailing-3 pace</td><td class="num">31 months, ~Apr 2029</td><td class="num">82 months, ~2033</td></tr>
+        <tr><td>Pace needed for 12 months</td><td class="num">+32,945/mo, 2.6x</td><td class="num">+7,252/mo, 6.8x</td></tr>
+        <tr><td>Pace needed for 24 months</td><td class="num">+16,472/mo, 1.3x</td><td class="num">+3,626/mo, 3.4x</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Multiples are against the trailing-3 pace, which is the number that survives a single viral month.</p>
+</section>
+
+<section>
+  <p class="eyebrow">The pace, read honestly</p>
+  <h2>On pace for the quarter. Off pace for the goal.</h2>
+  <p>Those are two different questions and August answers them differently. The Q3 numbers land. The two follower targets do not, on any reading of the current rate.</p>
+  <p><strong>First, the average flatters us.</strong> Instagram's last three months are +4,740, +24,354, +8,976. That is a 5x swing, so the trailing-3 average of 12,690 is one exceptional month carried by one post, sitting on top of two ordinary ones. The median month, 8,976, is the number we actually own. Both are shown below and the truth sits between them.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th></th><th>Instagram 500K</th><th>LinkedIn 100K</th></tr></thead>
+      <tbody>
+        <tr><td>Average month</td><td class="num">+12,690</td><td class="num">+1,068</td></tr>
+        <tr><td>Median month</td><td class="num">+8,976</td><td class="num">+1,009</td></tr>
+        <tr><td>Lands at the average</td><td class="num">31 months, Apr 2029</td><td class="num">82 months, Feb 2033</td></tr>
+        <tr><td>Lands at the median</td><td class="num">44 months, May 2030</td><td class="num">86 months, Nov 2033</td></tr>
+        <tr class="spot"><td>% of the pace a 24-month landing needs</td><td class="num up">55-77%</td><td class="num down">28-29%</td></tr>
+        <tr><td>% of the pace a 12-month landing needs</td><td class="num down">27-39%</td><td class="num down">14-15%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="grid g2">
+    <div class="container-block focus">
+      <h3>Instagram: the ceiling is fine, the variance is the problem</h3>
+      <p class="stat-note">A 24-month landing needs 16,472 a month. July did 148% of that. August did 54%. So the target does not need a bigger month, it needs every second month to look like July instead of one in three. Nothing about the pace says 500K is out of reach; it says the growth is event-driven and nobody has put the events on a calendar.</p>
+    </div>
+    <div class="container-block focus">
+      <h3>LinkedIn: the pace is a fifth of what the goal needs</h3>
+      <p class="stat-note">A 24-month landing needs 3,626 a month. The best month this account has ever had produced 1,373. Five months of data sit between 821 and 1,373, and four of the five predate the only mechanism that moved the line. So the pace does not say "push harder", it says the current machine tops out at roughly a third of the requirement.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">What the pace is actually made of</p>
+  <h2>Growth is priced in artifacts, so the pace is a publishing schedule</h2>
+  <p>Every month that beat its own average was carried by the same thing. Volume never did it.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>What produced the month</th><th>Platform</th><th>Followers</th></tr></thead>
+      <tbody>
+        <tr><td>10-startups list, comment-gated</td><td style="text-align:left">Instagram</td><td class="num">3,200</td></tr>
+        <tr><td>Age-14 childhood photo post, July</td><td style="text-align:left">Instagram</td><td class="num">14,000-15,000</td></tr>
+        <tr><td>Exit deck, comment-gated</td><td style="text-align:left">Instagram</td><td class="num">1,400</td></tr>
+        <tr><td>Exit deck, ungated</td><td style="text-align:left">LinkedIn</td><td class="num">~590</td></tr>
+        <tr><td>Personal-timeline thread</td><td style="text-align:left">X</td><td class="num">748</td></tr>
+        <tr class="spot"><td>161 pieces of ordinary output</td><td style="text-align:left">Instagram</td><td class="num">55% of a below-average month</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>So the pace converts into a quota, and the quota is the plan.</p>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>To land in</th><th>LinkedIn needs per month</th><th>Baseline</th><th>Artifact posts per month</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr class="spot"><td>24 months</td><td class="num">+3,626</td><td class="num">~1,050</td><td class="num">5, all different</td><td style="text-align:left">A weekly signature series. Achievable.</td></tr>
+        <tr><td>12 months</td><td class="num">+7,252</td><td class="num">~1,050</td><td class="num">11, all different</td><td style="text-align:left">No archive holds eleven a month. Paid question.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>All different is the binding word. The same asset rerun on Instagram went 3,200, then 267, then 207, so it decays 94% by the fourth outing. The pace scales with new documents, and with nothing else.</p>
+</section>
+
+<section>
+  <p class="eyebrow">The cost of a slow quarter</p>
+  <h2>Waiting until January makes both targets harder, and one of them noticeably</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>If the series starts</th><th>Instagram needs</th><th>LinkedIn needs</th><th>LinkedIn artifacts per month</th></tr></thead>
+      <tbody>
+        <tr><td>September 2026</td><td class="num">+16,472/mo</td><td class="num">+3,626/mo</td><td class="num">5</td></tr>
+        <tr class="spot"><td>January 2027</td><td class="num">+17,972/mo</td><td class="num">+4,141/mo</td><td class="num">6</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Four months of drift at the current rate adds 9% to the Instagram requirement and 14% to LinkedIn's, which is one more artifact post every month for the rest of the run. The arrears compound, so the cheapest month to start is this one.</p>
+  <div class="callout"><p>The conclusion in one line: Instagram is on a pace that reaches 500K if the good month stops being rare, and LinkedIn is on a pace that reaches 100K in 2033 unless the artifact series becomes weekly. Both fixes are the same fix, and it is a supply of documents rather than a supply of posts.</p></div>
+</section>
+
+<section>
+  <p class="eyebrow">Q3 status</p>
+  <h2>Followers are ahead. Views are behind, and it is one line.</h2>
+  <div class="scroller">
+    <table>
+      <thead><tr><th>KR</th><th>September target</th><th>August actual</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Total views per month</td><td class="num">7,000,000</td><td class="num">5,300,365</td><td class="num down">76%</td></tr>
+        <tr><td>Total followers</td><td class="num">~202,000</td><td class="num">~202,969</td><td class="num up">done, TikTok not counted</td></tr>
+        <tr><td>Instagram views</td><td class="num">2,600,000</td><td class="num">3,331,989</td><td class="num up">128%</td></tr>
+        <tr><td>Instagram followers</td><td class="num">95,000</td><td class="num">104,659</td><td class="num up">110%</td></tr>
+        <tr class="spot"><td>Facebook views</td><td class="num">4,000,000</td><td class="num">107,426</td><td class="num down">3%</td></tr>
+        <tr><td>Facebook followers</td><td class="num">96,000</td><td class="num">~84,000</td><td class="num down">88%</td></tr>
+        <tr><td>LinkedIn impressions</td><td class="num">70,000</td><td class="num">144,796</td><td class="num up">207%</td></tr>
+        <tr><td>LinkedIn followers</td><td class="num">13,500</td><td class="num">12,980</td><td class="num">96%, needs +520</td></tr>
+        <tr><td>TikTok views</td><td class="num">350,000</td><td class="num">1,391,919</td><td class="num up">398%</td></tr>
+        <tr><td>X impressions</td><td class="num">40,000</td><td class="num">324,235</td><td class="num up">810%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Facebook is 4 million of the 7 million target and delivers 0.11 million. Strip it out and the rest of the portfolio is running above 8 million against a 3 million commitment. The quarterly view miss is a Facebook question, not a content question.</p>
+</section>
+
+<section>
+  <p class="eyebrow">September</p>
+  <h2>Three things this data asks for</h2>
+  <ul class="checks">
+    <li><span class="mark">01</span><span><b>Name ten documents and ship one a week.</b> The LinkedIn 100K math turns on five artifact posts a month, and each one has to be a different asset. Two artifacts have carried two months and one of them is finished.</span></li>
+    <li><span class="mark">02</span><span><b>Stop paying for Instagram volume.</b> 161 pieces bought 42% less reach per piece than 114 did, and profile visits stayed flat. The follower line came from five posts. Move the hours from output to artifacts.</span></li>
+    <li><span class="mark">03</span><span><b>Settle Facebook with one number.</b> Post count for August against July, and views per post for each. If views per post fell 95% it is distribution. If the post count fell 95% it is the Instagram connection. Nobody should commit budget before that number exists.</span></li>
+  </ul>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Sources: LinkedIn AggregateAnalytics export 1-31 Aug 2026 · X Account Analytics daily export 1-31 Aug 2026 · Metricool per-post backfill 2026-09-08 · Instagram, Facebook and TikTok figures from the offsite pack of 2026-09-02. Raw data and full workings in O-output/monthly-summary-2026-08/data-collected.md</p>
+  </div>
+</footer>
+
+</div>

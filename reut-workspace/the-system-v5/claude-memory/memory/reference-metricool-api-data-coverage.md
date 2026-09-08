@@ -41,6 +41,19 @@ performance log is also partial (it logged nothing between Jun 12 and Jul 3).
 The only real source is LinkedIn Creator Analytics: set the date range, hit Export,
 and the downloaded workbook lists every post.
 
+## X: per-post only, and one env-var trap (verified 2026-09-08)
+
+`/api/v2/analytics/posts/twitter` works and backfills cleanly. `T-tools/01-skills/scripts/
+fetch_post_performance.py --days N` upserts it into `O-output/x-performance-log/posts.jsonl`;
+110 days pulled fine in one call. **The trap:** the script reads `METRICOOL_TOKEN` while the
+env file defines `METRICOOL_API_TOKEN`. Run it as
+`set -a; . ~/.config/metricool/.env; set +a; export METRICOOL_TOKEN="$METRICOOL_API_TOKEN"`.
+
+Metricool has NO account-level X data: no follower total, no bookmarks, no profile visits,
+and `/api/v2/analytics/timelines/{network}` does not exist. Those come from X's own
+Account Analytics daily CSV export. Metricool also counts thread parts and follow-cards as
+posts, 47 items for August against X's own 23, so take X's post count from X.
+
 ## Second trap: Metricool views are not account views
 
 Summing per-post views does not equal Instagram's account-level views for the same

@@ -32,7 +32,7 @@ metadata:
 
 ## Acquisition path
 - **Sold AutoDS to Fiverr for $92M, no investors; deal closed in 23 days** (vs 6 months of PE grind). Fiverr price was **4x+ the PE offer** from 2 years earlier. (Source: "שיעורים שלמדתי מפייבר" video script V1, confirmed 2026-06-10.)
-- 2 years pre-Fiverr: 6-month PE negotiation, full DD, **walked away a DAY before closing** (PE CEO wanted to cut staff / cash-cow it — misaligned; employees who'd worked below-market since day one would have been fired).
+- 2 years pre-Fiverr: 6-month PE negotiation, full DD, **offer was $30M** (Reut, 2026-09-08 — life-changing money at that stage), **walked away a DAY before closing** (PE CEO wanted to turn AutoDS into a CASH COW: squeeze it for profit and cut staff — misaligned; employees who'd worked below-market since day one would have been fired). NOTE: $92M / $30M ≈ 3x, so the "4x+ the PE offer" line above doesn't reconcile — verify before using either multiple publicly.
 - **B-list/A-list selling trick:** rank potential buyers; pitch B-list first to make mistakes and refine the deck where stakes are low, then approach A-list ready. General lesson: know exactly where you can afford to fail.
 - **Three blocks / pyramid framework:** Business Model (base — LTV:CAC), Product (drives LTV), Marketing (drives CAC, must be scalable/repeatable). "If the numbers don't add up at the base, great product and genius marketing still collapse."
 - **CEO advisor at 21** (paid with free system access): "Lior, the CEO role is a lonely one, always." Brought in tech partner (Michael) after a year as force multiplier.

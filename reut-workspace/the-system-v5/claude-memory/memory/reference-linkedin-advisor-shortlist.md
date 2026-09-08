@@ -63,3 +63,24 @@ Open item: Reut also named "Nora" as a reference point — last name unknown, no
 top-LinkedIn-expert ranking. Ask her before sourcing more in that direction.
 
 Related: [[linkedin-interest-graph-2026]], [[lior-top-8-10k-playbook]], [[project-agency-produces-content-i-learn]]
+
+## Technologist layer (added 2026-09-07, corrected same day)
+
+Reut's refined brief: a LinkedIn CONSULTANT by profession who WRITES the posts, is a technologist,
+and is world-class at founder marketing. Finding: at the top tier of LinkedIn consultants nobody is
+a technologist; the technical people with big LinkedIn audiences (Ruben Hassid, Alex Banks) sell
+products and communities, not advisory. Reut rejected Hassid on exactly that ground: "הוא לא יועץ לינקדין".
+Full doc: the-system-v5/O-output/linkedin-advisor-technologist-shortlist-2026-09-07.md
+
+- **Ron Fybish / Foundera** — https://www.linkedin.com/in/ronfybish/ · https://www.foundera.co/ —
+  TOP PICK for this brief. Tel Aviv LinkedIn thought-leadership studio for deep-tech founders;
+  differentiator IS technical fluency (cloud, DevOps, data, AI, LLMs, security). Verified clients:
+  Qodo, Kubiya, Cycode, Piiano, FalkorDB, Apono, DagsHub, Blink, Pynt, lakeFS. Mismatch to probe:
+  built for B2B pipeline to engineers/CISOs, Lior is B2C chasing follower conversion.
+- **Pete Codes** — https://www.linkedin.com/in/petecodes/ — purest technologist who actually takes
+  clients. Self-taught dev, No CS Degree + High Signal newsletter, ghostwrites for YC founders and
+  $100M+ CEOs. ~$1.5-3K/mo tier. Buy for craft, not reach.
+- **Understory (Alex Fine + Ali Yildirim)** — B2B SaaS founder ghostwriting wired to GTM.
+- Route B if we drop the technologist requirement: Amelia Sordell (strategy) or Matt Barker
+  (done-for-you writing), with our side supplying the tech depth.
+- Luke Matthews ruled out for this brief: works with AI startups but his background is construction.

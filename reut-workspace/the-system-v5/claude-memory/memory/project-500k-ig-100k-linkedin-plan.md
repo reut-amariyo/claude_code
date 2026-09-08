@@ -27,8 +27,22 @@ impression. At the current ~963/month pace, 100K is ~92 months away.
 personal-artifact post is a repeatable series. Reels volume doubled (48 -> 97) while
 per-reel views halved (40,945 -> 20,619): volume buys total reach, not better reach.
 
+**AUGUST 2026 BROKE THE BAND, and named the mechanism** (LinkedIn export, added 2026-09-08).
+144,796 impressions -> **+1,373 net followers, total 12,980**. Half of May's reach, 57% MORE
+followers. The cause is one post: the ungated exit deck of 08-25, 70,922 imp, and Aug 25-27
+carried 48% of the month's impressions and 40% of its new followers, ~590 of them incremental
+over the ~30/day baseline. So the correct statement is now: followers do not respond to reach,
+they respond to first-party artifacts. Same month, same shape on X: the 219K-impression Reddit
+post made 51 followers while the 58K "kid nobody would have bet on" thread made 748.
+**Priced at ~590 followers per artifact post, 100K needs ~5 DIFFERENT artifact posts a month
+for a 24-month landing and ~11 for a 12-month landing.** Five a month is a weekly signature
+series and is achievable; eleven is not, and reruns of the same asset decay 94% by the 4th run.
+Baselines on 2026-08-31: IG 104,659 (trailing-3 +12,690/mo, 500K ~Apr 2029),
+LinkedIn 12,980 (trailing-3 +1,068/mo). Full month pack: `O-output/monthly-summary-2026-08/`.
+
 **Never pulled, and the highest-value missing metric:** LinkedIn monthly profile visits.
-Without it we cannot locate where the LinkedIn funnel leaks.
+Without it we cannot locate where the LinkedIn funnel leaks. LinkedIn's own August export
+still does not carry it.
 
 Related: [[project-okrs-q3-2026-operating-targets]], [[linkedin-interest-graph-2026]],
 [[lior-performance-log]], [[user-lior-half-year-review-2026-08]]

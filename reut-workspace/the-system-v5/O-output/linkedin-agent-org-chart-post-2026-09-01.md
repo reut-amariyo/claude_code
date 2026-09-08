@@ -45,7 +45,7 @@ character ceiling and keeps it to one idea.
 
 You are working way too hard.
 
-(I tested 9 that do the job)
+(I tested 9 repos that can do your work)
 
 No budget, no time, 3874932 tasks, and one person to do them.
 
@@ -105,7 +105,7 @@ A position missing from this list? Tell me and I will go find the best one for i
 ## The five edits to Reut's 2026-09-03 copy
 
 1. **Parenthetical cut from 10 words to 6.** "(I tested 9 repos that can do the job for you)" became
-   "(I tested 9 that do the job)". Her verb, her number, her phrase, inside the 6-word ceiling that the
+   "(I tested 9 repos that can do your work)". Her verb, her number, her phrase, inside the 6-word ceiling that the
    approved line-2 counter-hook exception sets.
 2. **🔴 "poison" was the word "position".** "Want a poison and can't find it here?" is the CTA, the last
    line anyone reads, and poison means the opposite of what she meant. Now "A position missing from this

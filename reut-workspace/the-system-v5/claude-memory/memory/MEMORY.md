@@ -7,7 +7,7 @@
 - [Q3 2026 operating targets](project-okrs-q3-2026-operating-targets.md) — 7M+ views/mo, 190K+ followers; prefer moves helping under-target platforms (X, LinkedIn) or Q3 levers
 - 📸 [IG agency engagement to 500K](project-ig-agency-500k-engagement.md) — weekly of 2026-09-02: baseline 100,601 → ~105K, need 25K/mo vs ~10K actual; quota 20 carousels + 31 videos + 9 collabs + 10 trial reels/day; FB reach down 97%; four decisions left open (92M in reels, fabrication proposals, prison story timing, real headcount)
 - 📸 [What actually grows Lior's IG](lior-ig-content-engines.md) — reels = reach, carousels = followers, STORIES = a sales tool (2-3 frames, black bg, automation); 3 proven engines (AGE 14 / Fiverr deck / startup list) = first-party artifact + ungated takeaway, same mechanism as the LinkedIn exit-deck; talking heads capped at 40 sec
-- [500K IG / 100K LinkedIn plan](project-500k-ig-100k-linkedin-plan.md) — Lior's Aug 2026 task; data pack in the-system-v5/O-output/growth-plan-500k-100k/. KEY: LinkedIn followers do NOT scale with reach (6x impressions, flat ~1K/mo) — 100K needs a conversion lever, not more reach; IG 500K is a run-rate extension riding on one repeatable format
+- [500K IG / 100K LinkedIn plan](project-500k-ig-100k-linkedin-plan.md) — Lior's Aug 2026 task; data pack in the-system-v5/O-output/growth-plan-500k-100k/. KEY: LinkedIn followers do NOT scale with reach, they scale with ARTIFACTS — Aug 2026 broke the 4-month flat band (+1,373 on half of May's reach, 40% of it from the ungated exit deck); 100K needs ~5 different artifact posts/month, IG 500K is a run-rate extension. Baselines 2026-08-31: IG 104,659, LI 12,980
 - [Monthly review decks live on the Desktop](reference-monthly-review-decks-desktop.md) — `~/Desktop/brand/month sum/`; the vault only has June + July, so check there before saying a month's data is missing (May 2026 is there)
 - [Metricool API coverage](reference-metricool-api-data-coverage.md) — blogId 5775125 covers ALL Lior's networks; IG posts+reels endpoints are complete (validated vs IG's July recap), but LinkedIn post data is only ~20-40% complete from June 2026 — never quote a LinkedIn post count from it
 
@@ -30,6 +30,7 @@
 - [Newsjack = human reaction, not news anchor](feedback-newsjack-human-not-news-anchor.md) — Lior 2026-08-12, watermark post: "my media not news media"; person-reacting spine + "teach me" close = comment engine, but only ~3K imp — conversation lever, pair with a reach lever (tag giant / threat frame / day-1 timing)
 
 ## 🔨 ACTIVE BUILDS
+- 🆕 [LinkedIn swipe engine](project-linkedin-swipe-engine.md) — second LinkedIn profile following 100 top AI/general creators; daily harvest → ranked donor-structure report in the-system-v5/O-output/linkedin-swipe-engine/. Claude never clicks, Reut does every action
 - [Lior's Hebrew Wikipedia entry](project-lior-wikipedia-entry.md) — draft + 3 qualifying sources in the-system-v5/O-output/wikipedia-lior-pozin/; go via טיוטה + ייעוץ ערכים, COI must be disclosed
 - [⚠️ The $92M exit figure vs Fiverr's SEC filing](lior-exit-amount-92m-vs-sec-filing.md) — 20-F says $55.658M total consideration + up to $36M earn-out; $92M is media-sourced, never state it as fact anywhere fact-checkable
 - [Lior's book (Amazon bestseller)](project-lior-book-bestseller.md) — dealing with "no" / bootstrap without investors; STANDING ORDER: mine every recording/podcast for book material → log in the-system-v5/O-output/lior-book/source-bank.md
@@ -83,6 +84,7 @@
 ## Reply / Comment Rules
 - 🛑 [LinkedIn + X replies: NEVER auto-post](feedback-linkedin-comments-manual-posting.md) — deliver DRAFT + link only; "מאשר" approves the draft, not posting. X reply crons off 2026-06-11; Bluesky auto-replies off 2026-07-09 — only bluesky-mirror auto-posts
 - Reply post selection: 200+ likes or 10K+ views; SaaS/AI/startup only; never hardware/robotics/crypto
+- 🟣 [Reference comment = posture, never content](feedback-comment-reference-spirit-not-copy.md) — Reut attaches a comment that performed; mirror what it DOES (reframe / extend / question / image), never its wording; deliver 2-3 tight variants
 - [Replies engage the post first](feedback-replies-engage-post-first.md) — real Lior story with a specific number when it fits naturally, NEVER force-fit (Reut, 2026-08-03)
 - [Lift up commenters](feedback-lift-up-commenters.md) — credit the commenter's insight by name first, then the Lior story
 - [Question-posts: answer the question](feedback-comment-answer-the-question.md) — genuine answers, no forced story
