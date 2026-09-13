@@ -19,6 +19,8 @@
 - 🟣 [Build on proven structures](feedback-build-on-proven-structures.md) — Reut 2026-08-30: every Lior LinkedIn post starts from a donor post that already performed for another creator; map its beats first, then strip its AI tells
 - 🚫 [Ruben Hassid moratorium — next 20 posts](feedback-diversify-inspiration-creators.md) — since 2026-08-24, do NOT use Ruben Hassid archetypes as inspiration for the next 20 Lior LinkedIn posts. Pull from the 10-creator list instead. Counter lives in the file.
 - 🔴 [KPI = followers, not impressions](feedback-linkedin-kpi-followers-not-impressions.md) — Reut 2026-08-23: LinkedIn judged on net new followers/month; post mix becomes a 60/30/10 budget, archetypes 8+9 promoted, 4 demoted to a capped reach play, new gate row "why would a stranger follow?". CORRECTED same day: the engine is a SIGNATURE SERIES at 3-5x/week, not personal posts; reason from the big accounts, not only from Lior's narrow data
+- 🟢 [First how-to that WORKED: Claude→Codex migration](lior-post-claude-to-codex-migration.md) — 2026-09-07, 25K imp, Reut: continue this line; 8-beat template for a legal how-to: two-number hook, line-2 parenthetical, permission line, operator confession, trigger, named cost of staying, 3 real commands, close that refuses the verdict. Check every draft against its own last line
+- [LinkedIn media formats](linkedin-media-format-rules.md) — 9:16 pillarboxes on desktop, 4:5 gets cropped by the mobile video player, bottom 10% is covered by controls; an animated GIF in the IMAGE slot survives everything
 - 🟢 [Exit-deck giveaway = THE follower engine](lior-post-exit-deck-lead-magnet.md) — best follower post ever (Reut, 2026-08-29): 66,682 imp / 317 reactions / ~80 connection requests, vs 55 imp for the identical copy with a comment gate. First-party artifact, ungated, document carousel, ONE tactic in the body. Now the signature series, 1 per 2 weeks; 7 next posts drafted in O-output/linkedin-artifact-giveaway-series-2026-08-29.md
 - [Top 13 / 10K+ Playbook](lior-top-8-10k-playbook.md) — THE leading reference: 10 archetypes, 9 hook shapes, 5 universal rules, 4 visual families; beats all older rules on conflict
 - 🔴 [AI-slop button = 40% fewer views](linkedin-ai-slop-penalty.md) — Aug 2026: LinkedIn's "seems like AI slop" report (1M+ presses) suppresses flagged posts, "it's not X, it's Y" auto-suppressed; anti-AI rules are now a reach rule, check analytics for the report warning after publishing
@@ -30,6 +32,7 @@
 - [Newsjack = human reaction, not news anchor](feedback-newsjack-human-not-news-anchor.md) — Lior 2026-08-12, watermark post: "my media not news media"; person-reacting spine + "teach me" close = comment engine, but only ~3K imp — conversation lever, pair with a reach lever (tag giant / threat frame / day-1 timing)
 
 ## 🔨 ACTIVE BUILDS
+- [X agency voice export](project-x-agency-voice-export.md) — 2026-09-13 one-file Lior voice/worldview doc for the agency's Claude; send deltas when voice rules change
 - 🆕 [LinkedIn swipe engine](project-linkedin-swipe-engine.md) — second LinkedIn profile following 100 top AI/general creators; daily harvest → ranked donor-structure report in the-system-v5/O-output/linkedin-swipe-engine/. Claude never clicks, Reut does every action
 - [Lior's Hebrew Wikipedia entry](project-lior-wikipedia-entry.md) — draft + 3 qualifying sources in the-system-v5/O-output/wikipedia-lior-pozin/; go via טיוטה + ייעוץ ערכים, COI must be disclosed
 - [⚠️ The $92M exit figure vs Fiverr's SEC filing](lior-exit-amount-92m-vs-sec-filing.md) — 20-F says $55.658M total consideration + up to $36M earn-out; $92M is media-sourced, never state it as fact anywhere fact-checkable
@@ -50,6 +53,7 @@
 
 ## Voice & Anti-AI Rules (EVERY post/reply/comment)
 - [Anti-AI writing & voice rules](feedback-anti-ai-writing-rules.md) — 11 hard rules: no "not X, it's Y", no em-dashes, "I" hook limits, first-person minimization, no "Honestly" openers, + RED LIST of banned AI words (delve / crucial / pivotal / tapestry / robust / seamless / realm) and phrases ("Here's the thing", "Hope this helps", "Most people...")
+- [Reuse the STRUCTURE, never the content](feedback-reuse-structure-not-content.md) — Reut 2026-09-10: a 2-day-old winner lends its beat skeleton only; new hook, new permission line, new numbers, no callback
 - [Vary post openings](feedback-vary-post-openings.md) — Reut 2026-08-10: my drafts "start the same"; rotate hook shapes + proof stories, stop defaulting to the At-21-eBay origin arc
 - [No parentheses](feedback-no-parentheses.md) — never in drafts; delete or fold into the sentence. ONE exception (Reut 2026-08-12): line-2 parenthetical counter-hook that flips line 1, under 6 words, once per post
 - [Minimize "just"](feedback-avoid-just-overuse.md) — Lior flagged overuse (2026-08-06); max one per post, audit every draft
@@ -75,6 +79,7 @@
 
 ## Team & Brand Facts
 - [AutoDS = איקומרס, never "dropshipping"](feedback-autods-is-ecommerce-not-dropshipping.md) — Reut 2026-08-25: the category word for AutoDS is e-commerce/איקומרס in all public copy; users are "סוחרים", not דרופשיפרים
+- [AutoDS employees had NO equity](feedback-autods-employees-no-equity.md) — never state it, never imply it (Reut 2026-09-11); no "pay in equity" / "your team's options" lines in Lior drafts
 - [AutoDS is B2C](feedback-autods-is-b2c.md) — NEVER call it B2B; full operator standing on B2C topics (Reut, 2026-07-14)
 - [Shopify: always "partner" in copy](feedback-shopify-affiliate-and-partner.md) — never "affiliate" in Lior public copy (Reut 2026-08-06); #1-affiliate fact is internal background only; never "affiliate partner"
 - 🔴 "200 employees" in public content (Reut corrected 250 → 200 on 2026-08-30); NEVER "100 engineers". [Don't overuse team size](feedback-stop-overusing-250-employees.md) or [social proof](feedback-stop-overusing-social-proof.md)
@@ -86,6 +91,7 @@
 - Reply post selection: 200+ likes or 10K+ views; SaaS/AI/startup only; never hardware/robotics/crypto
 - 🟣 [Reference comment = posture, never content](feedback-comment-reference-spirit-not-copy.md) — Reut attaches a comment that performed; mirror what it DOES (reframe / extend / question / image), never its wording; deliver 2-3 tight variants
 - [Replies engage the post first](feedback-replies-engage-post-first.md) — real Lior story with a specific number when it fits naturally, NEVER force-fit (Reut, 2026-08-03)
+- 🟣 [Employee comments = warm, not clever](feedback-employee-comments-warm-not-clever.md) — Reut 2026-09-09: an AutoDS employee's tribute gets years + thanks + their growth, never a cutting one-liner or a restated Lior rule
 - [Lift up commenters](feedback-lift-up-commenters.md) — credit the commenter's insight by name first, then the Lior story
 - [Question-posts: answer the question](feedback-comment-answer-the-question.md) — genuine answers, no forced story
 - [AI prompts go in code blocks](feedback-ai-prompts-in-code-blocks.md) — every prompt for an AI tool (Seedream/HiggsField/Kling/ElevenLabs/sync.so) is delivered inside a fenced code block so she gets a copy button; social drafts stay plain text
@@ -149,6 +155,7 @@
 - [Lior's spoken voice DNA (E97)](lior-spoken-voice-dna-e97.md) — GROUND TRUTH for how he actually talks; full analysis in the-system-v5/M-memory/
 - [E97 canonical stories + new public facts](lior-podcast-e97-canonical-stories.md) — 13 stories with his numbers; $20M+ ARR now public from his mouth
 - [Coral Santoro — inspiration figure](lior-inspiration-coral-santoro.md) — her philosophy may inform content, NEVER use her stories as his
+- [PE offer refused a day before closing](lior-story-pe-offer-refused-day-before.md) — 6 months PE negotiation + full DD, walked a day before closing; reason = cut-staff/cash-cow plan vs day-one employees, never "wanted a bigger number"
 - [Dollar bug story](lior-story-dollar-bug.md) — production incident + FB live apology; transparency posts
 - [Build Your Store origin story](lior-story-build-your-store.md) — Shopify-conference 30% stat → AI barrier-removal → biggest-partner outcome; partner-not-affiliate guardrail; 2 post angles
 - [Shopify reviews 620K](lior-post-shopify-reviews-620k.md) — Crisis Response + Mindset Reframe, 7-beat template
@@ -168,8 +175,11 @@
 
 ## User Preferences
 - [Never revert to my earlier draft](feedback-never-revert-to-my-earlier-draft.md) — when Reut returns an edited version it becomes the base; fix only what is broken, improve forward, never restore my old wording
+- [Read drafts the way a user executes them](feedback-read-drafts-as-a-user-follows-them.md) — Reut catches sequence faults I miss: nouns used before introduction, steps out of executable order, duplicated instructions, and contradictions with the post's own last line. A checklist pass is not a comprehension pass
+- [Verify every command and metric before publishing](feedback-verify-commands-and-metrics-before-publishing.md) — the donor post is a structure, never a fact-checker; I invented a slash command and inherited a wrong reason from a donor on 2026-09-07. Also: never take a ratio of two Elo ratings
 - [Answer in 1-3 lines, answer first](feedback-keep-answers-short.md) — long replies bury the deliverable; reasoning goes in the file, not the chat
 - ["close" = END the task](feedback-close-means-end-task.md) — stop iterating, not "almost there"
 - [Default to English](feedback-language-default.md) — unless explicitly asked otherwise
 - [No Word export](feedback-no-word-export.md) — no .docx ever; deliverables stay Markdown
 - [IG story text ends with a cursor sign](feedback-ig-story-text-cursor-sign.md) — every Instagram story draft ends with `█`; stories only, not posts or replies
+- [Deliverables answer the question only](feedback-deliverables-answer-the-question-only.md) — shareable docs carry ONE number/answer; models, caveats and reasoning stay in the chat reply

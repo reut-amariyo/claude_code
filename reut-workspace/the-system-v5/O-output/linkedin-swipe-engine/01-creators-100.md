@@ -162,3 +162,18 @@ Log changes at the bottom of this file with a date.
 
 ### Change log
 - 2026-09-06 — list created.
+
+---
+
+## Added 2026-09-10 — the "Tech & AI" creator card Reut sent (Ruben's post, top-creators graphic)
+
+Reut wants these 5 as inspiration for Lior's AI posts. Ruben Hassid is on the same card and stays 🔴 under moratorium.
+Slugs found via search on 2026-09-10; confirm by follower count on open.
+
+| Name | Followers on card | URL | Lane | Donor value |
+|---|---|---|---|---|
+| Charlie Hills | 252K | https://www.linkedin.com/in/charliehills/ | Claude/Codex how-tos, numbered steps, prompt templates. Donor of BOTH the 25K migration post and the Astra 7-step post | 🟢 |
+| Heather Murray | 83K | https://www.linkedin.com/in/accessible-ai/ | AI for non-techies, huge comment volume (#11 on the list) | 🟢 |
+| Sabrina Ramonov | 59K | https://www.linkedin.com/in/sabrinaramonov/ | AI automation, tutorial-heavy (#53 on the list) | 🟡 |
+| Liam Ottley | 45K | https://www.linkedin.com/in/liamottley/ | AI agency / AI automation business, YouTube-first | 🟡 |
+| Cam Trew | 27K | https://www.linkedin.com/in/camerontrew/ | AI tooling, smaller account, watch for structure only | 🟡 |
