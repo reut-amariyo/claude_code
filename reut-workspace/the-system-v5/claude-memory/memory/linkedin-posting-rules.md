@@ -30,7 +30,7 @@ Repost the post from Lior's own account 6-8 hours after the original. After 1-2 
 
 ## Rule 3 — Stay active for 1 full hour to comment
 
-For the first hour after posting, Lior responds to every comment.
+For the first hour after posting, Lior responds to every comment. Since Oct 2026 the window that matters is the first 48h, see [[linkedin-reach-drop-oct-2026-first-48h]].
 
 **Why:** This is the single strongest signal to the LinkedIn algorithm. It also builds the community — people comment again because they know Lior will reply. "Never post and ghost."
 
@@ -105,17 +105,10 @@ Read every paragraph out loud. If you can't say it in one breath, break it.
 
 ---
 
-## Rule 9 — Two topical hashtags to control the post URL
+## Rule 9 — NO hashtags (Reut, 2026-09-28)
 
-LinkedIn builds each post's permanent URL slug from the FIRST LINE of the post, unless the post
-has hashtags, then it uses the hashtags. Add exactly 2 hashtags naming what the post is about.
-
-**Why:** LinkedIn posts rank in Google and AI answer engines read Google. The slug is a machine
-signal about what the page covers, and it is free to control. Stacks with Rule 1 (ALT text).
-Source: Tom Orbach newsletter, 2026-08-24.
-
-**How to apply:** ❌ #mondaymotivation #hustle → ✅ #ecommerceautomation #aiagents. On-pillar,
-lowercase, two only, at the end of the post. Never hashtag-stuff the body.
+Never add hashtags to a LinkedIn post. The old 2-hashtag URL-slug rule is retired.
+See [[feedback-no-hashtags-linkedin]].
 
 ## Rule 10 — Check post analytics for an AI-slop warning after publishing
 
@@ -143,7 +136,7 @@ draft shape. See [[linkedin-ai-slop-penalty]].
 - [ ] Character count verified on charactercalculator.com/he/ (target: 750-1,200)
 - [ ] Statistical hook leads if a strong stat exists
 - [ ] Breath test passed on every paragraph
-- [ ] Two on-pillar hashtags added (controls the post URL slug)
+- [ ] No hashtags anywhere in the post
 - [ ] After publish: post analytics checked for an AI-slop report warning
 
 ---

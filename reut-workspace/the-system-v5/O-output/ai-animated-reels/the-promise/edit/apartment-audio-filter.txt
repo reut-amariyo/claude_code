@@ -1,0 +1,1 @@
+atrim=start=0.95,asetpts=PTS-STARTPTS,aresample=48000,aformat=channel_layouts=stereo,atempo=1.15,highpass=f=100,agate=threshold=0.008:ratio=20:range=0.003:attack=4:release=150:knee=2,volume=13dB,equalizer=f=3500:t=q:w=1.2:g=4,alimiter=limit=0.9

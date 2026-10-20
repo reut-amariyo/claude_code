@@ -23,3 +23,5 @@ First long-form unscripted Lior source in the system (E97, Real Life Superpowers
 Vulnerability, his way: focus is an ASPIRATION he works on ("jumping between too many things" is his named weakness), tennis started with the rule that he won't be world-best, hates running yet signed up for a 10K, still an introvert. Never fear, always specifics.
 
 Related: [[lior-podcast-e97-canonical-stories]], [[feedback-anti-ai-writing-rules]], [[lior-brand-pillars-2026]].
+
+**Addendum 2026-09-30, live English on the podcast-agency call** (notes in `B-brain/meetings/2026-09-30-podcast-agency-kickoff.md`): confirms all 6. New: (a) the pivot is "Okay, f*** it. I'll just [bigger bet]", twice in 20 min; in writing keep "Okay. I'll just..." without the curse. (b) Numbers ARE the scene: 30 messages, 3 answers, 12 hours, 9:00/9:15/9:30. (c) Advice is conditional, "it depends on the stage in life". (d) "Either... or..." framing. (e) Bio ends "That's it basically." (f) Weak spot: abstract slogans come out tangled, stories come out crisp. (g) He doesn't volunteer stories; they need a prompt question.

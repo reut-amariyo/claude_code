@@ -1,3 +1,8 @@
+> **Superseded 2026-09-20.** The second LinkedIn profile is no longer needed. Bright Data
+> harvests the creators without any login, and Reut chose to drop the second-profile plan
+> (it carried the one-account risk and no longer bought anything). Kept for history.
+> Current operation: `scripts/harvest.py` + the `linkedin-swipe-daily` scheduled task.
+
 # LinkedIn Swipe Engine — Setup Guide
 
 Built 2026-09-06. Purpose: a dedicated LinkedIn profile whose feed is 100% top AI +

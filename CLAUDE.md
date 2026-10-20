@@ -22,6 +22,8 @@ These rules are true for ALL work in this vault, on any model, any platform, any
   X-post mirror auto-posts; Bluesky auto-replies were disabled 2026-07-09 per Reut.
 - Never offer .docx / Word exports. Reut has no Word. Deliverables stay Markdown.
 - Present post/reply drafts as easy-to-copy plain text, never blockquotes.
+- Every LinkedIn post draft and every IG story text ends with the cursor ▮ as the last
+  character. Not for comments, replies, X posts or DMs.
 - When Reut asks "will this succeed?" on a Lior LinkedIn post, run the full pre-publish
   audit before answering. Never answer go/no-go by feel. The audit lives in
   reut-workspace/the-system-v5/CLAUDE.md → "Pre-publish gate".

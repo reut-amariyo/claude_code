@@ -28,6 +28,16 @@ platforms, so treat it as the cross-platform rule rather than a LinkedIn rule.
 because for a long stretch there were restrictions on stating it. That is the biggest untapped
 lever on the account. See [[lior-exit-amount-92m-vs-sec-filing]] for where it is safe.
 
+**Engine #4 CANDIDATE, from the Sept 2026 review (2026-10-01): the "Theory" reel.** A scene with
+a stranger or a billionaire + a named idea. IG: Train Station Theory 536K, Black Coffee Theory 498K.
+TikTok: "the flight home theory" 351K, the #1 video of the month. Three hits on two platforms in
+one month. Promote it to a proven engine if October repeats it.
+
+**Reposting rule (Sept 2026):** on Facebook, reposting a proven winner works. The May 11 "reason your
+family never worries about money" reel was reposted Sep 3 and did 3.9M, 78% of FB's month. On IG and X,
+reruns decay (10-startups list 3,200 → 267 → 207; X intro thread 3rd run 1/8). Repost on FB; on IG/X
+change the story and keep the structure.
+
 **Talking-head video:**
 - Black background, minimal captions, direct to camera performed best of all his talking video.
 - **Cap at ~40 seconds.** He speaks slowly; 90-second and 2-minute cuts kill watch-through.

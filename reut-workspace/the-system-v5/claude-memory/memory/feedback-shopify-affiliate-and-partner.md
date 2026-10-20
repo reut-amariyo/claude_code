@@ -1,17 +1,14 @@
 ---
 name: feedback-shopify-affiliate-and-partner
-description: "In Lior content always call AutoDS a Shopify PARTNER — never 'affiliate' in public copy; and never the combined title 'affiliate partner'"
-metadata: 
-  node_type: memory
+description: "Shopify relationship in Lior copy = \"#1 Shopify partner and affiliate\" (2024 and 2025); Reut 2026-10-14 reversed the old partner-only rule"
+metadata:
   type: feedback
-  originSessionId: 9ff21db2-b210-4f3e-84dd-48eb5bad9d11
-  modified: 2026-08-06T13:53:19.373Z
 ---
 
-In Lior/AutoDS public content, describe the Shopify relationship as **"partner"** — do NOT write "affiliate" or "#1 affiliate" in post copy. (2026-08-06, Reut: "תמיד לכתוב פרטנר ולא אפילייט".) The older rule still holds too: never the combined title "affiliate partner".
+**Current rule (Reut, 2026-10-14, OMANE Media brief):** say "partner and affiliate". Shopify comes first: "#1 Shopify partner and affiliate", always BOTH years, 2024 and 2025.
 
-Background facts (for internal accuracy, not for copy): AutoDS is Shopify's #1 affiliate (2024 and 2025, 2 years in a row) AND a partner — two distinct relationships. The affiliate fact exists, but Reut/Lior don't want "affiliate" appearing in Lior's public voice; "partner" is the word.
+Superseded history: 2026-07-22 "never affiliate partner"; 2026-08-06 "always partner, never affiliate". Both are replaced by the 2026-10-14 wording.
 
-**Why:** Reut corrections on 2026-07-22 (never "affiliate partner", Toronto conference post) and 2026-08-06 (always "partner", never "affiliate" — Shopify earnings culture post, where "Shopify's #1 affiliate for 2 years, and a partner" was rejected).
+**Why:** Reut corrected a section-5 draft that said "partner, never affiliate". AutoDS holds both relationships, and she wants both named.
 
-**How to apply:** Any Lior post/reply/bio/pitch: "AutoDS is a Shopify partner" or "we've been Shopify partners for years". Drop #1-affiliate claims from public copy unless Reut explicitly asks. Related: [[feedback-never-criticize-shopify]].
+**How to apply:** any Lior post, bio, pitch, agency brief: "#1 Shopify partner and affiliate in 2024 and 2025". Never criticize Shopify: [[feedback-never-criticize-shopify]]. Agency voice docs that still say "partner only" need this delta: [[project-x-agency-voice-export]], [[project-foundera-linkedin-agency]].

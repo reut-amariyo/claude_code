@@ -24,7 +24,7 @@ Follow these first. If the project only ever tracks 23 people, these are the 23.
 | # | Name | Lane | Cadence | Donor value |
 |---|---|---|---|---|
 | 1 | Justin Welsh | Solopreneur, LinkedIn's most-studied writer | Daily | 🟢 |
-| 2 | Alex Hormozi | Business, blunt frameworks | Near-daily | 🟢 |
+| 2 | Alex Hormozi | Business, blunt frameworks | Near-daily | 🔴 barred as donor by Reut 2026-09-20 |
 | 3 | Allie K. Miller | AI for business, ROI framing | Daily | 🟢 |
 | 4 | Ethan Mollick | Practical GenAI at work, Wharton | Near-daily | 🟢 |
 | 5 | Andrew Ng | AI education, clarity-first | Several/week | 🟡 |
@@ -162,6 +162,12 @@ Log changes at the bottom of this file with a date.
 
 ### Change log
 - 2026-09-06 — list created.
+- 2026-09-20 — Alex Hormozi barred as donor (Reut), tracked for data only.
+- 2026-09-20 — moved to Bright Data. Profile URLs resolved for all 103 (incl. the 3 from the
+  09-10 card) into `data/creators.json`. 11 cannot be harvested (activity hidden from
+  logged-out view): Armand Ruiz, Marily Nika, Katelyn Bourgoin, Luke Matthews, Sabrina Ramonov,
+  Liam Ottley, Sahar Mor, Sabri Suby, Charlie Hills, Mustafa Suleyman, Barsee. Replace them
+  at the first monthly review with creators who keep appearing in the top-post comments.
 
 ---
 
@@ -177,3 +183,32 @@ Slugs found via search on 2026-09-10; confirm by follower count on open.
 | Sabrina Ramonov | 59K | https://www.linkedin.com/in/sabrinaramonov/ | AI automation, tutorial-heavy (#53 on the list) | 🟡 |
 | Liam Ottley | 45K | https://www.linkedin.com/in/liamottley/ | AI agency / AI automation business, YouTube-first | 🟡 |
 | Cam Trew | 27K | https://www.linkedin.com/in/camerontrew/ | AI tooling, smaller account, watch for structure only | 🟡 |
+
+
+---
+
+## Added 2026-09-20 — from Lara Acosta's "100+ creators" card (350K post)
+
+Reut: take inspiration from everyone on the card EXCEPT the LinkedIn-experts and marketing rows.
+Tech & AI row added nothing new (Hassid barred, Hills / Ottley / Ramonov hidden, Trew and Murray
+already in). Jenny Stojkovic hides her activity, not harvestable. "Emily D" not identifiable from
+the card. All 12 below verified through Bright Data by name + follower count.
+
+| # | Name | Card row | Followers | Donor value |
+|---|---|---|---|---|
+| 104 | Harry Stebbings | Founders & Investors | 281K | 🟢 |
+| 105 | Leila Hormozi | Business & Leadership | 414K | 🟡 Reut to decide, Alex is barred |
+| 106 | Jade Bonacolta | Mindset & Leadership | 490K | 🟡 |
+| 107 | Elena Verna | Business & Leadership | 237K | 🟡 growth-adjacent |
+| 108 | Timothy Armoo | Business & Leadership | 220K | 🟢 |
+| 109 | Adam Robinson | Founders & Investors | 158K | 🟢 |
+| 110 | Tori Dunlap | Founders & Investors | 98K | 🟡 |
+| 111 | Varun Anand | Founders & Investors | 63K | 🟢 |
+| 112 | James Ware | Mindset & Leadership | 47K | 🟡 |
+| 113 | Maya Raichoora | Mindset & Leadership | 109K | 🟡 |
+| 114 | Colby Kultgen | Mindset & Leadership | 525K | 🟡 |
+| 115 | H. León Castillo | Mindset & Leadership | 7.6K | 🟡 |
+
+Standing rule from the same review: LinkedIn-growth and marketing creators already on the list
+(Alić, Acosta, Matthews, van der Blom, Szuchan, Gerhardt, Walker, Simmonds, Natividad) stay for
+data, but their LinkedIn-tactics and marketing posts fail the topic bar and never become references.

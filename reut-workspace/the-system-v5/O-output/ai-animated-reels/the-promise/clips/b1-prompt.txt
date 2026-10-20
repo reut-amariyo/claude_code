@@ -1,0 +1,12 @@
+Create a 25-second 1:1 premium 3D animated-film scene, continuing exactly from the START IMAGE.
+REFERENCES: START IMAGE = opening frame. IMAGE REFERENCE 1 = LIOR ONLY, the young man in the black [BETA] T-shirt. IMAGE REFERENCE 2 = GALIT ONLY, the young woman with long light brown hair in the cream sweater. Preserve both exact faces, hair, outfits and proportions in every shot. Never swap or merge identities.
+DIALOGUE RULE: ONLY the character named before each line speaks it. Non-speakers keep mouths closed with natural listening reactions. Natural accurate lip-sync for the active speaker only. Both speak English with a light natural Israeli accent. Lior: warm, slightly sheepish young male voice. Galit: calm, confident, warm female voice with playful dry humor.
+STYLE: same premium 3D animated look as the start image, soft natural window light, expressive but restrained faces, gentle cinematic camera, quiet café ambience, no music.
+0-4s: Medium two-shot as in the start image. GALIT, arms crossed, eyebrow raised: "You brought a laptop to our date?"
+4-9s: Cut to Lior close-up, embarrassed half-smile. LIOR: "I'm building my own company. AutoDS. I always have to be reachable."
+9-12s: Cut to Galit close-up, curious, head tilted. GALIT: "How many customers do you have?"
+12-16s: Lior close-up, small confident grin. LIOR: "Thousands. But we're going to have millions."
+16-19s: The laptop pings softly. Lior glances down at the screen, then back up at her, bracing, expecting her to leave. Silence.
+19-22s: Galit close-up: she slowly uncrosses her arms, a small warm smile. GALIT: "I know you will."
+22-25s: Wide two-shot: Galit pulls a thick dental textbook from her bag and sets it on the table next to his laptop, opens it, and starts studying. Lior watches her, smiling. Both working across the small table. Hold.
+No subtitles, no on-screen text except the [BETA] shirt print, no morphing, no face drift, no extra people in focus, stable hands.

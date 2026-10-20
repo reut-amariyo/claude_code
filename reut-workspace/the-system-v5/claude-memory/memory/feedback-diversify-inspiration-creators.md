@@ -39,7 +39,8 @@ Plus other verified operator-founders as discovered.
 
 **Cycle start:** 2026-08-24
 
-**Ruben-inspired posts in this cycle:** 1
+**Ruben-inspired posts in this cycle:** 2
+- 2026-10-12 · Claude Skills giveaway, structure from Ruben's skills-library post; Reut chose it knowingly (his site skillsclau.de NOT used)
 - 2026-08-24 · Decision-tree post "There's a reason Claude keeps giving you mid output" · adapted from Ruben's Fable/Opus/Sonnet/Haiku format
 
 **Non-Ruben posts published since cycle start:** 0 / 20

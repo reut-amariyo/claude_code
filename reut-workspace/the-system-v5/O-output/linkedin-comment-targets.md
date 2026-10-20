@@ -57,9 +57,14 @@ from LinkedIn.** Filter on engine efficiency and mechanism legality, never on fo
 | 2 | Allie K. Miller | https://www.linkedin.com/in/alliekmiller/ | Operator reality against AI theory. Weak engine, but the audience is right |
 | 3 | Greg Isenberg | https://www.linkedin.com/in/gisenberg/ | Actually shipped the thing he is theorizing about |
 | 4 | Aaron Levie | https://www.linkedin.com/in/boxaaron/ | B2C counter-example to his enterprise framing |
-| 5 | Steven Bartlett | https://www.linkedin.com/in/stevenbartlett-/ | Largest reach. 🛑 AI and building posts ONLY, never the wellness lane |
+| 5 | Steven Bartlett | https://www.linkedin.com/in/stevenbartlett-123/ | Largest reach. 🛑 AI and building posts ONLY, never the wellness lane |
 | 6 | Alex Hormozi | https://www.linkedin.com/in/alexhormozi/ | Operator scale, founder audience |
-| 7 | Dan Martell | https://www.linkedin.com/in/danmartell/ | Exit and scaling lane. ⚠️ activity page often returns 0 readable posts |
+| 7 | Dan Martell | https://www.linkedin.com/in/dmartell/ | Exit and scaling lane. ⚠️ activity page often returns 0 readable posts |
+
+**Slug fixes, 2026-09-22:** Steven Bartlett was `/in/stevenbartlett-/` which 404s, correct slug is
+`/in/stevenbartlett-123/`. Dan Martell was `/in/danmartell/` which is a different person, a
+mechanical engineer with 425 followers; the SaaS coach is `/in/dmartell/`. Both verified by search,
+not yet opened in Chrome because the extension has been down since 2026-09-17.
 
 **Removed:** Rowan Cheung, Reut's call, weak engine of his own · Will Ahmed, product and partnership marketing, nothing to add · Ryan Petersen,
 no operator standing on freight and tariffs, fails our own rule 4.

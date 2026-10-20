@@ -37,9 +37,10 @@ superiority, (2) loves 0→1, (3) focus.
 - Team size is "200 employees", corrected by Reut 2026-08-30, used only when central. NEVER "100 engineers" —
   the number is unverified.
 - Lior is dyslexic. Never "I read / just finished a book". Podcasts, audiobooks, team summaries.
-- No imposter syndrome, no disbelief lines, no fear confessions. Wins are earned
-  outcomes; vulnerability means real past failures only.
-- Never criticize Shopify. Never name Shopify as a potential AutoDS acquirer.
+- No imposter syndrome, no disbelief lines. Wins are earned outcomes. Fear, including
+  current fear, IS allowed: "he's always human" (Reut 2026-10-14).
+- Shopify: "#1 Shopify partner and affiliate", both years 2024 and 2025. Never criticize Shopify.
+  Never name Shopify as a potential AutoDS acquirer.
 - His AI stack is Hermes Agent + OpenAI Codex since June 2026. Any workflow
   content must match it. Claude may appear only for direct terminal/desktop use.
 - CEO relevance filter: would a SaaS CEO with 200 employees credibly say this?
@@ -111,10 +112,28 @@ no "Read that again" template phrases, leave an engagement gap open at the end.
   The anti-AI rules in the vault-root CLAUDE.md are now a distribution rule, not a taste rule.
   After publishing, check post analytics for the AI-report warning; a flagged post explains a
   sudden reach drop that is neither throttling nor topic mismatch.
-- **Hashtags control the post URL.** LinkedIn builds the permanent slug from the post's first line
-  unless hashtags are present, then it uses the hashtags. Add exactly 2 on-pillar topical hashtags
-  at the end of every post (#ecommerceautomation #aiagents, never #mondaymotivation). LinkedIn posts
-  rank in Google and AI answers read Google, so the slug is a free machine signal. Pairs with ALT text.
+- **NO hashtags on LinkedIn, ever** (Reut, 2026-09-28). The old 2-hashtag URL-slug rule is retired.
+
+### Topic gate (added 2026-09-22 by Reut, runs BEFORE a topic is chosen)
+
+Per-post profile-viewer + followers-gained data (n=63): followers come only from a
+first-party artifact, an operator-seat rules post, or a named-person personal post.
+Tool how-tos, scoreboards, generic curation lists, generic lesson lists and repeat topics
+converted 0. Exception (2026-10-01): curation that is HIS receipt passes. The 50-mentors list
+"people who taught me", on follow.liorpozin.com, was Sept's best follower post, 21 fol / 78 saves. Answer all 7
+before approving a topic; 1-3 are blockers.
+1. Could ONLY Lior have written this? Delete his name; if any CEO or AI newsletter could post it, fail.
+2. What does the reader take home, and who owns it? His document / his rule / his person / his own list of who shaped him. Someone else's tool = 0.
+3. Why would a stranger press Follow? "Wants the next one" passes; "learned something" is a reach play.
+4. Which seat is he speaking from? 200 people, 4 acquisitions, the exit. If a non-manager could say it, not his seat.
+5. Is there a named person or a number that is his? "Successful people" / "every founder" = 0.
+6. Lesson or scoreboard? A milestone travels only through what it teaches.
+7. Topic already in the log? Needs a news trigger or a new artifact, or it halves.
+Timing: a 20K+ post in the last 48h means the next slot gets the strongest artifact in the queue.
+Cadence: never more than 2 days without a post; the Sep 18-22 gap dropped reach to ~600/day.
+Reach plays (10% budget): AI how-tos hit 1 in 5 (Jul-Sep); a REAL-news "LEAKED" post buys reach
+but few followers, so follow it with an artifact slot. Manufactured "Reddit just LEAKED" hooks
+flopped twice on X in Sept, don't repeat them.
 
 ### Pre-publish gate (mandatory before any go/no-go)
 

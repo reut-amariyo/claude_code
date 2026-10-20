@@ -63,3 +63,11 @@ views from Instagram.
 
 Related: [[project-500k-ig-100k-linkedin-plan]], [[project-bluesky-mirror-pipeline]],
 [[lior-performance-log]]
+
+## Instagram disconnected (found 2026-10-01)
+
+From ~Sept 2026 the API returns "There is no instagram connection for blog 5775125"; brand networks
+list only X, LinkedIn, TikTok, Bluesky (Threads also gone). Reut: Instagram was disconnected from
+Facebook because paid campaigns are running. Metricool reads IG through the Meta business link, so
+that's the likely cause. Until it's reconnected, IG monthly numbers come from the IG app (screen
+recording) and IG views do NOT include Facebook, so IG + FB add without double-counting.

@@ -1,0 +1,14 @@
+[
+  {"kicker": "FOUNDER SALARY · THE MATH",
+   "lines": ["CASH IN THE BANK", "{{÷ 18}}", "− MONTHLY TEAM COST", "= YOUR SALARY CEILING"],
+   "variant": "dark", "size": "portrait",
+   "out": "O-output/linkedin-founder-salary-visual/salary-ceiling-dark-portrait.png"},
+  {"kicker": "FOUNDER SALARY · THE MATH",
+   "lines": ["CASH IN THE BANK", "{{÷ 18}}", "− MONTHLY TEAM COST", "= YOUR SALARY CEILING"],
+   "variant": "light", "size": "portrait",
+   "out": "O-output/linkedin-founder-salary-visual/salary-ceiling-light-portrait.png"},
+  {"kicker": "FOUNDER SALARY · THE MATH",
+   "lines": ["CASH IN THE BANK", "{{÷ 18}}", "− MONTHLY TEAM COST", "= YOUR SALARY CEILING"],
+   "variant": "dark", "size": "square",
+   "out": "O-output/linkedin-founder-salary-visual/salary-ceiling-dark-square.png"}
+]

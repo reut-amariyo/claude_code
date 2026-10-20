@@ -1,0 +1,11 @@
+{
+  "photo": "O-output/linkedin-founder-salary-visual/lior-laptop.jpg",
+  "title": "Founder salary, the math:",
+  "lines": ["Cash in the bank ÷ 18",
+            "minus monthly team cost",
+            "= your salary ceiling"],
+  "focus": "50% 45%",
+  "size": "portrait",
+  "note_y": 56,
+  "out": "O-output/linkedin-founder-salary-visual/salary-note-on-photo.png"
+}

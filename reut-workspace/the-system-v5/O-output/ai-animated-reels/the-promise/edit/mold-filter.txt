@@ -1,0 +1,1 @@
+format=gbrp,geq=red_expr='if(lt(r(X,Y),110)*gt(g(X,Y),0.74*r(X,Y))*lt(Y,0.55*H),0.75*(0.3*r(X,Y)+0.59*g(X,Y)+0.11*b(X,Y)),r(X,Y))':green_expr='if(lt(r(X,Y),110)*gt(g(X,Y),0.74*r(X,Y))*lt(Y,0.55*H),0.75*(0.3*r(X,Y)+0.59*g(X,Y)+0.11*b(X,Y)),g(X,Y))':blue_expr='if(lt(r(X,Y),110)*gt(g(X,Y),0.74*r(X,Y))*lt(Y,0.55*H),0.75*(0.3*r(X,Y)+0.59*g(X,Y)+0.11*b(X,Y)),b(X,Y))',format=yuv420p

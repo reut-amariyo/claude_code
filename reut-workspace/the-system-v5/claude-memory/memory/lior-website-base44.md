@@ -146,3 +146,13 @@ Podcast thumbnails from og:image.
 - About photo: Hebrew Forbes cover to be replaced
 - Hollywood Life article: approved by Reut, keep it
 - Podcasts: English only
+
+---
+
+## Playbook lead magnet (fixed 2026-09-19)
+- Section id="subscribe": "Ideas That Don't Exist Yet" ebook, 200 ideas / 17 sectors. Form = first name + email → backend function `sendEbook`.
+- Base44 appId: 6989baa373c3a2fb4ba41f9a. DNS at GoDaddy, mail on Google Workspace.
+- Was broken since launch (2026-07-19): function used Resend in testing mode (no verified domain) → 403 for every address except reut_a@autods.com; every visitor saw "Something went wrong." Leads WERE saved (entity **EmailSubscriber**, source ebook_200_startup_ideas): 275 real unique people by 2026-09-19, none of whom ever received the PDF. Export lives in ~/Downloads/EmailSubscriber_export.csv.
+- Fix: Resend removed, Base44 built-in SendEmail instead; lead saved FIRST to the **Subscriber** entity (source "playbook"); on success the form shows "It's yours." + DOWNLOAD THE PLAYBOOK button, email is a bonus.
+- Where the emails live: Base44 → Dashboard → Data → EmailSubscriber (the old entity; check whether the fix wrote to a new Subscriber entity or reused it). No external list (no Kit/Mailchimp) yet.
+- Optional later: verify liorpozin.com at resend.com/domains (records go in GoDaddy) to send from lior@liorpozin.com.

@@ -46,3 +46,14 @@ still does not carry it.
 
 Related: [[project-okrs-q3-2026-operating-targets]], [[linkedin-interest-graph-2026]],
 [[lior-performance-log]], [[user-lior-half-year-review-2026-08]]
+
+**Deadline set (Reut, 2026-10-01): both targets are due in 10 months, by the end of July 2027.**
+Pace check as of Sep 30 2026, against the Jul-Sep average:
+- IG 116,821 → needs +38,318/mo. Runs at +15,068, which is 39% of the needed pace and 23,250/mo short.
+- LinkedIn 13,698 → needs +8,630/mo. Runs at +971 net, 11% of the needed pace; about 1,333 gross, 15%.
+Every monthly review must show "how far behind the pace" against this deadline.
+
+**IG deadline moved (Reut, 2026-10-06): the plan is a 12-month year, Sep 2026 → 31 Aug 2027.**
+"Road to 500K" artifact (https://claude.ai/artifact/Vh2Lf8uvZ4JKZsKtmHYyqu) now runs 105K → 500K
+compounding ~13.9%/mo: Sep 119.6K, Oct 136.2K, Nov 155.1K, Dec 176.7K ... Jul 439K, Aug 500K.
+Built for the meeting with Alex and Shaked. LinkedIn 100K deadline not restated; ask before moving it.

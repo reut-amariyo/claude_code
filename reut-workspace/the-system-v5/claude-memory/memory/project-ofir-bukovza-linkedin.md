@@ -17,4 +17,6 @@ New content workstream started 2026-06-16: LinkedIn posts for **Ofir Bukovza (א
 
 **Public numbers Ofir himself stated (G-CMO podcast):** ~150 employees, $200M annual sales volume at customers, 50,000 paying customers, scans 700M+ products. (Note: differs from the Lior-content "200 employees" public line — for Ofir use what he said publicly.)
 
+**Update 2026-10-06:** Ofir is leaving AutoDS. Lior farewell post planned for Nov 5-10, 2026; material in B-brain/meetings/2026-10-06-weekly-sync-lior.md. Confirm with Reut whether Ofir's own posts continue after he leaves.
+
 **Status:** still building his data/playbook. Using Lior's playbook as proxy for now. See [[lior-top-8-10k-playbook]], [[feedback-anti-ai-writing-rules]], [[feedback-linkedin-engagement-gap]].

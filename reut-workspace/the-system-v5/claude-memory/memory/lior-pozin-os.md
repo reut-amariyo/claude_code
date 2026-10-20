@@ -14,14 +14,15 @@ metadata:
 - Co-Founder & CEO **AutoDS** (acquired by Fiverr, operates independently, he remains CEO). Also Co-Founder & CEO: **BuildYourStore.ai** (largest AI store builder for Shopify), **CreateUGC.AI** (AI ads generator for ecom), **ShopShark** (TikTok Shop affiliate analysis). Investor.
 - Parents immigrated Ukraine→Israel 1989. Grew up Beer Sheva, modest family (mom grocery store, dad AC technician). Self-made.
 - Married to Galit (May 22, 2025). Galit finished 6 years of dental school Aug 2026 (studied in Jerusalem, commuted from Tel Aviv). Cat: Ray — Rio the Bengal died, Ray is the current cat (Reut, 2026-08-09); NEVER reference Rio as alive in drafts. Tesla; drove McLaren 765LT + Bentley GTC in Modball 2025.
-- At 29: Forbes 30 Under 30 nominee; 2025 Shopify #1 partner & affiliate.
+- At 29: **ON the Forbes 30 Under 30 list** (Reut 2026-09-20: he was part of the list, never write "nominee"; "FORBES 30 UNDER 30" stands as a flat fact on the website). **Shopify #1 partner in BOTH 2024 and 2025, two years in a row** (Reut, 2026-09-16: always cite both years, never only 2025).
 - **Born June 25** (turned 31 on 2026-06-25 → born 1995). **Sold AutoDS to Fiverr at age 28.** His real birthday-post canon = 10 tips "what actually got me there": pick co-founder like a spouse / kill side projects (focus) / be lazy, automate repeats / make mistakes fast, professional not perfect / hire HR early / skip business plan, stay close to data / ship before it's ready / be home for dinner / enjoy the ride / treat it like a game.
 - Languages: EN/HE/RU. Extreme sports, snowboarding, scuba, gym 3-4x/wk, yoga, tennis.
 
 ## Timeline (canonical)
 - **Age 10:** Dad locked his computer as punishment → hacked into it. First lesson in rejecting "no".
 - **Age 12:** Fixed neighbors' computers to buy a skateboard; built school forum that became the school's communication hub; freelance web dev.
-- **Age 14:** TinyDeal→eBay arbitrage, first $40 in hours; e-cigs at school → online store → parents' apartment as warehouse.
+- **Age 14:** **kicked out of school at 14** (Reut 2026-09-20, confirmed for public copy; the podcast's "10th grade" wording does not override this). TinyDeal→eBay arbitrage, first $40 in hours; e-cigs at school → online store → parents' apartment as warehouse.
+- **Age 23: became a millionaire** (Reut confirmed 2026-09-24 for paid-ad hooks: "At 14, I got kicked out of school. 9 years later, I became a millionaire.").
 - **Age 21:** eBay blocked his 7-year main account → opened **100 eBay accounts** → built automation software for himself → showed at a conference, dropshippers became beta users → AutoDS. Bootstrapped: no front website for 2 years, billed backwards.
 - Feared **DSM-Tool** (market leader, 2 brothers, MBA, connections, money) → overtook in 5 years → **acquired them**.
 - **VAT crisis:** spent every dollar on growth, didn't know about year-end VAT; advisor wanted $30K he didn't have → took a loan → together created mentorship program (**150 people × $200/month**). Learned to sell; organized first AutoDS conference despite fear of public speaking.
@@ -31,7 +32,7 @@ metadata:
 - By 2026: **250+ employees, 10s of millions ARR.** Current PUBLIC stats per autods.com (verified 2026-06-11, prefer these over the older 1M+/$150M figures): **1.8M+ dropshippers use AutoDS, $1B+ earned by our dropshippers, 800M+ winning products, Trustpilot 4.7 (1,700+ reviews), 8 channel integrations.**
 
 ## Acquisition path
-- **Sold AutoDS to Fiverr for $92M, no investors; deal closed in 23 days** (vs 6 months of PE grind). Fiverr price was **4x+ the PE offer** from 2 years earlier. (Source: "שיעורים שלמדתי מפייבר" video script V1, confirmed 2026-06-10.)
+- **Sold AutoDS to Fiverr for $92M** (Reut 2026-09-20: $92M IS the number, state it flat on liorpozin.com and all brand content; SEC caveat is Wikipedia-only), no investors; deal closed in 23 days** (vs 6 months of PE grind). Fiverr price was **4x+ the PE offer** from 2 years earlier. (Source: "שיעורים שלמדתי מפייבר" video script V1, confirmed 2026-06-10.)
 - 2 years pre-Fiverr: 6-month PE negotiation, full DD, **offer was $30M** (Reut, 2026-09-08 — life-changing money at that stage), **walked away a DAY before closing** (PE CEO wanted to turn AutoDS into a CASH COW: squeeze it for profit and cut staff — misaligned; employees who'd worked below-market since day one would have been fired). NOTE: $92M / $30M ≈ 3x, so the "4x+ the PE offer" line above doesn't reconcile — verify before using either multiple publicly.
 - **B-list/A-list selling trick:** rank potential buyers; pitch B-list first to make mistakes and refine the deck where stakes are low, then approach A-list ready. General lesson: know exactly where you can afford to fail.
 - **Three blocks / pyramid framework:** Business Model (base — LTV:CAC), Product (drives LTV), Marketing (drives CAC, must be scalable/repeatable). "If the numbers don't add up at the base, great product and genius marketing still collapse."
@@ -64,3 +65,10 @@ metadata:
 
 ## Socials
 IG liorpozin · LinkedIn /in/liorpozin · X @lior_pozin
+
+## Additions from the Hebrew podcast "99 Is Not 100" (2026-09, his mouth; see [[lior-podcast-99-lo-100-canonical-stories]])
+- Dream stated publicly: **billionaire by 45**. 10 hours/week on personal development. "Nobody is born a CEO." "I really believe in no."
+- Family Ukrainian (confirmed). Aliyah year on tape 1990 vs 1989 above: unverified, never publish a year. Born 1995, five years after.
+- First shekel at 12 fixing neighbours' PCs (~100 shekels). First eBay product at 14: Chinese phone, **$30** profit (older "$40" figure unverified). Dropshipped 14-18, own store later, e-cigarette stock at home. Expelled from one high school in 10th grade.
+- Army: landed in an IT technician team, demanded a test, moved, became team leader. Unit name never published.
+- Listens to books, cannot sit and read; last book The Science of Scaling (unreasonable size goal + unreasonable deadline).

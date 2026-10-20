@@ -24,3 +24,16 @@ reut-workspace/the-system-v5/.claude/
 # Node projects (Remotion etc.) — never commit dependencies or rendered output
 node_modules/
 reut-workspace/the-system-v5/T-tools/remotion-videos/out/
+
+# Meeting recordings (Plaud) hold budgets and negotiations; keep them off the cloud-bot repo
+reut-workspace/the-system-v5/B-brain/meetings/
+
+# Private voice kits (Reut + other CEOs), never pushed
+voice-kits/
+
+# AI animated reel renders/frames (~650MB of iterations), keep local only
+reut-workspace/the-system-v5/O-output/ai-animated-reels/**/*.mp4
+reut-workspace/the-system-v5/O-output/ai-animated-reels/**/*.png
+reut-workspace/the-system-v5/O-output/ai-animated-reels/**/*.mov
+reut-workspace/the-system-v5/O-output/ai-animated-reels/**/*.wav
+reut-workspace/the-system-v5/O-output/ai-animated-reels/**/*.mp3

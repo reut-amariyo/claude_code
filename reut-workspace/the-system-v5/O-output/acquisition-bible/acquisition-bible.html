@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Acquisition Bible</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: 960px 540px; margin: 0; }
+  :root{
+    --graphite:#212425; --offwhite:#F5F3F0; --white:#FFFFFF; --sand:#C2A777;
+    --mid:#929494; --line:#2A2D2E; --light:#E7E4DF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--offwhite)}
+  body{font-family:Inter,Helvetica,Arial,sans-serif;color:var(--graphite);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .mono{font-family:"JetBrains Mono",Menlo,monospace}
+  .slide{width:960px;height:540px;position:relative;overflow:hidden;page-break-after:always;padding:44px 56px;background:var(--offwhite)}
+  .dark{background:var(--graphite);color:var(--white)}
+  .kicker{font-family:"JetBrains Mono",Menlo,monospace;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--mid)}
+  .num{position:absolute;top:40px;right:56px;font-family:"JetBrains Mono",Menlo,monospace;font-size:11px;color:var(--sand);letter-spacing:2px}
+  h1{font-family:"JetBrains Mono",Menlo,monospace;font-weight:700;font-size:44px;letter-spacing:1px;line-height:1.1}
+  h2{font-family:"JetBrains Mono",Menlo,monospace;font-weight:700;font-size:26px;margin-top:10px;line-height:1.2}
+  .lead{font-size:15px;line-height:1.55;margin-top:14px;max-width:640px}
+  .foot{position:absolute;left:56px;right:56px;bottom:30px;display:flex;justify-content:space-between;font-size:10px;color:var(--mid)}
+  .foot .mono{color:var(--sand)}
+  .box{border:1.5px solid var(--line);background:var(--white);padding:16px 18px}
+  .boxtitle{font-family:"JetBrains Mono",Menlo,monospace;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:10px;font-weight:700}
+  .quote{font-family:"JetBrains Mono",Menlo,monospace;font-size:19px;line-height:1.45;border-left:4px solid var(--sand);padding-left:18px;margin-top:22px;max-width:760px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
+  .grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:30px}
+  ul.q{list-style:none;font-size:13px;line-height:1.5}
+  ul.q li{padding-left:16px;position:relative;margin-bottom:7px}
+  ul.q li:before{content:"";position:absolute;left:0;top:7px;width:7px;height:7px;background:var(--sand)}
+  .fill{color:#9C8352;font-size:13px;line-height:1.9}
+  .fill b{color:var(--graphite);font-weight:600}
+  .cover-sq{width:28px;height:28px;border:1.5px solid var(--sand);margin-bottom:56px}
+  .tag{display:inline-block;border:1.5px solid var(--sand);color:var(--sand);font-family:"JetBrains Mono",Menlo,monospace;font-size:10px;letter-spacing:3px;padding:12px 48px;margin-top:26px}
+  .rulecard{border:1.5px solid var(--line);background:var(--white);padding:16px 14px;height:250px;position:relative}
+  .rulecard .n{font-family:"JetBrains Mono",Menlo,monospace;color:var(--sand);font-size:12px;letter-spacing:2px}
+  .rulecard .t{font-family:"JetBrains Mono",Menlo,monospace;font-weight:700;font-size:15px;margin-top:12px;line-height:1.3}
+  .rulecard .d{font-size:12px;line-height:1.5;margin-top:12px;color:#4A4D4E}
+  table.calc{width:100%;border-collapse:collapse;font-size:13px}
+  table.calc td{border-bottom:1px solid var(--light);padding:9px 4px}
+  table.calc td:last-child{text-align:right;color:#9C8352;font-family:"JetBrains Mono",Menlo,monospace}
+  table.calc tr.total td{border-bottom:none;font-weight:700;color:var(--graphite)}
+  table.calc tr.total td:last-child{color:var(--graphite)}
+  .verdict{display:flex;gap:12px;margin-top:14px}
+  .verdict div{flex:1;border:1.5px solid var(--line);padding:10px;text-align:center;font-family:"JetBrains Mono",Menlo,monospace;font-size:12px;font-weight:700}
+  .verdict .go{background:var(--graphite);color:var(--white)}
+  table.check{width:100%;border-collapse:collapse;margin-top:18px;font-size:12.5px;background:var(--white)}
+  table.check th{font-family:"JetBrains Mono",Menlo,monospace;font-size:9.5px;letter-spacing:2px;text-transform:uppercase;text-align:left;padding:9px 10px;background:var(--graphite);color:var(--white)}
+  table.check td{border:1px solid var(--light);padding:10px;vertical-align:top}
+  table.check td.n{font-family:"JetBrains Mono",Menlo,monospace;color:var(--sand);width:34px}
+  table.check td.r{font-weight:600;width:190px}
+  table.check td.pf{width:110px;font-family:"JetBrains Mono",Menlo,monospace;font-size:11px;white-space:nowrap}
+  .sq{display:inline-block;width:11px;height:11px;border:1.5px solid var(--graphite);vertical-align:-1px;margin-right:4px}
+  .ph{color:#9C8352}
+</style>
+</head>
+<body>
+
+<!-- 1 COVER -->
+<section class="slide dark">
+  <div class="cover-sq"></div>
+  <h1>THE ACQUISITION<br>BIBLE</h1>
+  <p class="lead" style="color:#D9D6D1">The 5 rules I run before buying a company.<br>Run your next deal through them.</p>
+  <div class="tag">A PLAYBOOK FOR BUYERS</div>
+  <div class="foot"><span class="mono">[ life is beta ]</span><span>Lior Pozin · CEO &amp; Co-Founder of AutoDS</span></div>
+</section>
+
+<!-- 2 HOW TO USE -->
+<section class="slide">
+  <div class="kicker">00 · How to use this</div>
+  <div class="num">[ 0.1 ]</div>
+  <h2>5 questions before any money moves</h2>
+  <p class="lead">Every company AutoDS looks at goes through the same 5 rules, in the same order. People first. Payback math only once the first 3 hold up.</p>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Use it when</div>
+      <ul class="q">
+        <li>A founder asks if you would buy their company</li>
+        <li>A product shows up that you planned to build anyway</li>
+        <li>You feel the deal before you have the numbers</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">What you need on the table</div>
+      <ul class="q">
+        <li>The asking price</li>
+        <li>Monthly profit today</li>
+        <li>An honest list of what you would fix on day one</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 3 THE 5 RULES -->
+<section class="slide">
+  <div class="kicker">00 · The rules</div>
+  <div class="num">[ 0.2 ]</div>
+  <h2>The whole Bible on one page</h2>
+  <div class="grid5">
+    <div class="rulecard"><div class="n">01</div><div class="t">People I trust</div><div class="d">A real link to the founders. Trust comes before the spreadsheet.</div></div>
+    <div class="rulecard"><div class="n">02</div><div class="t">Value we can add</div><div class="d">We make it more profitable or we make the product better.</div></div>
+    <div class="rulecard"><div class="n">03</div><div class="t">A gap in our ecosystem</div><div class="d">A complementary product that closes a hole for our customers.</div></div>
+    <div class="rulecard" style="background:var(--graphite);color:var(--white)"><div class="n">04</div><div class="t">Payback in 12 months</div><div class="d" style="color:#D9D6D1">After our fixes, the deal returns the investment within a year.</div></div>
+    <div class="rulecard"><div class="n">05</div><div class="t">A product we know</div><div class="d">Usually something we planned to build anyway. Buying saves time and focus.</div></div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 4 RULE 1 -->
+<section class="slide">
+  <div class="kicker">01 · People</div>
+  <div class="num">[ 1.0 ]</div>
+  <h2>People I trust</h2>
+  <div class="quote">"It starts with a connection to people I trust."</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Answer before the first call</div>
+      <ul class="q">
+        <li>Who on our side knows the founders personally?</li>
+        <li>Would we hire these people if the company did not exist?</li>
+        <li>Will they keep working hard once the money is in the bank?</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">Fill in</div>
+      <div class="fill"><b>Who we know there</b> [Name, role]<br><b>How we know them</b> [Years, context]<br><b>Who vouches for them</b> [Name]<br><b>Trust score</b> [1 to 5]</div>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 5 RULE 2 -->
+<section class="slide">
+  <div class="kicker">02 · Value</div>
+  <div class="num">[ 2.0 ]</div>
+  <h2>Value we can add</h2>
+  <div class="quote">"We know how to add value. Either improving profitability or improving the product."</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Answer before the first call</div>
+      <ul class="q">
+        <li>Which lever do we pull first, profit or product?</li>
+        <li>What do we already do better than they do?</li>
+        <li>What does monthly profit look like after the fix?</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">Fill in</div>
+      <div class="fill"><b>Main lever</b> [Profit / Product]<br><b>Day-one fixes</b> [3 bullets]<br><b>Profit today, monthly</b> [$X]<br><b>Profit after fixes, monthly</b> [$Y]</div>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 6 RULE 3 -->
+<section class="slide">
+  <div class="kicker">03 · Ecosystem</div>
+  <div class="num">[ 3.0 ]</div>
+  <h2>A gap in our ecosystem</h2>
+  <div class="quote">"What does our ecosystem get from it? A complementary product that fills the holes."</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Answer before the first call</div>
+      <ul class="q">
+        <li>Which gap between our features does it close?</li>
+        <li>Would our customers use both products together?</li>
+        <li>What can our customers do after the deal that they cannot do today?</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">Fill in</div>
+      <div class="fill"><b>The gap it closes</b> [One sentence]<br><b>Customer overlap</b> [X%]<br><b>What it unlocks</b> [One sentence]<br><b>Fit score</b> [1 to 5]</div>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 7 RULE 4 -->
+<section class="slide">
+  <div class="kicker">04 · Payback</div>
+  <div class="num">[ 4.0 ]</div>
+  <h2>Payback in 12 months</h2>
+  <div class="quote" style="font-size:17px">"If I can get the investment back within a year, I'm buying."</div>
+  <div class="grid2" style="grid-template-columns:1.15fr 1fr">
+    <div class="box">
+      <div class="boxtitle">The payback math</div>
+      <table class="calc">
+        <tr><td>A · Asking price</td><td>[$_____]</td></tr>
+        <tr><td>B · Monthly profit after our fixes</td><td>[$_____]</td></tr>
+        <tr class="total"><td>A ÷ B = months to payback</td><td>[____]</td></tr>
+      </table>
+      <div class="verdict"><div class="go">12 OR LESS · BUY</div><div>OVER 12 · PASS</div></div>
+    </div>
+    <div class="box">
+      <div class="boxtitle">Why after the fixes</div>
+      <ul class="q">
+        <li>Use the profit after rule 02, once the fixes are in</li>
+        <li>That is the number you are paying for</li>
+        <li>If you cannot name the fixes, use today's profit</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 8 RULE 5 -->
+<section class="slide">
+  <div class="kicker">05 · Know it</div>
+  <div class="num">[ 5.0 ]</div>
+  <h2>A product we know</h2>
+  <div class="quote">"We don't buy something we don't know. Usually it's something we planned to build anyway, and it saves us time and focus."</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Answer before the first call</div>
+      <ul class="q">
+        <li>Is this on our roadmap already?</li>
+        <li>How long would building it take our team?</li>
+        <li>What would that team build instead?</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">Fill in</div>
+      <div class="fill"><b>On our roadmap</b> [Yes / No]<br><b>Time to build it ourselves</b> [Months]<br><b>Team it frees up</b> [Who]<br><b>What they ship instead</b> [One sentence]</div>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 9 SELLER SIDE -->
+<section class="slide">
+  <div class="kicker">06 · The other side of the table</div>
+  <div class="num">[ 6.0 ]</div>
+  <h2>What the seller needs from you</h2>
+  <div class="quote">"Every deal we do runs on targets. They need to trust that together, we hit them."</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="boxtitle">Your job in the room</div>
+      <ul class="q">
+        <li>Show the targets and how you hit them together</li>
+        <li>Show why it pays them more than running alone</li>
+        <li>Be honest about what happens if they say no</li>
+      </ul>
+    </div>
+    <div class="box">
+      <div class="boxtitle">The honest part</div>
+      <p style="font-size:13px;line-height:1.55">Sometimes the seller already knows you are entering their space anyway. Say it plainly. A seller who sees the whole picture decides faster.</p>
+    </div>
+  </div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 10 REGRET -->
+<section class="slide dark">
+  <div class="kicker" style="color:var(--sand)">07 · The mistake</div>
+  <div class="num">[ 7.0 ]</div>
+  <h2 style="margin-top:22px">The deals I regret are the ones we skipped</h2>
+  <div class="quote" style="color:#E7E4DF">"I didn't take enough risk. Same playbook, we knew what we were doing. We should have taken the loan."</div>
+  <p class="lead" style="color:#D9D6D1;margin-top:26px">If a deal passes all 5 rules, the cash in the bank is the last reason to say no.</p>
+  <div class="foot"><span class="mono">[ life is beta ]</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 11 CHECKLIST -->
+<section class="slide" style="padding-top:36px">
+  <div class="kicker">08 · The checklist</div>
+  <div class="num">[ 8.0 ]</div>
+  <h2 style="font-size:22px">Run every deal through this page</h2>
+  <table class="check">
+    <tr><th>#</th><th>Rule</th><th>The question</th><th>Pass?</th></tr>
+    <tr><td class="n">01</td><td class="r">People I trust</td><td>Do we have a real link to the founders, and would we hire them?</td><td class="pf"><span class="sq"></span>Yes <span class="sq"></span>No</td></tr>
+    <tr><td class="n">02</td><td class="r">Value we can add</td><td>Can we name the fixes that raise profit or improve the product?</td><td class="pf"><span class="sq"></span>Yes <span class="sq"></span>No</td></tr>
+    <tr><td class="n">03</td><td class="r">A gap in our ecosystem</td><td>Does it close a hole our customers feel today?</td><td class="pf"><span class="sq"></span>Yes <span class="sq"></span>No</td></tr>
+    <tr><td class="n">04</td><td class="r">Payback in 12 months</td><td>Asking price ÷ monthly profit after fixes = 12 or less?</td><td class="pf"><span class="sq"></span>Yes <span class="sq"></span>No</td></tr>
+    <tr><td class="n">05</td><td class="r">A product we know</td><td>Was it on our roadmap anyway?</td><td class="pf"><span class="sq"></span>Yes <span class="sq"></span>No</td></tr>
+  </table>
+  <div class="verdict" style="margin-top:16px"><div class="go">5 OF 5 · MAKE THE OFFER</div><div>ANY NO · FIX IT OR WALK</div></div>
+  <div class="foot"><span class="mono">THE ACQUISITION BIBLE</span><span>Lior Pozin</span></div>
+</section>
+
+<!-- 12 CLOSE -->
+<section class="slide dark">
+  <div class="cover-sq"></div>
+  <h1 style="font-size:36px">Copy the rules.<br>Run your next deal<br>through them.</h1>
+  <p class="lead" style="color:#D9D6D1">More playbooks from inside AutoDS at follow.liorpozin.com</p>
+  <div class="foot"><span class="mono">[ life is beta ]</span><span>Lior Pozin · CEO &amp; Co-Founder of AutoDS</span></div>
+</section>
+
+</body>
+</html>

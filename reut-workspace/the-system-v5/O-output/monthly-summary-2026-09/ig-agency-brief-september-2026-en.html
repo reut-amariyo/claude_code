@@ -1,0 +1,82 @@
+<title>Instagram Agency Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+:root{
+  --ground:#F2F1ED; --surface:#FBFAF7; --ink:#1F1E1B; --ink-2:#56544E; --ink-3:#8E8B83;
+  --line:#DEDCD5; --line-strong:#C6C3B9; --sand:#A87C4A; --sand-fill:#EBE0CE;
+  --good:#2F5E37; --good-fill:#E3EEE2; --warn:#A0503A; --warn-fill:#F3E2DA;
+  --sans:"Inter",-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+  --ground:#131311; --surface:#1B1B18; --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842; --sand:#D2AC7C; --sand-fill:#3A3226;
+  --good:#9CC7A2; --good-fill:#1F2D21; --warn:#CE8569; --warn-fill:#33221C;}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#131311; --surface:#1B1B18; --ink:#F0EEE8; --ink-2:#B4B1A8; --ink-3:#7E7B73;
+  --line:#33322D; --line-strong:#4A4842; --sand:#D2AC7C; --sand-fill:#3A3226;
+  --good:#9CC7A2; --good-fill:#1F2D21; --warn:#CE8569; --warn-fill:#33221C;}
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.6; direction:ltr}
+.wrap{max-width:820px; margin:0 auto; padding-inline:20px; padding-block:56px 64px}
+.lockup{font-family:var(--mono); font-size:13px; letter-spacing:.1em; color:var(--sand); margin:0 0 28px; }
+.eyebrow{font-size:13px; font-weight:500; color:var(--ink-3); margin:0 0 8px}
+h1{font-weight:800; font-size:clamp(30px,5vw,44px); line-height:1.15; margin:0 0 14px; text-wrap:balance}
+h2{font-weight:800; font-size:22px; margin:0 0 16px; display:flex; align-items:center; gap:10px}
+h2 .pill{font-size:12px; font-weight:700; padding:3px 10px; border-radius:2px}
+.good .pill{background:var(--good-fill); color:var(--good)}
+.warn .pill{background:var(--warn-fill); color:var(--warn)}
+.lead{font-size:17px; color:var(--ink-2); margin:0; max-width:60ch}
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin:32px 0 44px}
+.stat{background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:16px 18px}
+.stat b{display:block; font-family:var(--mono); font-size:24px; font-weight:700;  font-variant-numeric:tabular-nums}
+.stat span{font-size:13px; color:var(--ink-3)}
+section{margin-top:40px}
+ol{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:12px; counter-reset:item}
+li{counter-increment:item; display:grid; grid-template-columns:34px 1fr; gap:12px; background:var(--surface); border:1px solid var(--line); border-radius:2px; padding:16px 18px}
+li::before{content:counter(item); font-family:var(--mono); font-weight:700; color:var(--sand); font-size:15px; padding-top:2px}
+li h3{margin:0 0 4px; font-size:16.5px; font-weight:700}
+li p{margin:0; color:var(--ink-2); font-size:15px}
+.n{font-family:var(--mono); font-size:.92em; unicode-bidi:isolate; direction:ltr; display:inline-block}
+.en{unicode-bidi:isolate; direction:ltr; display:inline-block}
+footer{margin-top:44px; padding-top:18px; border-top:1px solid var(--line); font-size:12.5px; color:var(--ink-3)}
+@media print{body{font-size:13.5px} .wrap{padding-block:20px} li{break-inside:avoid} section{margin-top:26px} .stats{margin:22px 0 26px}}
+</style>
+
+<div class="wrap">
+  <p class="lockup">[ life is beta ]</p>
+  <p class="eyebrow">September 2026 review · Instagram · Lior Pozin</p>
+  <h1>What September's data says</h1>
+  <p class="lead">What worked, what to improve, and what to do in October.</p>
+
+  <div class="stats">
+    <div class="stat"><b>6.19M</b><span>Views, +86% on August</span></div>
+    <div class="stat"><b>+11,874</b><span>New followers</span></div>
+    <div class="stat"><b>116,821</b><span>Followers at month end</span></div>
+    <div class="stat"><b>111,175</b><span>Profile visits, +73%</span></div>
+  </div>
+
+  <section class="good">
+    <h2>What worked <span class="pill">Keep going</span></h2>
+    <ol>
+      <li><div><h3>"Theory" reels</h3><p>Train Station Theory reached 536K and Black Coffee Theory 498K. A scene with a stranger plus an idea with a name. The same format was also #1 on TikTok. Let's make 3-4 more in October and see if it repeats.</p></div></li>
+      <li><div><h3>Lists bring shares</h3><p>"Comment CEO" got 666 shares and 442 comments. "9 business lessons" got 1.6K shares. Keep one list in every week.</p></div></li>
+      <li><div><h3>The $92M works</h3><p>The exit-at-28 reel reached 475K. Send any use of this number to me for approval first.</p></div></li>
+      <li><div><h3>The origin story works on other platforms</h3><p>On X, the "I'm Lior" threads brought most of the new followers. On TikTok, "It's about time I introduce myself" did 93K. Worth building an Instagram reel version.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="warn">
+    <h2>What to improve <span class="pill">Fix</span></h2>
+    <ol>
+      <li><div><h3>Profile conversion dropped</h3><p>Profile visits rose 73%, followers only 32%. 10.7% of visitors followed, down from 14% in August. The bio and pinned posts need a refresh.</p></div></li>
+      <li><div><h3>ManyChat isn't bringing trials</h3><p>8,769 people joined the flow and 31 started a Build Your Store trial. Add a BYS step to the HUSTLE and CEO automations.</p></div></li>
+      <li><div><h3>Name the automations</h3><p>21 of 24 are called things like "copy 47". Name each one after its post and trigger keyword.</p></div></li>
+      <li><div><h3>The audience is still 78% men</h3><p>And India (15%) is almost as big as the US (18%). Think about which content draws more women and more US viewers.</p></div></li>
+    </ol>
+  </section>
+
+  <footer>Sources: Instagram Insights for September 2026 · ManyChat Insights · Impact · TikTok Studio · X Analytics</footer>
+</div>

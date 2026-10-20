@@ -2,6 +2,18 @@
 
 Built 2026-09-06. This is the contract for what Claude produces from each harvest.
 
+> **v2, 2026-09-20 — Bright Data replaces the manual harvest.** `scripts/harvest.py daily` pulls
+> the 5 most recent posts of every harvestable creator through Bright Data's LinkedIn posts
+> dataset, scores the 72-hour window, and writes section 1 of the daily report. A desktop-app
+> scheduled task (`linkedin-swipe-daily`, 08:00) runs it and then writes sections 2-5.
+> Bright Data does NOT return repost counts, so the live formula is
+> `score = comments x3 + likes x1`, then `x min(this post / creator median, 10)`, multiplier
+> only for posts with 100+ likes or 20+ comments, median only once a creator has 5+ posts
+> aged 24h+. Reposts by the creator are excluded. 11 creators hide their activity from
+> logged-out view and cannot be harvested, flagged `harvestable: false` in `data/creators.json`.
+> Lior-fit flags live in `data/lior-fit.json`. The section below is the original spec, still
+> the intent, with the repost weight now unavailable.
+
 ---
 
 ## The outlier bar (what Reut saves during the harvest)

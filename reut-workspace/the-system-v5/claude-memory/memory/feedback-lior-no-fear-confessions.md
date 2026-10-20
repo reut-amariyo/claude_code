@@ -1,18 +1,12 @@
 ---
 name: feedback-lior-no-fear-confessions
-description: "Never write Lior expressing fear/being scared about his own decisions (\"it scared us\", \"I was terrified to ship\"). His vulnerability = real failures and mistakes, not fear framing."
-metadata: 
-  node_type: memory
+description: "Fear IS allowed in Lior content, including current fears (Reut 2026-10-14: 'he's always human'); the 2026-06-10 ban is retired"
+metadata:
   type: feedback
-  originSessionId: ee1c84b6-df32-44d6-86b8-227f93056692
 ---
 
-Never frame Lior (or "us"/AutoDS under his voice) as scared, afraid, nervous, or terrified about a decision he made — e.g. "giving an AI write access to live stores scared us. We shipped it anyway."
+**Current rule (Reut, 2026-10-14, OMANE Media brief):** Lior can talk about fear, including current fears. "He's always human, so it's good to talk about that." Do not ban fear or limit vulnerability to past failures.
 
-**Why:** Reut rejected exactly that line on the AutoDS Claude MCP launch post (2026-06-10): "אני יודעת שזה לא נכון עבור ליאור". Fear-confession framing contradicts his core identity: [[lior-brand-pillars-2026]] Pillar 1 ("I live on 200") is decisive, full-throttle conviction. Lior decides fast and stands behind it. His vulnerability lane is REAL failures and mistakes after the fact (the [[lior-story-dollar-bug]] production incident, failed senior hires), never anticipatory fear.
+Superseded history: on 2026-06-10 Reut rejected "giving an AI write access to live stores scared us" on the AutoDS Claude MCP launch post, and that became a blanket ban. The blanket ban is retired. Judge each line on whether it is true for Lior, as with any claim.
 
-**How to apply:**
-- When a draft needs an "honest/raw beat" (e.g. adapting structures like Maor Shlomo's milestone post), do NOT reach for fear. Instead: acknowledge the market's objections ("fair questions") and answer them with operator conviction ("we'd rather learn the answers live than in a slide deck"), or use a real past failure.
-- Banned phrasings in Lior's voice: "scared us", "I was afraid", "terrified", "honestly, it freaked me out", "we hesitated".
-- Allowed vulnerability: concrete past mistakes, public failures, wrong calls he owned and fixed.
-- Related: [[feedback-lior-never-arrogant]] (no flexing) — together they define the band: confident without arrogance, vulnerable without fear.
+**How to apply:** fear and doubt beats are allowed in drafts and agency briefs. Pair fear with action where it fits his "Deal with your fears" principle in [[lior-pb-strategy-v8]]. Still confident without arrogance: [[feedback-lior-never-arrogant]].

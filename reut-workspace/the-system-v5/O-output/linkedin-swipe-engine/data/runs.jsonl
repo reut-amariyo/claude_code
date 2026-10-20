@@ -1,0 +1,10 @@
+{"ts": "2026-09-20T09:13:20.447584", "mode": "probe", "snapshot": "sd_mu9lkgrug1u8nmm79", "inputs": 103, "limit": 1, "records": 75, "errors": 28}
+{"ts": "2026-09-20T09:16:32.026753", "mode": "probe", "snapshot": "sd_mu9lplrw13gb7ktz98", "inputs": 31, "limit": 1, "records": 19, "errors": 12}
+{"ts": "2026-09-20T09:23:48.604312", "mode": "probe", "snapshot": "sd_mu9lyb3d78xqf5vur", "inputs": 2, "limit": 1, "records": 0, "errors": 2}
+{"ts": "2026-09-20T09:25:36.608313", "mode": "probe", "snapshot": "sd_mu9m0a9h2ox6gst497", "inputs": 2, "limit": 1, "records": 0, "errors": 2}
+{"ts": "2026-09-20T09:30:21.038733", "mode": "backfill", "snapshot": "sd_mu9m2n4519oip7y02t", "inputs": 92, "limit": 15, "records": 1087, "errors": 12}
+{"ts": "2026-09-21T17:54:50.212936", "mode": "daily", "snapshot": "sd_mubjdiglr8exmhilw", "inputs": 104, "limit": 5, "records": 509, "errors": 2}
+{"ts": "2026-09-21", "mode": "collect-muse", "inputs": 4, "records": 4}
+{"ts": "2026-09-22T21:11:50.124523", "mode": "daily", "snapshot": "sd_mud5yc29239y2e6fzc", "inputs": 104, "limit": 5, "records": 512, "errors": 2}
+{"ts": "2026-09-24T08:10:01.111095", "mode": "daily", "snapshot": "sd_muf8sh971z7loni9vm", "inputs": 104, "limit": 5, "records": 512, "errors": 2}
+{"ts": "2026-09-27T19:02:38.394779", "mode": "daily", "snapshot": "sd_muk6i5xr2o3hts3h45", "inputs": 104, "limit": 5, "records": 512, "errors": 2}

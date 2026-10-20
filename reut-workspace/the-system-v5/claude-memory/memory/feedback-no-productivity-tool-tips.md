@@ -3,10 +3,13 @@ name: No productivity/tool-tip posts for Lior
 description: Lior LinkedIn/X must not post AI workflow tips, productivity hacks, or "how to use [tool]" content — that's a creator/influencer lane, not a CEO lane
 type: feedback
 originSessionId: 00b8e064-a436-4f90-81b5-513bfa10dcba
+modified: 2026-10-19T08:13:13.894Z
 ---
 Never draft productivity hacks, AI workflow tips, "how to use Claude/ChatGPT/[tool]" posts, or any tool-recommendation content for Lior. This includes Anthropic/OpenAI feature explainers, prompt-engineering tricks, and "the X trick I use daily" formats.
 
-**Why:** Confirmed by a 400-impression flop (2026-05-12) — a post explaining the "MD files → HTML" Claude review workflow. Reasons it failed:
+**CORRECTION 2026-10-19 (Reut's analytics screenshot):** the May 11 2026 "Anthropic's team just dropped the workflow trick... MD files → HTML" post did NOT flop. It ended at **93,321 impressions**, 56 reactions, 24 comments, Lior's #3 post by impressions. The "400 impressions" below was an early read and is wrong; never cite it as a flop again. Engagement rate ~0.09% and follower conversion unknown, so treat it as a REACH play, not a follower engine.
+
+**Why (original reasoning, partly superseded by the correction above):** a post explaining the "MD files → HTML" Claude review workflow, first logged as a 400-impression flop (2026-05-12). Reasons given then:
 - Justin Welsh, Greg Isenberg, and every AI-tools creator own this lane — Lior has no credibility advantage as a Bootstrapped→Fiverr founder with 200 employees
 - Hits zero of the Three Pillars (200% / 0→1 / focus) — could've been written by any consultant
 - No story, no scene, no stakes — violates Real Person Principle

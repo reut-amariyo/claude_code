@@ -1,6 +1,6 @@
 ---
-name: Lior LinkedIn — Top 13 / 10K+ Impressions Playbook (LEADING RULES)
-description: THE leading reference for Lior LinkedIn posts. Synthesized from 13 confirmed 10K+ impression posts (started as 8). Every new post MUST map to one of the 10 archetypes here, follow the 5 universal rules, and use one of the 4 visual families. When this file contradicts older guidance, THIS FILE WINS.
+name: Lior LinkedIn — Top 18 / 10K+ Impressions Playbook (LEADING RULES)
+description: THE leading reference for Lior LinkedIn posts. Synthesized from 18 confirmed 10K+ impression posts (started as 8, +5 Aug 25-Sep 2026). Every new post MUST map to one of the 12 archetypes here, follow the 5 universal rules, and use one of the 4 visual families. When this file contradicts older guidance, THIS FILE WINS.
 type: feedback
 originSessionId: 6078a9c3-698f-4e50-a2f7-967e002ca971
 modified: 2026-08-04T07:34:39.100Z
@@ -59,6 +59,54 @@ The old KPI line is kept below for history, but it no longer governs. The 10 arc
 **The line that keeps this from reopening the tool-tip floodgates:** a how-to is allowed ONLY when (a) framed as insider intel from an *authority* Lior stress-tested himself, (b) opened with operator confession, and (c) closed on a strategic/human insight. A plain "here's how to use [tool]" with none of those three is still banned.
 
 **Confirmed data (2026-06-02, pulled from the live post):** published ~2026-05-12, **57 likes, 24 comments, ~93K imp → ~0.09% eng rate** — the LOWEST resonance of any win in this set (below even the Google post's 0.16%). **My earlier "probably high-saves utility post" guess was wrong.** The comment-to-like ratio is unusually high (24:57) because the comments skew *critical/debate* (people questioning token efficiency vs. just using a markdown viewer). So the correct read: **this is a pure reach + debate play, NOT warm resonance.** The tutorial framing buys enormous cold-audience distribution but thin approval — fine when the KPI is exposure, but do NOT model this post when the goal is saves/affinity. Tutorial exception = a reach lever, used sparingly.
+
+---
+
+## Aug 25 – Sep 2026 additions (5 new 10K+ wins, refreshed 2026-10-12)
+
+Reut, 2026-10-12: "a successful post = one that cleared 10K." Lifetime numbers, read 2026-10-01 to 10-12.
+
+| Date | Post | Impressions | Followers | Saves | Maps to |
+|---|---|---|---|---|---|
+| 08-25 | "Sold my business to Fiverr for $92M with this 47-slide deck" | **79,288** (live 10-12) | 94 | — | **Archetype 11 (new)** |
+| 09-07 | "9 months with Claude. Moved to Codex in 4 min." | 26,087 | 6 | 42 | Archetype 4, how-to sub-pattern |
+| 09-23 | "This is how I scaled my business to $50M ARR" (50 mentors) | 24,023 | **21** | **78** | **Archetype 11 (new)** |
+| 09-29 | "Anthropic $2T IPO just LEAKED:" | 17,338 day 1 | 8 | 4 | Archetype 4, leak sub-pattern |
+| 09-24 | "Day in the life of a 31-year-old exited founder running 200 people" | 10,542 | 1 | 5 | **Archetype 12 (new)** |
+
+**What all 5 share (these are now rules, see Rule F + G below):**
+1. **Line 2 is a parenthetical counter-hook, under 6 words, in 5 of 5.** "(Now I'm open-sourcing it.)" · "(With no background in business)" · "(The numbers are wild)" · "(Spoiler: no 5 a.m. alarm.)" · the Codex line-2. Necessary, not sufficient: the janitor post had one too and did 6.4K.
+2. **Line 1 carries a number in 5 of 5, money in 3 of 5.** $92M, $50M ARR, $2T, 9 months/4 min, 31/200 people.
+3. **ONE idea in the body.** One tactic (deck), one method (mentors), one data block (IPO), one schedule (day), one migration (Codex). Every generic multi-lesson list died the same month: "9 lessons" 779.
+4. **Skimmable body:** 3 dash bullets, a link, ➤ data rows, timestamp rows, numbered steps. No paragraph over 2 lines.
+5. **Reach and follows come from different posts.** Artifacts = 115 of the 130 attributed followers. How-to + leak = reach with almost no follows. Plan the calendar with both, never expect followers from a newsjack.
+
+**What the two artifact posts share (the follower engine, top 2 of 5 by followers):**
+- The trigger is DEMAND: "founders keep reaching out" / "my most asked question". Lior answers, he does not teach.
+- The reader leaves OWNING something only Lior has: the deck that sold his company, the people who taught him.
+- Ungated link on his own domain, zero ask. Close = handoff ("Copy the structure. Fill in your numbers.") or "P.S. Who should I add?"
+
+### 11. First-Party Artifact Giveaway (NEW — confirmed 08-25 + 09-23, THE follower engine)
+**Hook:** [hard outcome number] + [with this artifact]. Line 2: "(Now I'm open-sourcing it.)" or a 4-6 word credential twist.
+**Body:** why the document exists = people keep asking → ONE counterintuitive tactic, 3 short lines max → proof it survived something real → handoff → plain link.
+**Visual:** native document carousel from the artifact itself, portrait 1080x1350.
+**Kills it:** any gate (55 imp), a document written for the post, a list of 10 tips, a single image.
+**Cadence:** every 2 weeks. Queue: the-system-v5/O-output/linkedin-artifact-giveaway-series-2026-08-29.md.
+
+### 12. Personal Timestamp Schedule (NEW — confirmed 09-24)
+**Hook:** familiar format + identity stack of 3 anchors ("Day in the life of a 31-year-old exited founder running 200 people:"). Line 2 kills the cliché ("(Spoiler: no 5 a.m. alarm.)").
+**Body:** timestamped rows, each with one small human confession; his AI system shown as life, never taught. P.S. pivots to one idea, last line reverses the reader's excuse.
+**Note:** reach + profile visits (94), only 1 follower. Affinity slot, not the follower slot. Repeat as a variant (a week in, travel day, the day of the exit), never a republish.
+
+### Archetype 4 sub-patterns confirmed in September
+- **How-to with Lior beats** (Codex 26K): confession → trigger → named cost → 3 real verified steps → close that refuses the obvious verdict. 1 in 5 AI how-tos worked; the 4 losers had the beats trimmed. See [[feedback-howto-beats-are-structural-two-flops]].
+- **Real LEAK + data block** (IPO 17K): "[Giant] [number] just LEAKED:" + 4 ➤ rows + punch pivot + 3 founder lessons + guessing-game P.S. Only with real news, day 1.
+
+### Rule F — Line-2 parenthetical counter-hook (NEW, 5 of 5 September winners)
+Under 6 words, once per post, it either turns the hook ("Now I'm open-sourcing it") or kills the cliché the hook sets up. The only legal parenthesis, see [[feedback-no-parentheses]].
+
+### Rule G — One idea, skimmable shape (NEW)
+One tactic / method / data block / schedule per post, delivered as rows, bullets or steps. Lists of lessons die.
 
 ---
 

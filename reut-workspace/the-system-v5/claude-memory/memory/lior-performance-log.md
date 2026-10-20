@@ -3,7 +3,7 @@ name: Lior LinkedIn Performance Log
 description: Chronological log of every LinkedIn post Lior publishes, with metrics + post-hoc analysis. THE most important file for learning what actually works for Lior's audience.
 type: project
 originSessionId: 11cc6c8f-354d-4bc2-8669-8d3411421269
-modified: 2026-08-09T07:58:03.862Z
+modified: 2026-09-21T20:07:28.957Z
 ---
 # Lior LinkedIn Performance Log
 
@@ -3501,7 +3501,7 @@ Three reads:
 
 ---
 
-### 2026-08-25 — "Sold my business to Fiverr for $92M with this 47-slide deck" (free lead-magnet / open-sourced artifact) ⭐⭐ EXCEPTIONAL (in-flight @ 4d: **66,524 imp** — 3rd-highest post in the log)
+### 2026-08-25 — "Sold my business to Fiverr for $92M with this 47-slide deck" (free lead-magnet / open-sourced artifact) ⭐⭐ EXCEPTIONAL (FINAL locked 2026-09-21: **73,680 imp / 94 followers** — 3rd-highest post in the log)
 **Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7498008927662567424/
 **Published (URN-decoded):** 2026-08-25 13:30 UTC
 **Topic tag:** #exit #artifact #save-first
@@ -3541,9 +3541,11 @@ Three reads:
 
 **Learnings applied going forward:** This is the single most important result since the KPI change. **The save-first artifact post is now the confirmed follower engine**, and it beat the reach lane on its own terms. Concretely: (1) never gate; (2) the artifact must be countable in the hook (47 slides); (3) the credential's job is to prove the artifact worked. Next test is whether a *series* of these on a fixed rhythm compounds — which is exactly the signature-series recommendation. 7d FINAL due 2026-09-01.
 
+**FINAL (locked 2026-09-21, lifetime-to-date @ 27d — the 09-01 slot was missed, see Scan Issues):** Impressions **73,680** · Reactions 346 · Comments 67 · Reposts 1 · **Saves 177** · Sends 11 · Profile viewers 308 · **Followers gained 94** · In-network only 10% (90% out-of-network). Landed inside the 70-80K projection. **3rd-highest final ever** and the account's best follower post by ~8x. Verdict ⭐⭐ EXCEPTIONAL. Follower ledger from Audience analytics: Aug 25-31 delivered **860 net new followers in 7 days** (Aug 26 alone +427), which is ~90% of a normal month. This one post set the September baseline.
+
 ---
 
-### 2026-08-26 — "There's a reason Claude keeps giving you mid output" (Claude model-routing decision tree) ✅ (in-flight @ 3d: 6,271 imp)
+### 2026-08-26 — "There's a reason Claude keeps giving you mid output" (Claude model-routing decision tree) ✅ (FINAL locked 2026-09-21: 6,666 imp / 2 followers)
 **Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7498374442956533760/
 **Published (URN-decoded):** 2026-08-26 13:43 UTC
 **Topic tag:** #ai #decision-tree #save-first
@@ -3578,9 +3580,11 @@ Three reads:
 
 **Learnings applied going forward:** A save-first *format* is not enough — the artifact must come from the operator's seat. A model-routing tree is a creator's artifact and converts like one. Contrast directly with the exit deck (86 followers) and the give-back listicle: both are things only Lior could hand over. **Flag the "not X, it's Y" instance to the agency; two of these in the last month is drift.** 7d FINAL due 2026-09-02.
 
+**FINAL (locked 2026-09-21, lifetime-to-date @ 26d):** Impressions **6,666** · Reactions 50 · Comments 19 · Reposts 1 · Saves 14 · Profile viewers 10 · **Followers gained 2** · In-network 22%. Verdict ✅ on reach, **0.30 followers per 1,000 impressions** — the worst conversion of any ✅ post in the log. The tool-tip lane can clear 5K and still buy nothing.
+
 ---
 
-### 2026-08-27 — "THE ACTUAL STEPS TO GROW A SaaS COMPANY" (all-caps 4-step operator playbook) 🔴 (in-flight @ 2d: 1,124 imp)
+### 2026-08-27 — "THE ACTUAL STEPS TO GROW A SaaS COMPANY" (all-caps 4-step operator playbook) 🔴 (FINAL locked 2026-09-21: 1,659 imp / 1 follower)
 **Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7498735026294136834/
 **Published (URN-decoded):** 2026-08-27 13:35 UTC
 **Topic tag:** #saas #operator-playbook #save-first
@@ -3620,6 +3624,363 @@ Three reads:
 - vs. Lior's baseline: **65% below the 3,255 median.**
 
 **Learnings applied going forward:** Strong evidence that **the packaging, not the substance, sets the ceiling.** Same operator standing as the exit deck, opposite presentation, ~59x less reach. Concretely: no all-caps hooks, no ☑️ manifests, odd-numbered lists only. 7d FINAL due 2026-09-03.
+
+**FINAL (locked 2026-09-21, lifetime-to-date @ 25d):** Impressions **1,659** · Reactions 51 · Comments 16 · Reposts 1 · Saves 3 · Profile viewers 5 · **Followers gained 1** · In-network 58%. Verdict 🔴, 49% below the median. Confirmed: packaging set the ceiling.
+
+---
+
+### 2026-08-31 — "I made an exit, but so can you. (I'm not special)" (focus / 3 habits for saying no) 🔴 (FINAL locked 2026-09-21: 2,044 imp / 0 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7500183243091107840/
+**Published (URN-decoded):** 2026-08-31 13:30 UTC
+**Topic tag:** #focus #saying-no #founder-journey
+**Hook type:** credential + humility parenthetical, 8 words
+**Structure:** credential → "one thing: Focus" → yes-to-everything confession → 3 numbered habits with ↳ sub-lines → "we disappoint ourselves" close → question CTA
+**Visual:** image (graphic link)
+**Length:** ~170 words
+**CTA:** "How do you decide if something is worth your time?"
+
+**Full post text:**
+> I made an exit, but so can you.
+> (I'm not special)
+> Too many founders learn that the hard way.
+> Eventually, it came down to one thing: Focus.
+> It's easy to fill a calendar with good opportunities: Another intro. Another partnership. Another founder who wants 5 minutes of your time.
+> I did this for years. Said yes to everything. Because saying no is uncomfortable.
+> Then I noticed the product was getting my leftovers.
+> Now every request goes through 3 habits:
+> 1️⃣ Buy yourself a day. ↳ Answer tomorrow, never in the room.
+> 2️⃣ Ask if it moves you toward what you set out to build. ↳ A good opportunity and the right opportunity are rarely the same thing.
+> 3️⃣ Name what you are saying no to. ↳ Every yes costs a ship date, a meeting, or a dinner somewhere else.
+> We all want to please. But in the end, the one we end up disappointing is the closest one to us. Ourselves.
+> How do you decide if something is worth your time?
+
+**Metrics (FINAL, captured 2026-09-21 @ 21d):**
+- Impressions: **2,044** → 🔴 (37% below the 3,224 median)
+- Reactions: 67 · Comments: 23 · Reposts: 0 · Saves: 6 · Sends: 0
+- Profile viewers from post: 14 · **Followers gained: 0**
+- **In-network: 80%** — the highest first-degree share of any post in this block; it never left his own network
+- Engagement rate: 4.4% (first-degree-only signature: warm, narrow)
+- Daily followers, all sources: Aug 31 +44, Sep 1 +26
+
+**Analysis:**
+- What worked: pillar 3 (focus) with a real confession ("the product was getting my leftovers"), 23 comments from the home crowd.
+- What didn't: (1) 1️⃣/↳ emoji-arrow list formatting — arrow lists killed three posts at ~800 imp before, and this is the same layer with number emojis. (2) "(I'm not special)" is a disbelief line; the vault bans disbelief framing of wins. (3) Habit list is generic time-management advice with no operator number, so a stranger has nothing to subscribe to. (4) Six days after the 73K exit deck, the follow-up returned to the audience the deck had already reached and no further.
+- Pattern match: focus-parable lane (07-28 shutdown 3,494, 08-04 wealthy-friend 1,174). Lost.
+
+**Learning:** A focus post needs the thing he said no to, with a number. Advice without the receipt stays first-degree. Also confirms the post-breakout slot rule from 08-27: the post after a mega-winner has been spent on a weak format twice in a row.
+
+---
+
+### 2026-09-02 — "Fable 5.1 just killed AI website slop" (7-step AI website build process) 🔴 (FINAL locked 2026-09-21: 2,386 imp / 1 follower)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7500919280696385538/
+**Published (URN-decoded):** 2026-09-02 14:15 UTC
+**Topic tag:** #ai #how-to #website #newsjack
+**Hook type:** model-launch newsjack + "killed" verb, 7 words
+**Structure:** parenthetical audience filter → problem (generic AI design) → "here is the process I used" → 7 numbered steps → "step 7 is the one doing the work" → question CTA
+**Visual:** diagram image
+**Length:** ~200 words
+**CTA:** "Have you built anything with Fable 5.1 yet? Tell me what you thought."
+
+**Full post text:**
+> Fable 5.1 just killed AI website slop.
+> (If you are building a site, this one is for you.)
+> AI design has always failed the same way: Generic. Same layout, same gradient, same spacing. You could spot it in two seconds.
+> Now the new Anthropic model gets you past that. Here is the process I used:
+> 1. Start with brand guidelines so the colors, type, and visual language stay consistent.
+> 2. Define the pain, the person, and the promise so the design fits the business and the people it is for.
+> 3. Give the visitor feedback while they scroll - text fading in or elements moving at different speeds.
+> 4. Pull specific inspiration from competitors' sites.
+> 5. Reuse existing components instead of asking the model to invent every button, card, and animation from scratch.
+> 6. Check the mobile version.
+> 7. Run screenshot verification across the full scroll so the agent catches broken layers, awkward cuts, and elements sitting outside the frame.
+> Seven is the step everyone skips. And it's also the one doing the work.
+> Have you built anything with Fable 5.1 yet? Tell me what you thought.
+
+**Metrics (FINAL, captured 2026-09-21 @ 19d):**
+- Impressions: **2,386** → 🔴 (26% below median)
+- Reactions: 50 · Comments: 17 · Reposts: 0 · Saves: 9 · Sends: 2
+- Profile viewers from post: 9 · **Followers gained: 1**
+- In-network: 43%
+- Daily followers, all sources: Sep 2 +19, Sep 3 +70 (shared with the 09-03 post)
+
+**Analysis:**
+- What worked: a launch-day anchor (Fable 5.1) and a 7-step artifact, so it has a "why now".
+- What didn't: (1) Seven generic design steps with no operator scene, no number, no confession. It is a web-designer's checklist, and a 200-person SaaS CEO has no standing on scroll animations. CEO relevance filter fails. (2) The visual is a diagram, the one visual family the 09-13 rule bans (post redrawn as a diagram). (3) A newsjack without a verdict is an explainer, and explainers sit at n≈8 in the bomb list.
+- Pattern match: AI-tactical-explainer dead-end (Grok 1,347, Fable5-beach 1,222, watermark explainer 1,428). Lost, as the lane predicts.
+
+**Learning:** The launch anchor bought nothing because the body was a design tutorial. Same-day news only helps a verdict, never a checklist.
+
+---
+
+### 2026-09-03 — "You are working way too hard. (I tested 9 repos that can do your work)" (9 GitHub repos = 9 free hires) 🔴 (FINAL locked 2026-09-21: 2,142 imp / 0 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7501270562460123136/
+**Published (URN-decoded):** 2026-09-03 13:31 UTC
+**Topic tag:** #ai #open-source #resource-list #save-first
+**Hook type:** reader-diagnosis + counted-artifact parenthetical, 6 words
+**Structure:** pain → "the fix is on GitHub, free" → 9 numbered roles each with a lnkd.in link → "easiest moment to build" → hiring-standards close → request CTA
+**Visual:** image
+**Length:** ~170 words + 9 links
+**CTA:** "Which position is still missing? Name it, and I will find you the repo."
+
+**Full post text:**
+> You are working way too hard.
+> (I tested 9 repos that can do your work)
+> No budget, no time, 3874932 tasks, and one person to do them.
+> The fix is open and already on GitHub. And it can get you a company. For free.
+> It sounds like an overstatement. But over the last few months, I collected the best repo for every position, so you can work with pros on no budget:
+> 1. A QA tester · 2. A senior engineer · 3. A product designer · 4. A researcher · 5. A marketer · 6. A social manager · 7. A motion designer · 8. A docs team · 9. An ops manager (github.com/mem0ai/mem0)
+> [each with a lnkd.in link]
+> This is the easiest moment there has ever been to build something.
+> We do not compromise on the people we hire. So why compromise on the repo we run?
+> Which position is still missing? Name it, and I will find you the repo.
+
+**Metrics (FINAL, captured 2026-09-21 @ 18d):**
+- Impressions: **2,142** → 🔴 (34% below median)
+- Reactions: 41 · Comments: 16 · Reposts: 0 · Saves: 8 · Sends: 0
+- Profile viewers from post: 5 · **Followers gained: 0**
+- In-network: 60%
+- Daily followers, all sources: Sep 3 +70, Sep 4 +29 (the +70 is the highest quiet-week day, but the post itself attributed 0, so the source is elsewhere, likely the exit deck's tail)
+
+**Analysis:**
+- What worked: countable artifact in the parenthetical (9 repos), odd number, save-first shape, 8 saves.
+- What didn't: (1) **Nine external links in the body.** LinkedIn throttles outbound links and this post carried more than any post in the log; 60% in-network says it was never distributed. (2) A curated resource list is the Educator lane the X rules ban and the "stream of unnamed generic AI guides" the LinkedIn rules ban. It is what AI newsletter accounts do better. (3) Hook is a reader diagnosis with no anchor; "3874932 tasks" is a joke number in the third line.
+- Pattern match: curated-list / educator lane. Lost.
+
+**Learning:** Save-first needs a first-party artifact. A list of other people's repos is a curation, and curation converts zero followers even when it gets saves. Links in the body stay capped at one, in the first comment if possible.
+
+---
+
+### 2026-09-07 — "9 months with Claude. Moved to Codex in 4 min." (Claude→Codex migration how-to) ⭐⭐ EXCEPTIONAL (FINAL locked 2026-09-21: **26,012 imp** / 6 followers — 5th-highest post in the log)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7502725301085532160/
+**Published (URN-decoded):** 2026-09-07 13:51 UTC
+**Topic tag:** #ai #how-to #codex #claude #newsjack
+**Hook type:** two-number anchor, 9 words + line-2 parenthetical counter-hook
+**Structure:** the 8-beat legal how-to — two-number hook → parenthetical → permission line ("I know. You love Claude. So do I.") → operator confession (ignored everyone) → trigger (Astra launched) → named cost of staying (setup debt) → 3 real commands → close that refuses the verdict ("Claude is not dead. It has a colleague.")
+**Visual:** bar-chart image, two big numbers the copy does not contain
+**Length:** ~150 words
+**CTA:** none (closed principle)
+
+**Full post text:**
+> 9 months with Claude. Moved to Codex in 4 min.
+> (GPT-6 Astra is insane.)
+> I know. You love Claude. So do I.
+> Every system I run lives inside it, which is exactly why I ignored everyone telling me Codex was better.
+> But then... Astra launched.
+> And you don't need to stay behind because of setup debt. OpenAI published a skill that does the whole move for you.
+> Here's how to move Claude's brain into Codex:
+> 1. Back up your Codex settings first. The skill writes to that file, so keep a copy before you start. One line in your terminal: cp ~/.codex/config.toml ~/.codex/config.backup.toml
+> 2. Install the skill inside Claude Code. npx -y skills add openai/skills --skill migrate-to-codex --agent claude-code
+> 3. Run it. It scans, plans, migrates, checks its own work, and fixes what it got wrong.
+> Claude is not dead. It has a colleague.
+
+**Metrics (FINAL, captured 2026-09-21 @ 14d):**
+- Impressions: **26,012** → ⭐⭐ EXCEPTIONAL (top 10%; 5th-highest final ever behind Google 146,506 / Anthropic 92,959 / exit deck 73,680 / Paperclip 30,009)
+- Reactions: 85 · Comments: 36 · Reposts: 1 · **Saves: 42** (2nd-most-saved post ever, after the exit deck's 177) · Sends: 3
+- Members reached: 17,097 · **In-network: 8%** — 92% out-of-network, the deepest out-of-network reach ever recorded on the account
+- Profile viewers from post: 48 · **Followers gained: 6**
+- Engagement rate: 0.47%
+- Daily followers, all sources: Sep 7 +34, Sep 8 +100 (the Sep 8 spike is shared with the janitor post, published 24h later)
+
+**Analysis:**
+- What worked: exactly what the teardown in M-memory/linkedin-claude-to-codex-teardown-2026-09-07.md recorded. The confession and the permission line make the reader who disagrees stay; the trigger gives it a "why now"; the commands are real and verified; the close is a management idea (run two suppliers), not a product verdict. Reut: "פוסט מעולה". 42 saves confirm the future-utility bet.
+- What didn't: **6 direct followers on 26K impressions = 0.23 per 1,000, the lowest conversion of any ⭐ post.** 92% of the audience were strangers to the network and almost none of them pressed Follow. The 8-beat structure sells the migration, not the operator. Compare the exit deck: 1.28 per 1,000, because the artifact was his.
+- vs. Lior's baseline: **707% above the 3,224 median.**
+- Pattern match: contrarian-AI news anchor with a first-person verdict (Anthropic MD→HTML, Google Base44). Won. First how-to in the log to clear 5K, after tool-feature flops at 546 / 792 / 1,175.
+
+**Learning:** This is a reach engine, not a follower engine. It belongs in the monthly reach budget as the one legal how-to shape, and it must not be sequelled (see 09-10, 09-14: both sequels lost 6 beats and 8-14x the reach). The follower engine remains the first-party artifact.
+
+---
+
+### 2026-09-08 — "You're not the CEO. You're the fucking janitor." (5 rules I run my 200-person company on) ✅ (FINAL locked 2026-09-21: 6,334 imp / **12 followers** — best follower post of September)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7503086886911963136/
+**Published (URN-decoded):** 2026-09-08 13:48 UTC
+**Topic tag:** #management #operator-rules #200-employees #save-first
+**Hook type:** two-beat provocation with profanity, 8 words
+**Structure:** provocation hook → "5 rules I run my 200-person company on" + "(learned each one by getting it wrong)" → 5 numbered rules each with one line of proof → dyslexia disclosure inside rule 4 → janitor metaphor resolved in the close
+**Structure family:** anti-checklist / thresholds he manages by, from the operator seat (the legal save-first format)
+**Visual:** image
+**Length:** ~230 words
+**CTA:** none (closed principle, "you clear the floor so everyone else can move")
+
+**Full post text:**
+> You're not the CEO. You're the fucking janitor.
+> 5 rules I run my 200-person company on now: (Learned each one by getting it wrong).
+> 1. Nobody clocks in. I have never asked an employee what time they logged on. I ask what moved. Hours measure presence, nothing more.
+> 2. The 70% rule. If someone can do it 70% as well as you, it stops being your job. Even if that means giving away the work you love.
+> 3. Full trust on day one, and a fast goodbye when it does not work. Nobody here gets a proving period. Real decisions from the first week. The other half of that deal is that we separate quickly when the fit is wrong.
+> 4. Everything on the table in the first conversation. Including the parts where I'm weak. I am dyslexic, so what I write comes out short and blunt, and it can read like anger. I say that on day one.
+> 5. The fun rule. If working together stops being fun for either of us, we stop working together. It is the earliest signal I have.
+> The hardest part of this job is unlearning what got you here so you can truly hear people out.
+> That is the janitor part. You clear the floor so everyone else can move.
+
+**Metrics (FINAL, captured 2026-09-21 @ 13d):**
+- Impressions: **6,334** → ✅ (96% above median)
+- Reactions: 118 · Comments: 45 · Reposts: 3 · Saves: 11 · Sends: 1
+- Members reached: 4,280 · In-network: 36%
+- **Profile viewers from post: 115** (2nd-highest ever after the exit deck's 308) · **Followers gained: 12**
+- Engagement rate: 2.6%
+- **Daily followers, all sources: Sep 8 +100, Sep 9 +47 = 147 in 48h**, the closest any post has come to the provisional 150-in-48h win condition (shared with the Codex post's tail)
+
+**Analysis:**
+- What worked: (1) 1.9 followers per 1,000 impressions, **the best conversion rate in the log**, better than the exit deck (1.28). (2) Every rule is a threshold he manages by with the receipt attached, which is the operator-seat save-first format in its cleanest form. (3) The dyslexia disclosure inside rule 4 is the first time the account has used it as an operating fact rather than a vulnerability confession, and the comment count (45, highest since the watermark newsjack) says it landed. (4) 200-person company is central to the post, so the team-size rule is respected. (5) The "70% rule", which bombed at 1,783 as a reductive-list opener, works here as item 2 inside a confession-framed list. Same idea, opposite packaging, 3.5x the reach and the followers.
+- What didn't: profanity in the hook is a first for the account and a brand risk in front of the founder/investor audience; no way to isolate its effect. Odd-numbered list ✓, no "not X, it's Y" ✓. Closed ending, no engagement gap (⚠️ note only).
+- Pattern match: macro-manager/autonomy lane (250-people 3,374, Ofir 3,659) upgraded with numbered rules + confession frame. Won, and beat the lane's previous ceiling by ~1.7x.
+
+**Learning:** **This is the signature-series candidate.** A numbered set of rules he actually runs a 200-person company by, each with one line of proof, framed by a confession. It converts followers at the highest rate ever logged and needs no artifact link, no news anchor, no how-to. Repeat the shape monthly with a different domain (hiring, pricing, meetings, product).
+
+---
+
+### 2026-09-10 — "Ok GPT-6 Astra is a BEAST." (Codex AGENTS.md co-founder onboarding how-to) 🔴 (FINAL locked 2026-09-21: 1,904 imp / 0 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7503814210334920705/
+**Published (URN-decoded):** 2026-09-10 13:58 UTC
+**Topic tag:** #ai #how-to #codex #astra
+**Hook type:** hype hook ("X is a BEAST") + "until I tried this:" cliffhanger
+**Structure:** hype → promise (20 min, answers about your business) → 3 steps incl. the interview prompt → "everyone has the same BEAST, yours knows your brain" close
+**Visual:** animated GIF, 10-box flowchart restating the steps (the post redrawn as a diagram)
+**Length:** ~180 words
+**CTA:** none
+
+**Full post text:**
+> Ok GPT-6 Astra is a BEAST.
+> But everything it showed me was nothing until I tried this:
+> Twenty minutes to build, and every answer after that is about your business, nobody else's.
+> And the setup is the fun part: It interviews you.
+> 1. Open Codex. New project, local, pick a folder. Choose GPT-6 Astra.
+> 2. Paste this, then answer like you are briefing a new co-founder: "Interview me one question at a time to build a profile: who I am, what the company does, this year's goals, how to talk to me, and current projects. Wait for each answer. When you are done, write everything into AGENTS.md at the root of this folder, so you load it every session."
+> 3. Open a new thread. Ask: "What am I working on this quarter?" If it answers without you explaining, it is onboarded.
+> From now on, it reads that file before every message.
+> Everyone has the same BEAST. Yours is the only one that knows your brain.
+
+**Metrics (FINAL, captured 2026-09-21 @ 11d):**
+- Impressions: **1,904** → 🔴 (41% below median)
+- Reactions: 44 · Comments: 10 · Reposts: 0 · Saves: 10 · Sends: 0
+- Profile viewers from post: 4 · **Followers gained: 0**
+- In-network: 43%
+- Daily followers, all sources: Sep 10 +69, Sep 11 +24 (post attributed 0 of them)
+
+**Analysis:**
+- Teardown already in M-memory/linkedin-astra-cofounder-teardown-2026-09-13.md and memory: the 8-beat template lost the confession, permission line, trigger and cost beats in the v17/v18 trims, leaving a hype hook + 3 steps = a tool tip. The visual was the post redrawn as a flowchart, adding nothing, unreadable on mobile.
+- Three days after a 26K post on the same tool, same author, same 3-step shape: **13.7x less reach.** The difference is the six missing beats and the visual. Reut: "the graphic was too much, keep it simpler."
+- Pattern match: Codex-how-to sequel. Lost. Newsjack follow-ups lose ~6x (watermark pair); this pair lost ~14x.
+
+**Learning:** Already recorded as law (feedback-howto-beats-are-structural-two-flops): a how-to without the Lior beats is a tool tip, and the visual is one real artifact or one number, never a diagram. Re-gate the version that ships.
+
+---
+
+### 2026-09-14 — "Grok Bot broke my sleep." (Grok Bot agent migration in 2 prompts) 🟡 (FINAL locked 2026-09-21: 3,263 imp / 0 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7505256215975968768/
+**Published (URN-decoded):** 2026-09-14 13:28 UTC
+**Topic tag:** #ai #how-to #agents #grok
+**Hook type:** anomaly hook, 5 words + parenthetical audience filter
+**Structure:** hook → "imagine your agents doing the work while you sleep" → "migration took 2 prompts" then 3 numbered steps → "now the insane part" description → "can go to bed" → closing principle
+**Visual:** meme image (O-output/grok-bot-meme/)
+**Length:** ~200 words
+**CTA:** none
+
+**Full post text:**
+> Grok Bot broke my sleep.
+> (If your day ends and your task list doesn't, this one is for you.)
+> Imagine your agents doing the work while you sleep. Now open the laptop and make it real.
+> Migration took 2 prompts:
+> 1. Open Grok Bot.
+> 2. Go to Claude or Codex (wherever you manage your agents) and ask: "Write a guide for Grok Bot to recreate every agent in this system. Instructions, skills, plugins, memory, routines."
+> 3. Back in Grok Bot, ask: "Read the guide and generate every bot automatically." Each one writes its own instructions, takes a name, and a job.
+> That's it.
+> Now the insane part starts: All your agents are talking to each other on one screen. Each agent has a real Chrome browser and a computer of its own, and a memory that holds.
+> You can talk to them from your phone, put them in groups, watch them hand work to each other at 1 am, and you? Can go to bed.
+> The only edge left is agents that work while you sleep.
+
+**Metrics (FINAL, captured 2026-09-21 @ 7d):**
+- Impressions: **3,263** → 🟡 (1% above median; the 09-15 teardown read 1,173 @ ~1d, it nearly tripled after, but all inside the middle band)
+- Reactions: 49 · Comments: 21 · Reposts: 0 · Saves: 1 · Sends: 1
+- Profile viewers from post: 12 · **Followers gained: 0**
+- In-network: 36%
+- Daily followers, all sources: Sep 14 +42, Sep 15 +27
+
+**Analysis:**
+- Teardown in M-memory/linkedin-grok-bot-migration-teardown-2026-09-15.md. Same failure as 09-10: the beats around the steps were trimmed, so it reads as a product walkthrough. "2 prompts" in the copy and 3 numbered steps is an internal contradiction. 1 save on a how-to says nobody expects to need it again.
+- Better than Astra (3,263 vs 1,904) because the hook is an anomaly with a person in it and the visual is a meme, not a diagram. Still 0 followers, and 0 followers is the metric.
+- Pattern match: Codex-how-to sequel #2. Lost on the KPI.
+
+**Learning:** Reach recovered into the 🟡 band, conversion did not. Two sequels, 0 followers combined, against the original's 6. The how-to lane, even when it works, does not buy followers; close the sequel line and spend the slot on the 09-08 rules shape.
+
+---
+
+### 2026-09-16 — "5 roles open. 3 reasons to stay away:" (negative-filter hiring post, 5 roles) ✅ (in-flight @ 5d: 5,224 imp / 5 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7505981399749955584/
+**Published (URN-decoded):** 2026-09-16 13:30 UTC
+**Topic tag:** #hiring #culture #autods
+**Hook type:** two-number anomaly, 7 words ("5 roles open. 3 reasons to stay away:")
+**Structure:** 3 ➤ "don't join because…" reversals (budget/tools/trust; speed and keys on day one; no ego, best idea wins) → "if you thought that's exactly what I've been looking for" → 5 bullet roles → "So don't apply (Unless you should.)" → link
+**Visual:** image with content credentials (AI-generated)
+**Length:** ~170 words
+**CTA:** careers link https://lnkd.in/dtsx4H59
+
+**Full post text:**
+> 5 roles open. 3 reasons to stay away:
+> ➤ Don't join because we'll give you everything you need to win. Budget. Tools. Trust. The kind of resources you usually have to fight for. Where's the fun in that?
+> ➤ Don't join because we move fast. Very. You get the keys on day one. We let you run, and let you fall.
+> ➤ Don't join if you have a big ego. The best idea in the room wins. Everyone gets a seat at the table, including the person who started on Monday.
+> But - If you read all of that and thought "that's exactly what I've been looking for"...
+> We're hiring: • Data Analyst • Senior SEO Manager • Social Media Manager • Head of Scaled Customer Service • HRBP, maternity leave cover
+> So don't apply (Unless you should.) ▮
+> https://lnkd.in/dtsx4H59
+
+**Metrics (@ 5d, captured 2026-09-21):**
+- Impressions: **5,224** → tracking ✅
+- Reactions: 73 · Comments: 23 · **Reposts: 5** (most reposts since Tough-days) · Saves: 7 · Sends: 0
+- Members reached: 3,707 · **In-network: 20%** (80% out-of-network, carried by the reposts)
+- Profile viewers from post: 38 · **Followers gained: 5**
+- Engagement rate: 1.9%
+- Daily followers, all sources: **Sep 16 +65, Sep 17 +85 = 150 in 48h**, hits the provisional bar exactly (shared with the 09-17 post)
+
+**Analysis:**
+- What worked: the hiring lane is now 3 for 3 above 5K (Tough-days 14,798, EA "not for you" 9,818, this 5,224). The negative-filter structure is the EA post's donor reused with a different role set. Reposts from AutoDS employees are the distribution engine, exactly as in Tough-days.
+- What didn't: ➤ arrow bullets (the arrow-list rule); an AI-generated visual instead of a real artifact; it is a company hiring ad on the personal brand, which the vault allows only as market-empathy or negative-filter posts, and this is the latter, so it passes narrowly.
+- Pattern match: negative-filter hiring (08-16). Won.
+
+**Checkpoints:** 24h n/a (scan gap) · 5d 5,224 · **7d FINAL due 2026-09-23.**
+
+---
+
+### 2026-09-17 — "How much should you pay yourself as a founder? (The sweet spot is math.)" (founder-salary threshold math, redo of the 05-06 topic) 🔴 (in-flight @ 4d: 2,294 imp / 0 followers)
+**Post URL:** https://www.linkedin.com/feed/update/urn:li:activity:7506343915139162113/
+**Published (URN-decoded):** 2026-09-17 13:30 UTC
+**Topic tag:** #founder-salary #threshold-numbers #save-first #confession
+**Hook type:** question hook + line-2 parenthetical, 8 words
+**Structure:** "every number in your business but one is a guess" → dilemma → bandwidth cost → confession (no salary for 5 years, profitable from day one, "that was a mistake") → 3-step math (cash ÷ 18 minus team cost = ceiling; take what life costs; if life > ceiling, fix one) → "Thoughts?"
+**Visual:** image (O-output/linkedin-founder-salary-visual/)
+**Length:** ~150 words
+**CTA:** "Thoughts?"
+
+**Full post text:**
+> How much should you pay yourself as a founder?
+> (The sweet spot is math.)
+> You know every number in your business. But one is a guess. Your salary.
+> Every founder has the same dilemma: Take too much, and it looks wrong for the business. Take too little, and you are building for free.
+> When you're worried about rent, groceries, or daycare, your mental bandwidth for growth, strategy, and scaling takes a hit.
+> I didn't take a salary for 5 years. (AutoDS was profitable from day one, and I still took nothing.)
+> That was a mistake.
+> Here is the math I would run today:
+> 1. Cash in the bank ÷ 18, minus monthly team cost. That is your monthly ceiling.
+> 2. Under the ceiling, take what your life actually costs.
+> 3. If your life costs more than the ceiling, one of the two numbers is wrong. Cut the life or fix the revenue.
+> Thoughts?
+
+**Metrics (@ 4d, captured 2026-09-21):**
+- Impressions: **2,294** → tracking 🔴 (below the 2,500 🟡 floor at 4d; reach has usually plateaued by now)
+- Reactions: 47 · Comments: 15 · Reposts: 0 · Saves: 3 · Sends: 0
+- Members reached: 1,533 · In-network: 47%
+- Profile viewers from post: 12 · **Followers gained: 0**
+- Engagement rate: 2.8%
+- Daily followers, all sources: Sep 17 +85 (shared with the hiring post), Sep 18 +37
+
+**Analysis (provisional):**
+- On paper this is the prescribed save-first format: a real past mistake, threshold numbers he manages by, odd-numbered list, no arrows, no emojis, two parentheticals (one over the limit). The 05-06 version of the same topic locked 4,614 🟡.
+- What is not working: (1) only 3 saves, so readers do not expect to need the math again, which suggests the ÷18 formula reads as invented rather than lived. (2) The hook is a question with no anchor, and the vault's hook rule wants a named entity, number or confession in line 1; "I didn't take a salary for 5 years" was the hook and it sits in line 9. (3) "Thoughts?" is the weakest close in the log. (4) Two parentheticals.
+- Pattern match: founder-salary / operator-confession (05-06, 4,614). Currently losing to its own donor by half.
+
+**Checkpoints:** 24h n/a (scan gap) · 4d 2,294 · **7d FINAL due 2026-09-24.**
 
 ---
 
@@ -3856,6 +4217,39 @@ All four are now well past 7d and are locked here from the 28-day Creator Analyt
   - **Cadence is erratic and it is costing slots.** August published on 10, 11, 12, 13, 16, 17, 18, 20, 25, 26, 27 — with a **four-day silence 08-21 → 08-24** immediately before the breakout, and nothing on 08-28. Against the 3/week Sept → 5/week Q4 ramp, the problem is no longer volume, it is rhythm: there is still no fixed-day signature series.
 
   **Next locks:** 08-25 exit deck **2026-09-01** (projecting 70-80K, would be the 3rd-highest final ever), 08-26 model tree 2026-09-02 (projecting ~6.5-7K ✅), 08-27 SaaS steps 2026-09-03 (projecting ~1.2-1.3K 🔴).
+
+- **2026-09-21 scan — 23-DAY GAP CLOSED. 10 FINALS LOCKED (3 August + 7 September), 2 IN-FLIGHT, FULL RECOUNT n=63, FIRST DAILY FOLLOWER LEDGER.** The scan did not run between 08-29 and 09-21 (Scan Issues below), so every September post was first-logged today; finals are lifetime-to-date from Creator Analytics, the same method as the 08-29 back-capture. All three August projections landed: **exit deck 73,680 ⭐⭐ (94 followers, 177 saves)**, model tree 6,666 ✅ (2 followers), SaaS steps 1,659 🔴 (1 follower).
+  **September finals (7):** 08-31 exit/focus habits **2,044 🔴** (0 fol) · 09-02 Fable 5.1 website steps **2,386 🔴** (1) · 09-03 nine GitHub repos **2,142 🔴** (0) · **09-07 Claude→Codex 26,012 ⭐⭐** (6) · **09-08 janitor / 5 rules 6,334 ✅ (12 fol, best conversion ever at 1.9 per 1,000)** · 09-10 Astra AGENTS.md **1,904 🔴** (0) · 09-14 Grok Bot **3,263 🟡** (0). In-flight: 09-16 hiring "5 roles / 3 reasons to stay away" 5,224 ✅ @ 5d (5 fol, locks 09-23) · 09-17 founder salary math 2,294 🔴 @ 4d (0 fol, locks 09-24).
+
+  ✅ **FULL RECOUNT (2026-09-21), n=63 final-locked posts** (adds every final logged since the n=32 recount of 07-23, including the back-captured July/August set and the seven September finals):
+  518, 546, 687, 792, 806, 1,084, 1,174, 1,175, 1,222, 1,347, 1,428, 1,659, 1,695, 1,701, 1,713, 1,783, 1,784, 1,892, 1,904, 2,044, 2,066, 2,070, 2,083, 2,142, 2,386, 2,393, 2,402, 2,530, 2,562, 2,811, 3,032, 3,224, 3,263, 3,286, 3,340, 3,352, 3,374, 3,459, 3,494, 3,659, 3,777, 4,175, 4,581, 4,614, 4,686, 4,828, 5,624, 5,721, 5,825, 6,334, 6,666, 8,253, 8,361, 9,818, 10,771, 11,422, 14,798, 18,009, 26,012, 30,009, 73,680, 92,959, 146,506
+  - **Median impressions: 3,224** (position 32). Unchanged from the n=31 recount; the last two months added as many 🔴 posts as ✅ ones.
+  - Mean: ~9,386 (skewed by the four 25K+ outliers)
+  - **Top 10% threshold: 18,009** (7 posts at or above: Google 146,506 / Anthropic 92,959 / exit deck 73,680 / Paperclip 30,009 / Codex 26,012 / Birthday 18,009 / Tough-days 14,798 sits just under). **Bottom 10% threshold: ≤1,084** (6 posts: Treat-yourself 518, Master Prompt 546, Jim Rohn 687, find-skills 792, republish 806, founder-stations 1,084).
+  - Band distribution: **🔴 under 2,500 → 27 of 63 (43%)** · **🟡 2,500–4,999 → 19 of 63 (30%)** · **✅ 5,000+ → 17 of 63 (27%)**. Stable versus July (44/31/25).
+
+  **Daily follower ledger (Audience analytics, UTC, first capture).** Total followers 13,396 on 2026-09-21 (was 12,980 on 08-31 per memory). Cumulative 28-day series and daily deltas: Aug 25 126 · Aug 26 +427 · Aug 27 +132 · Aug 28 +35 · Aug 29 +53 · Aug 30 +43 · Aug 31 +44 · Sep 1 +26 · Sep 2 +19 · Sep 3 +70 · Sep 4 +29 · Sep 5 +45 · Sep 6 +18 · Sep 7 +34 · **Sep 8 +100** · Sep 9 +47 · Sep 10 +69 · Sep 11 +24 · Sep 12 +12 · Sep 13 +13 · Sep 14 +42 · Sep 15 +27 · Sep 16 +65 · **Sep 17 +85** · Sep 18 +37 · Sep 19 +35 · Sep 20 +11 · Sep 21 +13 (partial). **Sep 1-20 = 808 net new followers, run-rate ~1,210/month**, above the 963 baseline but below the 1,400 Q4 rung, and the seven-day tail of the exit deck (Aug 25-31, 860) alone out-delivered the first 20 days of September.
+
+  **Five findings from this run.**
+  **(1) Reach and followers split cleanly across the two September winners, and the split is the whole strategy.** Codex how-to: 26,012 imp, 92% out-of-network, **6 followers (0.23/1,000)**. Janitor rules: 6,334 imp, **12 followers (1.9/1,000)**, 115 profile viewers, and the biggest daily follower spike of the month (+100 on Sep 8). The how-to sold the migration; the rules post sold the operator. Per the 08-23 KPI, the janitor shape is the one to repeat.
+  **(2) The how-to sequel line is dead on the KPI: 3 posts, 6 + 0 + 0 followers.** Astra (1,904) and Grok Bot (3,263) both lost the beats around the steps and both converted zero. Already law in memory; this is the numeric close.
+  **(3) Curation and tutorials convert nothing even when they get saves.** Nine repos (8 saves, 0 fol), Fable website steps (9 saves, 1 fol), model tree (14 saves, 2 fol). Saves on someone else's artifact are not a follow signal. Saves on a first-party artifact are (exit deck 177 saves → 94 fol; Codex 42 → 6 is the exception because the artifact was OpenAI's skill).
+  **(4) The hiring lane is 3 for 3 above 5K and the only reliably out-of-network lane besides mega-newsjacks.** 09-16 is 80% out-of-network on 5 reposts. Employee reposts are the engine; the negative-filter donor is reusable once per hiring wave, no more.
+  **(5) The post-after-the-breakout slot has now been wasted three times** (08-27 after the deck, 08-31 after the deck's tail, 09-10 after Codex). Whatever ships in the 48h after a 20K+ post inherits the profile visits; it should be the strongest first-party artifact in the queue, not a leftover.
+
+  **⚠️ Flags for the Monday digest.**
+  - Profanity in a hook (09-08) is new for the account and it worked; Reut's call whether it is on-brand for the Architect archetype, not the scan's.
+  - Arrow/emoji list layers came back twice (08-31 1️⃣↳, 09-16 ➤), both against the arrow-list rule.
+  - The 09-03 post carried nine outbound links in the body; 60% in-network says LinkedIn held it.
+  - The 09-17 founder-salary post is tracking 🔴 in the prescribed save-first shape; if it locks under 2,500 on 09-24 the ÷18 formula needs a real AutoDS receipt or the topic is spent.
+  - Cadence: Sep 2, 3, 7, 8, 10, 14, 16, 17 = 8 posts in 20 days, ~2.8/week against the 3/week September target. Still no fixed-day series.
+
+  **Next locks:** 09-16 hiring **2026-09-23** (projecting ~5.4-5.6K ✅), 09-17 founder salary **2026-09-24** (projecting ~2.4-2.5K 🔴).
+
+## Scan Issues
+
+- **2026-08-30 → 2026-09-20: no scan ran for 23 days.** Cause unknown from this side (the task runs only when the Mac is awake with the app open; the 08-29 run was the last). Consequences: the 24h and 72h checkpoints for all seven September finals and both in-flight posts were never captured, the 09-01/02/03 locks were taken at 25-27d instead of 7d, and the 09-07 Codex post crossed its 7d without a notification. Recovered 2026-09-21 by back-capturing lifetime-to-date values from per-post Creator Analytics, the same method as the 08-29 back-capture.
+- 2026-09-21: Claude in Chrome needed two reconnect attempts before the extension responded; the classifier also timed out once. Resolved within ~2 minutes, no data lost.
 
 ---
 

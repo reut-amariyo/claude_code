@@ -1,6 +1,6 @@
 ---
 name: lior-exit-amount-92m-vs-sec-filing
-description: The public "$92M exit" figure does not match Fiverr's SEC 20-F; know the real numbers before using the claim anywhere fact-checkable
+description: $92M is THE exit number in ALL social/brand content incl. X - never flag it; filing numbers matter ONLY for the Hebrew Wikipedia draft
 metadata:
   type: reference
 ---
@@ -18,4 +18,7 @@ Verified 2026-08-26 against Fiverr's Form 20-F for FY2024 (Note 3, SEC EDGAR):
 
 **2026-09-02 update:** the IG agency found that almost every top-5 follower post carries the 92 number, and plans to push it into reels for the first time, at 31 videos/month. That is inside the rule below, but it turns the figure into the account's headline claim, so decide the reel wording once rather than by drift. See [[project-ig-agency-500k-engagement]].
 
-**How to apply:** In brand/social content, keep using $92M as reported. In anything fact-checkable, write it as attributed ("reported at $92M") or use the filing numbers. Never state $92M as the audited price. Related: [[lior-pozin-os]], [[project-lior-wikipedia-entry]].
+**How to apply (updated 2026-09-20, Reut):** $92M is THE number. State it flat on liorpozin.com, the timeline, the numbers strip, pitches and all social. Never flag it again for the website. The filing numbers matter only for the Hebrew Wikipedia entry, where editors will check the 20-F. In brand/social content, keep using $92M. Only in the Wikipedia draft write it as attributed or use the filing numbers. Related: [[lior-pozin-os]], [[project-lior-wikipedia-entry]].
+
+
+**2026-10-07, Reut (second correction):** I flagged $92M on an agency X post as "checkable on X". Wrong. X is social; $92M is real per Reut. Do not raise the SEC filing in any post/reply/feedback review.
