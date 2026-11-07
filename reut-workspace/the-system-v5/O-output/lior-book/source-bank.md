@@ -534,3 +534,24 @@ the journey." He picked his friend Michael. Pairs with Ofir: "I don't have work 
 - "Now it's not my money." On how the earn-out freed him to grow.
 - "It's kind of buying an insurance." On why he sold when holding paid more.
 - "That's my game." On working harder after the exit.
+
+## 2026-10-29 Management offsite, Lior to his own managers (Plaud, paraphrase)
+Full note: B-brain/meetings/2026-10-28-29-management-offsite.md
+
+### [FRAME] The plan stayed in his pocket
+He walked into 2027 planning with many ideas and kept them to himself on purpose, "to keep it more
+for you". The founder's job at 200 people is to stop being the source of every idea.
+
+### [BOOT] Two guys in their parents' apartment
+"One guy or two guys sitting in their parents' apartment can run things much faster" than a company
+of hundreds. The bootstrap speed he is trying to keep alive inside a grown-up company.
+
+### [STORY] "A ship without a captain"
+His head of product said it in front of the whole forum, worried about Lior's month in Miami.
+Lior: "I get it. I agree with you." Then: the captain is here, he just wants other chefs to cook.
+
+### [QUOTE] Chapter-ready lines
+- "Even if we were losing money, some bugs happened, it was a mess... I prefer this way than holding another month."
+- "I don't agree. We never checked." On "there are no opportunities except Shopify".
+- "They will not decrease us to zero." On partner risk.
+- "I don't know what will happen in 28."

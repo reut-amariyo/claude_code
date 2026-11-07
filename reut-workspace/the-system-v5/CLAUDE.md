@@ -147,6 +147,17 @@ publish, no overrides.
 of Lior press Follow after reading this?" If the honest answer is "they would not, but it
 will travel", the post is a reach play and only ships inside the 10% monthly reach budget.
 
+## Instagram — Yes/No gate (Emily Shwed consult, 2026-10-21)
+
+Every IG post, carousel, reel and story passes all 4 checks before it's a YES. Otherwise it "could be anyone":
+1. Only Lior can say it. Delete his name and the post breaks.
+2. His face is in it.
+3. A first-time viewer knows it's him: beta shirt, repeating format.
+4. It sounds like him.
+The usual fix is one verified credibility line on a proven tactic, e.g. "from someone who built and sold
+a $92M company" or "kicked out of school at 14". Never "from his bedroom", which is unverified.
+Full notes + insert bank: O-output/consultant-notes/emily-shwed-2026-10-21.md
+
 ## X
 
 Operator archetype 70/20/10 (Operator/Builder/Contrarian), zero Educator lane.

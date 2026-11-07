@@ -72,3 +72,16 @@ Business Impact, Ownership, Collaboration, Innovation.
 
 Use: this IS the recognition block. Rewrite in Lior's voice, 2-3 lines, tag Marina.
 Open question: was it already announced? If yes, Lior's line is a short "again, thank you" + one specific.
+
+## Data, received 2026-10-22, 3 slides from the Data team manager
+
+1. AutoDS Brain launched: shared AI analyst on Claude, read-only SQL on Snowflake, answers in minutes vs analyst queue. 36 KPI definitions, 6 playbooks, 14 guardrails, 13 tools connected. 8 users today → ~50, whole company by March 2027. Timeline Sep 5 → Oct 21 one-click connector.
+2. Brain caught real problems: 325,597 fake bot accounts across BYS + AutoDS (BYS signups 78K on Sep 23, 101K on Sep 24 vs ~9K normal); Impact outage, 99.5% of untracked rows traced; +3,742 free trials and +533 paid trials recovered for Google in September.
+3. Country + OS exclusion live Oct 6: blocked-country free trials 9-10% → ~2% by Oct 18. +1.08pp expected CVR, ~12 online sales/day. Slide also shows $180K/mo per CVR point and $2M/yr payout forgone → slide NOT used in canvas.
+In canvas 2026-10-22: all 3 as numbered items, slides 1 + 2 as images, slide 3 text only. Missing: manager's name / owners.
+
+## CX update, 2026-10-27: Avner's one-pager + Shomron's feedback
+Shomron: put the emphasis on revenue, add visuals; unsure whether to show the Trustpilot dip.
+Corrected numbers from the one-pager: AutoDS Shopify app 4.3 → 4.5 (not 4.6); Orin resolution 41.4% → 49% (not 53%); Orin CSAT 89%.
+Revenue now shown: $26.1K incremental LTV vs $10K goal, 2.6x. Revenue panel cropped from the one-pager as the image.
+Left out: BYS Trustpilot 4.6 → 4.5, review volume gap, human CSAT, AI agent CX score dip, refunds.

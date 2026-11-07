@@ -31,3 +31,10 @@ Final text + all versions: the-system-v5/O-output/linkedin-ep568-selling-lessons
 **Profile setting (Reut screenshot 2026-10-20):** Lior's "Make follow primary" is ON, followers = Everyone on LinkedIn.
 So the gap between 2,248 profile viewers and 83 post-attributed follows is NOT a Connect-button problem. Top creators checked
 (Eric Partaker, Matt Gray, Codie Sanchez, Simon Squibb) also run Follow as primary.
+
+**Follow-up post, 2026-10-21: "Bought 4 companies with this playbook. (Now I'm leaking it.)"** (Acquisition Bible giveaway,
+follow.liorpozin.com/acquisitions). At 17h: 9,016 imp, 88% out-of-network, 7,083 reached, 32 profile viewers,
+**23 followers = 2.55 per 1K imp, the best conversion on record** (exit deck 1.19, $38M post 0.58). Reut: success.
+Confirms the timing rule: artifact giveaway on the same topic right after a viral post converts the new audience.
+**Image = the private-jet champagne toast photo (Lior + others).** I warned it would read as a flex; it didn't hurt.
+Lesson: a real celebratory moment with faces and smiles can work even in a luxury setting. One data point; check comments for backlash before generalizing.

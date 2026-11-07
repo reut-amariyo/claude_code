@@ -10,18 +10,18 @@ Attach one image: the Ep 568 frame, as a cover. The podcast is a small line at t
 ```
 Hey everyone 👋
 
-Lior here, with our first quarterly update.
+Our first quarterly update is here.
 
-We're at more than $50M in annual revenue, and growing fast. That number is all of you.
+We're at more than $50M in annual revenue, and heading to around 400K paid trials this year. Those numbers are all of you.
 
-Q3 was a big one. A new channel went from zero to scale in one quarter, AutoDS is now inside Claude, one test lifted paid trials by 15%, and we have our first Impact Award winner.
+Q3 was a big one. A new channel went from zero to scale in one quarter, AutoDS is now inside Claude, we launched our own AI analyst that every one of you will get by March, and one test lifted paid trials by 15%.
 
 All of it is here, with the graphs and the names behind every win 👇
 [LINK]
 
 Tell me in the thread what you want to hear more about.
 
-Lior
+Confidential: internal only, please don't share outside AutoDS.
 
 🎧 I talked about our story on Built to Sell last week: https://youtu.be/-Rd0AiMe1dc
 ```
@@ -127,3 +127,32 @@ In it: all sections, 8 product/marketing images + podcast cover + Marina's photo
 Open: Data section, Q4 focus left EMPTY on purpose until Lior answers, expected in a few days.
 Questions sent to Lior: one focus for the quarter, what makes it a great quarter, what we stop doing, what excites him, plus approval of $50M+, 40K+ paid trials, +40% funnel revenue.
 2026-10-20: added "👋 Ofir" section to the canvas, before the Impact Award. Ofir leaves after 7 years, stays as an external advisor. Open: confirm this is how employees first hear it, and "built our marketing from zero".
+
+## Status 2026-10-26: moved to Google Sites
+Shomron wanted a designed web page in the AutoDS brand instead of the canvas.
+- Page file: q3-2026-company-update.html (self-contained, brand book colors + Rubik).
+- Google Site, published, visible to "Anyone at AutoDS" only: https://sites.google.com/autods.com/q3-2026-autods-company-update
+- Bitly tracking link (Reut's Bitly account): https://bit.ly/4iosu3N , counts clicks only.
+- Pending: GA4 "G-" ID from marketing for views + avg time; Lior + Shomron approval; send Wednesday 2026-10-28.
+
+2026-11-03: Reut corrected the business numbers: revenue this year ~$80M (was "$50M+" from the podcast), paid trials ~400K this year (the 40K was Partnerships' own Q4 run rate, not company-wide). Page + Lior message updated.
+
+2026-11-04: revenue back to "$50M+" (Reut). Julia item: crossed one million dollars in ad revenue from Meta. Confidential banner added at the top of the page and a confidential line in Lior's message.
+
+2026-11-04: Lior doesn't want "Lior here" in the message, it's obviously from him. Removed the intro line and the sign-off.
+
+2026-11-04 FINAL Slack message from Lior, per Reut:
+
+Hey everyone 👋
+
+Our first quarterly update is here.
+
+We're at more than $50M in annual revenue, and heading to around 400K paid trials this year. Those numbers are all of you.
+
+Q3 was a big one. Here's what we built, and who built it 👇
+https://bit.ly/4iosu3N
+
+Thank you for an amazing quarter. Let's make Q4 even bigger 🚀
+
+2026-11-04 FINAL v2, Reut's own edit (supersedes above): link moved to the top, Q3 teaser line removed, close "Keep crushing it!"
+Hey everyone 👋 / Our first quarterly update is here 👇 / https://bit.ly/4iosu3N / We're at more than $50M in annual revenue, and heading to around 400K paid trials this year. / Those numbers are all of you. / Thank you for an amazing quarter. / Keep crushing it!

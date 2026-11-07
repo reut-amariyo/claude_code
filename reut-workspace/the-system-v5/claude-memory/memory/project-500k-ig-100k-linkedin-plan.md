@@ -57,3 +57,9 @@ Every monthly review must show "how far behind the pace" against this deadline.
 "Road to 500K" artifact (https://claude.ai/artifact/Vh2Lf8uvZ4JKZsKtmHYyqu) now runs 105K → 500K
 compounding ~13.9%/mo: Sep 119.6K, Oct 136.2K, Nov 155.1K, Dec 176.7K ... Jul 439K, Aug 500K.
 Built for the meeting with Alex and Shaked. LinkedIn 100K deadline not restated; ask before moving it.
+
+**Linear monthly IG table restated for 31 Aug 2027 (Reut, 2026-10-29).** Same 116,821 baseline as the
+July version, now +34,834/mo instead of +38,318: Oct 151,655 · Nov 186,490 · Dec 221,324 · Jan 256,159 ·
+Feb 290,993 · Mar 325,828 · Apr 360,662 · May 395,497 · Jun 430,331 · Jul 465,166 · Aug 500,000.
+File: `O-output/growth-plan-500k-100k/ig-monthly-targets-500k-aug-2027.md`. The Sep review deck still
+says "end of July 2027"; fix it in the October deck.

@@ -15,13 +15,14 @@ metadata:
 - Parents immigrated Ukraine→Israel 1989. Grew up Beer Sheva, modest family (mom grocery store, dad AC technician). Self-made.
 - Married to Galit (May 22, 2025). Galit finished 6 years of dental school Aug 2026 (studied in Jerusalem, commuted from Tel Aviv). Cat: Ray — Rio the Bengal died, Ray is the current cat (Reut, 2026-08-09); NEVER reference Rio as alive in drafts. Tesla; drove McLaren 765LT + Bentley GTC in Modball 2025.
 - At 29: **ON the Forbes 30 Under 30 list** (Reut 2026-09-20: he was part of the list, never write "nominee"; "FORBES 30 UNDER 30" stands as a flat fact on the website). **Shopify #1 partner in BOTH 2024 and 2025, two years in a row** (Reut, 2026-09-16: always cite both years, never only 2025).
-- **Born June 25** (turned 31 on 2026-06-25 → born 1995). **Sold AutoDS to Fiverr at age 28.** His real birthday-post canon = 10 tips "what actually got me there": pick co-founder like a spouse / kill side projects (focus) / be lazy, automate repeats / make mistakes fast, professional not perfect / hire HR early / skip business plan, stay close to data / ship before it's ready / be home for dinner / enjoy the ride / treat it like a game.
+- **Born May 24, 1995 (24.5.95)**, confirmed by Reut 2026-10-25; the old "June 25" was wrong. Turned 31 on 2026-05-24. **Sold AutoDS to Fiverr at age 28.** His real birthday-post canon = 10 tips "what actually got me there": pick co-founder like a spouse / kill side projects (focus) / be lazy, automate repeats / make mistakes fast, professional not perfect / hire HR early / skip business plan, stay close to data / ship before it's ready / be home for dinner / enjoy the ride / treat it like a game.
 - Languages: EN/HE/RU. Extreme sports, snowboarding, scuba, gym 3-4x/wk, yoga, tennis.
 
 ## Timeline (canonical)
 - **Age 10:** Dad locked his computer as punishment → hacked into it. First lesson in rejecting "no".
 - **Age 12:** Fixed neighbors' computers to buy a skateboard; built school forum that became the school's communication hub; freelance web dev.
 - **Age 14:** **kicked out of school at 14** (Reut 2026-09-20, confirmed for public copy; the podcast's "10th grade" wording does not override this). TinyDeal→eBay arbitrage, first $40 in hours; e-cigs at school → online store → parents' apartment as warehouse.
+- **Age 21: running 100 eBay stores**, then automated the work, which became AutoDS (Reut confirmed 2026-10-26 for public copy).
 - **Age 23: became a millionaire** (Reut confirmed 2026-09-24 for paid-ad hooks: "At 14, I got kicked out of school. 9 years later, I became a millionaire.").
 - **Age 21:** eBay blocked his 7-year main account → opened **100 eBay accounts** → built automation software for himself → showed at a conference, dropshippers became beta users → AutoDS. Bootstrapped: no front website for 2 years, billed backwards.
 - Feared **DSM-Tool** (market leader, 2 brothers, MBA, connections, money) → overtook in 5 years → **acquired them**.

@@ -18,3 +18,7 @@ Regret = deals he skipped, even ones a loan would have covered. The real deal an
 the-system-v5/O-output/acquisition-bible/ (HTML source + PDF, render with headless Chrome --print-to-pdf).
 Quotes are rendered from the 10-06 transcript 12:40-18:12. The questions under each rule are scaffolding, Lior hasn't reviewed them yet.
 Regret slide holds a placeholder until Lior gives the skipped deal + number. Post draft: O-output/linkedin-ma-buy-checklist-exit-deck-sequel-2026-10-12.md.
+
+**🔴 2026-10-21, Lior: the 12-month payback rule "is not true at all". Never use it again** (post, page, checklist). Removed from
+follow.liorpozin.com/acquisitions and the checklist PDF. His seller-side rules instead (Slack, 2026-10-20):
+build a REAL business, not one for a flip; build SYSTEMS so it's sustainable without you; fit your potential buyers' ecosystem.

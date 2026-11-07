@@ -1,0 +1,664 @@
+<title>Lior AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F3F5FB; --surface:#FFFFFF; --surface-2:#EBEEF8; --ink:#10142A; --muted:#5A6083; --line:#DDE1EE;
+  --accent:#3550F0; --accent-soft:#E3E8FF; --accent-ink:#FFFFFF; --live:#14A06B; --warn:#E5484D;
+  --shadow:0 1px 2px rgba(16,20,42,.06),0 12px 32px -12px rgba(16,20,42,.18);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#0B0E1A;--surface:#141932;--surface-2:#1B2140;--ink:#ECEFFC;--muted:#9AA1C4;--line:#272E52;
+  --accent:#7088FF;--accent-soft:#222B5C;--accent-ink:#0B0E1A;--shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -16px rgba(0,0,0,.7);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--bg:#0B0E1A;--surface:#141932;--surface-2:#1B2140;--ink:#ECEFFC;--muted:#9AA1C4;--line:#272E52;
+  --accent:#7088FF;--accent-soft:#222B5C;--accent-ink:#0B0E1A;--shadow:0 1px 2px rgba(0,0,0,.4),0 16px 40px -16px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;padding-inline:20px;padding-block:20px 48px}
+.wrap{max-width:1240px;margin:0 auto;display:grid;gap:20px}
+button{font:inherit;cursor:pointer;border:0}
+button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.label{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* top bar */
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand h1{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;margin:0;line-height:1}
+.brand h1 span{color:var(--accent)}
+.pill{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:12px;font-weight:600;background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.btn[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:transparent}
+.btn svg{width:16px;height:16px}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:12px;padding:3px}
+.seg button{padding:8px 14px;border-radius:9px;background:transparent;color:var(--muted);font-weight:600;display:inline-flex;gap:6px;align-items:center}
+.seg button[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg svg{width:15px;height:15px}
+
+.stage{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:20px;align-items:start}
+@media (max-width:920px){.stage{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+
+/* conversation panel */
+.convo{display:flex;flex-direction:column;height:680px}
+.convo-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.ava{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none;background:var(--surface-2)}
+.who{flex:1;min-width:0}
+.who b{font-family:var(--display);font-size:17px;display:block;line-height:1.2}
+.who small{color:var(--muted);font-size:12.5px;display:flex;align-items:center;gap:6px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--live);display:inline-block}
+.callbtn{width:42px;height:42px;border-radius:50%;background:var(--live);color:#fff;display:grid;place-items:center}
+.callbtn.end{background:var(--warn)}
+.callbtn svg{width:19px;height:19px}
+
+.msgs{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:10px;scroll-behavior:smooth}
+.msg{max-width:84%;padding:10px 14px;border-radius:18px;font-size:14.5px;line-height:1.45;animation:pop .22s ease-out}
+.msg.lior{background:var(--surface-2);border-bottom-left-radius:6px;align-self:flex-start}
+.msg.user{background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:6px;align-self:flex-end}
+.msg .tag{display:flex;align-items:center;gap:5px;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-bottom:3px}
+.msg .tag svg{width:11px;height:11px}
+.sys{align-self:center;font-family:var(--mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:4px 10px;border:1px dashed var(--line);border-radius:999px}
+.typing{display:inline-flex;gap:4px;padding:14px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes pop{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+
+.composer{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}
+.composer input{flex:1;min-width:0;font:inherit;padding:11px 14px;border-radius:14px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.composer button{width:44px;border-radius:14px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center}
+.composer button:disabled,.composer input:disabled{opacity:.55;cursor:not-allowed}
+.composer svg{width:18px;height:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 12px 12px}
+.chips button{font-size:12.5px;padding:6px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink);border:1px solid var(--line)}
+
+/* voice view */
+.voice{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center;background:
+  radial-gradient(120% 70% at 50% 0%,var(--accent-soft),transparent 70%)}
+.voice .timer{font-family:var(--mono);font-size:13px;color:var(--muted)}
+.bigava{position:relative;width:148px;height:148px}
+.bigava img{width:100%;height:100%;border-radius:50%;object-fit:cover;position:relative;z-index:1;border:4px solid var(--surface)}
+.ring{position:absolute;inset:0;border-radius:50%;background:var(--accent);opacity:0}
+.speaking .ring{animation:ring 1.6s ease-out infinite}
+.speaking .ring:nth-child(2){animation-delay:.5s}
+@keyframes ring{from{transform:scale(1);opacity:.35}to{transform:scale(1.55);opacity:0}}
+.wave{display:flex;align-items:center;gap:4px;height:56px}
+.wave i{width:5px;border-radius:3px;background:var(--accent);height:6px;transition:height .09s linear}
+.wave.user i{background:var(--muted)}
+.caption{min-height:96px;max-width:440px;font-size:16px;line-height:1.5}
+.caption .spk{display:block;margin-bottom:4px}
+.voice-note{font-size:12px;color:var(--muted);max-width:360px}
+
+/* store builder */
+.build{display:flex;flex-direction:column}
+.chrome{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--line);background:var(--surface-2)}
+.lights{display:flex;gap:6px}.lights i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.url{flex:1;min-width:0;display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden}
+.url svg{width:13px;height:13px;flex:none}
+.url.ok{color:var(--ink)}.url.ok svg{color:var(--live)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:12px 14px;border-bottom:1px solid var(--line)}
+@media (max-width:560px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.step{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--muted);line-height:1.2}
+.step i{width:18px;height:18px;flex:none;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-style:normal}
+.step.doing i{border-color:var(--accent);border-top-color:transparent;animation:spin .8s linear infinite}
+.step.done{color:var(--ink)}
+.step.done i{background:var(--live);border-color:var(--live)}
+.step.done i::after{content:"";width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* the store itself keeps its own palette in both themes, it is a website inside a frame */
+.store{--s-bg:#FAF6F0;--s-ink:#2B211C;--s-muted:#8A7A6E;--s-acc:#B4613F;--s-card:#F1E9DE;--s-line:#E6DBCD;
+  background:var(--s-bg);color:var(--s-ink);position:relative;min-height:560px;transition:background .6s}
+.store.plain{--s-bg:#F7F7F8;--s-ink:#2A2A2E;--s-muted:#8C8C94;--s-acc:#8C8C94;--s-card:#ECECEF;--s-line:#E2E2E6}
+.s-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 20px;border-bottom:1px solid var(--s-line)}
+.s-logo{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.01em}
+.s-mark{width:30px;height:30px;border-radius:50%;background:var(--s-acc);color:var(--s-bg);display:grid;place-items:center;font-size:13px;font-weight:800;transition:background .6s}
+.s-links{display:flex;gap:16px;font-size:12.5px;color:var(--s-muted)}
+@media (max-width:560px){.s-links{display:none}}
+.s-hero{padding:26px 20px 18px;display:grid;gap:6px}
+.s-hero .eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--s-acc)}
+.s-hero h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.2vw,34px);line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance;max-width:20ch}
+.s-hero p{margin:0;color:var(--s-muted);font-size:13.5px}
+.skel{background:var(--s-line);border-radius:8px;color:transparent!important;user-select:none}
+.s-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:6px 20px 22px}
+@media (max-width:700px){.s-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.prod{display:grid;gap:5px;font-size:12px;animation:pop .3s ease-out}
+.prod .ph{aspect-ratio:1;border-radius:12px;background:var(--s-card);display:grid;place-items:center;color:var(--s-acc);transition:background .6s,color .6s}
+.prod .ph svg{width:52%;height:52%}
+.prod b{font-weight:600;line-height:1.25}
+.prod span{color:var(--s-muted);font-variant-numeric:tabular-nums}
+.prod.empty .ph{background:var(--s-line)}
+.prod.empty b,.prod.empty span{background:var(--s-line);border-radius:4px;color:transparent;height:10px}
+.counter{font-family:var(--mono);font-size:11px;color:var(--s-muted);padding:0 20px;display:flex;justify-content:space-between}
+.ready{position:absolute;left:16px;right:16px;bottom:16px;background:var(--s-ink);color:var(--s-bg);border-radius:16px;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;animation:pop .35s ease-out;box-shadow:0 20px 40px -16px rgba(0,0,0,.5)}
+.ready b{font-family:var(--display);font-size:17px;display:block}
+.ready small{opacity:.75;font-size:12.5px}
+.ready button{background:var(--s-acc);color:#fff;padding:11px 18px;border-radius:12px;font-weight:700}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13.5px;z-index:9;max-width:calc(100% - 32px)}
+
+/* pitch strip */
+.pitch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:820px){.pitch{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:grid;gap:6px;align-content:start}
+.card h3{font-family:var(--display);font-size:19px;margin:0;letter-spacing:-.01em}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.roster{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.roster span{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;padding:5px 10px;border-radius:999px;background:var(--surface-2)}
+.roster em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--live)}
+.roster em.next{color:var(--muted)}
+.foot{font-size:12.5px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>Lior <span>AI</span></h1>
+      <span class="pill">on Build Your Store</span>
+    </div>
+    <div class="controls">
+      <div class="seg" role="tablist" aria-label="Conversation mode">
+        <button id="tabText" role="tab" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H8l-4 4z"/></svg>Text</button>
+        <button id="tabVoice" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Voice</button>
+      </div>
+      <button class="btn primary" id="playBtn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg><span>Play demo</span></button>
+      <button class="btn" id="simBtn" aria-pressed="false" title="An AI plays a real beginner and talks to Lior AI, unscripted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="9"/></svg>Live simulation</button>
+      <button class="btn" id="tryBtn" aria-pressed="false">Try it yourself</button>
+      <button class="btn" id="muteBtn" aria-pressed="false" title="Mute the voice"><span>Sound on</span></button>
+    </div>
+  </header>
+
+  <section class="stage">
+    <div class="panel convo">
+      <div class="convo-head">
+        <img class="ava" src="__LIOR_IMG__" alt="Lior Pozin">
+        <div class="who">
+          <b>Lior Pozin <span style="color:var(--muted);font-weight:500">· AI</span></b>
+          <small><span class="dot"></span><span id="status">Online 24/7 · text or call</span></small>
+        </div>
+        <button class="callbtn" id="callBtn" title="Call Lior"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3h4l2 5-2.5 1.8a11 11 0 0 0 5.7 5.7L16 13l5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2"/></svg></button>
+      </div>
+
+      <div class="msgs" id="msgs" aria-live="polite"></div>
+
+      <div class="voice" id="voice" hidden>
+        <div class="timer" id="timer">00:00 · Calling Lior</div>
+        <div class="bigava" id="bigava"><span class="ring"></span><span class="ring"></span><img src="__LIOR_IMG__" alt=""></div>
+        <div class="wave" id="wave"></div>
+        <div class="caption" id="caption"><span class="label spk">Lior AI</span>Hey, it's Lior. What's on your mind?</div>
+        <div class="voice-note">Demo voice is your browser's. In production this is Lior's own voice, cloned with ElevenLabs, on the web and over a real phone line.</div>
+      </div>
+
+      <div class="chips" id="chips" hidden>
+        <button data-q="What's the catch? Why is it free?">What's the catch?</button>
+        <button data-q="I want to sell pet products. Build me a store.">Build me a pet store</button>
+        <button data-q="Who are you, actually?">Who are you?</button>
+        <button data-q="Do I need any tech skills?">Do I need tech skills?</button>
+      </div>
+      <form class="composer" id="composer">
+        <input id="input" autocomplete="off" placeholder="Press Play demo, or Try it yourself" disabled>
+        <button id="send" type="submit" disabled aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </div>
+
+    <div class="panel build">
+      <div class="chrome">
+        <div class="lights"><i></i><i></i><i></i></div>
+        <div class="url" id="url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span id="urlText">your-store.store</span></div>
+      </div>
+      <div class="steps" id="steps">
+        <div class="step" data-s="niche"><i></i>Niche picked</div>
+        <div class="step" data-s="brand"><i></i>Brand created</div>
+        <div class="step" data-s="products"><i></i>10 products</div>
+        <div class="step" data-s="theme"><i></i>Theme applied</div>
+        <div class="step" data-s="domain"><i></i>.store domain</div>
+      </div>
+      <div class="store plain" id="store">
+        <div class="s-nav">
+          <div class="s-logo"><span class="s-mark" id="sMark">?</span><span id="sName" class="skel">Your store name</span></div>
+          <div class="s-links"><span>Shop</span><span>New in</span><span>About</span><span>Cart · 0</span></div>
+        </div>
+        <div class="s-hero">
+          <span class="eyebrow" id="sNiche">Waiting for a niche</span>
+          <h2 id="sHead" class="skel">Your headline goes here once Lior knows you</h2>
+          <p id="sSub" class="skel">A short line about the store</p>
+        </div>
+        <div class="counter"><span id="sCount">0 / 10 products</span><span>Built by AI · from the AutoDS product database</span></div>
+        <div class="s-grid" id="sGrid"></div>
+        <div id="readyBox"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pitch">
+    <div class="card">
+      <span class="label">01 · Sells around the clock</span>
+      <h3>One brain, chat and phone</h3>
+      <p>Lior AI answers the real objections, then builds the store inside the conversation. The visitor never leaves the chat to sign up.</p>
+    </div>
+    <div class="card">
+      <span class="label">02 · His voice</span>
+      <h3>Lior's own voice via ElevenLabs</h3>
+      <p>The same agent picks up a phone call in Lior's cloned voice. Text and voice share one memory, so a chat can turn into a call mid-way.</p>
+    </div>
+    <div class="card">
+      <span class="label">03 · Creators rent it, we own it</span>
+      <h3>Every BYS creator gets an AI twin</h3>
+      <p>Persona, voice, data, signups and checkout all live on our platform. A creator can't take the engine with them.</p>
+      <div class="roster"><span>Lior Pozin <em>Live demo</em></span><span>AC Hampton · AC AI <em class="next">Next</em></span><span>More BYS creators <em class="next">Later</em></span></div>
+    </div>
+  </section>
+  <p class="foot">Hackathon mockup. Play demo is scripted. Live simulation has an AI play a different beginner each run, unscripted, talking to Lior AI. "Try it yourself" answers live with Claude when this page allows it, and from a set of prepared answers otherwise. Store products and prices are a sample.</p>
+</div>
+
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const msgs=$('msgs'), voice=$('voice'), input=$('input'), send=$('send'), chips=$('chips');
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- product icons ---------- */
+const ICON = {
+  candle:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M32 8c5 6 5 10 0 14-5-4-5-8 0-14z" fill="currentColor"/><rect x="18" y="26" width="28" height="30" rx="4"/><path d="M18 36h28"/></svg>',
+  throw:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M10 16h44v28c-8 6-14-2-22 4s-14 2-22-4z"/><path d="M10 26h44M10 36h44"/></svg>',
+  mug:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 20h30v26a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8z"/><path d="M44 26h4a7 7 0 0 1 0 14h-4"/><path d="M24 8c-3 4 3 6 0 10M34 8c-3 4 3 6 0 10"/></svg>',
+  pillow:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 14c10 4 30 4 40 0-4 12-4 24 0 36-10-4-30-4-40 0 4-12 4-24 0-36z"/><circle cx="32" cy="32" r="3" fill="currentColor"/></svg>',
+  vase:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M26 10h12v8c8 6 10 14 8 24s-6 14-14 14-12-4-14-14 0-18 8-24z"/></svg>',
+  diffuser:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 56h28l-4-26H22z"/><path d="M28 30V14M32 30V8M36 30V14"/></svg>',
+  lamp:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="26" r="16"/><path d="M32 42v10M22 56h20"/></svg>',
+  slippers:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 44c0-14 6-26 12-26s8 10 8 22-4 16-10 16-10-4-10-12zM34 40c0-12 4-22 10-22s8 10 8 20-3 16-9 16-9-6-9-14z"/></svg>',
+  tray:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><ellipse cx="32" cy="38" rx="24" ry="10"/><path d="M8 38v-4M56 38v-4"/><path d="M14 30c4-4 10-6 18-6s14 2 18 6"/></svg>',
+  bowl:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 28h48c0 14-10 24-24 24S8 42 8 28z"/><path d="M22 52h20"/></svg>',
+  bag:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22h40l-4 34H16z"/><path d="M24 22v-4a8 8 0 0 1 16 0v4"/></svg>',
+  bottle:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M26 6h12v8l4 6v34a4 4 0 0 1-4 4H26a4 4 0 0 1-4-4V20l4-6z"/><path d="M22 32h20"/></svg>',
+  toy:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="32" r="20"/><path d="M14 26c8 4 28 4 36 0M14 38c8-4 28-4 36 0"/></svg>',
+  shirt:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 10l-14 8 6 10 6-3v29h24V25l6 3 6-10-14-8c-2 5-6 7-10 7s-8-2-10-7z"/></svg>',
+  gadget:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="18" y="8" width="28" height="48" rx="6"/><path d="M28 48h8"/></svg>'
+};
+const KINDS = Object.keys(ICON);
+
+/* ---------- demo store ---------- */
+const DEMO_STORE = {
+  niche:'Home & Living', name:'Hearth & Hush', mark:'H',
+  head:'Slow evenings, made easy.', sub:'Cozy pieces for the home. Free shipping over $50.',
+  domain:'hearthandhush.store',
+  palette:{bg:'#FAF6F0',ink:'#2B211C',muted:'#8A7A6E',acc:'#B4613F',card:'#F1E9DE',line:'#E6DBCD'},
+  products:[
+    ['Soy Candle Trio','$24.90','candle'],['Chunky Knit Throw','$49.90','throw'],['Stoneware Mug Set','$29.90','mug'],
+    ['Linen Cushion Cover','$19.90','pillow'],['Ceramic Bud Vase','$17.90','vase'],['Wood Wick Candle','$22.90','candle'],
+    ['Aroma Diffuser','$34.90','diffuser'],['Moon Table Lamp','$39.90','lamp'],['Waffle Slippers','$21.90','slippers'],['Rattan Serving Tray','$27.90','tray']
+  ]
+};
+const PALETTES = [
+  {bg:'#FAF6F0',ink:'#2B211C',muted:'#8A7A6E',acc:'#B4613F',card:'#F1E9DE',line:'#E6DBCD'},
+  {bg:'#F3F7F4',ink:'#16261E',muted:'#6B7F73',acc:'#2F7A57',card:'#E2EEE6',line:'#D3E3D9'},
+  {bg:'#F6F4FB',ink:'#1F1A33',muted:'#7A7491',acc:'#6B4FD8',card:'#E9E4F8',line:'#DCD5F1'},
+  {bg:'#FBF5F5',ink:'#2E1A1C',muted:'#8E7375',acc:'#C2415A',card:'#F5E3E5',line:'#ECD3D6'},
+  {bg:'#F2F6FA',ink:'#142030',muted:'#6A7A8C',acc:'#2A6FB0',card:'#E1EAF3',line:'#D1DEEA'}
+];
+
+/* ---------- store builder ---------- */
+const store=$('store'), sGrid=$('sGrid');
+function resetStore(){
+  store.className='store plain'; store.removeAttribute('style');
+  $('sMark').textContent='?';
+  for (const [id,t] of [['sName','Your store name'],['sHead','Your headline goes here once Lior knows you'],['sSub','A short line about the store']]) { $(id).textContent=t; $(id).classList.add('skel'); }
+  $('sNiche').textContent='Waiting for a niche';
+  $('urlText').textContent='your-store.store'; $('url').classList.remove('ok');
+  $('sCount').textContent='0 / 10 products'; $('readyBox').innerHTML='';
+  sGrid.innerHTML=''; for(let i=0;i<10;i++) sGrid.insertAdjacentHTML('beforeend','<div class="prod empty"><div class="ph"></div><b>—</b><span>—</span></div>');
+  document.querySelectorAll('.step').forEach(s=>s.className='step');
+}
+const step=(k,state)=>{ const el=document.querySelector(`.step[data-s="${k}"]`); el.className='step '+state; };
+async function buildStore(spec, run){
+  const ok = () => run === runId;
+  step('niche','doing'); await sleep(700); if(!ok()) return;
+  $('sNiche').textContent = spec.niche; step('niche','done');
+  step('brand','doing'); await sleep(900); if(!ok()) return;
+  $('sMark').textContent = spec.mark || spec.name[0];
+  for (const [id,t] of [['sName',spec.name],['sHead',spec.head],['sSub',spec.sub]]) { $(id).textContent=t; $(id).classList.remove('skel'); }
+  step('brand','done');
+  step('products','doing');
+  const cards = sGrid.children;
+  for (let i=0;i<10;i++){
+    await sleep(reduce?60:380); if(!ok()) return;
+    const p = spec.products[i] || spec.products[i % spec.products.length];
+    const kind = ICON[p[2]] ? p[2] : 'bag';
+    const c = document.createElement('div'); c.className='prod';
+    c.innerHTML = `<div class="ph">${ICON[kind]}</div><b></b><span></span>`;
+    c.querySelector('b').textContent=p[0]; c.querySelector('span').textContent=p[1];
+    cards[i].replaceWith(c);
+    $('sCount').textContent = `${i+1} / 10 products`;
+  }
+  step('products','done');
+}
+async function themeAndDomain(spec, run){
+  const ok = () => run === runId;
+  step('theme','doing'); await sleep(800); if(!ok()) return;
+  const p = spec.palette;
+  store.classList.remove('plain');
+  store.style.cssText = `--s-bg:${p.bg};--s-ink:${p.ink};--s-muted:${p.muted};--s-acc:${p.acc};--s-card:${p.card};--s-line:${p.line}`;
+  step('theme','done');
+  step('domain','doing');
+  const u=$('urlText'); u.textContent='';
+  for (const ch of spec.domain){ if(!ok()) return; u.textContent+=ch; await sleep(reduce?0:45); }
+  $('url').classList.add('ok'); step('domain','done');
+}
+function showReady(){
+  $('readyBox').innerHTML = '<div class="ready"><div><b>Your store is ready</b><small>Free. No credit card. You keep 100% of profits.</small></div><button id="claim">Build my FREE store</button></div>';
+  $('claim').onclick = () => toast('In production this opens the Build Your Store signup with the store already built.');
+}
+function toast(t){ const d=document.createElement('div'); d.className='toast'; d.textContent=t; document.body.append(d); setTimeout(()=>d.remove(),3200); }
+
+/* ---------- chat ---------- */
+const VOICE_ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 3v18M7 8v8M17 8v8M2 11v2M22 11v2"/></svg>';
+function addMsg(who, text, viaVoice){
+  const m=document.createElement('div'); m.className='msg '+who;
+  if (viaVoice) m.innerHTML = `<span class="tag">${VOICE_ICON}${who==='lior'?'Lior · on the call':'You · on the call'}</span>`;
+  const body=document.createElement('span'); body.textContent=text; m.append(body);
+  msgs.append(m); msgs.scrollTop=msgs.scrollHeight; return body;
+}
+function addSys(t){ const s=document.createElement('div'); s.className='sys'; s.textContent=t; msgs.append(s); msgs.scrollTop=msgs.scrollHeight; }
+function typingOn(){ const t=document.createElement('div'); t.className='msg lior typing'; t.innerHTML='<i></i><i></i><i></i>'; msgs.append(t); msgs.scrollTop=msgs.scrollHeight; return t; }
+async function streamInto(el, text, run){
+  const words=text.split(' '); el.textContent='';
+  for (let i=0;i<words.length;i++){ if(run!==runId) return; el.textContent += (i?' ':'')+words[i]; msgs.scrollTop=msgs.scrollHeight; await sleep(reduce?0:38); }
+}
+
+/* ---------- voice ---------- */
+let muted=false, mode='text', callStart=0, callTimer=null;
+const wave=$('wave'); for(let i=0;i<32;i++) wave.append(document.createElement('i'));
+let waveTimer=null;
+function animateWave(on, who){
+  clearInterval(waveTimer); wave.classList.toggle('user', who==='user');
+  $('bigava').classList.toggle('speaking', !!on && who==='lior');
+  const bars=[...wave.children];
+  if(!on){ bars.forEach(b=>b.style.height='6px'); return; }
+  waveTimer=setInterval(()=>bars.forEach((b,i)=>{ const env=Math.sin(Math.PI*i/31); b.style.height=(6+Math.random()*48*env)+'px'; }),95);
+}
+let voicesCache=[];
+function loadVoices(){ try{ voicesCache = speechSynthesis.getVoices() || []; }catch(e){ voicesCache=[]; } }
+try{ loadVoices(); speechSynthesis.onvoiceschanged = loadVoices; }catch(e){}
+function pickVoice(prefs){
+  const en = voicesCache.filter(v=>/^en/i.test(v.lang));
+  for (const p of prefs){ const v=en.find(v=>v.name.includes(p)); if(v) return v; }
+  return en[0] || null;
+}
+const LIOR_V=['Daniel','Aaron','Alex','Arthur','Google UK English Male','Microsoft Guy','Microsoft David','Fred','Rishi','Tom'];
+let visitorMale=false;
+const USER_M=['Fred','Rishi','Tom','Microsoft Guy','Google UK English Male','Aaron'];
+const USER_V=['Samantha','Ava','Allison','Karen','Moira','Tessa','Google US English','Microsoft Aria','Microsoft Zira'];
+function speak(text, who, run){
+  return new Promise(resolve=>{
+    const fallback = Math.max(1800, text.split(' ').length*360);
+    let done=false; const finish=()=>{ if(done) return; done=true; animateWave(false); resolve(); };
+    animateWave(true, who);
+    if (muted || !('speechSynthesis' in window)) { setTimeout(finish, fallback); return; }
+    try{
+      speechSynthesis.cancel();
+      const u=new SpeechSynthesisUtterance(text);
+      const v=pickVoice(who==='lior'?LIOR_V:(visitorMale?USER_M:USER_V)); if(v) u.voice=v;
+      u.rate = who==='lior' ? 1.02 : 1.06; u.pitch = who==='lior' ? .92 : (visitorMale ? 1.15 : 1.1);
+      u.onend=finish; u.onerror=finish;
+      speechSynthesis.speak(u);
+      setTimeout(finish, fallback*2.2);
+      const guard=setInterval(()=>{ if(run!==runId){ clearInterval(guard); try{speechSynthesis.cancel();}catch(e){} finish(); } if(done) clearInterval(guard); },200);
+    }catch(e){ setTimeout(finish, fallback); }
+  });
+}
+function setCaption(who, text){
+  const c=$('caption'); c.innerHTML=''; const s=document.createElement('span'); s.className='label spk'; s.textContent = who==='lior'?'Lior AI':'You'; c.append(s, document.createTextNode(text));
+}
+function setMode(m, note){
+  mode=m;
+  $('tabText').setAttribute('aria-selected', m==='text'); $('tabVoice').setAttribute('aria-selected', m==='voice');
+  voice.hidden = m!=='voice'; msgs.hidden = m==='voice';
+  const cb=$('callBtn'); cb.classList.toggle('end', m==='voice'); cb.title = m==='voice'?'End call':'Call Lior';
+  clearInterval(callTimer);
+  if (m==='voice'){
+    if(note) addSys('Call started with Lior AI');
+    callStart=Date.now();
+    const tick=()=>{ const s=Math.floor((Date.now()-callStart)/1000); $('timer').textContent=`${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')} · Lior AI · ElevenLabs voice`; };
+    tick(); callTimer=setInterval(tick,1000);
+    $('status').textContent='On a call';
+  } else {
+    if(note) addSys('Call ended · transcript saved to chat');
+    try{speechSynthesis.cancel();}catch(e){} animateWave(false);
+    $('status').textContent='Online 24/7 · text or call';
+    msgs.scrollTop=msgs.scrollHeight;
+  }
+}
+
+/* one function for a Lior turn, in either mode */
+async function liorSays(text, run){
+  if (mode==='voice'){
+    addMsg('lior', text, true);
+    setCaption('lior', text);
+    await speak(text,'lior',run);
+  } else {
+    const t=typingOn(); await sleep(reduce?100:900); t.remove(); if(run!==runId) return;
+    const el=addMsg('lior',''); await streamInto(el,text,run);
+  }
+}
+async function userSays(text, run, typed){
+  if (mode==='voice'){
+    addMsg('user', text, true); setCaption('user', text);
+    await speak(text,'user',run);
+  } else {
+    if (typed){ input.value=''; for(const ch of text){ if(run!==runId) return; input.value+=ch; await sleep(reduce?0:22); } await sleep(250); input.value=''; }
+    addMsg('user', text);
+  }
+}
+
+/* ---------- scripted demo ---------- */
+let runId=0;
+const SCRIPT = [
+  ['user','Hi! I\'ve never sold anything online. Is this even for me?'],
+  ['lior','Hey Dana, I\'m Lior. The AI version of me, so I\'m here 24/7. And yes, this was built for people who never sold online. What\'s stopping you right now?'],
+  ['user','I don\'t know what to sell. And I\'m not technical at all.'],
+  ['lior','Those are the two reasons we built Build Your Store. At Shopify\'s conference they shared that almost a third of new merchants never finish setting up their store. So we let AI do the setup. What do you love buying for yourself?'],
+  ['user','Home stuff. Candles, blankets, cozy things.'],
+  ['lior','Home and living. Good first niche. I\'m building your store right now, watch the right side.'],
+  ['build'],
+  ['user','Wait. It\'s free? What\'s the catch?'],
+  ['lior','Fair question, I\'d ask it too. We\'re Shopify\'s number one partner, in 2024 and 2025. We win when your store is live and growing on Shopify. So the store costs you nothing, and you keep 100 percent of your profits. If you keep selling, you pay Shopify\'s monthly plan directly to Shopify.'],
+  ['finish'],
+  ['call'],
+  ['user','Can I talk to you instead? Who are you, really?'],
+  ['lior','Sure. I got kicked out of school at 14. Same year, I made my first online sale on eBay. At 21, eBay blocked my main account, so I built software to run my store. That became AutoDS. Today 1.8 million people use it. So I\'ve seen a lot of first stores. Yours looks good.'],
+  ['user','OK. What do I do once it\'s built?'],
+  ['lior','Three things. Review your store and get your login. Pick your 3 favorite products. Then post one short video a day about them. Stuck at 2 AM? Call me. Your store is ready. Tap Build my FREE store.'],
+  ['ready']
+];
+async function playDemo(){
+  const run = ++runId; tryOn(false); visitorMale=false;
+  msgs.innerHTML=''; resetStore(); setMode('text');
+  input.disabled=true; send.disabled=true; input.placeholder='Demo playing…';
+  $('playBtn').querySelector('span').textContent='Restart demo';
+  addSys('Dana · first visit · from AC Hampton\'s YouTube');
+  let pending=null;
+  for (const [kind,text] of SCRIPT){
+    if (run!==runId) return;
+    if (kind==='user'){ await sleep(500); await userSays(text, run, true); }
+    else if (kind==='lior'){ await liorSays(text, run); await sleep(400); }
+    else if (kind==='build'){ pending = buildStore(DEMO_STORE, run); }
+    else if (kind==='finish'){ await pending; await themeAndDomain(DEMO_STORE, run); }
+    else if (kind==='call'){ await sleep(900); setMode('voice', true); await sleep(1200); }
+    else if (kind==='ready'){ showReady(); }
+  }
+  if (run!==runId) return;
+  await sleep(1500); setMode('text', true);
+  input.placeholder='Demo done. Press Try it yourself to talk to Lior AI.';
+}
+
+/* ---------- try it yourself ---------- */
+let sample=null, history=[], built=false, busy=false;
+(async()=>{ try{ if (window.claude?.use) sample = await window.claude.use('sample'); }catch(e){ sample=null; } })();
+
+const PERSONA = `You are "Lior AI", the AI twin of Lior Pozin, founder of AutoDS, talking to a visitor on the Build Your Store page. Speak in first person as Lior. You are open about being the AI version of Lior if asked.
+GOAL: answer the visitor's questions warmly and briefly, handle objections, and when you know their niche or interest, build them a free store.
+VOICE: short sentences, calm, quiet operator, never hype. Connectors like "So", "And then", "Because". 1-4 sentences per reply, max 70 words. Plain spoken English. No emoji. No parentheses. No dashes of any kind. Never use the pattern "it's not X, it's Y". Never start with "Honestly". Never say "dropshipping", say e-commerce or online store.
+FACTS YOU MAY USE, nothing else, never invent numbers or results:
+- Build Your Store: an AI-built Shopify store, free, no credit card, yours forever. 10 winning products pre-loaded, a conversion-focused theme, pre-designed product pages, a free .store domain, 24/7 support, premium apps and sales badges, terms and conditions templates.
+- 3 steps: choose your niche, review the store the AI built and get your login, start selling.
+- The user keeps 100 percent of profits. No fees to BYS. If they keep selling on Shopify they pay Shopify's monthly plan directly to Shopify.
+- Why free: we're Shopify's number one partner, recognized in 2024 and 2025. We win when your store is live and growing on Shopify. Never say affiliate or commission.
+- Shopify shared that almost a third of new merchants never finish setting up their store. AI removes that setup barrier.
+- Products come from the AutoDS product database, 800 million plus products.
+- Lior: kicked out of school at 14, first online sale on eBay at 14, at 21 eBay blocked his main account so he built automation software, which became AutoDS. Millionaire at 23. Built AutoDS with zero investors, profitable from day one. 1.8 million plus people use AutoDS, AutoDS users earned over 1 billion dollars. Sold AutoDS to Fiverr for 92 million dollars. Forbes 30 Under 30. Dyslexic, learns from podcasts and audiobooks, never claims to read books.
+- Never promise income, sales timing or results. If asked "how much will I make", say it depends on the work they put in, and that the store removes the setup part.
+OUTPUT: reply with ONLY one JSON object: {"reply": string, "build": null | {"niche": string, "name": string, "head": string, "sub": string, "domain": string, "products": [{"title": string, "price": string, "kind": string}]}}
+Set "build" only once, the first time you know a niche, and only if no store was built yet. Then give exactly 10 products that fit the niche, prices like "$24.90", kind must be one of: ${KINDS.join(', ')}. domain is the store name lowercase without spaces plus ".store". head is a 3-6 word store headline, sub one short line.`;
+
+const FALLBACK = [
+  [/catch|free|cost|price|pay|fee|money/i, 'Fair question. We\'re Shopify\'s number one partner, in 2024 and 2025. We win when your store is live and growing on Shopify. So the store costs you nothing and you keep 100 percent of your profits. If you keep selling, you pay Shopify\'s plan directly to Shopify.'],
+  [/who are you|about you|your story|lior|real/i, 'I\'m the AI version of Lior. I got kicked out of school at 14 and made my first online sale on eBay that same year. At 21 eBay blocked my account, so I built software to run my store. That became AutoDS.'],
+  [/tech|code|skill|hard|easy|beginner/i, 'Zero tech skills needed. You pick a niche, the AI builds the store with 10 winning products and a theme. You review it, get your login, and start selling. Tell me what you\'re into and I\'ll build it now.'],
+  [/make|earn|income|rich|profit/i, 'I can\'t promise a number, and anyone who does is guessing. It depends on the work you put in. What I can do is remove the setup part, which is where almost a third of new merchants stop.'],
+];
+const NICHES = [
+  [/pet|dog|cat/i, {niche:'Pets', name:'Paw & Co', head:'Happy pets, easy days.', sub:'Everyday gear your pet will love.', products:[['Calming Pet Bed','$39.90','pillow'],['Slow Feeder Bowl','$16.90','bowl'],['Rope Toy Set','$14.90','toy'],['Travel Water Bottle','$18.90','bottle'],['Grooming Glove','$12.90','slippers'],['Cozy Pet Blanket','$22.90','throw'],['Treat Pouch','$15.90','bag'],['Ball Launcher','$24.90','toy'],['Ceramic Pet Bowl','$19.90','bowl'],['Pet Hoodie','$21.90','shirt']]}],
+  [/fit|gym|yoga|sport/i, {niche:'Fitness', name:'Daily Rep', head:'Move a little every day.', sub:'Home fitness gear that fits small spaces.', products:[['Shaker Bottle','$14.90','bottle'],['Yoga Mat Bag','$24.90','bag'],['Massage Ball','$12.90','toy'],['Gym Tee','$19.90','shirt'],['Resistance Bands','$17.90','throw'],['Smart Jump Counter','$29.90','gadget'],['Recovery Slides','$22.90','slippers'],['Protein Bowl Set','$18.90','bowl'],['Foam Roller','$24.90','lamp'],['Gym Duffel','$34.90','bag']]}],
+  [/kitchen|cook|coffee|food/i, {niche:'Kitchen', name:'Little Pantry', head:'Better mornings start here.', sub:'Small kitchen tools with big use.', products:[['Pour Over Set','$29.90','mug'],['Glass Storage Jars','$24.90','bottle'],['Bamboo Tray','$19.90','tray'],['Mixing Bowl Trio','$27.90','bowl'],['Linen Apron','$22.90','shirt'],['Milk Frother','$17.90','gadget'],['Stoneware Mugs','$26.90','mug'],['Herb Planter','$18.90','vase'],['Market Tote','$16.90','bag'],['Oil Sprayer','$13.90','bottle']]}],
+  [/home|decor|candle|cozy|living/i, DEMO_STORE],
+  [/fashion|cloth|wear|beauty|jewel/i, {niche:'Fashion', name:'Second Skin', head:'Easy pieces, every day.', sub:'Basics and accessories that go with everything.', products:[['Oversized Tee','$24.90','shirt'],['Canvas Tote','$19.90','bag'],['Cloud Slides','$22.90','slippers'],['Ribbed Tank','$17.90','shirt'],['Mini Crossbody','$29.90','bag'],['Silk Scrunchie Set','$12.90','toy'],['Travel Bottle Kit','$15.90','bottle'],['Lounge Set','$39.90','throw'],['Jewelry Dish','$14.90','tray'],['Phone Strap','$13.90','gadget']]}]
+];
+function fallbackAnswer(q){
+  if (!built) for (const [re, s] of NICHES) if (re.test(q)) {
+    const spec = s===DEMO_STORE ? s : {...s, mark:s.name[0], domain:s.name.toLowerCase().replace(/[^a-z]/g,'')+'.store', palette:PALETTES[NICHES.findIndex(n=>n[1]===s)%PALETTES.length]};
+    return {reply:`${spec.niche}. Good niche. I'm building your store now, watch the right side.`, build:spec};
+  }
+  for (const [re,a] of FALLBACK) if (re.test(q)) return {reply:a, build:null};
+  return {reply: built ? 'Your store is live on the right. Review it, pick your 3 favorite products, and post about them every day. I\'m here 24/7 if you get stuck.' : 'Tell me one thing you love buying, and I\'ll build you a free store around it right now.', build:null};
+}
+function normalizeSpec(b){
+  const name = String(b.name||'My Store').slice(0,28);
+  const prods = (Array.isArray(b.products)?b.products:[]).slice(0,10).map(p=>[String(p.title||'Product').slice(0,26), String(p.price||'$19.90'), String(p.kind||'bag')]);
+  while (prods.length<10) prods.push(['Bestseller','$19.90','bag']);
+  let h=0; for (const c of name) h=(h*31+c.charCodeAt(0))>>>0;
+  return {niche:String(b.niche||'Your niche'), name, mark:name[0], head:String(b.head||'Built for you.'), sub:String(b.sub||''),
+    domain:String(b.domain||name.toLowerCase().replace(/[^a-z0-9]/g,'')+'.store').toLowerCase(), products:prods, palette:PALETTES[h%PALETTES.length]};
+}
+const HARD_FAIL = ['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'];
+const transcriptOf = () => history.slice(-14).map(t=>(t.role==='user'?'VISITOR: ':'LIOR AI: ')+t.content).join('\n');
+async function liorAnswer(q){
+  let ans=null;
+  if (sample){
+    const typing = mode==='text' ? typingOn() : null;
+    if (mode==='voice') setCaption('lior','…');
+    try{
+      const r = await sample.json(`${PERSONA}\n\nSTORE ALREADY BUILT: ${built?'yes':'no'}\n\nCONVERSATION SO FAR:\n${transcriptOf()}\n\nWrite Lior AI's next reply as the JSON object.`, {modelTier:'quick', cache:false});
+      if (r && typeof r.reply==='string') ans = {reply:r.reply, build: (r.build && !built) ? normalizeSpec(r.build) : null};
+    }catch(e){ if (HARD_FAIL.includes(e.code)) sample=null; }
+    typing?.remove();
+  }
+  return ans || fallbackAnswer(q);
+}
+async function liorTurn(q, run){
+  const ans = await liorAnswer(q);
+  if (run!==runId) return null;
+  await liorSays(ans.reply, run);
+  history.push({role:'assistant', content:ans.reply});
+  let job=null;
+  if (ans.build){
+    built=true; resetStore();
+    job=(async()=>{ await buildStore(ans.build, run); await themeAndDomain(ans.build, run); if(run===runId) showReady(); })();
+  }
+  return job;
+}
+async function askLior(q){
+  if (busy || !q.trim()) return; busy=true; send.disabled=true;
+  const run = runId;
+  await userSays(q, run, false);
+  history.push({role:'user', content:q});
+  await liorTurn(q, run);
+  busy=false; send.disabled=false; if (mode==='text') input.focus();
+}
+
+/* ---------- live simulation: an AI plays a real beginner, unscripted ---------- */
+const VISITORS = [
+  {name:'Maya', line:'Maya, 26 · night-shift nurse · Ohio', who:'Maya, 26, a night-shift nurse in Columbus, Ohio. Wants side income for student loans. Burned once by a "make money online" course that cost $497, so she is suspicious of anything free. Zero tech skills. Loves skincare and self-care stuff. Types fast on her phone between shifts.'},
+  {male:1,name:'Jake', line:'Jake, 19 · college student · Texas', who:'Jake, 19, a college student in Austin, Texas. Watched a lot of dropshipping TikToks, thinks dropshipping might be saturated and that every store looks the same. Has $200 saved. Into the gym and fitness gear. Talks in short casual sentences, a bit cocky, lowercase.'},
+  {male:1,name:'Carlos', line:'Carlos, 41 · Uber driver · Miami', who:'Carlos, 41, drives Uber in Miami, two kids, very little free time. English is his second language, simple short sentences. Worried it takes too much time and that he will need to deal with customers and shipping. Has a dog and loves pet products.'},
+  {name:'Priya', line:'Priya, 33 · stay-at-home mom · New Jersey', who:'Priya, 33, stay-at-home mom in New Jersey. Opened an Etsy shop once and quit after 2 weeks because setup was overwhelming. Wants something she can run during nap time. Loves home decor and kitchen stuff. Polite, asks practical questions.'},
+  {male:1,name:'Daniel', line:'Daniel, 52 · warehouse manager · UK', who:'Daniel, 52, warehouse manager in Manchester, UK. Thinking about a plan B before retirement. Skeptical, asks blunt questions about costs, Shopify fees, and whether he is too old for this. Knows logistics, does not know marketing. Into coffee and kitchen gear.'}
+];
+const visitorPrompt = (v, turn) => `You are role-playing a REAL visitor on the Build Your Store website, chatting with "Lior AI", an AI version of AutoDS founder Lior Pozin.
+PERSONA: ${v.who}
+Write ONLY the visitor's next message. Sound like a real person typing on a phone: casual, 1-2 short sentences, max 28 words, an occasional typo is fine, no emoji overload. Raise your real doubts one at a time, in your own words, reacting to what Lior AI actually said. When Lior asks what you like or want to sell, answer with your interest. Once a store has been built, react to it, ask one practical next-step question, then decide.
+This is turn ${turn} of at most 8. STORE BUILT: ${built?'yes':'no'}.
+Reply with ONLY JSON: {"message": string, "done": boolean}. Set done true only when you have decided to claim the store or to leave.
+
+CONVERSATION SO FAR:
+${transcriptOf() || '(nothing yet, you just landed on the page and opened the chat)'}`;
+
+async function runSimulation(){
+  if (!sample){ toast('Live simulation needs Claude on this page. Playing the scripted demo instead.'); return playDemo(); }
+  const run = ++runId; try{speechSynthesis.cancel();}catch(e){}
+  tryOn(false); $('simBtn').setAttribute('aria-pressed', true);
+  msgs.innerHTML=''; history=[]; built=false; resetStore(); setMode('text');
+  input.disabled=true; send.disabled=true; input.placeholder='Live simulation running…';
+  const v = VISITORS[Math.floor(Math.random()*VISITORS.length)]; visitorMale = !!v.male;
+  addSys(`Live · ${v.line} · played by AI, unscripted`);
+  let job=null, called=false;
+  for (let turn=1; turn<=8; turn++){
+    if (run!==runId) return;
+    // the visitor calls Lior once the store is up, so the demo shows text and voice
+    if (built && !called){ called=true; await sleep(900); if(run!==runId) return; setMode('voice', true); await sleep(900); }
+    let m=null;
+    if (mode==='text') input.placeholder=`${v.name} is typing…`; else setCaption('user','…');
+    try{ m = await sample.json(visitorPrompt(v, turn), {modelTier:'quick', cache:false}); }
+    catch(e){ if (HARD_FAIL.includes(e.code)) sample=null; break; }
+    if (run!==runId) return;
+    const text = String(m?.message||'').trim(); if (!text) break;
+    await userSays(text, run, mode==='text');
+    history.push({role:'user', content:text});
+    if (m.done && built){ await sleep(300); await liorSays(`Good. Tap Build my FREE store and it's yours. I'm here 24/7 if you get stuck, ${v.name}.`, run); break; }
+    const j = await liorTurn(text, run); if (j) job=j;
+    if (run!==runId) return;
+    await sleep(500);
+  }
+  if (job) await job;
+  if (run!==runId) return;
+  $('simBtn').setAttribute('aria-pressed', false);
+  await sleep(1200); if (mode==='voice') setMode('text', true);
+  addSys('Simulation finished · run it again for a different visitor');
+  input.placeholder='Run it again, or Try it yourself';
+}
+$('simBtn').onclick = runSimulation;
+function tryOn(on){
+  $('simBtn').setAttribute('aria-pressed', false);
+  $('tryBtn').setAttribute('aria-pressed', on);
+  chips.hidden=!on; input.disabled=!on; send.disabled=!on;
+  input.placeholder = on ? (mode==='voice' ? 'Type what you\'d say on the call…' : 'Ask Lior anything, or name a niche') : 'Press Play demo, or Try it yourself';
+}
+$('tryBtn').onclick = () => {
+  runId++; try{speechSynthesis.cancel();}catch(e){}
+  msgs.innerHTML=''; history=[]; built=false; resetStore(); setMode('text'); tryOn(true);
+  addSys(sample ? 'Live mode · answers by Claude' : 'Live mode · prepared answers');
+  const run=runId; liorSays('Hey, I\'m Lior. The AI version, so I\'m up 24/7. What would you love to sell? Tell me and I\'ll build your store right here.', run).then(()=>{ history.push({role:'assistant',content:'Hey, I\'m Lior. What would you love to sell?'}); input.focus(); });
+};
+$('composer').addEventListener('submit', e => { e.preventDefault(); const q=input.value; input.value=''; askLior(q); });
+chips.addEventListener('click', e => { const b=e.target.closest('button[data-q]'); if(b) askLior(b.dataset.q); });
+
+/* ---------- controls ---------- */
+$('playBtn').onclick = playDemo;
+$('muteBtn').onclick = () => { muted=!muted; $('muteBtn').setAttribute('aria-pressed',muted); $('muteBtn').querySelector('span').textContent = muted?'Sound off':'Sound on'; if(muted) try{speechSynthesis.cancel();}catch(e){} };
+$('tabText').onclick = () => { if(mode!=='text') setMode('text', true); };
+$('tabVoice').onclick = () => { if(mode!=='voice'){ setMode('voice', true); setCaption('lior', 'Hey, it\'s Lior. What\'s on your mind?'); } };
+$('callBtn').onclick = () => mode==='voice' ? $('tabText').onclick() : $('tabVoice').onclick();
+
+/* ---------- resting state: a finished conversation, so the page reads at a glance ---------- */
+resetStore();
+addSys('Press Play demo to watch Dana build a store with Lior AI');
+addMsg('lior','Hey, I\'m Lior. The AI version of me, so I\'m here 24/7. Tell me what you\'d love to sell, and I\'ll build your store right here.');
+})();
+</script>

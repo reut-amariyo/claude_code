@@ -36,9 +36,12 @@ Judges' hooks it hits: underdog origin, bootstrapped, exit, global scale, number
 - Revenue: add 2025/2026 only with a number Reut confirms; "$20M+ ARR" is public per [[lior-podcast-e97-canonical-stories]].
 
 ## Conflicts with later canon. ASK Reut before reusing
-- **DOB**: pitch says 24/5/1995; Lior OS says born June 25. One is wrong.
+- **DOB**: RESOLVED 2026-10-25, Reut confirmed 24/5/1995. The pitch was right; Lior OS is now fixed.
 - **School**: pitch says "full bagrut"; canon says kicked out of school at 14 (podcast: expelled from one high school in 10th grade). Both can be true (expelled from one school, finished elsewhere) but confirm before writing either.
-- **Founding age/story**: pitch = alone at 22, early 2017, right after the army; OS = age 21 eBay blocked his account → 100 accounts → automation. Michael joins 2018 in OS vs early 2019 in pitch.
+- **Founding age/story**: Reut used "founded alone at 21" in the ice 40U40 2026 submission, 2026-10-25. Older note: pitch = alone at 22, early 2017, right after the army; OS = age 21 eBay blocked his account → 100 accounts → automation. Michael joins 2018 in OS vs early 2019 in pitch.
 - **"Dropshipping" in Hebrew**: pitch uses דרופשיפינג throughout; current rule [[feedback-autods-is-ecommerce-not-dropshipping]] = AutoDS is איקומרס, users are סוחרים. New Hebrew pitches follow the current rule.
 - "No external investors" is fine and consistent with [[feedback-lior-investors-never-said-no]]; never turn it into "investors rejected him".
 - Parents' aliyah "35 years ago" = a year; canon says never publish an aliyah year. Use "immigrated from Ukraine".
+
+## Lesson from ice 40U40 2026, Reut 2026-10-25
+Leave Forbes 30U30 out of short pitches to OTHER outlets' lists. A rival outlet's list makes the candidate look already covered, and lists want discoveries. Keep it for the follow-up interview, or for non-competing forms like conferences and awards.

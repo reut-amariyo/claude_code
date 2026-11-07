@@ -28,3 +28,5 @@ checklist card and then a text-heavy page screenshot for the next post. Reut had
 2,215 imp (n=12). Real Lior photo median 4,077 and 7 of the top 16. Winning memes are FAMOUS templates (Base44 147K, grandpa 93K,
 Brad Pitt 30K); AI-generated cartoons sit at the bottom. Strongest rule: the image PROVES the hook (record post = Lior + Fiverr's
 CEO under the Fiverr logo, not the podcast frame).
+
+**2026-10-27 update:** the bootstrap sorry/not-sorry post hit 18K with Reut's pick, a warm tuxedo selfie of Lior + co-founder Michael, the person named in point 3. I had ranked a 2016/2026 concept split first. Rank a real photo of Lior with a person named in the post at least as high as a concept image. See [[lior-post-bootstrap-sorry-not-sorry-18k]].

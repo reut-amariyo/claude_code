@@ -7,21 +7,31 @@
 - [Agency produces content, I learn](project-agency-produces-content-i-learn.md) — since 2026-06-27; don't…
 - 📸 [IG agency engagement to 500K](project-ig-agency-500k-engagement.md) — need 25K/mo vs ~10K actual…
 - 🆕 [Lior IG = US-only access (PIA Florida)](project-lior-ig-us-location.md) — dedicated IP Miami; Lior…
+- 🆕 [Emily Shwed consult: "only Lior" gate](reference-emily-shwed-consult-2026-10-21.md) — face+credibility line in every IG post; searchable beta shirt
 - 📸 [What actually grows Lior's IG](lior-ig-content-engines.md) — reels = reach, carousels =…
 - [500K IG / 100K LinkedIn plan](project-500k-ig-100k-linkedin-plan.md) — IG DEADLINE 31 Aug 2027 (12…
 - [Monthly review decks live on the Desktop](reference-monthly-review-decks-desktop.md) — `~/Desktop/brand/month sum/`…
 - [LinkedIn monthly = connections + followers](feedback-linkedin-show-connections-and-followers.md) — show both totals, never sum…
 - [Metricool API coverage](reference-metricool-api-data-coverage.md) — blogId 5775125; IG complete…
 
+- 🆕 [AutoDS culture @ mgmt offsite Oct 2026](autods-culture-management-offsite-2026-10.md) — mid-mgmt = drivers, too corporate, "ship without a captain"; 8 post angles in B-brain/meetings
+- 🆕 [Lior's internal-leader voice](lior-voice-offsite-2026-10.md) — flat verdicts, concedes in public, gives power away
+
 ## 🧭 BRAND NORTH STAR (read before ANY Lior content)
+- 🆕 [Name idea: "The $1 Club"](project-name-idea-the-1-dollar-club.md) — for a future Lior newsletter/group; from his $1 paid-trial SaaS belief
 - [PB Strategy V8](lior-pb-strategy-v8.md)
 - [Visual Identity (VI)](lior-visual-identity-vi.md)
 
+- 🆕 [AI tool watchlist (10 apps)](reference-ai-tool-watchlist-2026-10.md) — Reut's "interesting" set; news feeds Release Decode only, list format banned for Lior
+
 ## 🏆 LinkedIn LEADING RULES (read FIRST before any Lior LinkedIn post)
+- 🆕 [Tony Robbins couple post = donor for Lior+Galit at Tony Robbins](reference-tony-robbins-couple-retreat-post.md) — copy its structure when they attend together
 - 🔴 [Image = a hook; my visual picks lag](feedback-visual-is-a-hook.md) — simple real Lior photo first
+- 🔴 [Influencer how-to collab w/ Mark Tilbury, ~1.8K at 15h](lior-post-influencers-mark-tilbury-collab-2026-11.md) — dormant LinkedIn partner = no collab reach
+- 🟢 [Bootstrap sorry/not-sorry, 18K](lior-post-bootstrap-sorry-not-sorry-18k.md) — 2026-10-26; Jasmin Alić donor; every item must be bootstrap-only; tuxedo photo beat my pick
 - 🏆 [RECORD: $38M walk-away post, ~127K / ~400 fol](lior-post-built-to-sell-38m-record.md) — 2026-10-19; podcast promo as…
 - 🔴 [Topic gate: only Lior could write this](feedback-topic-gate-only-lior-can-write.md) — 7 questions BEFORE choosing a…
-- 🟣 [Build on proven structures](feedback-build-on-proven-structures.md) — start from a donor post that…
+- 🟣 [Build on proven structures](feedback-build-on-proven-structures.md) — every donor Reut sends: use now AND save to bank; scan bank before every draft
 - 🆕 [Lara Acosta SLAY framework](reference-lara-acosta-slay-framework.md) — Story 2 lines, Lesson 1 line…
 - 🟢 [Codie Sanchez 7-beat spine = default skeleton](lior-linkedin-codie-7-beat-spine.md) — negative-list hook, outside…
 - 🚫 [Ruben Hassid moratorium](feedback-diversify-inspiration-creators.md) — no Hassid archetypes for the…
@@ -39,10 +49,14 @@
 - [Newsjack = human reaction, not news anchor](feedback-newsjack-human-not-news-anchor.md) — comment engine but low reach…
 - 🆕 [Lior's picks: Full-stack AI + 100 ideation…](lior-taste-full-stack-ai-explainer.md) — AI-era founder frameworks…
 - 🆕 [Justin Welsh "Go make some friends"](reference-justin-welsh-make-friends-essay.md) — peer network before anyone is…
+- 🆕 [Tom Orbach 2027 predictions, applied](reference-tom-orbach-2027-predictions-donor.md) — GEO flips per model, events for the clip, AI-commerce spine, value-first retention
+- 🆕 [Rob Hallam / SuperX = AF-on-X donor](reference-rob-hallam-superx-donor.md) — selfie beat demo launch post; loop attention→offer→receipt
 - 🆕 [Alon Houri = donor creator, 4 winners](reference-alon-houri-donor-creator.md) — coined term per post, one…
 - [LinkedIn advisor shortlist](reference-linkedin-advisor-shortlist.md) — consultants ranked by fit; van…
 
 ## 🔨 ACTIVE BUILDS
+- 🆕 [Sales Navigator Core buy link](reference-linkedin-sales-navigator-core.md) — compare-plans page, $119.99/mo; trial rules
+- 🆕 [US senior connect list, batch 1 done](project-lior-us-senior-connect-batch.md) — batch 1 2026-10-25, batch 2 = 34 CEOs 10-30, batch 3 = 53 founders/C-level 11-05
 - 🆕 [ManyChat funnel V5 rebuild (Mike PJ)](project-manychat-funnel-v5-rebuild.md) — drafts only, V4.4 live; shpat_ token-in-DM flag
 - 🆕 [Voice kits per person, /voice-kit](project-voice-kits.md) — Story Bible + Voice + Anti-AI self-check; Lior, Reut, new CEOs
 - 🆕 [Oct 2026 employee comms: include Ep 568 image](project-internal-comms-oct-2026-podcast-image.md) — Reut's monthly internal note to…
@@ -69,6 +83,8 @@
 - 🆕 [Lior's 5 acquisition buy rules](lior-acquisition-buy-rules.md) — payback within a year = buy…
 - 🆕 [Two stories from the 2026-09-22 tapes](lior-stories-recordings-2026-09-22.md) — the AI brain behind his…
 
+- 🆕 [Lior Globes column on AI layoffs, Jun 2026](reference-lior-globes-ai-layoffs-column.md) — "replace a person with a machine rarely adds up"; AutoDS did cut support
+
 ## 🤝 PERSONAL (not Lior / not AutoDS)
 - [Reut's private folder](project-reut-private-folder.md)
 - [My receipts are issued in SUMIT](reference-receipts-issued-via-sumit.md)
@@ -87,8 +103,10 @@
 - [No parentheses](feedback-no-parentheses.md)
 - [Minimize "just"](feedback-avoid-just-overuse.md)
 - [Posts always English](feedback-posts-always-english.md)
+- 🔴 [Hook <10 words = LinkedIn-derived](feedback-hook-length-rule-is-linkedin.md) — never cite it as an X fact
 - [Favorite hooks](feedback-favorite-hooks.md)
 - [No imposter syndrome](feedback-lior-no-imposter-syndrome.md)
+- 🔴 [CEO reputation lens](feedback-lior-ceo-reputation-lens.md) — no line that implies he cut without thinking; no "did we do enough?"
 - ["Write like Natalie" — phonetic…
 
 ## Lior's Brand Foundation (run BEFORE any post)
@@ -130,10 +148,11 @@
 - [AI prompts go in code blocks](feedback-ai-prompts-in-code-blocks.md)
 - [LinkedIn line spacing rules](feedback-linkedin-line-spacing-rules.md)
 - [Read every link Reut sends](feedback-read-every-link-sent.md)
-- [Post draft delimiters](feedback-post-draft-delimiters.md)
+- [Post drafts = copy block + START/END markers](feedback-post-draft-delimiters.md) — code block for the copy button, markers outside
+- 😄 [Replies need more humor](feedback-replies-use-more-humor.md) — one playful option in every set; trolls get a joke, not silence
 - [Reply voice](feedback-reply-voice.md)
 - [Never arrogant](feedback-lior-never-arrogant.md)
-- [Reply formatting](feedback-reply-formatting.md)
+- [Reply formatting](feedback-reply-formatting.md) — ALWAYS: several sharp options, own code block each, Lior voice, 1+ funny
 - [No list-item numbers in comments](feedback-comments-no-list-item-numbers.md)
 - [Tag companies in X replies](feedback-tag-companies-in-x-replies.md)
 - [LinkedIn comments tight](feedback-linkedin-comments-keep-short.md)
@@ -150,6 +169,9 @@
 - [Performance log](lior-performance-log.md)
 - [Viral inspiration must be from the last…](feedback-viral-post-recency.md)
 - Skills: `/linkedin-learn` (single post), `/linkedin-digest` (weekly, Hebrew approval)
+
+- [No closing question by default](feedback-no-closing-question-default.md) — winners end on the handover line, not a question
+- [Closing questions: binary for founder choices, experience+opinion for big debates](feedback-closing-question-binary-choice.md) — always name the topic, e.g. AI
 
 ## LinkedIn — Failure Patterns
 - 🔴 [Skills giveaway flop, ~600 imp](feedback-skills-giveaway-flop-2026-10.md)
@@ -237,3 +259,6 @@
 - [IG stories + LinkedIn posts end with a…](feedback-ig-story-text-cursor-sign.md)
 - [Deliverables answer the question only](feedback-deliverables-answer-the-question-only.md)
 - [Lior O-1 visa: judging credits](project-lior-o1-visa-judging.md)
+- 🔴 [Reut cut it = it stays cut](feedback-respect-reut-edits.md) — her edited version is the base; never restore what she removed
+- 🆕 [Lior Store Builder AI mockup](project-lior-store-builder-ai.md) — hackathon chat+call bot that builds the BYS store in-chat; AC AI next
+- 🔴 [BYS bot = store-opening intent only](feedback-bys-bot-store-intent-only.md) — no hobby chips like 'I love my dog'; steer to the 5 niche cards

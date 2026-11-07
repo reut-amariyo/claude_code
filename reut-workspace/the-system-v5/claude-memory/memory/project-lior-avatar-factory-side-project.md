@@ -25,6 +25,12 @@ can learn from it, since that is the operator-seat material that converts follow
   influencers") retells Mark Tilbury's YouTube test (LlhTEttKcwQ, "I Tried The LAZIEST Way to
   Make Money With AI") as "THE TEST WE RAN". Flagged to Reut 2026-10-20 as a blocker: never
   present another creator's experiment as Lior's. Avatar Factory is only one line near the end.
+- Reut 2026-10-21: public content MAY say Lior created an AI influencer. It may NOT say Avatar
+  Factory is his. Don't name Avatar Factory next to his own influencer story, so it doesn't read
+  as an owner plugging his tool without disclosure.
+- Reut 2026-10-26: wants to SELL Avatar Factory through Lior's X, via a new X agency she's
+  vetting (intake form asked LTV). Flagged: selling it from his account requires disclosing
+  his ownership, which conflicts with the 2026-10-21 "ownership stays private" rule. Lior decides.
 - Before 2026-10-20 the rule was: never name or describe Avatar Factory in a public draft. Content = the method, the rules he
   works by, moments with numbers, artifacts he reuses (after product details are stripped).
 - Every post on this goes through Lior's approval, as always.

@@ -35,7 +35,17 @@ only open variable left is whether the content is good.
 First one built this way: the-system-v5/O-output/linkedin-janitor-ceo-borrowed-structure-2026-08-30.md
 Donor was Eric Partaker's "7 Truths New CEOs Learn Too Late". Related: [[lior-top-8-10k-playbook]].
 
+**STANDING ORDER (Reut, 2026-11-03):** every post Reut sends as "a post that worked" / "מבנה שהצליח" is used
+TWICE: (1) for the current draft, and (2) saved here in the donor bank right away, with hook + beat map, so
+that future drafts pull hooks and structures from it. Before drafting any new Lior post, scan this bank
+for the best-fitting donor and offer it, even when Reut doesn't name one.
+
 **Donor bank (mapped teardowns, ready to build on):**
+- 2026-11-03 batch, all four in the-system-v5/M-memory/linkedin-donors-reut-sent-2026-11-03.md:
+  D1 "My mum said she'd never speak to me again" - loved-one pushback, empathy twist, "describing your situation or theirs?" close + outside quote.
+  D2 Justin Welsh "The happiest people I know all have something a little odd in common:" - inverted-order thesis, dated scene with partner, 3 pruning bullets, cost accepted, ritual result, "Yeah/Sure" concession.
+  D3 Tim Stoddart "Reminder: 99.99999% of successful people..." - black text card, absurd-precision stat, 4-word verdict.
+  D4 "After 15+ years... 2 opinions that seem contradictory:" - 2 numbered opposites, "The sweet spot is:" 2-bullet synthesis.
 - Eric Partaker, "7 Truths New CEOs Learn Too Late" - numbered-list/save play.
   the-system-v5/O-output/linkedin-janitor-ceo-borrowed-structure-2026-08-30.md
 - "At 16, I cleaned toilets" age-ladder timeline - ladder of ages + odd-numbered advice list.

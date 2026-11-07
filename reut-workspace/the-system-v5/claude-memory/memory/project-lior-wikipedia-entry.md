@@ -1,8 +1,11 @@
 ---
 name: project-lior-wikipedia-entry
-description: Hebrew Wikipedia entry for Lior Pozin - draft, source set, and the submission path that avoids deletion
+description: "Hebrew Wikipedia entry for Lior Pozin - draft, source set, and the submission path that avoids deletion"
 metadata:
+  node_type: memory
   type: project
+  originSessionId: df77d497-2d01-48a6-9bcc-622d74285fe1
+  modified: 2026-10-25T06:12:18.950Z
 ---
 
 Started 2026-08-26 at Reut's request. Draft lives at
@@ -45,3 +48,5 @@ fiverr.com is on the Wikimedia GLOBAL spam blacklist (meta), so any fiverr.com U
   account on he-wiki, following he rules (paid disclosure already done, AI-use disclosure on the draft talk page).
 
 2026-10-15: PUBLISHED 9 source fixes to he draft (summary "תיקון התאמה למקורות. עריכה בתשלום") + AI-use disclosure section on שיחת טיוטה:ליאור פוזין. 0 cite errors. Vault file synced to live. Colleague (likely XyberNomad, European, past wiki experience) will retarget en "Lior Pozin" redirect himself; Reut stays off en-wiki. Flagged: he needs a paid disclosure if AutoDS-connected.
+
+2026-10-25 LIVE CHECK: en "Lior Pozin" redirect retargeted Fiverr -> AutoDS on 2026-10-15 22:09 UTC (temp account, "Company the subject founded is the more appropriate redirect target"); en AutoDS article live, last edit 10-15. en Draft:Lior Pozin unchanged since the decline. he draft unchanged since 10-15, no deletion tags; move request still open, still {{מצב|חשיבות בספק}}, only Ladypine replied, no second editor in 13 days. No he AutoDS article.

@@ -1,0 +1,767 @@
+<title>Lior Store Builder AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#F4F5F8; --surface:#FFFFFF; --surface-2:#ECEEF4; --ink:#0F1220; --muted:#5C6280; --line:#DEE1EB;
+  --accent:#3550F0; --accent-soft:#E4E9FF; --accent-ink:#FFFFFF; --live:#14A06B; --warn:#E5484D;
+  --shadow:0 1px 2px rgba(15,18,32,.06),0 14px 36px -14px rgba(15,18,32,.22);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Figtree",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  color-scheme:dark;--bg:#0B0D17;--surface:#141829;--surface-2:#1C2136;--ink:#EDEFFA;--muted:#9BA1C2;--line:#272D47;
+  --accent:#7088FF;--accent-soft:#222A55;--accent-ink:#0B0D17;--shadow:0 1px 2px rgba(0,0,0,.4),0 18px 44px -18px rgba(0,0,0,.75);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;--bg:#0B0D17;--surface:#141829;--surface-2:#1C2136;--ink:#EDEFFA;--muted:#9BA1C2;--line:#272D47;
+  --accent:#7088FF;--accent-soft:#222A55;--accent-ink:#0B0D17;--shadow:0 1px 2px rgba(0,0,0,.4),0 18px 44px -18px rgba(0,0,0,.75);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;margin:0}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+button:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app{height:100%;display:flex;flex-direction:column}
+
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-inline:20px;padding-block:12px;border-bottom:1px solid var(--line);background:var(--surface)}
+.logo{display:flex;align-items:center;gap:10px;min-width:0}
+.logo-mark{width:30px;height:30px;border-radius:9px;background:var(--ink);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:15px;flex:none}
+.logo b{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:-.01em;white-space:nowrap}
+.logo b span{color:var(--accent)}
+.logo small{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+@media (max-width:520px){.logo small{display:none}}
+.bar-actions{display:flex;gap:8px;align-items:center}
+.ghost{padding:8px 12px;border-radius:10px;font-weight:600;font-size:13.5px;color:var(--muted);border:1px solid var(--line);background:var(--surface)}
+.ghost:hover{color:var(--ink)}
+.storepill{display:none;padding:8px 12px;border-radius:10px;font-weight:600;font-size:13.5px;background:var(--accent-soft);color:var(--accent)}
+
+/* home */
+.home{flex:1;overflow-y:auto;padding-inline:20px;padding-block:32px}
+.home-in{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:44px;align-items:center}
+@media (max-width:820px){.home-in{grid-template-columns:1fr;gap:24px}}
+.portrait{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:507/680;max-height:620px;background:var(--surface-2);box-shadow:var(--shadow)}
+@media (max-width:820px){.portrait{aspect-ratio:4/3.4;max-height:none}}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
+.portrait .badge{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:8px;background:rgba(15,18,32,.78);color:#fff;padding:8px 12px;border-radius:999px;font-size:13px;backdrop-filter:blur(6px)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--live);display:inline-block;box-shadow:0 0 0 3px rgba(20,160,107,.25)}
+.intro{display:grid;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.intro h1{font-family:var(--display);font-weight:800;font-size:clamp(34px,5vw,56px);line-height:1.02;letter-spacing:-.03em;margin:0;text-wrap:balance}
+.intro p.lede{margin:0;font-size:17px;color:var(--muted);max-width:52ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px}
+.facts span{font-size:13px;padding:6px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.starter{display:flex;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:8px;box-shadow:var(--shadow)}
+.starter input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;padding:8px 10px;color:var(--ink)}
+.starter input:focus{outline:none}
+.send{width:46px;height:46px;border-radius:14px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.send svg,.iconbtn svg{width:19px;height:19px}
+.callcta{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:14px;background:var(--ink);color:var(--bg);font-weight:700;justify-self:start}
+.callcta svg{width:18px;height:18px}
+.prompts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+@media (max-width:520px){.prompts{grid-template-columns:1fr}}
+.prompts button{text-align:left;padding:12px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--line);font-size:14px;line-height:1.35}
+.prompts button:hover{border-color:var(--accent)}
+.fine{font-size:12px;color:var(--muted)}
+
+/* chat layout */
+.chat{flex:1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:0}
+.chat.solo{grid-template-columns:minmax(0,1fr)}
+.chat.solo .side{display:none}
+.thread{display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--line);background:var(--bg);position:relative}
+.chat.solo .thread{border-right:0}
+.msgs{flex:1;overflow-y:auto;padding-inline:20px;padding-block:22px}
+.msgs-in{max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+.row{display:flex;gap:10px;align-items:flex-end;animation:pop .22s ease-out}
+.row.user{justify-content:flex-end}
+.row .ava{width:30px;height:30px;border-radius:50%;object-fit:cover;flex:none}
+.bubble{max-width:82%;padding:11px 15px;border-radius:20px;font-size:15px;line-height:1.5;white-space:pre-wrap}
+.row.lior .bubble{background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:6px}
+.row.user .bubble{background:var(--accent);color:var(--accent-ink);border-bottom-right-radius:6px}
+.bubble .tag{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;opacity:.65;margin-bottom:2px}
+.sys{align-self:center;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.typing{display:inline-flex;gap:4px;padding:15px 16px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:blink 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes blink{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes pop{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+.storecard{margin-left:40px;max-width:360px;display:flex;gap:12px;align-items:center;padding:12px;border-radius:16px;background:var(--surface);border:1px solid var(--line);text-align:left}
+.storecard .mk{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#fff;flex:none}
+.storecard b{display:block;font-size:14.5px}
+.storecard small{color:var(--muted);font-size:12.5px}
+.niches{margin-left:40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;max-width:620px;animation:pop .25s ease-out}
+.niche{display:grid;gap:6px;text-align:left;padding:12px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.niche:hover{border-color:var(--accent)}
+.niche .ic{width:36px;height:36px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.niche .ic svg{width:22px;height:22px}
+.niche b{font-size:14px;line-height:1.2}
+.niche small{font-size:12.5px;color:var(--muted);line-height:1.35}
+.niche.picked{border-color:var(--accent);background:var(--accent-soft)}
+.niches.done .niche:not(.picked){opacity:.45}
+@media (max-width:520px){.niches,.storecard{margin-left:0}}
+.offer{margin-left:40px;max-width:420px;border-radius:18px;border:1.5px solid var(--accent);background:var(--surface);padding:16px;display:grid;gap:10px;animation:pop .3s ease-out}
+.offer-top{display:flex;gap:12px;align-items:center}
+.offer .shield{width:42px;height:42px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;flex:none}
+.offer .shield svg{width:22px;height:22px}
+.offer b{font-family:var(--display);font-size:18px;display:block;line-height:1.15}
+.offer .price{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.offer p{margin:0;font-size:14px}
+.offer .terms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;text-align:center}
+.offer .terms div{background:var(--surface-2);border-radius:12px;padding:8px 4px;font-size:11.5px;color:var(--muted)}
+.offer .terms strong{display:block;font-family:var(--display);font-size:19px;color:var(--ink);font-variant-numeric:tabular-nums}
+.offer-btns{display:flex;gap:8px;flex-wrap:wrap}
+.offer-btns button{flex:1;padding:10px 12px;border-radius:12px;font-weight:700;border:1px solid var(--line)}
+.offer-btns .yes{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.offer.added{border-style:dashed}
+.offer.added .offer-btns{display:none}
+.offer .status{font-size:13px;font-weight:600;color:var(--live)}
+@media (max-width:520px){.offer{margin-left:0}}
+.quick{display:flex;gap:6px;flex-wrap:wrap;max-width:720px;margin:0 auto;padding-inline:20px;padding-bottom:8px}
+.quick button{font-size:13px;padding:7px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.composer{padding-inline:20px;padding-block:10px 14px}
+.composer-in{max-width:720px;margin:0 auto;display:flex;gap:8px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:6px;box-shadow:var(--shadow)}
+.composer input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:15.5px;padding:9px 10px;color:var(--ink)}
+.composer input:focus{outline:none}
+.iconbtn{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;color:var(--muted);flex:none}
+.iconbtn:hover{background:var(--surface-2);color:var(--ink)}
+.composer .send{width:42px;height:42px;border-radius:12px}
+.composer .send:disabled{opacity:.5;cursor:not-allowed}
+.disclaim{max-width:720px;margin:6px auto 0;text-align:center;font-size:11.5px;color:var(--muted)}
+
+/* call overlay */
+.call{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:space-between;gap:14px;padding:24px 20px;text-align:center;
+  background:radial-gradient(110% 60% at 50% 0%,var(--accent-soft),var(--bg) 70%)}
+.call{overflow-y:auto}
+.call-quick{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.call-quick button{font-size:13px;padding:7px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+#callOffer .offer{margin-left:0;max-width:none;text-align:left}
+.call .timer{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+.call-mid{display:grid;justify-items:center;gap:18px}
+.bigava{position:relative;width:156px;height:156px}
+.bigava img{width:100%;height:100%;border-radius:50%;object-fit:cover;position:relative;z-index:1;border:4px solid var(--surface)}
+.ring{position:absolute;inset:0;border-radius:50%;background:var(--accent);opacity:0}
+.speaking .ring{animation:ring 1.6s ease-out infinite}
+.speaking .ring:nth-child(2){animation-delay:.5s}
+@keyframes ring{from{transform:scale(1);opacity:.35}to{transform:scale(1.55);opacity:0}}
+.call h2{font-family:var(--display);font-size:24px;margin:0}
+.wave{display:flex;align-items:center;gap:4px;height:52px}
+.wave i{width:5px;border-radius:3px;background:var(--accent);height:6px;transition:height .09s linear}
+.caption{min-height:84px;max-width:460px;font-size:16.5px;line-height:1.5}
+.caption .spk{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.call-bottom{width:100%;max-width:460px;display:grid;gap:12px}
+.call-type{display:flex;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:5px}
+.call-type input{flex:1;min-width:0;border:0;background:transparent;font:inherit;padding:8px 10px;color:var(--ink)}
+.call-type input:focus{outline:none}
+.call-ctrls{display:flex;justify-content:center;gap:18px}
+.round{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1px solid var(--line)}
+.round svg{width:22px;height:22px}
+.round.end{background:var(--warn);color:#fff;border-color:transparent}
+.round.on{background:var(--ink);color:var(--bg)}
+
+/* store side */
+.side{display:flex;flex-direction:column;min-height:0;background:var(--surface)}
+.side-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 16px;border-bottom:1px solid var(--line)}
+.side-head b{font-family:var(--display);font-size:16px}
+.closeside{display:none}
+.chrome{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--surface-2);border-bottom:1px solid var(--line)}
+.lights{display:flex;gap:6px}.lights i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.url{flex:1;min-width:0;display:flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:6px 10px;font-family:var(--mono);font-size:12.5px;color:var(--muted);white-space:nowrap;overflow:hidden}
+.url svg{width:13px;height:13px;flex:none}
+.url.ok{color:var(--ink)}.url.ok svg{color:var(--live)}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;padding:10px 14px;border-bottom:1px solid var(--line)}
+.step{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);line-height:1.2}
+.step i{width:17px;height:17px;flex:none;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-style:normal}
+.step.doing i{border-color:var(--accent);border-top-color:transparent;animation:spin .8s linear infinite}
+.step.done{color:var(--ink)}
+.step.done i{background:var(--live);border-color:var(--live)}
+.step.done i::after{content:"";width:7px;height:4px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg) translate(1px,-1px)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.storewrap{flex:1;overflow-y:auto;min-height:0}
+.store{--s-bg:#F7F7F8;--s-ink:#2A2A2E;--s-muted:#8C8C94;--s-acc:#8C8C94;--s-card:#ECECEF;--s-line:#E2E2E6;
+  background:var(--s-bg);color:var(--s-ink);min-height:100%;position:relative;padding-bottom:96px;transition:background .6s}
+.s-nav{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 20px;border-bottom:1px solid var(--s-line)}
+.s-logo{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;font-size:18px}
+.s-mark{width:30px;height:30px;border-radius:50%;background:var(--s-acc);color:var(--s-bg);display:grid;place-items:center;font-size:13px;font-weight:800}
+.s-links{display:flex;gap:14px;font-size:12.5px;color:var(--s-muted)}
+.s-hero{padding:24px 20px 16px;display:grid;gap:6px}
+.s-hero .ey{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--s-acc)}
+.s-hero h3{font-family:var(--display);font-weight:700;font-size:clamp(24px,2.6vw,32px);line-height:1.08;letter-spacing:-.02em;margin:0;text-wrap:balance}
+.s-hero p{margin:0;color:var(--s-muted);font-size:13.5px}
+.skel{background:var(--s-line);border-radius:8px;color:transparent!important}
+.counter{font-family:var(--mono);font-size:11px;color:var(--s-muted);padding:0 20px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.s-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:12px;padding:8px 20px 20px}
+.prod{display:grid;gap:5px;font-size:12px;animation:pop .3s ease-out}
+.prod .ph{aspect-ratio:1;border-radius:12px;background:var(--s-card);display:grid;place-items:center;color:var(--s-acc)}
+.prod .ph svg{width:52%;height:52%}
+.prod b{font-weight:600;line-height:1.25}
+.prod span{color:var(--s-muted);font-variant-numeric:tabular-nums}
+.prod.empty .ph{background:var(--s-line)}
+.prod.empty b,.prod.empty span{background:var(--s-line);border-radius:4px;color:transparent;height:10px}
+.ready{position:sticky;bottom:14px;margin:0 14px;background:var(--s-ink);color:var(--s-bg);border-radius:16px;padding:14px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;animation:pop .35s ease-out;box-shadow:0 20px 40px -16px rgba(0,0,0,.5)}
+.ready b{font-family:var(--display);font-size:17px;display:block}
+.ready small{opacity:.75;font-size:12.5px}
+.ready button{background:var(--s-acc);color:#fff;padding:11px 18px;border-radius:12px;font-weight:700}
+
+@media (max-width:900px){
+  .chat{grid-template-columns:1fr}
+  .side{position:fixed;inset:0;z-index:20;transform:translateY(100%);transition:transform .3s ease;padding-top:env(safe-area-inset-top,0px)}
+  .side.open{transform:none}
+  .closeside{display:inline-flex}
+  .has-store .storepill{display:inline-flex}
+  .thread{border-right:0}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:30;background:rgba(10,12,22,.55);display:grid;place-items:center;padding:16px}
+.sheet{background:var(--surface);border-radius:22px;padding:24px;width:100%;max-width:420px;display:grid;gap:14px;box-shadow:var(--shadow)}
+.sheet h3{font-family:var(--display);font-size:24px;margin:0;letter-spacing:-.01em}
+.sheet p{margin:0;color:var(--muted);font-size:14px}
+.sheet label{display:grid;gap:6px;font-size:13px;font-weight:600}
+.sheet input{font:inherit;padding:11px 12px;border-radius:12px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.primary{padding:12px 16px;border-radius:12px;background:var(--accent);color:var(--accent-ink);font-weight:700}
+.sheet ul{margin:0;padding-left:18px;color:var(--muted);font-size:13.5px;display:grid;gap:4px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:12px;font-size:13.5px;z-index:40;max-width:calc(100% - 32px)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="app" id="app">
+  <header class="bar">
+    <div class="logo">
+      <span class="logo-mark">L</span>
+      <b>Lior Store Builder <span>AI</span></b>
+      <small>by Build Your Store</small>
+    </div>
+    <div class="bar-actions">
+      <button class="storepill" id="storePill">Your store</button>
+      <button class="ghost" id="newChat" hidden>New chat</button>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <main class="home" id="home">
+    <div class="home-in">
+      <div class="portrait">
+        <img src="__HERO__" alt="Lior Pozin, founder of AutoDS">
+        <span class="badge"><span class="dot"></span>Lior AI is online 24/7</span>
+      </div>
+      <div class="intro">
+        <span class="eyebrow">Your first online store, built with Lior</span>
+        <h1>Want your own online store? Let's build it together.</h1>
+        <p class="lede">I'm the AI version of Lior Pozin. I ran my first store from my parents' apartment, then built AutoDS and sold it to Fiverr. Ask me anything about starting online, then watch your free Shopify store get built right here in the chat.</p>
+        <form class="starter" id="startForm">
+          <input id="startInput" autocomplete="off" placeholder="I want to open an online store, but I don't know how to start…" aria-label="Message Lior">
+          <button class="send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+        <div class="prompts" id="prompts">
+          <button data-q="I want to open an online store, but I don't know how to start.">I want to open an online store, but I don't know how to start</button>
+          <button data-q="Which niche should I pick for my first store?">Which niche should I pick?</button>
+          <button data-q="Is it really free? What's the catch?">Is it really free? What's the catch?</button>
+          
+          <button data-q="I'm not technical at all. Can I still do this?">I'm not technical. Can I still do this?</button>
+        </div>
+        <button class="callcta" id="homeCall"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 3h4l2 5-2.5 1.8a11 11 0 0 0 5.7 5.7L16 13l5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>Or call Lior</button>
+        <div class="facts"><span>Free store, no credit card</span><span>10 winning products</span><span>Free .store domain</span><span>Shopify #1 partner 2024 &amp; 2025</span></div>
+        <p class="fine">Lior Store Builder AI is an AI trained on Lior Pozin's story and the Build Your Store playbook. It can make mistakes.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- CHAT -->
+  <section class="chat solo" id="chat" hidden>
+    <div class="thread">
+      <div class="msgs" id="msgsWrap"><div class="msgs-in" id="msgs" aria-live="polite"></div></div>
+      <div class="quick" id="quick"></div>
+      <form class="composer" id="composer">
+        <div class="composer-in">
+          <button type="button" class="iconbtn" id="callBtn" title="Call Lior" aria-label="Call Lior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></button>
+          <input id="input" autocomplete="off" placeholder="Message Lior…" aria-label="Message Lior">
+          <button class="send" id="send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <p class="disclaim">AI version of Lior Pozin. It can make mistakes.</p>
+      </form>
+
+      <div class="call" id="call" hidden>
+        <div class="timer" id="timer">00:00</div>
+        <div class="call-mid">
+          <div class="bigava" id="bigava"><span class="ring"></span><span class="ring"></span><img src="__AVA__" alt=""></div>
+          <h2>Lior</h2>
+          <div class="wave" id="wave"></div>
+          <div class="caption" id="caption"></div>
+        </div>
+        <div class="call-bottom">
+          <div id="callOffer"></div>
+          <div class="call-quick" id="callQuick"></div>
+          <form class="call-type" id="callForm">
+            <input id="callInput" autocomplete="off" placeholder="Speak, or type here" aria-label="Say something to Lior">
+            <button class="send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </form>
+          <div class="call-ctrls">
+            <button class="round" id="micBtn" title="Hold to talk" aria-label="Talk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></button>
+            <button class="round" id="spkBtn" title="Mute Lior" aria-label="Mute Lior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M19 6a8 8 0 0 1 0 12"/></svg></button>
+            <button class="round end" id="endBtn" title="End call" aria-label="End call"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 14c5-5 13-5 18 0l-2 3-4-1v-3a10 10 0 0 0-6 0v3l-4 1z"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="side" id="side">
+      <div class="side-head"><b id="sideTitle">Your store</b><button class="ghost closeside" id="closeSide">Back to chat</button></div>
+      <div class="chrome">
+        <div class="lights"><i></i><i></i><i></i></div>
+        <div class="url" id="url"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span id="urlText">your-store.store</span></div>
+      </div>
+      <div class="steps">
+        <div class="step" data-s="niche"><i></i>Niche</div>
+        <div class="step" data-s="brand"><i></i>Brand</div>
+        <div class="step" data-s="products"><i></i>10 products</div>
+        <div class="step" data-s="theme"><i></i>Theme</div>
+        <div class="step" data-s="domain"><i></i>Domain</div>
+      </div>
+      <div class="storewrap">
+        <div class="store" id="store">
+          <div class="s-nav">
+            <div class="s-logo"><span class="s-mark" id="sMark">?</span><span id="sName" class="skel">Your store name</span></div>
+            <div class="s-links"><span>Shop</span><span>About</span><span>Cart · 0</span></div>
+          </div>
+          <div class="s-hero">
+            <span class="ey" id="sNiche">Niche</span>
+            <h3 id="sHead" class="skel">Your headline goes here</h3>
+            <p id="sSub" class="skel">A short line about the store</p>
+          </div>
+          <div class="counter"><span id="sCount">0 / 10 products</span><span>From the AutoDS product database</span></div>
+          <div class="s-grid" id="sGrid"></div>
+          <div id="readyBox"></div>
+        </div>
+      </div>
+    </aside>
+  </section>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <form class="sheet" id="claimForm">
+    <h3 id="claimTitle">Claim your store</h3>
+    <p>Next you create your free Shopify account, and this store gets installed on it. No credit card.</p>
+    <ul><li>Your AI-built Shopify store with 10 products</li><li>Free .store domain</li><li>You keep 100% of your profits</li><li id="insLine" hidden>Launch Insurance: $19, one time</li></ul>
+    <label for="claimEmail">Your email<input id="claimEmail" type="email" required placeholder="you@email.com"></label>
+    <button class="primary" type="submit">Build my FREE store</button>
+    <button type="button" class="fine" id="claimCancel">Not yet, keep chatting</button>
+  </form>
+</div>
+
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const AVA = '__AVA__';
+const msgs=$('msgs'), wrap=$('msgsWrap'), input=$('input'), sendBtn=$('send');
+
+/* ---------- product icons ---------- */
+const ICON = {
+  candle:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><path d="M32 8c5 6 5 10 0 14-5-4-5-8 0-14z" fill="currentColor"/><rect x="18" y="26" width="28" height="30" rx="4"/><path d="M18 36h28"/></svg>',
+  throw:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M10 16h44v28c-8 6-14-2-22 4s-14 2-22-4z"/><path d="M10 26h44M10 36h44"/></svg>',
+  mug:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M14 20h30v26a8 8 0 0 1-8 8H22a8 8 0 0 1-8-8z"/><path d="M44 26h4a7 7 0 0 1 0 14h-4"/><path d="M24 8c-3 4 3 6 0 10M34 8c-3 4 3 6 0 10"/></svg>',
+  pillow:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 14c10 4 30 4 40 0-4 12-4 24 0 36-10-4-30-4-40 0 4-12 4-24 0-36z"/><circle cx="32" cy="32" r="3" fill="currentColor"/></svg>',
+  vase:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M26 10h12v8c8 6 10 14 8 24s-6 14-14 14-12-4-14-14 0-18 8-24z"/></svg>',
+  diffuser:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M18 56h28l-4-26H22z"/><path d="M28 30V14M32 30V8M36 30V14"/></svg>',
+  lamp:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="26" r="16"/><path d="M32 42v10M22 56h20"/></svg>',
+  slippers:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 44c0-14 6-26 12-26s8 10 8 22-4 16-10 16-10-4-10-12zM34 40c0-12 4-22 10-22s8 10 8 20-3 16-9 16-9-6-9-14z"/></svg>',
+  tray:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><ellipse cx="32" cy="38" rx="24" ry="10"/><path d="M14 30c4-4 10-6 18-6s14 2 18 6"/></svg>',
+  bowl:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M8 28h48c0 14-10 24-24 24S8 42 8 28z"/><path d="M22 52h20"/></svg>',
+  bag:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M12 22h40l-4 34H16z"/><path d="M24 22v-4a8 8 0 0 1 16 0v4"/></svg>',
+  bottle:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M26 6h12v8l4 6v34a4 4 0 0 1-4 4H26a4 4 0 0 1-4-4V20l4-6z"/><path d="M22 32h20"/></svg>',
+  toy:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><circle cx="32" cy="32" r="20"/><path d="M14 26c8 4 28 4 36 0M14 38c8-4 28-4 36 0"/></svg>',
+  shirt:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 10l-14 8 6 10 6-3v29h24V25l6 3 6-10-14-8c-2 5-6 7-10 7s-8-2-10-7z"/></svg>',
+  gadget:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="18" y="8" width="28" height="48" rx="6"/><path d="M28 48h8"/></svg>',
+  jar:'<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3"><rect x="20" y="8" width="24" height="8" rx="2"/><path d="M18 16h28v36a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4z"/><path d="M18 30h28"/></svg>'
+};
+const KINDS = Object.keys(ICON);
+const PALETTES = [
+  {bg:'#FAF6F0',ink:'#2B211C',muted:'#8A7A6E',acc:'#B4613F',card:'#F1E9DE',line:'#E6DBCD'},
+  {bg:'#F3F7F4',ink:'#16261E',muted:'#6B7F73',acc:'#2F7A57',card:'#E2EEE6',line:'#D3E3D9'},
+  {bg:'#F6F4FB',ink:'#1F1A33',muted:'#7A7491',acc:'#6B4FD8',card:'#E9E4F8',line:'#DCD5F1'},
+  {bg:'#FBF5F5',ink:'#2E1A1C',muted:'#8E7375',acc:'#C2415A',card:'#F5E3E5',line:'#ECD3D6'},
+  {bg:'#F2F6FA',ink:'#142030',muted:'#6A7A8C',acc:'#2A6FB0',card:'#E1EAF3',line:'#D1DEEA'}
+];
+
+/* ---------- state ---------- */
+let history=[], spec=null, busy=false, sample=null, mode='text', muted=false;
+const KEY='lior-store-builder-ai-v1';
+const save = () => { try{ localStorage.setItem(KEY, JSON.stringify({history, spec})); }catch(e){} };
+(async()=>{ try{ if (window.claude?.use) sample = await window.claude.use('sample'); }catch(e){ sample=null; } })();
+
+/* ---------- screens ---------- */
+function openChat(){
+  $('home').hidden=true; $('chat').hidden=false; $('newChat').hidden=false;
+}
+function showSide(){ $('chat').classList.remove('solo'); $('app').classList.add('has-store'); }
+
+/* ---------- messages ---------- */
+function addRow(who, text, viaCall){
+  const r=document.createElement('div'); r.className='row '+who;
+  if (who==='lior'){ const a=document.createElement('img'); a.className='ava'; a.src=AVA; a.alt=''; r.append(a); }
+  const b=document.createElement('div'); b.className='bubble';
+  if (viaCall){ const t=document.createElement('span'); t.className='tag'; t.textContent = 'On the call'; b.append(t); }
+  const body=document.createElement('span'); body.textContent=text; b.append(body); r.append(b);
+  msgs.append(r); wrap.scrollTop=wrap.scrollHeight; return body;
+}
+function addSys(t){ const s=document.createElement('div'); s.className='sys'; s.textContent=t; msgs.append(s); wrap.scrollTop=wrap.scrollHeight; }
+function typingOn(){
+  const r=document.createElement('div'); r.className='row lior';
+  r.innerHTML=`<img class="ava" src="${AVA}" alt=""><div class="bubble typing"><i></i><i></i><i></i></div>`;
+  msgs.append(r); wrap.scrollTop=wrap.scrollHeight; return r;
+}
+async function streamInto(el, text){
+  const words=text.split(' '); el.textContent='';
+  for (let i=0;i<words.length;i++){ el.textContent += (i?' ':'')+words[i]; wrap.scrollTop=wrap.scrollHeight; await sleep(reduce?0:32); }
+}
+function storeCard(s){
+  const c=document.createElement('button'); c.className='storecard'; c.type='button';
+  c.innerHTML=`<span class="mk" style="background:${s.palette.acc}"></span><span><b></b><small></small></span>`;
+  c.querySelector('.mk').textContent=s.mark; c.querySelector('b').textContent=s.name; c.querySelector('small').textContent=`${s.domain} · 10 products · tap to view`;
+  c.onclick=()=>{ $('side').classList.add('open'); };
+  msgs.append(c); wrap.scrollTop=wrap.scrollHeight;
+}
+function nicheCards(){
+  document.querySelectorAll('.niches:not(.done)').forEach(n=>n.remove());
+  const g=document.createElement('div'); g.className='niches';
+  for (const [name,ic,line] of NICHE_CARDS){
+    const b=document.createElement('button'); b.type='button'; b.className='niche';
+    b.innerHTML=`<span class="ic">${ICON[ic]}</span><b></b><small></small>`;
+    b.querySelector('b').textContent=name; b.querySelector('small').textContent=line;
+    b.onclick=()=>{ if(g.classList.contains('done')||busy) return; b.classList.add('picked'); g.classList.add('done'); ask(`Let's go with ${name}.`); };
+    g.append(b);
+  }
+  msgs.append(g); wrap.scrollTop=wrap.scrollHeight;
+}
+function setQuick(list){
+  for (const q of [$('quick'), $('callQuick')]){
+    q.innerHTML='';
+    for (const it of list){ const [label,text]=Array.isArray(it)?it:[it,it]; const b=document.createElement('button'); b.type='button'; b.textContent=label; b.onclick=()=>ask(text); q.append(b); }
+  }
+}
+
+/* ---------- store builder ---------- */
+const store=$('store'), sGrid=$('sGrid');
+const step=(k,st)=>{ document.querySelector(`.step[data-s="${k}"]`).className='step '+st; };
+function resetStore(){
+  store.removeAttribute('style'); $('sMark').textContent='?';
+  for (const [id,t] of [['sName','Your store name'],['sHead','Your headline goes here'],['sSub','A short line about the store']]) { $(id).textContent=t; $(id).classList.add('skel'); }
+  $('sNiche').textContent='Niche'; $('urlText').textContent='your-store.store'; $('url').classList.remove('ok');
+  $('sCount').textContent='0 / 10 products'; $('readyBox').innerHTML='';
+  sGrid.innerHTML=''; for(let i=0;i<10;i++) sGrid.insertAdjacentHTML('beforeend','<div class="prod empty"><div class="ph"></div><b>&nbsp;</b><span>&nbsp;</span></div>');
+  document.querySelectorAll('.step').forEach(s=>s.className='step');
+}
+async function buildStore(s, instant){
+  try{ await buildSteps(s, instant); }catch(e){ if (e!=='stale') throw e; }
+}
+async function buildSteps(s, instant){
+  const sess=session;
+  const w = async ms => { if (!instant) await sleep(reduce?40:ms); if (sess!==session) throw 'stale'; };
+  showSide(); if (!instant && innerWidth<=900 && mode!=='call') $('side').classList.add('open');
+  step('niche','doing'); await w(600); $('sNiche').textContent=s.niche; step('niche','done');
+  step('brand','doing'); await w(800);
+  $('sMark').textContent=s.mark;
+  for (const [id,t] of [['sName',s.name],['sHead',s.head],['sSub',s.sub]]) { $(id).textContent=t; $(id).classList.remove('skel'); }
+  step('brand','done'); step('products','doing');
+  for (let i=0;i<10;i++){
+    await w(330);
+    const p=s.products[i]; const c=document.createElement('div'); c.className='prod';
+    c.innerHTML=`<div class="ph">${ICON[p[2]]||ICON.bag}</div><b></b><span></span>`;
+    c.querySelector('b').textContent=p[0]; c.querySelector('span').textContent=p[1];
+    sGrid.children[i].replaceWith(c); $('sCount').textContent=`${i+1} / 10 products`;
+  }
+  step('products','done'); step('theme','doing'); await w(700);
+  const p=s.palette; store.style.cssText=`--s-bg:${p.bg};--s-ink:${p.ink};--s-muted:${p.muted};--s-acc:${p.acc};--s-card:${p.card};--s-line:${p.line}`;
+  step('theme','done'); step('domain','doing');
+  if (instant) $('urlText').textContent=s.domain;
+  else { $('urlText').textContent=''; for (const ch of s.domain){ $('urlText').textContent+=ch; await w(40); } }
+  $('url').classList.add('ok'); step('domain','done');
+  $('readyBox').innerHTML='<div class="ready"><div><b>Your store is ready</b><small>'+(insured?'Free store + Launch Insurance. You keep 100% of profits.':'Free. No credit card. You keep 100% of profits.')+'</small></div><button type="button" id="claim">Build my FREE store</button></div>';
+  $('claim').onclick=openClaim;
+}
+function openClaim(){ $('claimTitle').textContent = spec ? `Claim ${spec.name}` : 'Claim your store'; $('modal').hidden=false; $('claimEmail').focus(); }
+$('claimCancel').onclick=()=>{ $('modal').hidden=true; };
+$('claimForm').addEventListener('submit', e=>{ e.preventDefault(); $('modal').hidden=true; toast('Mockup: in the product this creates the login and hands over the Shopify store.'); });
+function toast(t){ const d=document.createElement('div'); d.className='toast'; d.textContent=t; document.body.append(d); setTimeout(()=>d.remove(),3400); }
+
+/* ---------- the brain ---------- */
+const PERSONA = `You are "Lior Store Builder AI", the AI version of Lior Pozin, founder of AutoDS, chatting with a visitor on the Build Your Store website. Speak in first person as Lior. If asked, say openly that you are the AI version of Lior.
+GOAL: help a beginner who never sold online. Answer questions warmly and briefly, handle doubts, and and guide them to pick one of the 5 niches so you can build their free store. Every reply moves them one step closer to opening the store.
+VOICE: short sentences, calm, a quiet operator, never hype. Connectors like "So", "And then", "Because". 1-4 sentences, max 70 words. Plain spoken English. No emoji, no parentheses, no dashes of any kind, no lists. Never use the pattern "it's not X, it's Y". Never start with "Honestly". Never say "dropshipping" yourself, say e-commerce or online store, even if the visitor says dropshipping.
+FACTS YOU MAY USE, nothing else. Never invent numbers, results or testimonials:
+- Build Your Store gives an AI-built Shopify store, free, no credit card, yours forever: 10 winning products pre-loaded, a conversion-focused theme, pre-designed product pages, a free .store domain, 24/7 support, premium apps and sales badges, terms and conditions templates.
+- 3 steps: choose your niche, review the store the AI built and get your login, start selling.
+- The user keeps 100 percent of profits. No fees to Build Your Store. If they keep selling on Shopify, they pay Shopify's monthly plan directly to Shopify.
+- Why free: we're Shopify's number one partner, recognized in 2024 and 2025. We win when your store is live and growing on Shopify. Never say affiliate or commission.
+- Shopify shared that almost a third of new merchants never finish setting up their store. AI removes the setup part.
+- Products come from the AutoDS product database.
+- Lior: kicked out of school at 14, made his first online sale on eBay at 14, ran his first store from his parents' apartment. At 21 eBay blocked his main account, so he built automation software for himself, which became AutoDS. Built AutoDS with zero investors, profitable from day one. 1.8 million plus people use AutoDS. AutoDS users earned over 1 billion dollars. Sold AutoDS to Fiverr for 92 million dollars. Forbes 30 Under 30. He is dyslexic and learns from podcasts and audiobooks, never claims to read books.
+- Never promise income, sales or timing. If asked how much they will make, say it depends on the work they put in, and that the store removes the setup part.
+- After the store is built, next steps are: review the store and get the login, pick 3 favorite products, post one short video a day about them.
+NICHES: Build Your Store has exactly 5 niches: Pets, Electronics & Gadgets, Fashion & Beauty, Sport & Fitness, Home & Garden. Every store you build sits in one of them. If the visitor asks which niche to pick, or doesn't know what to sell, set "show_niches" true so the page shows the 5 niche cards, and in the reply ask which one fits them, or recommend one if they already told you something about themselves. Don't list the niches in the reply text, the cards show them.
+LAUNCH INSURANCE, the one paid add-on: $19, one time. If the visitor doesn't make a sale within 3 months, Lior gives them $50. Mention it only when the visitor is afraid they won't make a sale or it won't work.
+OUTPUT: reply with ONLY one JSON object: {"reply": string, "show_niches": boolean, "build": null | {"niche": string, "name": string, "head": string, "sub": string, "products": [{"title": string, "price": string, "kind": string}]}, "suggestions": [string, string, string]}
+"niche" inside build must be one of the 5 niches. "build": set it only once, the first time you know a niche, and only if no store exists yet. When you set it, the reply says you're building it now and to watch it come together. Exactly 10 products that fit the niche, short titles, prices like "$24.90", kind is one of: ${KINDS.join(', ')}. head is a 3-6 word store headline, sub one short line.
+"suggestions": 3 short things the VISITOR might say next, in their voice, max 8 words each. They are always about opening an online store: how to start, which niche, cost, time, experience, what happens next, doubts. Never personal hobbies, pets or things they love.`;
+
+const FALLBACK = [
+  [/recommend|you pick|would you pick|which one|best niche/i, 'For a first store, I like Sport & Fitness or Pets. People buy there with emotion, and the products are easy to show in a short video. Tap the one that feels like you.', true],
+  [/how (long|fast|quick)|minutes|how soon/i, 'Minutes. You pick a niche, the AI builds the store while we talk, and you get your login. Then you start selling.', false],
+  [/catch|free|cost|price|pay|fee|money|scam/i, 'Fair question. We\'re Shopify\'s number one partner, in 2024 and 2025. We win when your store is live and growing on Shopify. So the store costs you nothing, and you keep 100 percent of your profits. If you keep selling, you pay Shopify\'s plan directly to Shopify.'],
+  [/who are you|about you|your story|lior|real|human|bot/i, 'I\'m the AI version of Lior. I got kicked out of school at 14 and made my first online sale on eBay that same year. At 21 eBay blocked my account, so I built software to run my store. That became AutoDS.'],
+  [/tech|code|skill|hard|easy|beginner|never sold|experience/i, 'You don\'t need any tech skills. You pick a niche, the AI builds the store with 10 winning products and a theme. You review it, get your login, and start selling. So let\'s pick your niche.', true],
+  [/make|earn|income|rich|profit|how much/i, 'I won\'t promise a number. It depends on the work you put in. What I can do is remove the setup part, which is where almost a third of new merchants stop. So let\'s pick your niche and build it.', true],
+  [/next|after|then what|now what/i, 'Three things. Review your store and get your login. Pick your 3 favorite products. Then post one short video a day about them. Stuck? I\'m here 24/7.']
+];
+const NICHE_CARDS = [
+  ['Pets','bowl','Easy to love, easy to film'],
+  ['Electronics & Gadgets','gadget','Small, clever products that demo well'],
+  ['Fashion & Beauty','shirt','A good fit if you like making content'],
+  ['Sport & Fitness','bottle','For people who already live the gym life'],
+  ['Home & Garden','lamp','Cozy products people love to gift']
+];
+const ASK_NICHE = /online store|how to start|don.?t know how|want to (open|start)|my own store|which niche|what niche|niche should|what (should|can|do) i sell|don.?t know what|dont know what|open a store|start a store|which store|what store|where do i start|where do i even start|never sold/i;
+const NICHES = [
+  [/electronic|gadget|phone|charger|tech gadget/i, {niche:'Electronics & Gadgets', name:'Clever Kit', head:'Small tools, big upgrades.', sub:'Everyday gadgets that make life easier.', products:[['Magnetic Phone Mount','$19.90','gadget'],['Wireless Charging Pad','$24.90','gadget'],['LED Strip Lights','$22.90','lamp'],['Mini Ring Light','$18.90','lamp'],['Cable Organizer Kit','$12.90','bag'],['Portable Neck Fan','$21.90','gadget'],['Smart Plug Duo','$19.90','gadget'],['Tech Pouch','$16.90','bag'],['Item Tracker Tag','$17.90','toy'],['Desk Lamp Charger','$34.90','lamp']]}],
+  [/pet|dog|cat|puppy/i, {niche:'Pets', name:'Paw & Co', head:'Happy pets, easy days.', sub:'Everyday gear your pet will love.', products:[['Calming Pet Bed','$39.90','pillow'],['Slow Feeder Bowl','$16.90','bowl'],['Rope Toy Set','$14.90','toy'],['Travel Water Bottle','$18.90','bottle'],['Grooming Glove','$12.90','slippers'],['Cozy Pet Blanket','$22.90','throw'],['Treat Pouch','$15.90','bag'],['Ball Launcher','$24.90','toy'],['Ceramic Pet Bowl','$19.90','bowl'],['Pet Hoodie','$21.90','shirt']]}],
+  [/fit|gym|yoga|sport|workout/i, {niche:'Sport & Fitness', name:'Daily Rep', head:'Move a little every day.', sub:'Home fitness gear for small spaces.', products:[['Shaker Bottle','$14.90','bottle'],['Yoga Mat Bag','$24.90','bag'],['Massage Ball','$12.90','toy'],['Gym Tee','$19.90','shirt'],['Resistance Bands','$17.90','throw'],['Jump Counter','$29.90','gadget'],['Recovery Slides','$22.90','slippers'],['Meal Prep Bowls','$18.90','bowl'],['Foam Roller','$24.90','lamp'],['Gym Duffel','$34.90','bag']]}],
+  [/kitchen|cook|coffee|food|bake/i, {niche:'Home & Garden', name:'Little Pantry', head:'Better mornings start here.', sub:'Small kitchen tools, big use.', products:[['Pour Over Set','$29.90','mug'],['Glass Storage Jars','$24.90','jar'],['Bamboo Tray','$19.90','tray'],['Mixing Bowl Trio','$27.90','bowl'],['Linen Apron','$22.90','shirt'],['Milk Frother','$17.90','gadget'],['Stoneware Mugs','$26.90','mug'],['Herb Planter','$18.90','vase'],['Market Tote','$16.90','bag'],['Oil Sprayer','$13.90','bottle']]}],
+  [/home|garden|decor|candle|cozy|living|interior|plant/i, {niche:'Home & Garden', name:'Hearth & Hush', head:'Slow evenings, made easy.', sub:'Cozy pieces for the home.', products:[['Soy Candle Trio','$24.90','candle'],['Chunky Knit Throw','$49.90','throw'],['Stoneware Mug Set','$29.90','mug'],['Linen Cushion Cover','$19.90','pillow'],['Ceramic Bud Vase','$17.90','vase'],['Wood Wick Candle','$22.90','candle'],['Aroma Diffuser','$34.90','diffuser'],['Moon Table Lamp','$39.90','lamp'],['Waffle Slippers','$21.90','slippers'],['Rattan Serving Tray','$27.90','tray']]}],
+  [/beauty|skin|makeup|self.?care|spa/i, {niche:'Fashion & Beauty', name:'Soft Hours', head:'Ten minutes, just for you.', sub:'Small rituals for slower days.', products:[['Jade Face Roller','$19.90','gadget'],['Silk Sleep Mask','$16.90','pillow'],['Bath Salt Jar','$14.90','jar'],['Scented Candle','$22.90','candle'],['Spa Headband','$11.90','throw'],['Glass Dropper Set','$13.90','bottle'],['Waffle Robe','$44.90','shirt'],['Aroma Diffuser','$34.90','diffuser'],['Vanity Tray','$18.90','tray'],['Cozy Slippers','$21.90','slippers']]}],
+  [/fashion|cloth|wear|jewel|style/i, {niche:'Fashion & Beauty', name:'Second Skin', head:'Easy pieces, every day.', sub:'Basics that go with everything.', products:[['Oversized Tee','$24.90','shirt'],['Canvas Tote','$19.90','bag'],['Cloud Slides','$22.90','slippers'],['Ribbed Tank','$17.90','shirt'],['Mini Crossbody','$29.90','bag'],['Scrunchie Set','$12.90','toy'],['Travel Bottle Kit','$15.90','bottle'],['Lounge Set','$39.90','throw'],['Jewelry Dish','$14.90','tray'],['Phone Strap','$13.90','gadget']]}]
+];
+function finishSpec(b){
+  const name=String(b.name||'My Store').slice(0,28);
+  const prods=(Array.isArray(b.products)?b.products:[]).slice(0,10).map(p=>Array.isArray(p)?p:[String(p.title||'Product').slice(0,26),String(p.price||'$19.90'),String(p.kind||'bag')]);
+  while (prods.length<10) prods.push(['Bestseller','$19.90','bag']);
+  let h=0; for (const c of name) h=(h*31+c.charCodeAt(0))>>>0;
+  return {niche:String(b.niche||'Your niche'), name, mark:name[0].toUpperCase(), head:String(b.head||'Built for you.'), sub:String(b.sub||''),
+    domain:name.toLowerCase().replace(/[^a-z0-9]/g,'')+'.store', products:prods, palette:PALETTES[h%PALETTES.length]};
+}
+function fallbackAnswer(q){
+  if (!spec && ASK_NICHE.test(q) && !NICHES.some(([re])=>re.test(q)))
+    return {reply:'Good. Build Your Store has 5 niches ready to go, each loaded with 10 winning products. Pick the one you\'d enjoy talking about every day, because you\'ll be posting about it. Which one feels like you?', showNiches:true, build:null, suggestions:['Which one do you recommend?','Is it really free?','Do I need experience?']};
+  if (!spec) for (const [re,s] of NICHES) if (re.test(q))
+    return {reply:`${s.niche}. Good first niche. I'm building your store now, watch it come together.`, build:finishSpec(s), suggestions:['Wait, what\'s the catch?','What do I do after it\'s built?','How fast is it ready?']};
+  for (const [re,a,cards] of FALLBACK) if (re.test(q)) return {reply:a, showNiches:!!cards && !spec, build:null, suggestions: spec?['What do I do next?','What if it doesn\'t work?','Is it really free?']:['Which one do you recommend?','How fast is the store ready?','Is it really free?']};
+  return {reply: spec ? 'Your store is ready on the side. Review it, pick your 3 favorite products, and post about them every day. I\'m here 24/7.' : 'Want to open your own online store? Pick a niche and I\'ll build it for you right now.', showNiches:!spec, build:null,
+    suggestions: spec?['What do I do next?','Is it really free?','Who are you?']:['Which one do you recommend?','How fast is the store ready?','Is it really free?']};
+}
+async function getAnswer(){
+  if (sample){
+    try{
+      const t = history.slice(-14).map(m=>(m.role==='user'?'VISITOR: ':'LIOR: ')+m.content).join('\n');
+      const r = await sample.json(`${PERSONA}\n\nSTORE ALREADY BUILT: ${spec?'yes, '+spec.name:'no'}\n\nCONVERSATION:\n${t}\n\nWrite Lior's next reply as the JSON object.`, {modelTier:'quick', cache:false});
+      if (r && typeof r.reply==='string') return {reply:r.reply, showNiches:!!r.show_niches && !spec, build:(r.build&&!spec)?finishSpec(r.build):null, suggestions:Array.isArray(r.suggestions)?r.suggestions.slice(0,3).map(String):[]};
+    }catch(e){ if (['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].includes(e.code)) sample=null; }
+  }
+  return fallbackAnswer(history[history.length-1]?.content||'');
+}
+
+/* ---------- voice ---------- */
+const wave=$('wave'); for(let i=0;i<32;i++) wave.append(document.createElement('i'));
+let waveTimer=null, voices=[], callTimer=null;
+function loadVoices(){ try{ voices=speechSynthesis.getVoices()||[]; }catch(e){} }
+try{ loadVoices(); speechSynthesis.onvoiceschanged=loadVoices; }catch(e){}
+const LIOR_V=['Daniel','Aaron','Alex','Arthur','Google UK English Male','Microsoft Guy','Microsoft David','Fred','Rishi','Tom'];
+function waveOn(on){
+  clearInterval(waveTimer); $('bigava').classList.toggle('speaking',on);
+  const bars=[...wave.children];
+  if(!on){ bars.forEach(b=>b.style.height='6px'); return; }
+  waveTimer=setInterval(()=>bars.forEach((b,i)=>{ b.style.height=(6+Math.random()*46*Math.sin(Math.PI*i/31))+'px'; }),95);
+}
+const VOICE_MAP = __VOICE_MAP__;
+const vkey = t => String(t).toLowerCase().replace(/[^a-z0-9]/g,'');
+let clip=null;
+function speak(text){
+  const src = VOICE_MAP[vkey(text)];
+  if (src && !muted) return new Promise(res=>{
+    let done=false; const fin=()=>{ if(done) return; done=true; waveOn(false); res(); };
+    try{ speechSynthesis.cancel(); }catch(e){}
+    clip?.pause(); clip=new Audio(src); waveOn(true);
+    clip.onended=fin; clip.onerror=()=>{ done=true; waveOn(false); ttsSpeak(text).then(res); };
+    clip.play().catch(()=>{ done=true; waveOn(false); ttsSpeak(text).then(res); });
+  });
+  return ttsSpeak(text);
+}
+function ttsSpeak(text){
+  return new Promise(res=>{
+    const fb=Math.max(1600,text.split(' ').length*350); let done=false;
+    const fin=()=>{ if(done) return; done=true; waveOn(false); res(); };
+    waveOn(true);
+    if (muted || !('speechSynthesis' in window)) return setTimeout(fin, fb);
+    try{
+      speechSynthesis.cancel();
+      const u=new SpeechSynthesisUtterance(text);
+      const en=voices.filter(v=>/^en/i.test(v.lang)); u.voice = LIOR_V.map(n=>en.find(v=>v.name.includes(n))).find(Boolean) || en[0] || null;
+      u.rate=1.02; u.pitch=.92; u.onend=fin; u.onerror=fin; speechSynthesis.speak(u); setTimeout(fin, fb*2.4);
+    }catch(e){ setTimeout(fin, fb); }
+  });
+}
+function caption(who, text){ const c=$('caption'); c.innerHTML=''; const s=document.createElement('span'); s.className='spk'; s.textContent=who; c.append(s, document.createTextNode(text)); }
+async function startCall(){
+  openChat(); mode='call'; $('call').hidden=false; addSys('Call started'); $('callOffer').innerHTML='';
+  const t0=Date.now(); clearInterval(callTimer);
+  const tick=()=>{ const s=Math.floor((Date.now()-t0)/1000); $('timer').textContent=`${String(s/60|0).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`; };
+  tick(); callTimer=setInterval(tick,1000);
+  const hello = history.length ? 'Hey, it\'s Lior again. Where were we?' : 'Hey, it\'s Lior. Want to open your own online store? I\'ll help you start.';
+  caption('Lior', hello); addRow('lior', hello, true); history.push({role:'assistant',content:hello}); save();
+  await speak(hello); $('callInput').focus(); afterLior();
+}
+function endCall(){
+  handsFree=false; if (rec){ try{rec.abort();}catch(e){} rec=null; }
+  const co=$('callOffer').firstElementChild; if (co){ msgs.append(co); wrap.scrollTop=wrap.scrollHeight; }
+  mode='text'; $('call').hidden=true; clearInterval(callTimer); try{speechSynthesis.cancel();}catch(e){} clip?.pause(); waveOn(false);
+  addSys('Call ended · transcript is above'); input.focus();
+}
+$('endBtn').onclick=endCall;
+$('spkBtn').onclick=()=>{ muted=!muted; $('spkBtn').classList.toggle('on',muted); $('spkBtn').title=muted?'Unmute Lior':'Mute Lior'; if(muted){ try{speechSynthesis.cancel();}catch(e){} clip?.pause(); } };
+/* talking to Lior: tap the mic once, then the call is hands-free.
+   Lior listens again each time he finishes speaking. */
+let handsFree=false, rec=null;
+const MIC_BLOCKED="The microphone is blocked on this page. Open the local version to talk to Lior, or type instead.";
+function listen(){
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR){ handsFree=false; toast(MIC_BLOCKED); return; }
+  if (mode!=='call' || busy) return;
+  try{
+    rec=new SR(); rec.lang='en-US'; rec.interimResults=true; rec.continuous=false;
+    let said='';
+    $('micBtn').classList.add('on'); caption('You','Listening…');
+    rec.onresult=e=>{ const t=[...e.results].map(x=>x[0].transcript).join(' '); caption('You',t); if (e.results[e.results.length-1].isFinal) said=t; };
+    rec.onerror=e=>{ $('micBtn').classList.remove('on'); if (['not-allowed','service-not-allowed','audio-capture'].includes(e.error)){ handsFree=false; toast(MIC_BLOCKED); } };
+    rec.onend=()=>{ $('micBtn').classList.remove('on'); rec=null; if (said) ask(said); else if (handsFree && mode==='call' && !busy) setTimeout(listen, 300); };
+    rec.start();
+  }catch(e){ handsFree=false; toast(MIC_BLOCKED); }
+}
+function afterLior(){ if (mode==='call' && handsFree && !busy && !rec) listen(); }
+$('micBtn').onclick=()=>{
+  if (rec){ handsFree=false; try{rec.stop();}catch(e){} return; }
+  handsFree=true; try{speechSynthesis.cancel();}catch(e){} clip?.pause(); listen();
+};
+
+/* ---------- blockers: Lior removes what stops a hesitating visitor ---------- */
+const INS = {name:'Launch Insurance', price:'$19', payout:'$50', months:3};
+const LINE = {
+  ask: "Your store is ready. Before you claim it, tell me. What's stopping you from opening it today?",
+  fear: "Don't worry. If you don't make a sale within 3 months, I'll give you 50 dollars. Add Launch Insurance for 19 dollars, and the risk is on me.",
+  time: "I hear that a lot. The store is already built, so the setup hours are gone. What's left is one short video a day about your products. You can film it on your phone during a break.",
+  money: "The store is free and it stays yours. You keep 100 percent of your profits. If you keep selling on Shopify, you pay Shopify's monthly plan directly to Shopify. Nothing to us.",
+  skill: "You don't need tech skills. The store, the products and the pages are done. I'll walk you through your first video and your first post, step by step. And I'm here 24/7.",
+  yes: "Done. Launch Insurance is on your store. Now there's nothing to lose. Tap Build my FREE store and let's go.",
+  no: "All good. The store is still free and it's yours. Tap Build my FREE store whenever you're ready.",
+  yesPre: "Done. Launch Insurance is on. Now there's nothing to lose. Let's pick your niche and build your store.",
+  noPre: "All good. Let's pick your niche and build your store.",
+  go: "All good. The store is still free and it's yours. Tap Build my FREE store whenever you're ready."
+};
+const BLOCKERS = [
+  ['fear', /afraid|scared|fear|no sales?|won.?t (make|get) a (sale|sell)|won.?t sell|won.?t (succeed|work|sell|make)|fail|not succeed|what if|lose|nervous|worried|doubt/i],
+  ['money', /money|cost|pay|afford|expensive|budget|fee|price|catch/i],
+  ['time', /time|busy|job|kids|schedule|hours/i],
+  ['skill', /tech|don.?t know how|complicated|hard|marketing|no idea how|experience/i],
+  ['go', /i.?m in\b|let.?s go|i.?m ready|sign me up|^nothing|^ok\b|^yes\b|sounds good/i]
+];
+let insured=false, offered=false;
+async function liorLine(text){
+  const onCall = mode==='call';
+  if (onCall){ addRow('lior', text, true); caption('Lior', text); }
+  else { const t=typingOn(); await sleep(reduce?100:700); t.remove(); const el=addRow('lior',''); await streamInto(el, text); }
+  history.push({role:'assistant',content:text}); save();
+  if (onCall) await speak(text);
+}
+let session=0;
+async function askBlocker(sess){
+  while (busy) await sleep(200);
+  if (sess!==session) return;
+  busy=true; await sleep(900);
+  if (sess!==session){ busy=false; return; }
+  await liorLine(LINE.ask);
+  setQuick(offered?["I don't have time","What will it cost me later?","Nothing, I'm in"]:["I'm afraid I won't make a sale","I don't have time","What will it cost me later?","Nothing, I'm in"]);
+  busy=false; afterLior();
+}
+function offerCard(){
+  offered=true;
+  const c=document.createElement('div'); c.className='offer';
+  c.innerHTML=`<div class="offer-top"><span class="shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></span><span><b>${INS.name}</b><span class="price">${INS.price} one time · added to your free store</span></span></div>
+  <div class="terms"><div><strong>${INS.months}</strong>months</div><div><strong>1</strong>sale is the goal</div><div><strong>${INS.payout}</strong>to you if not</div></div>
+  <p>No sale within ${INS.months} months? Lior sends you ${INS.payout}.</p>
+  <div class="offer-btns"><button type="button" class="yes">Add for ${INS.price}</button><button type="button" class="nah">No thanks</button></div><span class="status" hidden>Added</span>`;
+  c.querySelector('.yes').onclick=async()=>{ if(busy) return; busy=true; insured=true; c.classList.add('added'); c.querySelector('.status').hidden=false; $('insLine').hidden=false;
+    const r=document.querySelector('.ready small'); if(r) r.textContent='Free store + Launch Insurance. You keep 100% of profits.';
+    addRow('user', `Add ${INS.name}`); history.push({role:'user',content:'Add Launch Insurance'}); await liorLine(spec?LINE.yes:LINE.yesPre); busy=false; setQuick([]); if(!spec) pickNiche(); afterLior(); };
+  c.querySelector('.nah').onclick=async()=>{ if(busy) return; busy=true; c.querySelector('.offer-btns').hidden=true;
+    addRow('user','No thanks'); history.push({role:'user',content:'No thanks'}); await liorLine(spec?LINE.no:LINE.noPre); busy=false; if(spec) setQuick(['What do I do after I claim it?']); else pickNiche(); afterLior(); };
+  if (mode==='call'){ $('callOffer').innerHTML=''; $('callOffer').append(c); } else { msgs.append(c); wrap.scrollTop=wrap.scrollHeight; }
+}
+function offerReply(q){
+  const c=document.querySelector('.offer:not(.added)'); if (!c || c.querySelector('.offer-btns').hidden) return false;
+  if (/\b(add|yes|yeah|sure|deal|do it|ok|okay|i.?ll take)\b/i.test(q)){ c.querySelector('.yes').click(); return true; }
+  if (/\b(no|nope|not now|skip)\b/i.test(q)){ c.querySelector('.nah').click(); return true; }
+  return false;
+}
+function pickNiche(){ if (mode==='call') setQuick(NICHE_CARDS.map(n=>[n[0], `Let's go with ${n[0]}.`])); else nicheCards(); }
+function blockerFor(q){ if (!offered && BLOCKERS[0][1].test(q)) return 'fear'; if (!spec) return null; for (const [id,re] of BLOCKERS) if (re.test(q)) { if (id==='fear' && offered) return null; return id; } return null; }
+
+/* ---------- one turn ---------- */
+async function ask(q){
+  q=String(q||'').trim(); if(!q || busy) return;
+  if (offered && !insured && offerReply(q)) return;
+  busy=true; sendBtn.disabled=true; openChat(); setQuick([]);
+  const onCall = mode==='call';
+  addRow('user', q, onCall); history.push({role:'user',content:q}); save();
+  const blk = blockerFor(q);
+  if (blk){
+    await liorLine(LINE[blk]);
+    if (blk==='fear') { offerCard(); setQuick([]); }
+    else if (blk==='go') { setQuick([]); setTimeout(openClaim, 900); }
+    else setQuick(offered?["OK, I'm in","What do I do first?"]:["I'm still afraid it won't work","OK, I'm in","What do I do first?"]);
+    busy=false; sendBtn.disabled=false; afterLior(); return;
+  }
+  let typing=null; if (onCall) caption('You', q); else typing=typingOn();
+  const ans = (onCall && Object.keys(VOICE_MAP).length) ? fallbackAnswer(q) : await getAnswer();
+  typing?.remove();
+  if (onCall){ addRow('lior', ans.reply, true); caption('Lior', ans.reply); }
+  else { const el=addRow('lior',''); await streamInto(el, ans.reply); }
+  history.push({role:'assistant',content:ans.reply});
+  if (ans.showNiches && !spec && !ans.build) nicheCards();
+  let job=null;
+  if (ans.build){ spec=ans.build; resetStore(); const sess=session; job=buildStore(spec,false).then(()=>{ if (sess!==session) return; storeCard(spec); return askBlocker(sess); }); }
+  save();
+  if (onCall) await speak(ans.reply);
+  setQuick(ans.showNiches && !spec && mode==='call' ? NICHE_CARDS.map(n=>[n[0], `Let's go with ${n[0]}.`]) : (ans.suggestions||[]).filter(x=>x.toLowerCase()!==q.toLowerCase()));
+  busy=false; sendBtn.disabled=false;
+  if (mode==='call') $('callInput').focus(); else input.focus();
+  afterLior();
+  await job;
+}
+$('startForm').addEventListener('submit',e=>{ e.preventDefault(); const v=$('startInput').value; $('startInput').value=''; ask(v); });
+$('composer').addEventListener('submit',e=>{ e.preventDefault(); const v=input.value; input.value=''; ask(v); });
+$('callForm').addEventListener('submit',e=>{ e.preventDefault(); const v=$('callInput').value; $('callInput').value=''; ask(v); });
+$('prompts').addEventListener('click',e=>{ const b=e.target.closest('button[data-q]'); if(b) ask(b.dataset.q); });
+$('homeCall').onclick=startCall; $('callBtn').onclick=startCall;
+$('storePill').onclick=()=>$('side').classList.add('open');
+$('closeSide').onclick=()=>$('side').classList.remove('open');
+$('newChat').onclick=()=>{
+  session++; busy=false; history=[]; spec=null; insured=false; offered=false; $('callOffer').innerHTML=''; $('insLine').hidden=true; save(); msgs.innerHTML=''; setQuick([]); resetStore();
+  $('chat').classList.add('solo'); $('app').classList.remove('has-store'); if(mode==='call') endCall();
+  $('chat').hidden=true; $('home').hidden=false; $('newChat').hidden=true;
+};
+
+/* ---------- restore a returning visitor ---------- */
+resetStore();
+try{
+  const saved=JSON.parse(localStorage.getItem(KEY)||'null');
+  if (saved && saved.history?.length){
+    history=saved.history; spec=saved.spec; openChat();
+    for (const m of history) addRow(m.role==='user'?'user':'lior', m.content);
+    if (spec){ buildStore(spec,true); storeCard(spec); }
+    setQuick(spec?['What do I do next?','What if it doesn\'t work?','Is it really free?']:['I want to open an online store','Which niche should I pick?','Is it really free?']);
+  }
+}catch(e){}
+})();
+</script>
