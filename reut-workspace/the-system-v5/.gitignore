@@ -4,3 +4,6 @@
 .env.*
 *.key
 *.pem
+
+# Ralston packaging SOP, given privately by Caleb Ralston 2026-11-17, do not publish
+C-core/ralston-packaging-sop-source.md

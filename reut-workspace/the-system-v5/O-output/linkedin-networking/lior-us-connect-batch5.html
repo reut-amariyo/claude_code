@@ -1,0 +1,142 @@
+<title>Lior US Connect List</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap">
+<style>
+/* Layout: single column worklist, summary on top, two tables */
+:root{--bg:#f6f7f9;--surface:#ffffff;--fg:#1a1f2b;--muted:#5d6577;--line:#dfe3ea;--accent:#0a66c2;--warn:#9a6700;--display:"Space Grotesk",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11141a;--surface:#191d25;--fg:#e8ebf1;--muted:#9aa3b5;--line:#2b313d;--accent:#5aa9f0;--warn:#e0b44c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#11141a;--surface:#191d25;--fg:#e8ebf1;--muted:#9aa3b5;--line:#2b313d;--accent:#5aa9f0;--warn:#e0b44c;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 48px}
+main{max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1{font-family:var(--display);font-size:28px;margin:0;text-wrap:balance}
+h2{font-family:var(--display);font-size:19px;margin:0 0 6px}
+.sub{color:var(--muted);margin:6px 0 0;max-width:68ch}
+.crit{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:4px 12px;font-size:13px}
+.tw{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:620px}
+th{text-align:left;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:10px 12px;border-bottom:1px solid var(--line)}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n{color:var(--muted);width:2.5em} .num{font-variant-numeric:tabular-nums;font-weight:600}
+a{color:var(--accent);font-weight:600;text-decoration:none} a:hover,a:focus-visible{text-decoration:underline}
+.role{color:var(--muted);font-size:13.5px}
+.note{color:var(--warn);font-size:14px;margin:0 0 10px}
+button{font:inherit;font-weight:600;background:var(--accent);color:var(--bg);border:0;border-radius:8px;padding:8px 14px;cursor:pointer}
+button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.bar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+#links{position:absolute;left:-9999px}
+</style>
+<main>
+<header>
+<h1>US connect targets for Lior, batch 5</h1>
+<p class="sub">40 new people, checked on 15 Nov 2026. Each name links to the LinkedIn profile.</p>
+<div class="crit"><span class="chip">Lives in the US</span><span class="chip">50+ mutuals</span><span class="chip">Founder, CEO or C-level</span><span class="chip">Own post in last 30 days</span><span class="chip">Not in batches 1-4</span></div>
+</header>
+<section>
+<div class="bar"><h2 style="margin:0">Main list</h2><button id="copy" type="button">Copy all 40 links</button><span id="msg" class="role" aria-live="polite"></span></div>
+<div class="tw"><table><thead><tr><th>#</th><th>Name and role</th><th>Mutuals</th><th>Last post</th><th>Location</th></tr></thead><tbody>
+<tr><td class="n">1</td><td><a href="https://www.linkedin.com/in/yairvardi/" target="_blank" rel="noopener">Yair Vardi</a><div class="role">Founding Partner, Fusion VC</div></td><td class="num">1168</td><td>2w</td><td>US</td></tr>
+<tr><td class="n">2</td><td><a href="https://www.linkedin.com/in/boazalbaranes/" target="_blank" rel="noopener">Boaz Albaranes</a><div class="role">Managing Partner, Mindset Ventures</div></td><td class="num">656</td><td>3w</td><td>NYC</td></tr>
+<tr><td class="n">3</td><td><a href="https://www.linkedin.com/in/shulygalili/" target="_blank" rel="noopener">Shuly Galili</a><div class="role">Founding Partner, UpWest VC</div></td><td class="num">429</td><td>3w</td><td>SF Bay Area</td></tr>
+<tr><td class="n">4</td><td><a href="https://www.linkedin.com/in/levyraiz/" target="_blank" rel="noopener">Levy Raiz</a><div class="role">Entrepreneur, tech and PE investor</div></td><td class="num">427</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">5</td><td><a href="https://www.linkedin.com/in/neribluman/" target="_blank" rel="noopener">Neri Bluman</a><div class="role">Co-Founder XFunnel, acquired by HubSpot</div></td><td class="num">415</td><td>~1mo</td><td>Austin</td></tr>
+<tr><td class="n">6</td><td><a href="https://www.linkedin.com/in/yuvalkesh/" target="_blank" rel="noopener">Yuval Keshtcher</a><div class="role">Founder &amp; CEO, UX Writing Hub</div></td><td class="num">384</td><td>2w</td><td>US</td></tr>
+<tr><td class="n">7</td><td><a href="https://www.linkedin.com/in/ronnie-jaffa-a90217a2/" target="_blank" rel="noopener">Ronnie Jaffa</a><div class="role">Co-Founder &amp; CEO, Naveh</div></td><td class="num">309</td><td>today</td><td>SF Bay Area</td></tr>
+<tr><td class="n">8</td><td><a href="https://www.linkedin.com/in/avivshalgi/" target="_blank" rel="noopener">Aviv Shalgi</a><div class="role">CEO, Solar Simplified, 3 exits</div></td><td class="num">244</td><td>1d</td><td>Chicago</td></tr>
+<tr><td class="n">9</td><td><a href="https://www.linkedin.com/in/adhamghazali/" target="_blank" rel="noopener">Adham Ghazali</a><div class="role">Founder, robotics and agents</div></td><td class="num">228</td><td>2w</td><td>US</td></tr>
+<tr><td class="n">10</td><td><a href="https://www.linkedin.com/in/guy-leitersdorf-21b10891/" target="_blank" rel="noopener">Guy Leitersdorf</a><div class="role">CEO, Longevity AI</div></td><td class="num">194</td><td>3w</td><td>NYC</td></tr>
+<tr><td class="n">11</td><td><a href="https://www.linkedin.com/in/mayaprosor/" target="_blank" rel="noopener">Maya Prosor</a><div class="role">Chief Business Officer, Lemonade</div></td><td class="num">167</td><td>~1mo</td><td>NYC</td></tr>
+<tr><td class="n">12</td><td><a href="https://www.linkedin.com/in/shmuel-reichman-332884154/" target="_blank" rel="noopener">Shmuel Reichman</a><div class="role">CEO, SMA, coach and author</div></td><td class="num">161</td><td>2d</td><td>Chicago</td></tr>
+<tr><td class="n">13</td><td><a href="https://www.linkedin.com/in/talia-cohen-101a911/" target="_blank" rel="noopener">Talia Cohen</a><div class="role">Founder &amp; Managing Partner, Unlock</div></td><td class="num">159</td><td>~1mo</td><td>Palo Alto</td></tr>
+<tr><td class="n">14</td><td><a href="https://www.linkedin.com/in/elibeer/" target="_blank" rel="noopener">Eli Beer</a><div class="role">Founder &amp; President, United Hatzalah</div></td><td class="num">148</td><td>2d</td><td>NYC</td></tr>
+<tr><td class="n">15</td><td><a href="https://www.linkedin.com/in/yoav-ziv/" target="_blank" rel="noopener">Yoav Ziv</a><div class="role">CEO, Tasq.ai</div></td><td class="num">144</td><td>4w</td><td>US</td></tr>
+<tr><td class="n">16</td><td><a href="https://www.linkedin.com/in/eddie-dovzhik-796938113/" target="_blank" rel="noopener">Eddie Dovzhik</a><div class="role">Co-Founder &amp; CEO, Lema.AI</div></td><td class="num">134</td><td>3d</td><td>NYC</td></tr>
+<tr><td class="n">17</td><td><a href="https://www.linkedin.com/in/eyalharari/" target="_blank" rel="noopener">Eyal Harari</a><div class="role">CEO, Allot</div></td><td class="num">130</td><td>1w</td><td>US</td></tr>
+<tr><td class="n">18</td><td><a href="https://www.linkedin.com/in/guylevyyurista/" target="_blank" rel="noopener">Guy Levy-Yurista</a><div class="role">CEO, Imperagen</div></td><td class="num">129</td><td>2d</td><td>Washington DC</td></tr>
+<tr><td class="n">19</td><td><a href="https://www.linkedin.com/in/yan-gaits/" target="_blank" rel="noopener">Yan Gaitsgory</a><div class="role">Founder, building, ex-McKinsey</div></td><td class="num">123</td><td>1w</td><td>NYC</td></tr>
+<tr><td class="n">20</td><td><a href="https://www.linkedin.com/in/yoavmarkiewicz/" target="_blank" rel="noopener">Yoav Markiewicz</a><div class="role">Entrepreneur</div></td><td class="num">118</td><td>3w</td><td>US</td></tr>
+<tr><td class="n">21</td><td><a href="https://www.linkedin.com/in/nadav-eyal-1ab21941/" target="_blank" rel="noopener">Nadav Eyal</a><div class="role">CEO &amp; Co-Founder, Eybna</div></td><td class="num">108</td><td>1w</td><td>LA</td></tr>
+<tr><td class="n">22</td><td><a href="https://www.linkedin.com/in/alon-shalvi/" target="_blank" rel="noopener">Alon Shalvi</a><div class="role">CEO, Werkit</div></td><td class="num">106</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">23</td><td><a href="https://www.linkedin.com/in/tomer-shlomo/" target="_blank" rel="noopener">Tomer Shlomo</a><div class="role">Co-Founder &amp; CTO, Addressable.io</div></td><td class="num">102</td><td>2d</td><td>US</td></tr>
+<tr><td class="n">24</td><td><a href="https://www.linkedin.com/in/danbarak/" target="_blank" rel="noopener">Dan Barak</a><div class="role">Noetive, physical-economy AI lab</div></td><td class="num">102</td><td>4d</td><td>SF Bay Area</td></tr>
+<tr><td class="n">25</td><td><a href="https://www.linkedin.com/in/garyambrosino/" target="_blank" rel="noopener">Gary Ambrosino</a><div class="role">CEO, board member, AI transformation</div></td><td class="num">102</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">26</td><td><a href="https://www.linkedin.com/in/jeremy-suard/" target="_blank" rel="noopener">Jeremy Suard</a><div class="role">Co-Founder &amp; CEO, Exodigo</div></td><td class="num">100</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">27</td><td><a href="https://www.linkedin.com/in/eran-shiff/" target="_blank" rel="noopener">Eran Shiff</a><div class="role">Chief Product Officer</div></td><td class="num">98</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">28</td><td><a href="https://www.linkedin.com/in/saar-dickman-a1a535/" target="_blank" rel="noopener">Saar Dickman</a><div class="role">CEO, Dynamic Infrastructure</div></td><td class="num">97</td><td>1d</td><td>US</td></tr>
+<tr><td class="n">29</td><td><a href="https://www.linkedin.com/in/arikgaisler/" target="_blank" rel="noopener">Arik Gaisler</a><div class="role">Building Benji, ex Co-Founder &amp; CTO 2ndKitchen, acquired</div></td><td class="num">82</td><td>2w</td><td>Brooklyn</td></tr>
+<tr><td class="n">30</td><td><a href="https://www.linkedin.com/in/eilamgazit/" target="_blank" rel="noopener">Eilam Gazit</a><div class="role">COO, Neko Health</div></td><td class="num">81</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">31</td><td><a href="https://www.linkedin.com/in/naama-halevi-davidov-phd-8827675/" target="_blank" rel="noopener">Naama Halevi Davidov</a><div class="role">CFO, board member</div></td><td class="num">62</td><td>~1mo</td><td>NYC</td></tr>
+<tr><td class="n">32</td><td><a href="https://www.linkedin.com/in/stephyliu/" target="_blank" rel="noopener">Steph Liu</a><div class="role">Founder, Levitate</div></td><td class="num">60</td><td>3d</td><td>US</td></tr>
+<tr><td class="n">33</td><td><a href="https://www.linkedin.com/in/nadav-lobel-3ba4a260/" target="_blank" rel="noopener">Nadav Lobel</a><div class="role">Chief Customer Officer, Riskified</div></td><td class="num">56</td><td>1d</td><td>NYC</td></tr>
+<tr><td class="n">34</td><td><a href="https://www.linkedin.com/in/hirefasthireright/" target="_blank" rel="noopener">Avetis Antaplyan</a><div class="role">Founder &amp; CEO, HIRECLOUT</div></td><td class="num">54</td><td>3d</td><td>US</td></tr>
+<tr><td class="n">35</td><td><a href="https://www.linkedin.com/in/sasha-medvedovsky-10b2381/" target="_blank" rel="noopener">Sasha Medvedovsky</a><div class="role">CEO, Diversion</div></td><td class="num">53</td><td>2d</td><td>US</td></tr>
+<tr><td class="n">36</td><td><a href="https://www.linkedin.com/in/ori-entis-98075a161/" target="_blank" rel="noopener">Ori Entis</a><div class="role">EVP Product, ex Founder &amp; CEO Staircase AI</div></td><td class="num">53</td><td>3w</td><td>LA</td></tr>
+<tr><td class="n">37</td><td><a href="https://www.linkedin.com/in/neerajsingh0101/" target="_blank" rel="noopener">Neeraj Singh</a><div class="role">Founder &amp; CEO, BigBinary &amp; Neeto</div></td><td class="num">51</td><td>3d</td><td>Miami</td></tr>
+<tr><td class="n">38</td><td><a href="https://www.linkedin.com/in/michabenoliel/" target="_blank" rel="noopener">Micha Benoliel</a><div class="role">Co-Founder &amp; CEO, Nodle</div></td><td class="num">51</td><td>3w</td><td>SF</td></tr>
+<tr><td class="n">39</td><td><a href="https://www.linkedin.com/in/charlienewarkfrench/" target="_blank" rel="noopener">Charlie Newark-French</a><div class="role">4x enterprise SaaS CEO</div></td><td class="num">51</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">40</td><td><a href="https://www.linkedin.com/in/rabbidovidmcohen/" target="_blank" rel="noopener">David M. Cohen</a><div class="role">CEO, The Algemeiner</div></td><td class="num">50</td><td>6d</td><td>NYC</td></tr>
+</tbody></table></div>
+</section>
+<section>
+<h2>Borderline</h2>
+<p class="note">Active with 50+ mutuals, but the title is VP level or below, or the headline is unclear.</p>
+<div class="tw"><table><thead><tr><th>#</th><th>Name and role</th><th>Mutuals</th><th>Last post</th><th>Location</th></tr></thead><tbody>
+<tr><td class="n">41</td><td><a href="https://www.linkedin.com/in/raviv-sapir/" target="_blank" rel="noopener">Raviv Sapir</a><div class="role">Headline only says &#x27;Discovery, at scale&#x27;, role unclear</div></td><td class="num">973</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">42</td><td><a href="https://www.linkedin.com/in/descalo/" target="_blank" rel="noopener">Boaz Descalo</a><div class="role">Writes on AI-first businesses, role unclear</div></td><td class="num">423</td><td>2d</td><td>US</td></tr>
+<tr><td class="n">43</td><td><a href="https://www.linkedin.com/in/buchman/" target="_blank" rel="noopener">Eytan Buchman</a><div class="role">Sovereign AI, brand, cyber. No title in headline</div></td><td class="num">330</td><td>3d</td><td>US</td></tr>
+<tr><td class="n">44</td><td><a href="https://www.linkedin.com/in/chen-shir/" target="_blank" rel="noopener">Chen Shir</a><div class="role">Fractional CPO</div></td><td class="num">286</td><td>1w</td><td>US</td></tr>
+<tr><td class="n">45</td><td><a href="https://www.linkedin.com/in/maayan-rosenboim/" target="_blank" rel="noopener">Maayan Rosenboim</a><div class="role">Office of the CTO, AIR</div></td><td class="num">162</td><td>~1mo</td><td>US</td></tr>
+<tr><td class="n">46</td><td><a href="https://www.linkedin.com/in/oren-ben-shaul/" target="_blank" rel="noopener">Oren Ben-Shaul</a><div class="role">Product exec, former acting CPO GitLab</div></td><td class="num">123</td><td>5d</td><td>Manhattan Beach</td></tr>
+<tr><td class="n">47</td><td><a href="https://www.linkedin.com/in/eladkoren/" target="_blank" rel="noopener">Elad Koren</a><div class="role">VP Product, Palo Alto Networks</div></td><td class="num">122</td><td>1w</td><td>San Jose</td></tr>
+<tr><td class="n">48</td><td><a href="https://www.linkedin.com/in/shay-bar/" target="_blank" rel="noopener">Shay Bar</a><div class="role">VP, Tel Aviv University USA</div></td><td class="num">120</td><td>1w</td><td>LA</td></tr>
+<tr><td class="n">49</td><td><a href="https://www.linkedin.com/in/avi-greenberg-812246/" target="_blank" rel="noopener">Avi Greenberg</a><div class="role">Managing Director, KLA</div></td><td class="num">82</td><td>2w</td><td>Irvine</td></tr>
+<tr><td class="n">50</td><td><a href="https://www.linkedin.com/in/oded-har-even-3a33a9/" target="_blank" rel="noopener">Oded Har-Even</a><div class="role">Co-Managing Partner, Sullivan &amp; Worcester law firm</div></td><td class="num">79</td><td>~1mo</td><td>NYC</td></tr>
+<tr><td class="n">51</td><td><a href="https://www.linkedin.com/in/rachel-kirschenbaum-4349a240/" target="_blank" rel="noopener">Rachel Kirschenbaum</a><div class="role">VP Customer Success</div></td><td class="num">53</td><td>4w</td><td>NYC</td></tr>
+<tr><td class="n">52</td><td><a href="https://www.linkedin.com/in/nreichenberg/" target="_blank" rel="noopener">Nimmy Reichenberg</a><div class="role">SVP Marketing Cato Networks, 5x CMO</div></td><td class="num">52</td><td>2d</td><td>NYC</td></tr>
+</tbody></table></div>
+</section>
+</main>
+<textarea id="links" aria-hidden="true">https://www.linkedin.com/in/yairvardi/
+https://www.linkedin.com/in/boazalbaranes/
+https://www.linkedin.com/in/shulygalili/
+https://www.linkedin.com/in/levyraiz/
+https://www.linkedin.com/in/neribluman/
+https://www.linkedin.com/in/yuvalkesh/
+https://www.linkedin.com/in/ronnie-jaffa-a90217a2/
+https://www.linkedin.com/in/avivshalgi/
+https://www.linkedin.com/in/adhamghazali/
+https://www.linkedin.com/in/guy-leitersdorf-21b10891/
+https://www.linkedin.com/in/mayaprosor/
+https://www.linkedin.com/in/shmuel-reichman-332884154/
+https://www.linkedin.com/in/talia-cohen-101a911/
+https://www.linkedin.com/in/elibeer/
+https://www.linkedin.com/in/yoav-ziv/
+https://www.linkedin.com/in/eddie-dovzhik-796938113/
+https://www.linkedin.com/in/eyalharari/
+https://www.linkedin.com/in/guylevyyurista/
+https://www.linkedin.com/in/yan-gaits/
+https://www.linkedin.com/in/yoavmarkiewicz/
+https://www.linkedin.com/in/nadav-eyal-1ab21941/
+https://www.linkedin.com/in/alon-shalvi/
+https://www.linkedin.com/in/tomer-shlomo/
+https://www.linkedin.com/in/danbarak/
+https://www.linkedin.com/in/garyambrosino/
+https://www.linkedin.com/in/jeremy-suard/
+https://www.linkedin.com/in/eran-shiff/
+https://www.linkedin.com/in/saar-dickman-a1a535/
+https://www.linkedin.com/in/arikgaisler/
+https://www.linkedin.com/in/eilamgazit/
+https://www.linkedin.com/in/naama-halevi-davidov-phd-8827675/
+https://www.linkedin.com/in/stephyliu/
+https://www.linkedin.com/in/nadav-lobel-3ba4a260/
+https://www.linkedin.com/in/hirefasthireright/
+https://www.linkedin.com/in/sasha-medvedovsky-10b2381/
+https://www.linkedin.com/in/ori-entis-98075a161/
+https://www.linkedin.com/in/neerajsingh0101/
+https://www.linkedin.com/in/michabenoliel/
+https://www.linkedin.com/in/charlienewarkfrench/
+https://www.linkedin.com/in/rabbidovidmcohen/</textarea>
+<script>
+document.getElementById('copy').addEventListener('click',()=>{const t=document.getElementById('links');const m=document.getElementById('msg');navigator.clipboard.writeText(t.value).then(()=>m.textContent='Copied').catch(()=>{t.style.position='static';t.select();m.textContent='Press Cmd+C to copy'});});
+</script>

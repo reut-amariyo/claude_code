@@ -23,4 +23,6 @@ Reut posts on her own LinkedIn account in HEBREW (separate from Lior's brand; Li
 
 **Audience:** Hebrew-speaking Israeli LinkedIn users who post and struggle with reach. The reach-pain topic is her strongest lane — post #2 (interest-graph shift, drafted 2026-08-04) continues it. Remaining Reed material (saves currency, commenting as training data, 90-day game) = 2-3 more posts in the series.
 
+**Positioning goal + NO Lior, ever (Reut, 2026-11-08):** her account positions HER as a LinkedIn expert. Lior never appears, not as her employer, not as an outside example, no Lior data. Value comes from frameworks she learns (e.g. [[reference-lara-acosta-slay-framework]]) + her own results only, e.g. her 100+ connection-request post.
+
 Related: [[linkedin-interest-graph-2026]], [[feedback-anti-ai-writing-rules]]

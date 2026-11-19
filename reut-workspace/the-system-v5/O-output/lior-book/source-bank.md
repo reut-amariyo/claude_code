@@ -555,3 +555,11 @@ Lior: "I get it. I agree with you." Then: the captain is here, he just wants oth
 - "I don't agree. We never checked." On "there are no opportunities except Shopify".
 - "They will not decrease us to zero." On partner risk.
 - "I don't know what will happen in 28."
+
+### [STORY] Lior's toast to Ofir at the year-end party (Hebrew, read aloud, sent by Reut 2026-11-08)
+"What did I ask you 8 years ago? To help me rank first on Google for one keyword. Who said anything
+about 200+ influencers? About Shopify's biggest partner in the world? About 200M+ shekels a year?"
+"I'll only say thank you": for insisting we build a team in Israel, for the push, for what we built.
+Also the year in one line: started with "AI kills the whole trend", ended with people at Shopify's most
+exclusive event asking AutoDS to speak on stage next time. "Because we decided, set goals, believed, worked together."
+Note: 8 years here vs 7 in Reut's draft. The ₪200M revenue figure is internal, never in public copy without approval.

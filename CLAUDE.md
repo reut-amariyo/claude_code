@@ -46,6 +46,8 @@ Why: senior audiences smell AI instantly; these are the confirmed tells.
 - Red list, never appears in a draft: delve, crucial, pivotal, tapestry, robust, seamless, realm,
   "Here's the thing", "Hope this helps", "After careful consideration", "just to give a quick update",
   "Most people..." as a hook, and adverb-propped verbs ("X quietly runs Y").
+- Packaging gate on every creative, any platform: gift first (problem + solution), name the lever,
+  check the 4 curiosity conditions, readable in 1 second. Rules: reut-workspace/the-system-v5/C-core/packaging-gate.md
 - Read the draft out loud before delivering. If Lior wouldn't say it on a podcast, cut it.
 
 ## Where things live

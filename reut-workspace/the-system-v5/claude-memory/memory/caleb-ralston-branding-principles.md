@@ -57,3 +57,5 @@ Caleb: 80% your one core thing, 20% rounding-out interests to stay human and giv
 
 ## How to apply (every Lior task)
 Before drafting, silently run: (a) which association/pillar am I pairing him with? (b) is there a real story (origin/failure/success) carrying it? (c) does the hook open a gap? (d) any association to AVOID here? (e) what does the top-10% data say? Then draft. The LEADING rules ([[lior-top-8-10k-playbook]]) still win on any conflict; this is the connective framework underneath them.
+
+**Update 2026-11-17 live consult:** see [[feedback-packaging-gate-every-creative]] (his packaging SOP, applied to every creative) and [[project-positioning-intake-new-clients]] (pond / pain / swords intake).

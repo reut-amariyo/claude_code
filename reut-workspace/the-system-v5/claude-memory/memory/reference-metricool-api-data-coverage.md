@@ -19,6 +19,11 @@ Working endpoints (all take `from`/`to` as `YYYY-MM-DDTHH:MM:SS`, plus `blogId`,
     /api/v2/analytics/posts/linkedin         -> LinkedIn posts
     /api/v2/analytics/stories/instagram      -> 500 error, does not work
 
+## ⚠️ Instagram DISCONNECTED (found 2026-11-09)
+
+IG endpoints now return 403 "There is no instagram connection for blog: 5775125"; brands listing shows no instagramData.
+Auth is fine. Until Reut reconnects IG in Metricool, October+ IG data must come from the IG app recap or the agency.
+
 ## The coverage trap (verified 2026-08-19)
 
 **Instagram is COMPLETE.** July 2026 returns 97 reels + 17 posts, exactly matching

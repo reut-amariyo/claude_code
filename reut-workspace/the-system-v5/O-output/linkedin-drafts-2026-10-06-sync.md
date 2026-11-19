@@ -190,3 +190,177 @@ Please... don't quit. Keep going.
 
 I'm rooting for you! ▮
 --- POST ENDS ---
+
+## 2b. Ofir farewell, personal version (2026-11-08)
+
+Donor: "Galit finished dental school this week" 2026-08-12, 8,253 imp / 14 fol, best follower rate of any personal post.
+Beats: named-person hook with a number → 3 stacked specifics → the line → tribute with tag.
+
+--- POST STARTS ---
+Ofir is leaving AutoDS after 7 years.
+
+He came in with no job description.
+My words to him: "I have no tasks for you. Come fix our SEO and do something."
+
+He did something.
+He built our marketing and became our CMO.
+[PLACEHOLDER: one number from what he built]
+
+What LinkedIn never saw:
+Half a year traveling together.
+Then roommates.
+Full fights on WhatsApp about the apartment.
+Then into the office, open Slack, talk work like nothing happened.
+
+The WhatsApp fight usually kept going in the other tab.
+
+Everyone warns you about building a company with your best friends.
+Nobody warns you how boring it gets without them.
+
+Ofir, thank you for 7 years. Go build something that makes me jealous ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---
+
+## 2c. Ofir farewell, Chesky-letter structure (2026-11-08)
+
+Donor: Brian Chesky's letter about Joe Gebbia leaving Airbnb, X 2022-07-22, 4.7K likes. https://x.com/bchesky/status/1550354758266863616
+Beats: "to understand X is to understand the company" → how it started, one scene → living together → "if I was the fuel, he was the launch pad" → "a few degrees different and I wouldn't be writing this" → "Thank you, Joe."
+
+--- POST STARTS ---
+To understand AutoDS, you need to understand Ofir.
+
+After 7 years, he's leaving.
+
+He joined with no job description.
+My words to him: "I have no time and nothing to give you. Come fix our SEO and do something."
+
+He went and figured out what "something" meant.
+
+Then the company became our whole life.
+Half a year traveling together.
+Then roommates.
+Fighting on WhatsApp about the apartment.
+Then walking into the office and talking work on Slack like nothing happened.
+
+The WhatsApp fight usually kept going in the other tab.
+
+If I built the product, Ofir made sure the world found it.
+[PLACEHOLDER: one Ofir move, e.g. the Times Square billboard, or one number]
+
+Looking back, it all hung on one moment.
+If he had asked me for a job description that day, this would be a very different company.
+
+Thank you, Ofir. Go build something that makes me jealous ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---
+
+## 2d. Ofir farewell, Leila Hormozi structure (2026-11-08)
+
+Donor: Leila Hormozi "He was our head sales guy since day one. / After 4 years, I asked him to start his own business." 768 reactions / 121 comments at 3h. https://lnkd.in/p/e5Vux6_t
+Beats: role-since-day-one + tenure hook → dense story paragraph → "keep in mind" investment → the question a reader would ask, answered → relationship doesn't end.
+
+--- POST STARTS ---
+He was our marketing department before we had one.
+After 7 years, Ofir is leaving AutoDS.
+
+When he joined, I had no tasks for him. My words: "Come fix our SEO and do something." He took a role nobody could define and built the whole thing.
+
+Somewhere along the way, the company became our life. Half a year traveling together. Then roommates. We'd fight on WhatsApp about the apartment, then walk into the office and talk work on Slack like nothing happened.
+
+Keep in mind, 7 years is most of AutoDS's story. He was there through the exit to Fiverr, and [PLACEHOLDER: one thing he built, ideally a number].
+
+Now he's off to [PLACEHOLDER: what's next].
+
+Does it hurt to lose your CMO after 7 years? Yes.
+Would I hire him again tomorrow, with no job description? Also yes.
+
+Friendship doesn't come with a notice period.
+Go build something that makes me jealous, Ofir ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---
+
+## 2e. Ofir farewell, built on Lior's own party toast (2026-11-08)
+
+--- POST STARTS ---
+8 years ago, I asked Ofir for one thing.
+Rank us first on Google for one keyword.
+
+That was the whole job description.
+
+Nobody asked for 200+ influencers.
+Nobody asked for Shopify's #1 partner, 2024 and 2025.
+He brought both anyway.
+
+Somewhere in between, we traveled together for half a year, running the company from laptops.
+He was the one who insisted we build a real team in Israel.
+Then we became roommates.
+Full fights on WhatsApp about the apartment, then work on Slack like nothing happened.
+
+Now, after 8 years, he's leaving AutoDS.
+
+At our party I told him it wasn't my farewell speech yet.
+This one is.
+
+Thank you for the team in Israel.
+Thank you for the push.
+Thank you for what we built together.
+
+Go build something that makes me jealous ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---
+
+## 2f. Ofir farewell, "Life update" format (2026-11-08)
+
+Donors: Nilesh Rathore "Life update: I'm joining heyclicky!" 354 reactions; Rowan Cheung "Personal news:" 115. Beats: label → one-line news → how we met, small start → stacked chronology → "I wasn't looking for… something clicked" → short punch close.
+
+--- POST STARTS ---
+Life update:
+
+After 8 years, Ofir is leaving AutoDS.
+
+8 years ago I needed one thing from him.
+Rank us first on Google for one keyword.
+
+That was the whole job description.
+
+From there:
+Half a year traveling together.
+Roommates.
+Full fights on WhatsApp about the apartment, then work on Slack like nothing happened.
+A real team in Israel, because he insisted.
+200+ influencers.
+Shopify's #1 partner, 2024 and 2025.
+
+I wasn't looking for a best friend when I hired a marketer.
+
+Got both.
+
+Go build something that makes me jealous, Ofir ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---
+
+## 2g. Ofir farewell, FINAL candidate (2026-11-09)
+
+Donor: Reut's "Never work for free" reference + bootstrap 18K quoted-objection hook. Score 9/10, photo pending.
+
+--- POST STARTS ---
+"Never build a company with your friends" is the worst advice I've heard.
+(After 8 years, he's leaving.)
+
+I asked Ofir for one thing.
+Rank us first on Google.
+
+He did. Then he kept going.
+
+The company became our life.
+Traveling together, sharing the cheapest hotel rooms we could find.
+Then roommates.
+Fighting on WhatsApp about the apartment.
+Then walking into the office and talking work on Slack like nothing happened.
+
+We built the product. Ofir made sure the world found it.
+#1 Shopify partner and affiliate, 2024 and 2025.
+The acquisition by Fiverr.
+
+The cheap hotel rooms turned into private jets.
+We went through all of it together.
+
+A stranger doesn't share the cheap room with you.
+
+Thank you for everything, Ofir. Go build something that makes me jealous ❤️ @Ofir Bokobza ▮
+--- POST ENDS ---

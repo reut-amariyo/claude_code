@@ -80,3 +80,6 @@ diagnostic input. The win condition per post is no longer "10,000+ impressions".
 Full strategy: `the-system-v5/O-output/linkedin-follower-kpi-strategy-2026-08-23.md`
 Related: [[linkedin-interest-graph-2026]], [[project-okrs-q3-2026-operating-targets]],
 [[lior-performance-log]], [[reference-linkedin-advisor-shortlist]]
+
+
+**Caveat 2026-11-12 (Reut):** per-post "Followers gained" undercounts, because strangers send connection requests instead of following. See [[feedback-post-followers-undercount-connection-requests]].

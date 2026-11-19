@@ -3,7 +3,7 @@ name: Lior LinkedIn Performance Log
 description: Chronological log of every LinkedIn post Lior publishes, with metrics + post-hoc analysis. THE most important file for learning what actually works for Lior's audience.
 type: project
 originSessionId: 11cc6c8f-354d-4bc2-8669-8d3411421269
-modified: 2026-09-21T20:07:28.957Z
+modified: 2026-11-09T08:39:10.901Z
 ---
 # Lior LinkedIn Performance Log
 
@@ -4250,6 +4250,7 @@ All four are now well past 7d and are locked here from the 28-day Creator Analyt
 
 - **2026-08-30 → 2026-09-20: no scan ran for 23 days.** Cause unknown from this side (the task runs only when the Mac is awake with the app open; the 08-29 run was the last). Consequences: the 24h and 72h checkpoints for all seven September finals and both in-flight posts were never captured, the 09-01/02/03 locks were taken at 25-27d instead of 7d, and the 09-07 Codex post crossed its 7d without a notification. Recovered 2026-09-21 by back-capturing lifetime-to-date values from per-post Creator Analytics, the same method as the 08-29 back-capture.
 - 2026-09-21: Claude in Chrome needed two reconnect attempts before the extension responded; the classifier also timed out once. Resolved within ~2 minutes, no data lost.
+- **2026-11-09 scan BLOCKED: Chrome navigation needs a site-approval prompt and the run is unattended.** The Chrome tab group connected, but the navigate call to Lior's recent-activity page sat waiting for approval for 5 minutes and was not sent. No LinkedIn data was read, and impressions plus the follower ledger are "unavailable" for this run. **Bigger issue: this log has not been updated since 2026-09-21, a 49-day gap.** No entries, checkpoints or finals exist for any post from 09-18 through 11-09. That includes the 10-19 $38M record post (~127K) and the 10-26 bootstrap post (18K); those numbers live only in their own memory files. The 09-16 hiring and 09-17 salary posts were never final-locked here. **Fix:** Reut should allow linkedin.com permanently for Claude in Chrome so the scheduled run doesn't stall on a prompt. After that, run one attended back-capture scan for Sept 18 → Nov 9, using lifetime Creator Analytics per post, the same method as 08-29 and 09-21. Flag for the Monday digest.
 
 ---
 
@@ -4264,4 +4265,16 @@ All four are now well past 7d and are locked here from the 28-day Creator Analyt
 **Proposed style guide updates:** {bullets — require approval before merging}
 -->
 
-_Empty — first synthesis after month 1._
+### October 2026 (PARTIAL, written 2026-11-09 from per-post memories; no Oct AggregateAnalytics xlsx seen yet, so no month totals)
+**Posts known:** ~10-02 AI-brain 1,893 / 0 fol 🔴 · ~10-12 Shopify Toronto ~5K 🟡 · 10-12/13 Claude Skills giveaway 688 / 0 fol 🔴 · 10-19 "$38M → $92M" ⭐ 143K at 36h, 83 post fol, 2,248 profile viewers, 200+ connect requests · 10-21 Acquisition Bible giveaway 9K at 17h, 23 fol = 2.55 / 1K, best conversion on record · 10-26 bootstrap sorry/not-sorry 18K.
+**Best pattern:** a SEQUENCE, not a post: viral credibility post, then a same-topic first-party artifact within 48h to convert the new audience. Image proves the hook with a real photo of Lior + a person named in the post; Reut's image picks beat mine on both winners.
+**Worst pattern:** tool / curation / "how I run my brand" posts with generic second halves and designed graphics = 0 followers. Shopify story: strong hook, nothing to take home.
+**Open weak spots:** shares, 2 reposts on 143K; profile viewers ≫ follows because strangers connect instead.
+**To close:** Oct xlsx for totals, back-capture 09-18 → 11-09 into this log.
+
+### 2026-11-11 · "One thing drives me crazy as a CEO: AI decks" 🟢 SUCCESS (Reut, 2026-11-12)
+~1d: 11,029 imp · 7,504 reached · 89% out-of-network · 92 profile viewers · 22 fol (~2.0 / 1K) · 454 engagements (4.1%). Codie Sanchez donor, AI-generated facepalm photo, discussion close; every comment answered day 1. Details: lior-post-ai-decks-drives-me-crazy-success.md
+
+### 2026-11-12 · "How to steal Apple's hype" Duolingo apple-cart, WHOOP structure 🔴 DELETED AT 11 MIN, REPOSTED
+v1 live: 11 imp at 7m, 25 imp / 2 likes at 11m, 0 comments; Reut did not see it in her own feed despite heavy engagement with Lior, and deleted. Same pattern Reut remembers from a deck post that ended ~60 imp. v1 had a composite image built from Duolingo's own photos (owl + cart + tilted "This is Duo." card + red loop) and tagged Apple + Duolingo company pages. Repost: different image (side-by-side v3, WHOOP format), no company tags, 37M line restored. Hypotheses, untested: reused third-party image detected as duplicate media; big-company tags. Log the repost's 1h / 48h numbers here to compare.
+Repost check (Chrome, Lior's activity): 8 imp at 2m, 0 reactions. Repost text was IDENTICAL to the deleted v1 (no 37M lines, "question-", "Agree? ▮"); only the image changed (IKEA-style v15). So the duplicate-text risk was not reduced. Reut again could not see it in her own feed. Advised: do not delete a second time.

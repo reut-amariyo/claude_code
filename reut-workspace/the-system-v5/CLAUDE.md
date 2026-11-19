@@ -147,6 +147,14 @@ publish, no overrides.
 of Lior press Follow after reading this?" If the honest answer is "they would not, but it
 will travel", the post is a reach play and only ships inside the 10% monthly reach budget.
 
+## Packaging gate — EVERY creative, every platform (Caleb Ralston SOP, 2026-11-17)
+
+Every hook / headline / first line / cover / subject line: write the gift first (ideal-customer problem +
+Lior's own solution), name the lever (10 levers), check Relevance / Gap / Belief / Novelty, readable in
+under 1 second, 5-8 words on reel headlines, 3-5 on covers. Multiple options = different levers.
+Full rules + house-rule conflicts: C-core/packaging-gate.md. New-client positioning intake:
+B-brain/voice-kits/_template/positioning-intake.md.
+
 ## Instagram — Yes/No gate (Emily Shwed consult, 2026-10-21)
 
 Every IG post, carousel, reel and story passes all 4 checks before it's a YES. Otherwise it "could be anyone":

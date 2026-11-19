@@ -12,6 +12,21 @@ originSessionId: 53b88dbd-efea-4967-bcc7-1b3020a18556
 
 ---
 
+## Sep 28 – Nov 11, 2026 snapshot (pulled 2026-11-12, Metricool, 65 posts) — LATEST, supersedes June rules where they conflict
+
+Account is NO LONGER throttled: 8 posts over 6K, top 269K. Ranking by form:
+
+| Form | Example | Impressions | Profile clicks |
+|---|---|---|---|
+| "What people think happens when X:" myth/reality ledger | exit for $92M, 10-06 | 269,165 | 1,784 |
+| "I'm Lior" origin thread | parents' apartment, 09-28 | 49,109 | 559 |
+| Masterclass PDF/link post | "what's DRAINING you, 2 pages", 10-27 | 48,224 | 43 |
+| Wife / personal milestone | Galit doctor 10-17; 16-hour days 10-31 | ~13K each | ~240 |
+| "> Be me" greentext origin | 10-13 | 10,507 | 236 |
+| Numbered generic advice listicle | 5 hard truths / things that destroy teams / 7 ways to build SaaS | 600-710 | 2-8 |
+
+Rules: (1) Numbered generic advice lists cap at ~700 imp and ~0 profile clicks: advice without a Lior scene does not build followers. (2) Myth/reality ledger is the top form but decays on reuse: 269K -> 3.7K free-trial version -> 996 "business in your 20s". Rotate the subject. (3) Masterclass link posts = reach without follows, PC 43 on 48K. (4) Profile clicks are the follower proxy; judge on them, not impressions. (5) Origin thread rerun on 11-10 got 987, its thread parts 36-92: fourth run of the same story decayed.
+
 ## Week of Jun 20 – Jun 27, 2026 snapshot (LATEST) — 🔵 FULL REVERSAL: ORIGINALS BROKE OUT, REPLIES DIED
 
 | Metric | Value |

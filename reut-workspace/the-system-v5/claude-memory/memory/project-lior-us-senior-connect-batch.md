@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: project
   originSessionId: e352c271-8cfe-49d9-aff4-a04f591c568b
-  modified: 2026-11-07T14:27:13.273Z
+  modified: 2026-11-08T11:30:01.085Z
 ---
 
 On 2026-10-25 I found US 2nd-degree CEOs, founders, investors and C-suite with the most mutuals on Lior's account. List: `reut-workspace/the-system-v5/O-output/linkedin-networking/us-senior-connect-targets-2026-10-25.md`.
@@ -18,7 +18,17 @@ Reut added the first 16 from the chat table, Micha Breakstone through Itai Sadan
 
 **Batch 3, 2026-11-05:** founders, CEOs and tech C-level, US, 100+ mutuals, batches 1 and 2 removed. 53 names, Amiram Shachar 878 down to Michael Diesu 100. File: `.../linkedin-networking/us-founder-ceo-connect-targets-2026-11-05.md`. Activity NOT verified because the Chrome extension dropped mid-check. Next time, verify activity first, then ask which ones she added. Learned: the search HTML is an RSC payload, so parse body.textContent by splitting on "• 2nd". JS output with "?" or "=" gets blocked, and long output gets truncated, so write results into a `<pre>` and read them with get_page_text. The /recent-activity/shares/ HTML has no timestamps; use /recent-activity/all/.
 
-**Email-gated profiles:** some people only accept invites from someone who knows their email. Aviv Cohen (avivco) is one, removed 2026-11-07. Never put him in a future batch. Add any others Reut reports here.
+**Batch 3 progress, 2026-11-07:** Reut added #1-#36. Then she asked for ACTIVE-only. Rule: never hand her a list until activity is verified, because she hit Yotam Hechtlinger, inactive 9mo+. Active-only list of 19 is appended to the same file, Guy Franklin 1236 → Michael Diesu 100. Activity check = fetch /in/<h>/recent-activity/all/, regex `(\d{1,2})(h|d|w|mo|yr) •`, drop items preceded by reposted/commented/liked. Takes ~20s per profile, so run 3 workers in parallel.
+
+**Workflow Reut likes, 2026-11-08:** threshold is 50+ mutuals. Open the actives as Chrome tabs, never as links. She says "סיימתי, תפתח לי עוד" in a loop. Every round of opened handles is logged in the batch-3 file, sections 4a-4k. The worker JS runs inside the LinkedIn feed tab. If she closes that tab, all state is lost, so rebuild the skip-set from the handles in the file. Tell her up front not to close the feed tab. LinkedIn throttled activity checks to ~1/min for a while after ~400 requests, then recovered.
+
+**Email-gated profiles:** some people only accept invites from someone who knows their email. Aviv Cohen (avivco) and Dave Gerhardt (davegerhardt), reported 2026-11-07 and 2026-11-08. Never put them in a future batch. Add any others Reut reports here.
+
+**2026-11-15 SEARCH PAUSED:** ~180 people-search fetches in ~3 min, 3 parallel workers, ~1.5s apart, and LinkedIn paused search on Lior's account: "unusual search traffic... search activity on your account has been paused". Next time: max ~100 search fetches per day, 1 worker, 5s+ between pages. Stop the moment a page comes back with 0 results. The activity-page fetches still worked after the pause. Search state lives in localStorage `ck3` on linkedin.com; the old pool is `ck_state`; activity results are in `ck_actr`. Batch 5 file: `us-founder-ceo-connect-targets-2026-11-15.md`.
+
+**Batch 5, 2026-11-15:** Reut asked for 100: US, active, 50+ mutuals, founder/CEO/C-level. Delivered 40 main + 12 borderline, all activity-verified, in `us-founder-ceo-connect-targets-2026-11-15.md`. The 50+ pool is close to used up. Activity regex fix: timestamps also look like "• 3w", so match `^(?:•\s*)?(\d{1,2})(h|m|d|w|mo|yr)` and anchor ownership on the "Feed post" block. The old regex missed about 40% of active people. Next time, ask which of batch 5 she added.
+
+**Batch 6, 2026-11-15:** threshold 20+ mutuals, same criteria. 56 main + 9 borderline in `us-founder-ceo-connect-targets-2026-11-15-batch6-20plus.md`; share page https://claude.ai/artifact/8HirSu1kLXJcBf2cXGMiqK. Search came back the same day after the pause; 49 slow pages, 6-10s apart, ran clean. Gotcha: when the LinkedIn tab goes to the background, Chrome throttles setTimeout and the loops stall, so run the checks inside awaited calls. Reut shares these lists as Artifact pages, not .md files.
 
 **Why:** LinkedIn caps how many invites she can send each week, so the list is worked in batches.
 

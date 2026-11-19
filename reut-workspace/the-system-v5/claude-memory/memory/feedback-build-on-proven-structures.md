@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: 1b97782c-b8e6-4d10-b71c-73f980d482ba
-  modified: 2026-10-06T07:51:41.847Z
+  modified: 2026-11-17T14:53:10.333Z
 ---
 
 Reut, 2026-08-30: "מעכשיו אני רוצה לבנות פוסטים ללינקדין רק על גבי מבנים שהצליחו לאחרים."
@@ -41,6 +41,15 @@ that future drafts pull hooks and structures from it. Before drafting any new Li
 for the best-fitting donor and offer it, even when Reut doesn't name one.
 
 **Donor bank (mapped teardowns, ready to build on):**
+- "I've published 845 LinkedIn posts. But yesterday, Jasmin Alić made me feel like a beginner." (added 2026-11-17, Reut: a structure that worked; RAW with UMA creator). Credential number + "but yesterday [named expert] made me feel like a beginner" hook, the expert's quote, context line, "so far this week" 3 bullets of time spent, "what I'll be changing" numbered items each = old habit + expert's fix, "N in, the basics still matter", one quotable, P.S. question "who's the last person who taught you something in your own field?" Use for any meeting with a bigger name. First use: Lior dinner with Nas Daily, 20% story / 80% value. the-system-v5/O-output/linkedin-nas-daily-dinner-2026-11-17.md
+- "As a founder, when you run out of good ideas, where do you go?" (added 2026-11-11, Reut: worked very well for its creator). Question hook to founders, guess the reader's answer (ChatGPT/Reddit), "they help sometimes, the answer was closer", one-line punch "go to customer care", big monthly stat, confession "I used to be on those calls, they're closer now", 3 things the team knows, "half the new ideas in strategy meetings they heard weeks ago", soft CTA "skip the search bar, ask them". Donor has "I'll be honest" + 💛 + "!!", drop all three. First use: Lior "ask support before ChatGPT" with the $1-bug customer → Head of Support arc. the-system-v5/O-output/linkedin-ask-support-not-chatgpt-2026-11-11.md
+- "I broke a promise to myself on Friday… 🫣" - 26 house moves at 24 (added 2026-11-10, Reut: "a structure that worked"). Confession hook + emoji, absurd count vs age 💀, the dated promise, "and well... I did it again. Oopsss", one-line "Move 26 DONE" stamp, "for a good reason, I promise", belief + outside research, backstage "nobody talks about how hard", mishap, "reminded me why I love this", practical lesson, callback to the count + 😂. Donor ends on question + "REPOST!!!", drop both. Contains "not a luxury, it's a tool" contrast, rewrite. First use: Lior "kill side projects" tip broken, 4 companies at 31. the-system-v5/O-output/linkedin-broke-a-promise-4-companies-2026-11-10.md
+- Lara Acosta, "I never expected this to get 2.1M views 😂" (added 2026-11-09, 2,154 reactions / 762 comments) - one-line caption + the viral video re-posted natively; disbelief at own number, one emoji, zero explanation. Use when a Lior reel/TikTok breaks out. First use: Lior 60M-views personal-story reel.
+- Codie Sanchez, "Unpopular truth: if you want to get paid like a pro, dress like one." (added 2026-11-08,
+  1,747 reactions / 412 comments) - "Unpopular truth:" rule hook, "This is wild" reaction line, named outside
+  research, "that's about X, but there's a business lesson" bridge, detailed named case, customer-voice line,
+  principle, 2-line quotable (donor's is a banned X/Y contrast, rewrite), CTA. First use: Lior "decks by hand" AI post.
+  the-system-v5/O-output/linkedin-decks-by-hand-codie-structure-2026-11-08.md
 - 2026-11-03 batch, all four in the-system-v5/M-memory/linkedin-donors-reut-sent-2026-11-03.md:
   D1 "My mum said she'd never speak to me again" - loved-one pushback, empathy twist, "describing your situation or theirs?" close + outside quote.
   D2 Justin Welsh "The happiest people I know all have something a little odd in common:" - inverted-order thesis, dated scene with partner, 3 pruning bullets, cost accepted, ritual result, "Yeah/Sure" concession.
@@ -92,3 +101,6 @@ its skeleton beat for beat, same hook shape, same section order, same close. Do 
 origin facts the donor does not have a beat for. The "kicked out at 14" line is for posts whose
 hook IS his story, never for a utility post like a list. Do not invent habits or claims for
 Lior; where the donor asserts a habit, keep the line and mark it "confirm with Lior".
+- **Leila Hormozi, "He was our head sales guy since day one."** (sent by Reut 2026-11-08, 768 reactions / 121 comments at 3h, https://lnkd.in/p/e5Vux6_t). Departure of a long-time team member told by the founder: role-since-day-one + tenure two-line hook → dense story paragraph → "keep in mind" investment → answer the reader's obvious question → the relationship outlives the job. Her "a loss? Of course not, a huge win" beat is a banned contrast template, rebuild it as two yes-questions. Used for Ofir's farewell, drafts file 2d.
+- **Brian Chesky's letter about Joe Gebbia** (X 2022-07-22, 4.7K likes). CEO farewell to a co-founder and ex-roommate: "to understand X is to understand the company" → origin scene → living together → "if I was the fuel, he was the launch pad" → "a few degrees different and I wouldn't be writing this" → "Thank you, Joe." Drafts file 2c.
+- **"We're fully remote with 70 people." / no permission slip for 2pm offline** (sent by Reut 2026-11-18). Remote-policy founder post: setup line with headcount → 2 policy lines → "But I've noticed something:" → concrete contrast observation, two groups with tiny real examples → "It's real." → reframe + 3 everyday one-liners → "None of that requires a permission slip." → "I hired an adult, not a child" line → two-line command close. Donor's "track profitability, not hours" is a banned contrast, rewrite it. Used for Lior's "remote since 2016, March 2020 was a normal Monday": the-system-v5/O-output/linkedin-remote-since-2016-covid-day-zero-2026-11-18.md

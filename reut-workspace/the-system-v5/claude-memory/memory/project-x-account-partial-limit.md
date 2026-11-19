@@ -14,3 +14,5 @@ Key facts: 76% of originals never pass 50 impressions; May 2026 was a hard throt
 **Why:** interpreting X performance without this context leads to wrong conclusions (blaming content/agency for throttled reach).
 
 **How to apply:** when analyzing X numbers, separate distribution effects from content quality (high ER + flat reach = throttle). Recovery levers: low posting volume like June's 33 posts, no mass-replying into restricted threads. Related: [[project-x-reply-pipeline-whitelist-collapse]].
+
+**Update 2026-11-12:** the limit has lifted. Sep-Nov 2026 posts hit 269K, 49K, 48K, 44K; hand posting by the agency at low volume is the setup that recovered. The zero-reach period matched API/automated posting + 100+ posts/month + mass replies. Reading data via Metricool is read-only and has no effect on distribution.
